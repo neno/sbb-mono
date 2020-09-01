@@ -1,0 +1,11 @@
+.sb-show-main {
+  #root {
+    > .l-grid {
+      .l-col {
+        background-color: #ccc;
+        text-align: center;
+        padding: 1rem;
+      }
+    }
+  }
+}

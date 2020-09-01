@@ -1,0 +1,86 @@
+%h1,
+%h2,
+%h3,
+%h3,
+%h4,
+%button {
+  font-family: $font-secondary;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: rem(20);
+}
+
+%h2,
+%h3,
+%h4,
+%button {
+  font-weight: 500;
+}
+
+%h1 {
+  font-size: $font-size-h1;
+
+  @include media-breakpoint-up(large) {
+    font-size: $font-size-h1-large;
+  }
+}
+
+%h2 {
+  font-size: $font-size-h2;
+  margin-bottom: rem(25);
+
+  @include media-breakpoint-up(large) {
+    font-size: $font-size-h2-large;
+    margin-bottom: rem(30);
+  }
+}
+
+%h3 {
+  font-size: $font-size-h3;
+
+  @include media-breakpoint-up(large) {
+    font-size: $font-size-h3-large;
+  }
+}
+
+%h4 {
+  font-size: $font-size-regular;
+  line-height: 1.25;
+
+  @include media-breakpoint-up(large) {
+    font-size: $font-size-regular-large;
+    line-height: 1.2;
+  }
+}
+
+%font-regular {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: $font-size-regular;
+  line-height: 1.25;
+
+  @include media-breakpoint-up(large) {
+    font-size: $font-size-regular-large;
+    line-height: 1.2;
+  }
+}
+
+%font-small {
+  @extend %font-regular;
+
+  @include media-breakpoint-up(large) {
+    font-size: $font-size-regular;
+    line-height: 1.25;
+  }
+}
+
+%button {
+  font-size: $font-size-regular-large;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+%block-margin {
+  margin: 0 0 rem(20) 0;
+}

@@ -1,0 +1,58 @@
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function rem($value, $context: 16) {
+  @return ($value / $context) * 1rem;
+}
+
+@function em($value, $context: 16) {
+  @return ($value / $context) * 1em;
+}
+
+@function colWidth($cols, $total-cols: 12, $width: 100%, $grid-gutter: 30) {
+  $available-width: calc(
+    #{$width} - ((#{$total-cols} - 1) * #{rem($grid-gutter)})
+  );
+  $one-col: calc(#{$available-width}/#{$total-cols});
+  @return calc(#{$cols} * #{$one-col});
+}
+
+@function grid-col-width-ie($cols, $total-cols, $grid-gutter) {
+  @return calc((100% / #{$total-cols}) * #{$cols} - #{$grid-gutter});
+}
+
+@function z-index($key1, $key2: null) {
+  $map: $z-indexes;
+  $found-index: null;
+  @if (map-has-key($map, $key1)) {
+    $found-index: index(map-keys($map), $key1);
+
+    @if ($key2) {
+      $map: map-get($map, $key1);
+      $found-index: index($map, $key2);
+    }
+  }
+
+  @return $found-index;
+}
+
+@function map-get-deep($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function header-height($headerPaddings, $logoHeight, $breakpoint: zero) {
+  @return #{map-get-deep($headerPaddings, $breakpoint, padding-top) +
+    map-get-deep($headerPaddings, $breakpoint, padding-bottom) +
+    map-get($logoHeight, $breakpoint)};
+}

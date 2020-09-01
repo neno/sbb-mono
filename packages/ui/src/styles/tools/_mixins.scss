@@ -1,0 +1,69 @@
+@mixin media-breakpoint-up($name) {
+  $min: strip-unit(map-get($breakpoints, $name));
+
+  @if $min {
+    @media (min-width: #{em($min)}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin hover($not: null) {
+  &:hover:not(.is-disabled):not([aria-disabled="true"]):not(:disabled) {
+    @content;
+  }
+}
+
+@mixin no-bullets() {
+  list-style: none;
+
+  &,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@mixin inline-list {
+  @include no-bullets();
+
+  display: inline-flex;
+  align-items: center;
+}
+
+@mixin h-list {
+  display: flex;
+
+  li {
+    margin-left: rem(40);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin grid-fallback($gutter) {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + #{$gutter});
+  transform: translate3d(-#{$gutter/2}, -#{$gutter/2}, 0);
+  margin-bottom: -#{$gutter/2};
+}
+
+@mixin grid-fallback-cols($cols, $gutter, $sel: ".l-col") {
+  @for $i from 1 through $cols {
+    @if $i == 1 {
+      #{$sel} {
+        width: grid-col-width-ie($i, $cols, $gutter);
+        margin: $gutter/2;
+      }
+    }
+
+    #{$sel}--#{$i} {
+      width: grid-col-width-ie($i, $cols, $gutter);
+    }
+  }
+}

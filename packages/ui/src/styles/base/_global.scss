@@ -1,0 +1,50 @@
+@-ms-viewport {
+  width: auto;
+}
+
+html {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  color: $color-primary-blue;
+  background-color: $color-primary-white;
+}
+
+figure {
+  margin: 0;
+}
+
+::placeholder {
+  color: $color-primary-blue;
+}
+
+::selection {
+  color: $color-primary-white;
+  background-color: $color-primary-blue;
+}
+
+abbr {
+  text-decoration: none;
+}

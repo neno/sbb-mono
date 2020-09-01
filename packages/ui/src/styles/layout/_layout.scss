@@ -1,0 +1,121 @@
+$offsetCurve: (
+  zero: rem(15),
+  micro: rem(15),
+  small: rem(15),
+  medium: rem(28),
+  wide: 0,
+  ultra: 0
+);
+
+$maxWidthCurve: (
+  zero: calc(100% - 2 * #{map-get($offsetCurve, "zero")}),
+  micro: calc(100% - 2 * #{map-get($offsetCurve, "micro")}),
+  small: calc(100% - 2 * #{map-get($offsetCurve, "small")}),
+  medium: calc(100% - 2 * #{map-get($offsetCurve, "medium")}),
+  wide: rem(1134),
+  ultra: rem(1248)
+);
+
+@mixin constrainer {
+  max-width: map-get($maxWidthCurve, "zero");
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-up(micro) {
+    max-width: map-get($maxWidthCurve, "micro");
+    // background-color: lightblue;
+  }
+
+  @include media-breakpoint-up(small) {
+    max-width: map-get($maxWidthCurve, "small");
+    // background-color: lightcoral;
+  }
+
+  @include media-breakpoint-up(medium) {
+    max-width: map-get($maxWidthCurve, "medium");
+    // background-color: lightgreen;
+  }
+
+  @include media-breakpoint-up(wide) {
+    max-width: map-get($maxWidthCurve, "wide");
+    // background-color: lightpink;
+  }
+
+  @include media-breakpoint-up(ultra) {
+    max-width: map-get($maxWidthCurve, "ultra");
+    // background-color: lightskyblue;
+  }
+}
+
+$maxWidthCurveFull: (
+  zero: 100%,
+  ultra: rem(2500)
+);
+
+@mixin maxWidthCurveFull {
+  max-width: map-get($maxWidthCurveFull, "zero");
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-up(ultra) {
+    max-width: map-get($maxWidthCurveFull, "ultra");
+    // background-color: lightskyblue;
+  }
+}
+
+.l-component {
+  padding-bottom: rem(60);
+
+  .l-component {
+    padding-bottom: 0;
+  }
+}
+
+.l-constrainer {
+  @include constrainer;
+
+  .l-constrainer {
+    max-width: 100%;
+  }
+
+  > {
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      width: colWidth(3, 4);
+    }
+  }
+
+  .l-constrainer {
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.l-constrainer-full {
+  @include maxWidthCurveFull;
+}
+
+#main {
+  display: block;
+  z-index: z-index(page-layout, main);
+  position: relative;
+  padding-top: header-height($headerPaddings, $logoHeight, zero);
+
+  @include media-breakpoint-up(medium) {
+    padding-top: header-height($headerPaddings, $logoHeight, medium);
+  }
+
+  @include media-breakpoint-up(large) {
+    padding-top: header-height($headerPaddings, $logoHeight, large);
+  }
+}

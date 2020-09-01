@@ -1,0 +1,116 @@
+.a-btn {
+  @extend %button;
+
+  border: 1px solid transparent;
+  padding: rem(13) rem(50);
+  cursor: pointer;
+  transition: transform;
+  position: relative;
+  overflow: hidden;
+  color: $color-primary-blue;
+  background-color: $color-primary-white;
+  will-change: color;
+
+  @include hover {
+    color: $color-primary-orange;
+  }
+
+  span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    pointer-events: none;
+  }
+
+  &--accordion {
+    .a-ico--minus {
+      display: block;
+    }
+
+    .a-ico--plus {
+      display: none;
+    }
+
+    &.a-btn--active {
+      .a-ico--minus {
+        display: none;
+      }
+
+      .a-ico--plus {
+        display: block;
+      }
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary-blue;
+    border-color: $color-primary-blue;
+    color: $color-primary-white;
+    will-change: color, background-color, border-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      transition: width $transition-time-default;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color-primary-orange;
+      will-change: background-color, width;
+    }
+
+    @include hover {
+      border-color: $color-primary-orange;
+      color: $color-primary-white;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &--secondary {
+    border: 1px solid $color-primary-blue;
+    will-change: color, border-color;
+
+    @include hover {
+      border-color: $color-primary-orange;
+    }
+  }
+
+  &--icon {
+    padding: 0;
+  }
+
+  &--lang {
+    border-top: 1px solid $color-primary-blue;
+    border-bottom: 1px solid $color-primary-blue;
+    width: 100%;
+    text-align: left;
+    font-size: $font-size-regular;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: rem(10) 0;
+
+    @include media-breakpoint-up(large) {
+      border: 0;
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  &--lbl-icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(10) 0;
+
+    .a-ico {
+      margin-left: rem(16);
+    }
+  }
+}

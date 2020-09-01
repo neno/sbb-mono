@@ -1,0 +1,14 @@
+$color-primary-blue: #243b47;
+$color-primary-orange: #c8652b;
+$color-primary-white: #ffffff;
+
+$color-secondary-gray: #d5d5d5;
+$color-secondary-gray-light: #f4f4f4;
+
+:export {
+  primaryColorBlue: $color-primary-blue;
+  primaryColorWhite: $color-primary-white;
+  primaryColorOrange: $color-primary-orange;
+  secondaryColorGray: $color-secondary-gray;
+  secondaryColorGrayLight: $color-secondary-gray-light;
+}

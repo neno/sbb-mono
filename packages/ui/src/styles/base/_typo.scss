@@ -1,0 +1,36 @@
+h1,
+.h1 {
+  @extend %h1;
+}
+
+h2,
+.h2 {
+  @extend %h2;
+}
+
+h3,
+.h3 {
+  @extend %h3;
+}
+
+h4,
+.h4 {
+  @extend %h4;
+}
+
+body,
+p,
+ul,
+ol {
+  @extend %font-regular;
+}
+
+p,
+ul,
+ol {
+  @extend %block-margin;
+}
+
+[class$='--small'] {
+  @extend %font-small;
+}
