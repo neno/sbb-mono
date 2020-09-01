@@ -1,23 +1,12 @@
 {
-    "extends": [
-        "airbnb-typescript",
-        "airbnb/hooks",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:jest/recommended",
-        "prettier",
-        "prettier/react",
-        "prettier/@typescript-eslint",
-        "plugin:prettier/recommended"
-    ],
-    "plugins": ["react", "@typescript-eslint", "jest"],
     "env": {
-        "browser": true,
-        "es6": true,
-        "jest": true
+        "browser": true
     },
+    "extends": ["airbnb-typescript"],
     "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "$": true,
+        "CKEDITOR": true,
+        "jQuery": true
     },
     "overrides": [
         {
@@ -33,9 +22,11 @@
             "jsx": true
         },
         "ecmaVersion": 2018,
-        "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project": "tsconfig.json",
+        "sourceType": "module"
     },
+    "plugins": ["@typescript-eslint"],
+    "root": true,
     "rules": {
         "@typescript-eslint/indent": [
             "error",
@@ -45,6 +36,7 @@
             }
         ],
         "@typescript-eslint/no-use-before-define": "off",
+        "arrow-parens": ["error", "as-needed"],
         "class-methods-use-this": "off",
         "func-names": "off",
         "indent": ["error", 4],
@@ -63,6 +55,13 @@
         "react/destructuring-assignment": "off",
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ]
     }
 }
