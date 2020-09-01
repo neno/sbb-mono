@@ -1,0 +1,68 @@
+{
+    "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "prettier",
+        "prettier/react",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["react", "@typescript-eslint", "jest"],
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "overrides": [
+        {
+            "files": "*.vue",
+            "rules": {
+                "indent": "off"
+            }
+        }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "@typescript-eslint/indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 0
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": "off",
+        "class-methods-use-this": "off",
+        "func-names": "off",
+        "indent": ["error", 4],
+        "max-len": "off",
+        "no-console": [
+            "error",
+            {
+                "allow": ["error"]
+            }
+        ],
+        "no-param-reassign": "off",
+        "no-plusplus": "off",
+        "no-restricted-syntax": "off",
+        "no-use-before-define": "off",
+        "prefer-destructuring": "off",
+        "react/destructuring-assignment": "off",
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/prop-types": "off"
+    }
+}

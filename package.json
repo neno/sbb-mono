@@ -1,9 +1,10 @@
 {
-  "name": "sbb-mono",
-  "workspaces": [
-    "packages/*"
-  ],
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  }
+    "name": "sbb-mono",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    }
 }
