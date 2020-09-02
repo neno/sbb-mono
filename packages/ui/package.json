@@ -7,6 +7,7 @@
         "test": "echo testing ui",
         "storybook": "STORYBOOK_TIMEOUT=2000 start-storybook -p 6006 -s ./static",
         "build-storybook": "STORYBOOK_TIMEOUT=2000 build-storybook",
+        "lint": "lint-staged",
         "lint-script": "eslint \"src/**/*.js\" --fix",
         "lint-style": "stylelint \"src/**/*.{scss,vue}\" --fix"
     },
@@ -40,6 +41,8 @@
         "eslint-plugin-prettier": "^3.1.4",
         "eslint-plugin-react": "^7.20.6",
         "eslint-plugin-react-hooks": "4.0.0",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.13",
         "mini-css-extract-plugin": "^0.10.0",
         "node-sass": "^4.14.1",
         "postcss-loader": "^3.0.0",
@@ -53,5 +56,18 @@
         "webpack": "^4.44.1",
         "webpack-cli": "^3.3.12",
         "webpack-merge": "^5.1.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "eslint --cache --fix"
+        ],
+        "src/**/*.scss": [
+            "stylelint --fix"
+        ]
     }
 }
