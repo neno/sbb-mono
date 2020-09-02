@@ -7,8 +7,8 @@
         "test": "echo testing ui",
         "storybook": "STORYBOOK_TIMEOUT=2000 start-storybook -p 6006 -s ./static",
         "build-storybook": "STORYBOOK_TIMEOUT=2000 build-storybook",
-        "format": "prettier --write src/**/*.{js,jsx,stories.js,data.js}",
-        "lint": "eslint src/**/*.{js,jsx,stories.js,data.js}"
+        "lint-script": "eslint \"src/**/*.js\" --fix",
+        "lint-style": "stylelint \"src/**/*.{scss,vue}\" --fix"
     },
     "dependencies": {
         "react": "^16.13.1",
@@ -46,6 +46,9 @@
         "prettier": "^2.1.1",
         "sass-loader": "^9.0.3",
         "style-loader": "^1.2.1",
+        "stylelint": "^13.7.0",
+        "stylelint-config-sass-guidelines": "^7.1.0",
+        "stylelint-scss": "^3.18.0",
         "typescript": "^4.0.2",
         "webpack": "^4.44.1",
         "webpack-cli": "^3.3.12",
