@@ -9,7 +9,7 @@
         "build-storybook": "STORYBOOK_TIMEOUT=2000 build-storybook",
         "lint": "lint-staged",
         "lint-script": "eslint \"src/**/*.js\" --fix",
-        "lint-style": "stylelint \"src/**/*.{scss,vue}\" --fix"
+        "lint-style": "stylelint \"src/**/*.scss\" --fix"
     },
     "dependencies": {
         "react": "^16.13.1",
