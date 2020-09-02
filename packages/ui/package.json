@@ -8,7 +8,7 @@
         "storybook": "STORYBOOK_TIMEOUT=2000 start-storybook -p 6006 -s ./static",
         "build-storybook": "STORYBOOK_TIMEOUT=2000 build-storybook",
         "lint": "lint-staged",
-        "lint-script": "eslint \"src/**/*.js\" --fix",
+        "lint-script": "eslint \"src/**/*.{js,jsx}\" --fix",
         "lint-style": "stylelint \"src/**/*.scss\" --fix"
     },
     "dependencies": {
@@ -63,7 +63,7 @@
         }
     },
     "lint-staged": {
-        "src/**/*.js": [
+        "src/**/*.{js,jsx}": [
             "eslint --cache --fix"
         ],
         "src/**/*.scss": [
