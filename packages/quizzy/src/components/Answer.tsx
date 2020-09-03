@@ -1,5 +1,5 @@
-import React, { memo } from "react";
-import { AnswerProps } from "../models.d";
+import React, { memo } from 'react';
+import { AnswerProps } from '../models.d';
 
 const Answer: React.FC<AnswerProps> = memo(
     ({
@@ -36,13 +36,13 @@ const Answer: React.FC<AnswerProps> = memo(
         let labelClassNames = `a-quiz-answer a-quiz-answer--${questionType}`;
         if (showResults) {
             labelClassNames += correct
-                ? " a-quiz-answer--correct"
-                : " a-quiz-answer--incorrect";
+                ? ' a-quiz-answer--correct'
+                : ' a-quiz-answer--incorrect';
         }
 
         return (
             <label htmlFor={`answer-${id}`} className={labelClassNames}>
-                {questionType === "single-choice" ? (
+                {questionType === 'single-choice' ? (
                     <RadioButton />
                 ) : (
                     <Checkbox />

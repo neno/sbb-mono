@@ -20,7 +20,7 @@ export interface IQuestion {
     answers: IAnswer[];
 }
 
-export type QuestionType = "multiple-choice" | "single-choice";
+export type QuestionType = 'multiple-choice' | 'single-choice';
 
 export interface IAnswer {
     id: number;
@@ -38,12 +38,12 @@ export interface IApiData {
     quiz: IQuiz;
 }
 
-export const TOGGLE_ANSWER = "TOGGLE_ANSWER";
-export const SHOW_RESULTS = "SHOW_RESULTS";
-export const RESET_QUIZ = "RESET_QUIZ";
-export const FETCH_LOADING = "FETCH_LOADING";
-export const FETCH_RESPONSE_COMPLETE = "FETCH_RESPONSE_COMPLETE";
-export const FETCH_ERROR = "FETCH_ERROR";
+export const TOGGLE_ANSWER = 'TOGGLE_ANSWER';
+export const SHOW_RESULTS = 'SHOW_RESULTS';
+export const RESET_QUIZ = 'RESET_QUIZ';
+export const FETCH_LOADING = 'FETCH_LOADING';
+export const FETCH_RESPONSE_COMPLETE = 'FETCH_RESPONSE_COMPLETE';
+export const FETCH_ERROR = 'FETCH_ERROR';
 
 export type QuizAction =
     | { type: typeof TOGGLE_ANSWER; payload: { id: number } }

@@ -1,10 +1,10 @@
-import React, { useReducer, FormEventHandler } from "react";
-import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from "../models.d";
-import { apiEndpoint } from "../config";
-import reducer, { INITIAL_STATE } from "../reducer";
-import useFetch from "../useFetch";
-import Question from "./Question";
-import Result from "./Result";
+import React, { useReducer, FormEventHandler } from 'react';
+import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models.d';
+import { apiEndpoint } from '../config';
+import reducer, { INITIAL_STATE } from '../reducer';
+import useFetch from '../useFetch';
+import Question from './Question';
+import Result from './Result';
 
 const App: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);

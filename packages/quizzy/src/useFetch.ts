@@ -1,12 +1,12 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import {
     QuizAction,
     FETCH_LOADING,
     FETCH_RESPONSE_COMPLETE,
     FETCH_ERROR,
     IApiData,
-} from "./models.d";
-import { excludeApi } from "./config";
+} from './models.d';
+import { excludeApi } from './config';
 
 const useFetch = (url: string, dispatch: React.Dispatch<QuizAction>): void => {
     useEffect(() => {
@@ -16,10 +16,10 @@ const useFetch = (url: string, dispatch: React.Dispatch<QuizAction>): void => {
             try {
                 let result: IApiData;
                 if (
-                    process.env.NODE_ENV === "production" &&
+                    process.env.NODE_ENV === 'production' &&
                     !excludeApi.includes(window.location.hostname)
                 ) {
-                    const root = document.getElementById("root");
+                    const root = document.getElementById('root');
                     const apiUrl = root?.dataset.api;
                     if (!apiUrl) {
                         throw new Error(
@@ -33,7 +33,7 @@ const useFetch = (url: string, dispatch: React.Dispatch<QuizAction>): void => {
                         payload: { result },
                     });
                 } else {
-                    result = await import("./quiz.json");
+                    result = await import('./quiz.json');
                 }
                 dispatch({
                     type: FETCH_RESPONSE_COMPLETE,

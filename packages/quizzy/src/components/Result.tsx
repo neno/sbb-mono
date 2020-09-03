@@ -1,6 +1,6 @@
-import React from "react";
-import { IResult, IQuestion } from "../models.d";
-import { isCorrectlyAnswered } from "../helpers/helpers";
+import React from 'react';
+import { IResult, IQuestion } from '../models.d';
+import { isCorrectlyAnswered } from '../helpers/helpers';
 
 interface Props {
     results: IResult[];

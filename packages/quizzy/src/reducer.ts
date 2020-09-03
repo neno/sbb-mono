@@ -8,7 +8,7 @@ import {
     IQuiz,
     SHOW_RESULTS,
     RESET_QUIZ,
-} from "./models.d";
+} from './models.d';
 
 export const INITIAL_STATE: IState = {
     quizReset: null,

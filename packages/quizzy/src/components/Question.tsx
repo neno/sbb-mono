@@ -1,7 +1,7 @@
-import React from "react";
-import { IQuestion } from "../models.d";
-import Answer from "./Answer";
-import { isCorrectlyAnswered } from "../helpers/helpers";
+import React from 'react';
+import { IQuestion } from '../models.d';
+import Answer from './Answer';
+import { isCorrectlyAnswered } from '../helpers/helpers';
 
 interface Props extends IQuestion {
     toggleAnswer: (id: number) => void;
@@ -12,10 +12,10 @@ const getQuestionClassNames = (
     showResults: boolean,
     isCorrect: boolean
 ): string => {
-    let questionClassNames = "o-question";
+    let questionClassNames = 'o-question';
     if (showResults) {
         questionClassNames += ` o-question--${
-            isCorrect ? "correct" : "incorrect"
+            isCorrect ? 'correct' : 'incorrect'
         }`;
     }
 
@@ -34,10 +34,10 @@ const Question: React.FC<Props> = ({
     showResults,
 }) => {
     const Correct = () => (
-        <span dangerouslySetInnerHTML={{ __html: "&#10003;" }} />
+        <span dangerouslySetInnerHTML={{ __html: '&#10003;' }} />
     );
     const Incorrect = () => (
-        <span dangerouslySetInnerHTML={{ __html: "&#10005;" }} />
+        <span dangerouslySetInnerHTML={{ __html: '&#10005;' }} />
     );
 
     const isCorrect = isCorrectlyAnswered(answers);
