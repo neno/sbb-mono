@@ -1,7 +1,6 @@
-$transition-time-default: 340ms;
-
-$font-size-h1: rem(30);
-$font-size-h1-large: rem(50);
+$font-size-h1: em(28, 15);
+$font-size-h1-mobile: em(30, 15);
+$font-size-h1-tablet: em(40, 15);
 
 $font-size-h2: rem(24);
 $font-size-h2-large: rem(40);
@@ -12,43 +11,6 @@ $font-size-h3-large: rem(30);
 $font-size-h4: rem(16);
 $font-size-h4-large: rem(20);
 
-$font-size-regular: rem(16);
-$font-size-regular-large: rem(20);
-
-$logoHeight: (
-  zero: rem(26),
-  medium: rem(32),
-  large: rem(48)
-);
-
-$logo-ratio: 3.125;
-
-$headerPaddings: (
-  zero: (
-    padding-top: rem(15),
-    padding-right: rem(15),
-    padding-bottom: rem(15),
-    padding-left: rem(15)
-  ),
-  medium: (
-    padding-top: rem(15),
-    padding-right: rem(15),
-    padding-bottom: rem(15),
-    padding-left: rem(15)
-  ),
-  large: (
-    padding-top: rem(45),
-    padding-right: rem(50),
-    padding-bottom: rem(42),
-    padding-left: rem(50)
-  )
-);
-
-// Ascending order of z-index items
-// The further down the item is placed here, the higher the index
-$z-indexes: (
-  page-layout: (
-    main,
-    header
-  )
-);
+$font-size-regular: rem(15);
+$font-size-regular-xlarge: rem(23);
+$font-size-regular-xxlarge: rem(30);

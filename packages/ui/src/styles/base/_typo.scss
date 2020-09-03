@@ -1,28 +1,21 @@
 h1,
 .h1 {
-  @extend %h1;
+  @extend %h-1;
 }
 
 h2,
 .h2 {
-  @extend %h2;
+  @extend %h-2;
 }
 
 h3,
 .h3 {
-  @extend %h3;
+  @extend %h-3;
 }
 
 h4,
 .h4 {
-  @extend %h4;
-}
-
-body,
-p,
-ul,
-ol {
-  @extend %font-regular;
+  @extend %h-4;
 }
 
 p,
@@ -31,6 +24,14 @@ ol {
   @extend %block-margin;
 }
 
-[class$='--small'] {
-  @extend %font-small;
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }

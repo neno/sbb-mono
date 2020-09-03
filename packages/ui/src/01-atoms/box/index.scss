@@ -1,0 +1,13 @@
+.a-box {
+  background-color: $color-red;
+  color: $color-white;
+  padding: rem(20);
+
+  &[aria-visible='false'] {
+    display: none;
+  }
+
+  &[aria-visible='true'] {
+    display: inherit;
+  }
+}

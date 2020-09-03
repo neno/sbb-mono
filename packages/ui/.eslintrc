@@ -40,6 +40,11 @@
         "class-methods-use-this": "off",
         "func-names": "off",
         "indent": ["error", 4],
+        "jsx-a11y/label-has-associated-control": [ 2, {
+            "required": {
+                "every": [ "id" ]
+            }
+        }],
         "max-len": "off",
         "no-console": [
             "error",

@@ -1,0 +1,11 @@
+.m-search-form {
+  position: relative;
+
+  &__submit {
+    height: $input-height - $input-border-width * 2;
+    position: absolute;
+    right: $input-border-width;
+    top: $input-border-width;
+    width: $search-submit-min-width;
+  }
+}

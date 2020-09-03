@@ -1,7 +1,7 @@
 import '../styles/index.scss';
 import Collapsible from './libs/Collapsible';
-import Nav from './libs/Nav';
-import Accordion from './libs/Accordion';
+import Tabs from './libs/Tabs';
+import FormValidation from './libs/FormValidation';
 
 const timeout = process.env.STORYBOOK_TIMEOUT || 0;
 
@@ -15,11 +15,11 @@ setTimeout(() => {
         Collapsible(el);
     });
 
-    document.querySelectorAll("[data-module='nav']").forEach(el => {
-        Nav(el);
+    document.querySelectorAll("[data-module='tabs']").forEach(el => {
+        Tabs(el);
     });
 
-    document.querySelectorAll("[data-module='accordion']").forEach(el => {
-        Accordion(el);
+    document.querySelectorAll("[data-module='form-validation']").forEach(el => {
+        FormValidation(el);
     });
 }, timeout);

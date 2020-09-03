@@ -1,11 +1,18 @@
+/* stylelint-disable */
 .sb-show-main {
   #root {
     > .l-grid {
       .l-col {
         background-color: #ccc;
-        text-align: center;
         padding: 1rem;
+        text-align: center;
       }
+    }
+
+    > .a-icon {
+      height: 2.25rem;
+      width: 2.25rem;
     }
   }
 }
+/* stylelint-enable */

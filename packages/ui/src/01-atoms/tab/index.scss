@@ -1,0 +1,66 @@
+.a-tab {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: em(20, 15);
+  font-weight: 300;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0 0 em(9, 20);
+  position: relative;
+
+  @include media-breakpoint-up(mobile) {
+    font-size: em(26, 15);
+    padding-bottom: em(21, 26);
+
+    &::after {
+      height: em(1, 26);
+    }
+
+    + .a-tab {
+      margin-left: em(42, 26);
+    }
+  }
+
+  &::after {
+    background: currentColor;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: em(1, 20);
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+    width: 0;
+    will-change: width;
+  }
+
+  + .a-tab {
+    margin-left: em(18, 20);
+  }
+
+  &:not(&--active) {
+    @include hover {
+      color: $color-red-125;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:focus {
+      color: $color-red-125;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &--active {
+    &::after {
+      width: 100%;
+    }
+  }
+}

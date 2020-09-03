@@ -1,14 +1,25 @@
-$color-primary-blue: #243b47;
-$color-primary-orange: #c8652b;
-$color-primary-white: #ffffff;
+$color-red: #eb0000;
+$color-red-125: #c60018;
+$color-white: #fff;
+$color-milk: #f6f6f6;
+$color-cloud: #e5e5e5;
+$color-silver: #dcdcdc;
+$color-aluminum: #d2d2d2;
+$color-graphite: #b7b7b7;
+$color-storm: #a8a8a8;
+$color-metal: #767676;
+$color-granite: #686868;
+$color-iron: #444;
+$color-black: #000;
 
-$color-secondary-gray: #d5d5d5;
-$color-secondary-gray-light: #f4f4f4;
-
+/* stylelint-disable */
 :export {
-  primaryColorBlue: $color-primary-blue;
-  primaryColorWhite: $color-primary-white;
-  primaryColorOrange: $color-primary-orange;
-  secondaryColorGray: $color-secondary-gray;
-  secondaryColorGrayLight: $color-secondary-gray-light;
+  colorAluminum: $color-aluminum;
+  colorGranite: $color-granite;
+  colorGraphite: $color-graphite;
+  colorMetal: $color-metal;
+  colorRed: $color-red;
+  colorRed125: $color-red-125;
+  colorWhite: $color-white;
 }
+/* stylelint-enable */

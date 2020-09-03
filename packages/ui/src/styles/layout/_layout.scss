@@ -1,75 +1,67 @@
-$offsetCurve: (
+$offset-curve: (
   zero: rem(15),
   micro: rem(15),
   small: rem(15),
   medium: rem(28),
   wide: 0,
-  ultra: 0
+  ultra: 0,
 );
 
-$maxWidthCurve: (
-  zero: calc(100% - 2 * #{map-get($offsetCurve, "zero")}),
-  micro: calc(100% - 2 * #{map-get($offsetCurve, "micro")}),
-  small: calc(100% - 2 * #{map-get($offsetCurve, "small")}),
-  medium: calc(100% - 2 * #{map-get($offsetCurve, "medium")}),
+$max-width-curve: (
+  zero: calc(100% - 2 * #{map-get($offset-curve, 'zero')}),
+  micro: calc(100% - 2 * #{map-get($offset-curve, 'micro')}),
+  small: calc(100% - 2 * #{map-get($offset-curve, 'small')}),
+  medium: calc(100% - 2 * #{map-get($offset-curve, 'medium')}),
   wide: rem(1134),
-  ultra: rem(1248)
+  ultra: rem(1248),
 );
 
 @mixin constrainer {
-  max-width: map-get($maxWidthCurve, "zero");
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  max-width: map-get($max-width-curve, 'zero');
+  width: 100%;
 
   @include media-breakpoint-up(micro) {
-    max-width: map-get($maxWidthCurve, "micro");
+    max-width: map-get($max-width-curve, 'micro');
     // background-color: lightblue;
   }
 
   @include media-breakpoint-up(small) {
-    max-width: map-get($maxWidthCurve, "small");
+    max-width: map-get($max-width-curve, 'small');
     // background-color: lightcoral;
   }
 
   @include media-breakpoint-up(medium) {
-    max-width: map-get($maxWidthCurve, "medium");
+    max-width: map-get($max-width-curve, 'medium');
     // background-color: lightgreen;
   }
 
   @include media-breakpoint-up(wide) {
-    max-width: map-get($maxWidthCurve, "wide");
+    max-width: map-get($max-width-curve, 'wide');
     // background-color: lightpink;
   }
 
   @include media-breakpoint-up(ultra) {
-    max-width: map-get($maxWidthCurve, "ultra");
+    max-width: map-get($max-width-curve, 'ultra');
     // background-color: lightskyblue;
   }
 }
 
-$maxWidthCurveFull: (
+$max-width-curve-full: (
   zero: 100%,
-  ultra: rem(2500)
+  ultra: rem(2500),
 );
 
-@mixin maxWidthCurveFull {
-  max-width: map-get($maxWidthCurveFull, "zero");
-  width: 100%;
+@mixin max-width-curve-full {
   margin-left: auto;
   margin-right: auto;
+  max-width: map-get($max-width-curve-full, 'zero');
+  width: 100%;
 
   @include media-breakpoint-up(ultra) {
-    max-width: map-get($maxWidthCurveFull, "ultra");
+    max-width: map-get($max-width-curve-full, 'ultra');
     // background-color: lightskyblue;
-  }
-}
-
-.l-component {
-  padding-bottom: rem(60);
-
-  .l-component {
-    padding-bottom: 0;
   }
 }
 
@@ -86,7 +78,7 @@ $maxWidthCurveFull: (
     h3,
     h4,
     p {
-      width: colWidth(3, 4);
+      width: col-width(3, 4);
     }
   }
 
@@ -102,20 +94,17 @@ $maxWidthCurveFull: (
 }
 
 .l-constrainer-full {
-  @include maxWidthCurveFull;
+  @include max-width-curve-full;
 }
 
-#main {
-  display: block;
-  z-index: z-index(page-layout, main);
-  position: relative;
-  padding-top: header-height($headerPaddings, $logoHeight, zero);
+.l-divider-big {
+  margin-bottom: em(48, 15);
 
-  @include media-breakpoint-up(medium) {
-    padding-top: header-height($headerPaddings, $logoHeight, medium);
+  @include media-breakpoint-up(mobile) {
+    margin-bottom: em(72, 15);
   }
 
-  @include media-breakpoint-up(large) {
-    padding-top: header-height($headerPaddings, $logoHeight, large);
+  @include media-breakpoint-up(tablet) {
+    margin-bottom: em(96, 15);
   }
 }

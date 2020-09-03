@@ -1,0 +1,25 @@
+.a-meta-link {
+  align-items: center;
+  color: $color-metal;
+  display: flex;
+  font-size: rem(14);
+  line-height: 17/14;
+  text-decoration: none;
+
+  @include media-breakpoint-up(wide) {
+    font-size: rem(21);
+  }
+
+  @include media-breakpoint-up(ultra) {
+    font-size: rem(28);
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-red-125;
+  }
+
+  > .a-icon {
+    margin-right: em(4, 14);
+  }
+}

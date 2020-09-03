@@ -1,0 +1,41 @@
+.a-notification {
+  align-items: center;
+  background-color: $color-granite;
+  color: $color-white;
+  display: flex;
+  line-height: (23 / 15);
+  padding: em(22, 15) em(24, 15) em(22, 15) em(16, 15);
+
+  > .a-icon {
+    height: em(36, 15);
+    margin-right: em(16, 15);
+    width: em(36, 15);
+  }
+
+  &--error {
+    background-color: $color-red;
+  }
+
+  &__error-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      &::before {
+        content: '/';
+        padding: 0 em(8, 15);
+      }
+
+      &:first-child::before {
+        content: none;
+      }
+
+      > a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

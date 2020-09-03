@@ -1,0 +1,17 @@
+.o-form {
+  &__list {
+    @include no-bullets();
+  }
+
+  &__list-item + &__list-item {
+    margin-top: em(24, 15);
+  }
+
+  &__footer {
+    margin-top: em(48, 15);
+  }
+
+  &__notification {
+    @extend .l-divider-big;
+  }
+}

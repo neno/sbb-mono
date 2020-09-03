@@ -1,0 +1,17 @@
+.a-icon {
+  height: em(24, 15);
+  width: em(24, 15);
+
+  path,
+  polyline {
+    fill: currentColor;
+  }
+
+  &--use-stroke {
+    path,
+    polyline {
+      fill: none;
+      stroke: currentColor;
+    }
+  }
+}

@@ -1,48 +1,46 @@
 $grid-gutter: 30px;
 
-@include media-breakpoint-up(medium) {
+.l-grid {
+  @include grid-fallback($grid-gutter);
+
+  @for $i from 2 through 4 {
+    &--#{$i} {
+      @include grid-fallback-cols($i, $grid-gutter);
+    }
+  }
+}
+
+@supports (display: grid) {
   .l-grid {
-    @include grid-fallback($grid-gutter);
+    grid-gap: $grid-gutter;
+
+    grid-template-rows: auto;
+    margin-bottom: 0;
+    transform: none;
+    @include media-breakpoint-up(medium) {
+      display: grid;
+    }
+
+    .l-col {
+      width: 100%;
+    }
 
     @for $i from 2 through 4 {
       &--#{$i} {
-        @include grid-fallback-cols($i, $grid-gutter);
+        grid-template-columns: repeat($i, 1fr);
       }
     }
   }
 
-  @supports (display: grid) {
-    .l-grid {
-      @include media-breakpoint-up(medium) {
-        display: grid;
-      }
+  .l-col {
+    grid-column: auto;
+    grid-row: auto;
+    margin: 0;
+  }
 
-      grid-template-rows: auto;
-      grid-gap: $grid-gutter;
-      transform: none;
-      margin-bottom: 0;
-
-      @for $i from 2 through 4 {
-        &--#{$i} {
-          grid-template-columns: repeat($i, 1fr);
-        }
-      }
-
-      .l-col {
-        width: 100%;
-        margin: 0;
-      }
-    }
-
-    .l-col {
-      grid-column: auto;
-      grid-row: auto;
-    }
-
-    @for $i from 2 through 4 {
-      .l-col--#{$i} {
-        grid-column: auto / span #{$i};
-      }
+  @for $i from 2 through 4 {
+    .l-col--#{$i} {
+      grid-column: auto / span #{$i};
     }
   }
 }

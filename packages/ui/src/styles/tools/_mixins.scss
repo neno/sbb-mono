@@ -11,26 +11,22 @@
 }
 
 @mixin hover($not: null) {
-  &:hover:not(.is-disabled):not([aria-disabled="true"]):not(:disabled) {
+  &:hover:not(.is-disabled):not([aria-disabled='true']):not(:disabled) {
     @content;
   }
 }
 
 @mixin no-bullets() {
   list-style: none;
-
-  &,
-  li {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
 }
 
 @mixin inline-list {
   @include no-bullets();
+  align-items: center;
 
   display: inline-flex;
-  align-items: center;
 }
 
 @mixin h-list {
@@ -48,22 +44,52 @@
 @mixin grid-fallback($gutter) {
   display: flex;
   flex-wrap: wrap;
-  width: calc(100% + #{$gutter});
-  transform: translate3d(-#{$gutter/2}, -#{$gutter/2}, 0);
   margin-bottom: -#{$gutter/2};
+  transform: translate3d(-#{$gutter/2}, -#{$gutter/2}, 0);
+  width: calc(100% + #{$gutter});
 }
 
-@mixin grid-fallback-cols($cols, $gutter, $sel: ".l-col") {
+@mixin grid-fallback-cols($cols, $gutter, $sel: '.l-col') {
   @for $i from 1 through $cols {
     @if $i == 1 {
       #{$sel} {
-        width: grid-col-width-ie($i, $cols, $gutter);
         margin: $gutter/2;
+        width: grid-col-width-ie($i, $cols, $gutter);
       }
     }
 
     #{$sel}--#{$i} {
       width: grid-col-width-ie($i, $cols, $gutter);
     }
+  }
+}
+
+@mixin hide-visually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin placeholder {
+  /* stylelint-disable-next-line */
+  &::input-placeholder {
+    @content;
+  }
+
+  &:placeholder {
+    @content;
+  }
+
+  &::placeholder {
+    @content;
+  }
+
+  &:input-placeholder {
+    @content;
   }
 }

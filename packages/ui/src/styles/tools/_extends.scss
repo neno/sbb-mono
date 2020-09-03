@@ -1,84 +1,66 @@
-%h1,
-%h2,
-%h3,
-%h3,
-%h4,
-%button {
-  font-family: $font-secondary;
-  font-weight: 700;
+%h-1,
+%h-2,
+%h-3,
+%h-3,
+%h-4 {
+  font-weight: 100;
   line-height: 1.2;
-  margin-top: 0;
   margin-bottom: rem(20);
+  margin-top: 0;
 }
 
-%h2,
-%h3,
-%h4,
-%button {
-  font-weight: 500;
-}
-
-%h1 {
+%h-1 {
   font-size: $font-size-h1;
 
-  @include media-breakpoint-up(large) {
-    font-size: $font-size-h1-large;
+  @include media-breakpoint-up(mobile) {
+    font-size: $font-size-h1-mobile;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    font-size: $font-size-h1-tablet;
   }
 }
 
-%h2 {
+%h-2 {
   font-size: $font-size-h2;
   margin-bottom: rem(25);
 
-  @include media-breakpoint-up(large) {
-    font-size: $font-size-h2-large;
-    margin-bottom: rem(30);
-  }
+  // @include media-breakpoint-up(large) {
+  //   font-size: $font-size-h2-large;
+  //   margin-bottom: rem(30);
+  // }
 }
 
-%h3 {
+%h-3 {
   font-size: $font-size-h3;
 
-  @include media-breakpoint-up(large) {
-    font-size: $font-size-h3-large;
-  }
+  // @include media-breakpoint-up(large) {
+  //   font-size: $font-size-h3-large;
+  // }
 }
 
-%h4 {
+%h-4 {
   font-size: $font-size-regular;
   line-height: 1.25;
 
-  @include media-breakpoint-up(large) {
-    font-size: $font-size-regular-large;
-    line-height: 1.2;
-  }
+  // @include media-breakpoint-up(large) {
+  //   font-size: $font-size-regular-large;
+  //   line-height: 1.2;
+  // }
 }
 
 %font-regular {
-  font-family: $font-primary;
-  font-weight: 400;
   font-size: $font-size-regular;
-  line-height: 1.25;
+  font-weight: 400;
+  line-height: (26 / 15);
 
-  @include media-breakpoint-up(large) {
-    font-size: $font-size-regular-large;
-    line-height: 1.2;
+  @include media-breakpoint-up(wide) {
+    font-size: $font-size-regular-xlarge;
   }
-}
 
-%font-small {
-  @extend %font-regular;
-
-  @include media-breakpoint-up(large) {
-    font-size: $font-size-regular;
-    line-height: 1.25;
+  @include media-breakpoint-up(ultra) {
+    font-size: $font-size-regular-xxlarge;
   }
-}
-
-%button {
-  font-size: $font-size-regular-large;
-  font-weight: 500;
-  margin-bottom: 0;
 }
 
 %block-margin {

@@ -1,20 +1,30 @@
 import React from 'react';
+import Icon from '../icon';
 
 const Button = ({
-    children, handleClick, classes = [], attr = {},
+    children,
+    handleClick,
+    classes = [],
+    attr = {},
+    type,
+    url,
+    arrows,
 }) => {
     const cls = ['a-btn', ...classes];
-
+    const CustomTag = url ? 'a' : 'button';
     return (
-        <button
-            type="button"
+        <CustomTag
             onClick={handleClick}
             className={cls.join(' ')}
+            type={`${type || 'button'}`}
+            href={url}
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...attr}
         >
+            {arrows && <Icon name="arrow-right" />}
             {children}
-        </button>
+            {arrows && <Icon name="arrow-right" />}
+        </CustomTag>
     );
 };
 
