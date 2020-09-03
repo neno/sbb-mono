@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Answer Multiple-Choice Snapshot 1`] = `
+<label
+  class="a-quiz-answer a-quiz-answer--multiple-choice"
+  for="answer-101"
+>
+  <input
+    id="answer-101"
+    name="answer-101"
+    type="checkbox"
+  />
+  Option 1
+</label>
+`;
+
+exports[`Answer Single-Choice Snapshot 1`] = `
+<label
+  class="a-quiz-answer a-quiz-answer--single-choice"
+  for="answer-101"
+>
+  <input
+    id="answer-101"
+    name="answer-100"
+    type="radio"
+  />
+  Option 1
+</label>
+`;

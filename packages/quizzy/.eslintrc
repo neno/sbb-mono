@@ -1,0 +1,72 @@
+{
+    "env": {
+        "browser": true
+    },
+    "extends": ["airbnb-typescript"],
+    "globals": {
+        "$": true,
+        "CKEDITOR": true,
+        "jQuery": true
+    },
+    "overrides": [
+        {
+            "files": "*.vue",
+            "rules": {
+                "indent": "off"
+            }
+        }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "project": "tsconfig.json",
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "root": true,
+    "rules": {
+        "@typescript-eslint/indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 0
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": "off",
+        "arrow-parens": ["error", "as-needed"],
+        "class-methods-use-this": "off",
+        "func-names": "off",
+        "indent": ["error", 4],
+        "jsx-a11y/label-has-associated-control": [ 2, {
+            "required": {
+                "every": [ "id" ]
+            }
+        }],
+        "max-len": "off",
+        "no-console": [
+            "error",
+            {
+                "allow": ["error"]
+            }
+        ],
+        "no-param-reassign": "off",
+        "no-plusplus": "off",
+        "no-restricted-syntax": "off",
+        "no-use-before-define": "off",
+        "prefer-destructuring": "off",
+        "react/destructuring-assignment": "off",
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/prop-types": "off",
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ]
+    }
+}

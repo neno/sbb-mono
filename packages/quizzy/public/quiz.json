@@ -1,0 +1,71 @@
+{
+    "quiz": {
+        "title": "Selbsttest",
+        "questions": [
+            {
+                "id": 100,
+                "title": "Frage 1",
+                "text": "Erklärungstext 1",
+                "questionType": "single-choice",
+                "answers": [
+                    {
+                        "id": 101,
+                        "title": "Antwort 1.1",
+                        "correct": true
+                    },
+                    {
+                        "id": 102,
+                        "title": "Antwort 1.2",
+                        "correct": false
+                    },
+                    {
+                        "id": 103,
+                        "title": "Antwort 1.3",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "id": 200,
+                "title": "Frage 2",
+                "text": "Erklärungstext 2",
+                "questionType": "multiple-choice",
+                "answers": [
+                    {
+                        "id": 201,
+                        "title": "Antwort 2.1",
+                        "correct": false
+                    },
+                    {
+                        "id": 202,
+                        "title": "Antwort 2.2",
+                        "correct": true
+                    },
+                    {
+                        "id": 203,
+                        "title": "Antwort 2.3",
+                        "correct": false
+                    }
+                ]
+            }
+        ],
+        "results": [
+            {
+                "score": 0,
+                "text": "Leider haben Sie keine Frage richtig beantwortet"
+            },
+            {
+                "score": 50,
+                "text": "Sie haben %%% der Fragen richtig beantwortet"
+            },
+            {
+                "score": 75,
+                "text": "Sehr gut! Sie haben %%% der Fragen richtig beantwortet"
+            },
+            {
+                "score": 100,
+                "text": "Gratulation! Sie haben alle Frage richtig beantwortet"
+            }
+        ]
+    }
+}
