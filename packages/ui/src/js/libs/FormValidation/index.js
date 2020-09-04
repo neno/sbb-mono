@@ -1,5 +1,6 @@
 import createModule from '../create-module';
 import hasError from './hasError';
+import Notification from '../Notification';
 
 const Tabs = createModule({
     options: () => ({
@@ -7,6 +8,10 @@ const Tabs = createModule({
         errorClass: 'a-error',
     }),
     constructor: ({ el, state, options }) => {
+        const notification = new Notification(el, {
+            class: 'a-notification a-notification--error',
+        });
+
         const handleSubmit = event => {
             const fields = event.target.elements;
 
@@ -23,10 +28,11 @@ const Tabs = createModule({
                 }
             }
 
-            // If there are errrors, don't submit form and focus on first element with error
+            // If there are errors, don't submit form and focus on first element with error
             if (hasErrors) {
                 event.preventDefault();
-                hasErrors.focus();
+                notification.init();
+                // hasErrors.focus();
             }
         };
 

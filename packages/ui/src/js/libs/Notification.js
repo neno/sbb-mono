@@ -1,90 +1,46 @@
-// import createModule from './create-module';
+import createModule from './create-module';
 
-// const Notification = createModule({
-//     options: () => ({
-//         class: 'a-notification',
-//     }),
-//     constructor: ({ el, state, options }) => {
-//         let instance;
+const Notification = createModule({
+    options: () => ({
+        class: 'a-notification',
+    }),
+    constructor: ({ el, state, options }) => {
+        const addContent = () => {
 
-//         const handleSubmit = event => {
-//             const fields = event.target.elements;
+        };
 
-//             // Validate each field
-//             // Store the first field with an error to a variable so we can bring it into focus later
-//             let hasErrors;
-//             for (let i = 0; i < fields.length; i++) {
-//                 const error = hasError(fields[i]);
-//                 if (error) {
-//                     showError(fields[i], error);
-//                     if (!hasErrors) {
-//                         hasErrors = fields[i];
-//                     }
-//                 }
-//             }
+        const createContainer = () => {
+            let container = el.querySelector(options.class);
 
-//             // If there are errrors, don't submit form and focus on first element with error
-//             if (hasErrors) {
-//                 event.preventDefault();
-//                 hasErrors.focus();
-//             }
-//         };
+            if (!container) {
+                container = document.createElement('div');
+                container.className = options.class;
+                el.insertBefore(container, el.firstChild);
+            }
+        };
 
-//         const createContainer = () => {
-//             let message = el.querySelector(`#error-for-${id}`);
+        const createNotification = () => {
+            createContainer();
+            addContent();
+        };
 
-//             if (!message) {
-//                 message = document.createElement('div');
-//                 message.className = options.errorClass;
-//                 message.id = `error-for-${id}`;
-//                 field.parentNode.insertBefore(message, field.nextSibling);
-//             }
+        const destoryNotification = () => {
+            const container = el.querySelector(options.class);
+            container.parentNode.removeChild(container);
+        };
 
-//             message.innerHTML = error;
-//             message.style.display = 'block';
-//             message.style.visibility = 'visible';
-//         };
+        // Public Methods
+        state.init = () => {
+            createNotification();
+        };
 
-//         const setInputAsInvalid = (field, id) => {
-//             field.classList.add(options.fieldErrorClass);
-//             field.setAttribute('aria-describedby', `error-for-${id}`);
-//         };
+        state.destroy = () => {
+            destoryNotification();
+        };
 
-//         const showError = (field, error) => {
-//             const id = field.id || field.name;
-//             if (!id) return;
+        // state.init();
+        return state;
+    },
+});
 
-//             createErrorMessage(field, error, id);
-//             setInputAsInvalid(field, id);
-//         };
-
-//         const hideErrorMessage = (field, id) => {
-//             // Check if an error message is in the DOM
-//             const message = field.form.querySelector(`#error-for-${id}`);
-//             if (!message) return;
-
-//             // If so, hide it
-//             message.innerHTML = '';
-//             message.style.display = 'none';
-//             message.style.visibility = 'hidden';
-//         };
-
-//         const createNotification = () => {
-//             const message = field.form.querySelector(`#error-for-${id}`);
-//         };
-
-//         // Public Methods
-//         state.init = () => {
-//             createNotification();
-//         };
-
-//         state.destroy = () => {
-
-//         };
-
-//         state.init();
-//         return state;
-//     },
-// });
-
-// export default Notification;
+export default Notification;
