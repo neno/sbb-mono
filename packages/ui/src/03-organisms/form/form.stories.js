@@ -28,6 +28,7 @@ export const Default = () => renderToStaticMarkup(
                         attr={{
                             id: 'firstname',
                             name: 'firstname',
+                            'data-error-message-missing': 'Custom error for missing text',
                         }}
                     />
                 </FormField>
@@ -41,6 +42,21 @@ export const Default = () => renderToStaticMarkup(
                         attr={{
                             id: 'lastname',
                             name: 'lastname',
+                        }}
+                    />
+                </FormField>
+            </li>
+            <li className="o-form__list-item">
+                <FormField>
+                    <Label htmlFor="email">
+                        Email
+                    </Label>
+                    <Input
+                        type="email"
+                        attr={{
+                            id: 'email',
+                            name: 'email',
+                            'data-error-message-type-mismatch': 'Custom error for type mismatch',
                         }}
                     />
                 </FormField>

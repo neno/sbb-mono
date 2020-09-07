@@ -9,11 +9,20 @@ export default function hasError(field) {
     if (validity.valid) return undefined;
 
     // If field is required and empty
-    if (validity.valueMissing) return 'Please fill out this field.';
+    if (validity.valueMissing) {
+        if (field.hasAttribute('data-error-message-missing')) {
+            return field.getAttribute('data-error-message-missing');
+        }
+        return 'Please fill out this field.';
+    }
 
     // If not the right type
     if (validity.typeMismatch) {
     // Email
+
+        if (field.hasAttribute('data-error-message-type-mismatch')) {
+            return field.getAttribute('data-error-message-type-mismatch');
+        }
         if (field.type === 'email') return 'Please enter an email address.';
 
         // URL
