@@ -3,33 +3,55 @@ import createModule from './create-module';
 const Notification = createModule({
     options: () => ({
         class: 'a-notification',
+        textContainerClass: 'a-notification__text',
     }),
     constructor: ({ el, state, options }) => {
-        const addContent = () => {
+        let container;
+        let textContainer;
 
+        const addIcon = () => {
+            container.innerHTML = options.icon;
+        };
+
+        const addContent = content => {
+            textContainer.innerHTML = content;
+        };
+
+        const addTextContainer = () => {
+            textContainer = document.createElement('div');
+            textContainer.className = options.textContainerClass;
+            container.appendChild(textContainer);
         };
 
         const createContainer = () => {
-            let container = el.querySelector(options.class);
+            container = el.querySelector(options.class);
 
             if (!container) {
                 container = document.createElement('div');
                 container.className = options.class;
+
+                if (options.icon) {
+                    addIcon();
+                }
+                addTextContainer();
+
                 el.insertBefore(container, el.firstChild);
             }
         };
 
         const createNotification = () => {
             createContainer();
-            addContent();
         };
 
         const destoryNotification = () => {
-            const container = el.querySelector(options.class);
             container.parentNode.removeChild(container);
         };
 
         // Public Methods
+        state.addContent = (content) => {
+            addContent(content);
+        };
+
         state.init = () => {
             createNotification();
         };
@@ -38,7 +60,7 @@ const Notification = createModule({
             destoryNotification();
         };
 
-        // state.init();
+        state.init();
         return state;
     },
 });

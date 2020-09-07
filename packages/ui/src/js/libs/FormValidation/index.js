@@ -1,29 +1,54 @@
 import createModule from '../create-module';
 import hasError from './hasError';
 import Notification from '../Notification';
+import { signExclamationPoint } from '../../utils/icons';
 
 const Tabs = createModule({
     options: () => ({
         fieldErrorClass: 'a-input--error',
         errorClass: 'a-error',
+        notificationTitle: 'Check following entries:',
     }),
     constructor: ({ el, state, options }) => {
-        const notification = new Notification(el, {
-            class: 'a-notification a-notification--error',
-        });
+        let notification;
+
+        const createErrorList = fields => {
+            let errorList = '<ul class="a-notification__error-list">';
+
+            for (let i = 0; i < fields.length; i++) {
+                const field = fields[i];
+                errorList += `<li><a href="#${field.id}">${field.label}</a></li>`;
+            }
+
+            errorList += '</ul>';
+
+            return errorList;
+        };
+
+        const createNotificationContent = fields => {
+            let content = `<strong>${options.notificationTitle}</strong>`;
+
+            content += createErrorList(fields);
+
+            return content;
+        };
 
         const handleSubmit = event => {
             const fields = event.target.elements;
-
-            // Validate each field
-            // Store the first field with an error to a variable so we can bring it into focus later
+            const invalidFields = [];
             let hasErrors;
             for (let i = 0; i < fields.length; i++) {
                 const error = hasError(fields[i]);
                 if (error) {
-                    showError(fields[i], error);
+                    const field = fields[i];
+                    showError(field, error);
+                    invalidFields.push({
+                        id: field.id,
+                        label: field.parentNode.querySelector(`label[for=${field.id}]`).textContent,
+                    });
+
                     if (!hasErrors) {
-                        hasErrors = fields[i];
+                        hasErrors = field;
                     }
                 }
             }
@@ -31,8 +56,14 @@ const Tabs = createModule({
             // If there are errors, don't submit form and focus on first element with error
             if (hasErrors) {
                 event.preventDefault();
-                notification.init();
-                // hasErrors.focus();
+                if (!notification) {
+                    notification = new Notification(el, {
+                        class: 'a-notification a-notification--error',
+                        icon: signExclamationPoint,
+                    });
+                }
+                notification.addContent(createNotificationContent(invalidFields));
+                hasErrors.focus();
             }
         };
 
