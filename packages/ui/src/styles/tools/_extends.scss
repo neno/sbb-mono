@@ -24,29 +24,15 @@
 %h-2 {
   font-size: $font-size-h2;
   margin-bottom: rem(25);
-
-  // @include media-breakpoint-up(large) {
-  //   font-size: $font-size-h2-large;
-  //   margin-bottom: rem(30);
-  // }
 }
 
 %h-3 {
   font-size: $font-size-h3;
-
-  // @include media-breakpoint-up(large) {
-  //   font-size: $font-size-h3-large;
-  // }
 }
 
 %h-4 {
   font-size: $font-size-regular;
   line-height: 1.25;
-
-  // @include media-breakpoint-up(large) {
-  //   font-size: $font-size-regular-large;
-  //   line-height: 1.2;
-  // }
 }
 
 %font-regular {

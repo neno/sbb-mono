@@ -24,7 +24,7 @@ const OverviewTemplate = () => (
         <div className="u-text-center">
             <h1>Login</h1>
         </div>
-        <Tabs tabs={tabs}>
+        <Tabs tabs={tabs} tabsListCentered="true">
             <TabPanel id="mitarbeitende" active="true">
                 <Button classes={['a-btn--primary a-btn--arrows']} arrows="true" url="/">
                     Login

@@ -97,14 +97,14 @@ $max-width-curve-full: (
   @include max-width-curve-full;
 }
 
+.l-divider-small {
+  margin-bottom: em(24, 15);
+}
+
 .l-divider-medium {
   margin-bottom: em(36, 15);
 
   @include media-breakpoint-up(mobile) {
-    margin-bottom: em(48, 15);
-  }
-
-  @include media-breakpoint-up(tablet) {
     margin-bottom: em(48, 15);
   }
 }
