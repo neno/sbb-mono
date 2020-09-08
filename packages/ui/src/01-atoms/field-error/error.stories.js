@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import Error from './index';
+import FieldError from './index';
 
 export default {
-    title: '01-Atoms/Error',
+    title: '01-Atoms/Field Error',
 };
 
 export const Default = () => renderToStaticMarkup(
-    <Error htmlFor="field_name">
+    <FieldError>
         Error Text
-    </Error>,
+    </FieldError>,
 );
