@@ -7,6 +7,7 @@ const Tabs = createModule({
     options: () => ({
         fieldErrorClass: 'a-input--error',
         errorClass: 'a-error',
+        notficationContainerClass: 'o-form__notification',
         notificationTitle: 'Check following entries:',
     }),
     constructor: ({ el, state, options }) => {
@@ -33,9 +34,31 @@ const Tabs = createModule({
             return content;
         };
 
+        const createNotificationContainer = () => {
+            const notificationContainer = document.createElement('div');
+            notificationContainer.className = options.notficationContainerClass;
+            el.insertBefore(notificationContainer, el.firstChild);
+
+            return notificationContainer;
+        };
+
+        const addNotification = invalidFields => {
+            if (!notification) {
+                const notificationContainer = createNotificationContainer();
+
+                notification = new Notification(notificationContainer, {
+                    class: 'a-notification a-notification--error',
+                    icon: signExclamationPoint,
+                });
+            }
+
+            notification.addContent(createNotificationContent(invalidFields));
+        };
+
         const handleSubmit = event => {
             const fields = event.target.elements;
             const invalidFields = [];
+
             let hasErrors;
             for (let i = 0; i < fields.length; i++) {
                 const error = hasError(fields[i]);
@@ -53,16 +76,10 @@ const Tabs = createModule({
                 }
             }
 
-            // If there are errors, don't submit form and focus on first element with error
             if (hasErrors) {
                 event.preventDefault();
-                if (!notification) {
-                    notification = new Notification(el, {
-                        class: 'a-notification a-notification--error',
-                        icon: signExclamationPoint,
-                    });
-                }
-                notification.addContent(createNotificationContent(invalidFields));
+
+                addNotification(invalidFields);
                 hasErrors.focus();
             }
         };
@@ -96,17 +113,14 @@ const Tabs = createModule({
         };
 
         const hideErrorMessage = (field, id) => {
-            // Check if an error message is in the DOM
             const message = field.form.querySelector(`#error-for-${id}`);
             if (!message) return;
 
-            // If so, hide it
             message.innerHTML = '';
             message.style.display = 'none';
             message.style.visibility = 'hidden';
         };
 
-        // Remove the error message
         const removeError = field => {
             const id = field.id || field.name;
             if (!id) return;
@@ -118,14 +132,14 @@ const Tabs = createModule({
         };
 
         const handleBlur = event => {
-            // Validate the field
-            const error = hasError(event.target);
+            if (event.target.type === 'text' || event.target.type === 'email' || event.target.type === 'password') {
+                const error = hasError(event.target);
 
-            // If there's an error, show it
-            if (error) {
-                showError(event.target, error);
-            } else {
-                removeError(event.target);
+                if (error) {
+                    showError(event.target, error);
+                } else {
+                    removeError(event.target);
+                }
             }
         };
 

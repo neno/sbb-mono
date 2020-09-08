@@ -48,7 +48,7 @@ const Notification = createModule({
         };
 
         // Public Methods
-        state.addContent = (content) => {
+        state.addContent = content => {
             addContent(content);
         };
 

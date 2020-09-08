@@ -25,6 +25,20 @@ export const Default = () => renderToStaticMarkup(
     </FormField>,
 );
 
+export const Optional = () => renderToStaticMarkup(
+    <FormField>
+        <Label htmlFor="field_name">
+            Label Text (optional)
+        </Label>
+        <Input
+            attr={{
+                id: 'field_name',
+                name: 'field_name',
+            }}
+        />
+    </FormField>,
+);
+
 export const HasError = () => renderToStaticMarkup(
     <FormField>
         <Label htmlFor="field_name">
