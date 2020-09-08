@@ -21,7 +21,7 @@ const tabs = [
 
 const OverviewTemplate = () => (
     <Layout classes={['t-template--overview']}>
-        <div className="u-text-center">
+        <div className="l-divider-big u-text-center">
             <h1>Login</h1>
         </div>
         <Tabs tabs={tabs} tabsListCentered="true">
