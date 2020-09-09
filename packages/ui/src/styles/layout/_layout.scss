@@ -65,6 +65,13 @@ $max-width-curve-full: (
   }
 }
 
+.l-login-panel {
+  @include media-breakpoint-up(small) {
+    margin: 0 auto;
+    max-width: 21.33333em;
+  }
+}
+
 .l-constrainer {
   @include constrainer;
 
