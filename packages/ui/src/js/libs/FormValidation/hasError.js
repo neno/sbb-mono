@@ -10,10 +10,10 @@ export default function hasError(field) {
 
     // If field is required and empty
     if (validity.valueMissing) {
-        if (field.hasAttribute('data-error-message-missing')) {
-            return field.getAttribute('data-error-message-missing');
+        if (field.hasAttribute('data-error-message-required')) {
+            return field.getAttribute('data-error-message-required');
         }
-        return 'Please fill out this field.';
+        return 'Mandatory field, please complete.';
     }
 
     // If not the right type

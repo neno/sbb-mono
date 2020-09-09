@@ -1,43 +1,59 @@
 %h-1,
 %h-2,
 %h-3,
-%h-3,
 %h-4 {
-  font-weight: 100;
-  line-height: 1.2;
-  margin-bottom: rem(20);
   margin-top: 0;
+}
+
+%h-1,
+%h-2,
+%h-3 {
+  line-height: 1.2;
+}
+
+%h-4 {
+  line-height: 1.5;
 }
 
 %h-1 {
   font-size: $font-size-h1;
+  font-weight: 200;
 
   @include media-breakpoint-up(mobile) {
-    font-size: $font-size-h1-mobile;
+    font-size: $font-size-h1-mobile-up;
   }
 
   @include media-breakpoint-up(tablet) {
-    font-size: $font-size-h1-tablet;
+    font-size: $font-size-h1-tablet-up;
   }
 }
 
 %h-2 {
   font-size: $font-size-h2;
-  margin-bottom: rem(25);
+  font-weight: 200;
+
+  @include media-breakpoint-up(tablet) {
+    font-size: $font-size-h2-tablet-up;
+  }
 }
 
 %h-3 {
   font-size: $font-size-h3;
+  font-weight: 300;
+
+  @include media-breakpoint-up(mobile) {
+    font-size: $font-size-h3-mobile-up;
+  }
 }
 
 %h-4 {
-  font-size: $font-size-regular;
-  line-height: 1.25;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 %font-regular {
   font-size: $font-size-regular;
-  font-weight: 400;
+  font-weight: 300;
   line-height: (26 / 15);
 
   @include media-breakpoint-up(wide) {
