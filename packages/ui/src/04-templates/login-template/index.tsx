@@ -6,18 +6,7 @@ import Button from '../../01-atoms/button';
 
 import LoginForm from './LoginForm';
 import Tabs from '../../03-organisms/tabs';
-
-const tabs = [
-    {
-        label: 'Mitarbeitende',
-        id: 'mitarbeitende',
-        active: 'true',
-    },
-    {
-        label: 'Pensionierte',
-        id: 'pensionierte',
-    },
-];
+import { tabs, loginTemplateData } from './stories/login-template.data';
 
 const OverviewTemplate = () => (
     <Layout classes={['t-template--overview']}>
@@ -25,13 +14,13 @@ const OverviewTemplate = () => (
             <h1>Login</h1>
         </div>
         <Tabs tabs={tabs}>
-            <TabPanel id="mitarbeitende" active="true">
-                <Button classes={['a-btn--primary a-btn--arrows']} arrows="true" url="/">
+            <TabPanel id="mitarbeitende" active>
+                <Button classes={['a-btn--primary a-btn--arrows']} arrows url="/">
                     Login
                 </Button>
             </TabPanel>
-            <TabPanel id="pensionierte">
-                <LoginForm />
+            <TabPanel id="pensionierte" active={false}>
+                <LoginForm username={loginTemplateData.username} password={loginTemplateData.password} />
             </TabPanel>
         </Tabs>
 

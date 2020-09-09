@@ -1,8 +1,13 @@
 import React from 'react';
 
-const TabPanel = ({ children, id, active }) => (
+interface Props {
+    id: string;
+    active: boolean;
+}
+
+const TabPanel: React.FC<Props> = ({ children, id, active }) => (
     <div
-        tabIndex="0"
+        tabIndex={0}
         role="tabpanel"
         id={`${id}-tab`}
         aria-labelledby={id}

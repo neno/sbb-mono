@@ -16,8 +16,13 @@ export default {
     title: '03-Organisms/Form',
 };
 
+const module = 'form-validation';
+const handleSubmit = event => {
+    event.preventDefault();
+};
+
 export const Default = () => renderToStaticMarkup(
-    <Form>
+    <Form module={module} handleSubmit={handleSubmit}>
         <ol className="o-form__list">
             <li className="o-form__list-item">
                 <FormField>
@@ -57,7 +62,7 @@ export const Default = () => renderToStaticMarkup(
 );
 
 export const Invalid = () => renderToStaticMarkup(
-    <Form>
+    <Form module={module} handleSubmit={handleSubmit}>
         <div className="o-form__notification">
             <Notification classes={['a-notification--error']}>
                 <Icon name="sign-exclamation-point" />

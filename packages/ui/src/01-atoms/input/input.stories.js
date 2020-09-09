@@ -8,29 +8,41 @@ export default {
 };
 
 export const InputDefault = () => renderToStaticMarkup(
-    <Input attr={{
-        value: 'Value',
-    }}
+    <Input
+        name="field-1"
+        id="field-1"
+        attrs={{
+            value: 'Value',
+            required: true,
+        }}
     />,
 );
 
 export const InputPlaceholder = () => renderToStaticMarkup(
-    <Input attr={{
-        placeholder: 'Placeholder Text',
-    }}
+    <Input
+        name="field-2"
+        id="field-2"
+        attrs={{
+            placeholder: 'Placeholder Text',
+        }}
     />,
 );
 
 export const InputDisabled = () => renderToStaticMarkup(
-    <Input attr={{
-        value: 'Value',
-        disabled: true,
-    }}
+    <Input
+        name="field-3"
+        id="field-3"
+        attrs={{
+            value: 'Value',
+            disabled: true,
+        }}
     />,
 );
 
 export const InputError = () => renderToStaticMarkup(
     <Input
+        name="field-4"
+        id="field-4"
         classes={['a-input--error']}
         attr={{
             value: 'Value',
