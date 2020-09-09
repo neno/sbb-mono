@@ -110,6 +110,8 @@ const Tabs = createModule({
 
             createErrorMessage(field, error, id);
             setInputAsInvalid(field, id);
+
+            field.addEventListener('input', handleInput);
         };
 
         const hideErrorMessage = (field, id) => {
@@ -129,6 +131,8 @@ const Tabs = createModule({
 
             field.classList.remove(options.fieldErrorClass);
             field.removeAttribute('aria-describedby');
+
+            field.removeEventListener('input', handleInput);
         };
 
         const handleBlur = event => {
@@ -140,6 +144,14 @@ const Tabs = createModule({
                 } else {
                     removeError(event.target);
                 }
+            }
+        };
+
+        const handleInput = event => {
+            const error = hasError(event.target);
+
+            if (!error) {
+                removeError(event.target);
             }
         };
 

@@ -44,3 +44,55 @@ a {
     cursor: pointer;
   }
 }
+
+h1,
+.h1 {
+  @extend %h-1;
+}
+
+h2,
+.h2 {
+  @extend %h-2;
+}
+
+h3,
+.h3 {
+  @extend %h-3;
+}
+
+h4,
+.h4 {
+  @extend %h-4;
+}
+
+p,
+ul,
+ol {
+  @extend %block-margin;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+a {
+  color: $color-black;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-red-125;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
+}
