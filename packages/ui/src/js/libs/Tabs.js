@@ -1,5 +1,4 @@
 import createModule from './create-module';
-import KeyCodes from '../utils/keycodes';
 
 const Tabs = createModule({
     options: () => ({
@@ -12,8 +11,10 @@ const Tabs = createModule({
         const tabs = el.querySelectorAll(options.tabsSelector);
         const panels = el.querySelectorAll(options.panelsSelector);
         const direction = {
-            37: -1,
-            39: 1,
+            ArrowLeft: -1,
+            ArrowRight: 1,
+            Left: -1,
+            Right: 1,
         };
 
         const deactivateTabs = () => {
@@ -56,7 +57,7 @@ const Tabs = createModule({
         };
 
         const switchTabOnArrowPress = event => {
-            const key = event.which || event.keyCode;
+            const key = event.key || event.keyCode;
 
             if (direction[key]) {
                 const target = event.target;
@@ -64,9 +65,9 @@ const Tabs = createModule({
                     const tab = tabs[target.index + direction[key]];
                     if (tab) {
                         tab.focus();
-                    } else if (key === KeyCodes.LEFT) {
+                    } else if (key === 'ArrowLeft' || key === 'Left') {
                         focusLastTab();
-                    } else if (key === KeyCodes.RIGHT) {
+                    } else if (key === 'ArrowRight' || key === 'Right') {
                         focusFirstTab();
                     }
                 }
@@ -74,14 +75,17 @@ const Tabs = createModule({
         };
 
         const handleKeyup = event => {
-            const key = event.which || event.keyCode;
+            const key = event.key || event.keyCode;
             switch (key) {
-            case KeyCodes.LEFT:
-            case KeyCodes.RIGHT:
+            case 'ArrowLeft':
+            case 'ArrowRight':
+            case 'Left':
+            case 'Right':
                 switchTabOnArrowPress(event);
                 break;
-            case KeyCodes.ENTER:
-            case KeyCodes.SPACE:
+            case 'Enter':
+            case 'Space':
+            case 'Spacebar':
                 activateTab(event.target);
                 break;
             default:
