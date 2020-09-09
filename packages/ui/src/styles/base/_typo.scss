@@ -32,6 +32,15 @@ button {
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  color: $color-black;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-red-125;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
