@@ -93,3 +93,17 @@
     @content;
   }
 }
+
+@mixin font-regular {
+  font-size: $font-size-regular;
+  font-weight: 300;
+  line-height: (26 / 15);
+
+  @include media-breakpoint-up(wide) {
+    font-size: $font-size-regular-xlarge;
+  }
+
+  @include media-breakpoint-up(ultra) {
+    font-size: $font-size-regular-xxlarge;
+  }
+}

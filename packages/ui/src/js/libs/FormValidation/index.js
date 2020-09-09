@@ -55,6 +55,15 @@ const Tabs = createModule({
             notification.addContent(createNotificationContent(invalidFields));
         };
 
+        const createInvalidFieldObject = field => {
+            const label = field.parentNode.querySelector(`label[for=${field.id}]`);
+
+            return {
+                id: field.id,
+                label: label.removeChild(label.childNodes[0]).textContent,
+            };
+        };
+
         const handleSubmit = event => {
             const fields = event.target.elements;
             const invalidFields = [];
@@ -65,10 +74,9 @@ const Tabs = createModule({
                 if (error) {
                     const field = fields[i];
                     showError(field, error);
-                    invalidFields.push({
-                        id: field.id,
-                        label: field.parentNode.querySelector(`label[for=${field.id}]`).textContent,
-                    });
+
+                    const invalidField = createInvalidFieldObject(field);
+                    invalidFields.push(invalidField);
 
                     if (!hasErrors) {
                         hasErrors = field;

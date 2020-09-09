@@ -1,74 +1,55 @@
+@mixin block-margin {
+  margin: 0 0 rem(20) 0;
+}
+
 h1,
 .h1 {
-  @extend %h-1;
+  font-size: $font-size-h1;
+  font-weight: 200;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(mobile) {
+    font-size: $font-size-h1-mobile-up;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    font-size: $font-size-h1-tablet-up;
+  }
 }
 
 h2,
 .h2 {
-  @extend %h-2;
+  font-size: $font-size-h2;
+  font-weight: 200;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(tablet) {
+    font-size: $font-size-h2-tablet-up;
+  }
 }
 
 h3,
 .h3 {
-  @extend %h-3;
+  font-size: $font-size-h3;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(mobile) {
+    font-size: $font-size-h3-mobile-up;
+  }
 }
 
 h4,
 .h4 {
-  @extend %h-4;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 p,
 ul,
 ol {
-  @extend %block-margin;
-}
-
-input,
-select,
-textarea,
-button {
-  font: inherit;
-}
-
-a {
-  color: $color-black;
-  text-decoration: underline;
-
-  &:hover,
-  &:focus {
-    color: $color-red-125;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-h1,
-.h1 {
-  @extend %h-1;
-}
-
-h2,
-.h2 {
-  @extend %h-2;
-}
-
-h3,
-.h3 {
-  @extend %h-3;
-}
-
-h4,
-.h4 {
-  @extend %h-4;
-}
-
-p,
-ul,
-ol {
-  @extend %block-margin;
+  @include block-margin;
 }
 
 input,
