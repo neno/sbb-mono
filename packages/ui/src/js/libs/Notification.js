@@ -28,6 +28,7 @@ const Notification = createModule({
 
             if (!container) {
                 container = document.createElement('div');
+                container.setAttribute('role', 'alert');
                 container.className = options.class;
 
                 if (options.icon) {

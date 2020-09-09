@@ -28,7 +28,7 @@ export const Default = () => renderToStaticMarkup(
                         attr={{
                             id: 'firstname',
                             name: 'firstname',
-                            'data-error-message-missing': 'Custom error for missing text',
+                            'data-error-message-required': 'Custom error for missing text',
                         }}
                     />
                 </FormField>
