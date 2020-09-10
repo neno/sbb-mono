@@ -14,6 +14,8 @@ $button-arrow-hover-position-x: em(36, 15);
   display: inline-block;
   min-width: $button-min-width;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   padding: em(10, 15) $button-padding-x;
   text-decoration: none !important;
   width: 100%;

@@ -40,13 +40,11 @@
   }
 
   &:not(&--active) {
-    @media (hover) {
-      @include hover {
-        color: $color-red-125;
+    @include hover {
+      color: $color-red-125;
 
-        &::after {
-          width: 100%;
-        }
+      &::after {
+        width: 100%;
       }
     }
 
