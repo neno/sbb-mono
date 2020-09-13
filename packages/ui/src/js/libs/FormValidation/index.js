@@ -7,11 +7,13 @@ const Tabs = createModule({
     options: () => ({
         fieldErrorClass: 'a-input--error',
         errorClass: 'a-error',
-        notficationContainerClass: 'o-form__notification',
+        notificationContainerClass: 'o-form__notification',
         notificationTitle: 'Check following entries:',
+        notificationClass: 'a-notification a-notification--error',
     }),
     constructor: ({ el, state, options }) => {
         let notification;
+        let notificationContainer = el.querySelector(`.${options.notificationContainerClass}`);
 
         const createErrorList = fields => {
             let errorList = '<ul class="a-notification__error-list">';
@@ -35,19 +37,19 @@ const Tabs = createModule({
         };
 
         const createNotificationContainer = () => {
-            const notificationContainer = document.createElement('div');
-            notificationContainer.className = options.notficationContainerClass;
-            el.insertBefore(notificationContainer, el.firstChild);
-
-            return notificationContainer;
+            if (!notificationContainer) {
+                notificationContainer = document.createElement('div');
+                notificationContainer.className = options.notificationContainerClass;
+                el.insertBefore(notificationContainer, el.firstChild);
+            }
         };
 
         const addNotification = invalidFields => {
             if (!notification) {
-                const notificationContainer = createNotificationContainer();
+                createNotificationContainer();
 
                 notification = new Notification(notificationContainer, {
-                    class: 'a-notification a-notification--error',
+                    class: options.notificationClass,
                     icon: signExclamationPoint,
                 });
             }

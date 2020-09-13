@@ -6,8 +6,8 @@ const Notification = createModule({
         textContainerClass: 'a-notification__text',
     }),
     constructor: ({ el, state, options }) => {
-        let container;
-        let textContainer;
+        let container = el.querySelector(`.${options.class.replace(/\s+/g, '.')}`);
+        let textContainer = container.querySelector(`.${options.textContainerClass.replace(/\s+/g, '.')}`);
 
         const addIcon = () => {
             container.innerHTML = options.icon;
@@ -18,14 +18,14 @@ const Notification = createModule({
         };
 
         const addTextContainer = () => {
-            textContainer = document.createElement('div');
-            textContainer.className = options.textContainerClass;
-            container.appendChild(textContainer);
+            if (!textContainer) {
+                textContainer = document.createElement('div');
+                textContainer.className = options.textContainerClass;
+                container.appendChild(textContainer);
+            }
         };
 
         const createContainer = () => {
-            container = el.querySelector(options.class);
-
             if (!container) {
                 container = document.createElement('div');
                 container.setAttribute('role', 'alert');
