@@ -1,7 +1,3 @@
-.sr-only {
-  @include hide-visually;
-}
-
 .u {
   &-text-center {
     text-align: center;
@@ -13,5 +9,9 @@
 
   &-text-right {
     text-align: right;
+  }
+
+  &-sr-only {
+    @include hide-visually;
   }
 }
