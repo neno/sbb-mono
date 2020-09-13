@@ -134,8 +134,6 @@ const Tabs = createModule({
         };
 
         const removeError = field => {
-            // eslint-disable-next-line
-            console.log('removeError');
             const id = field.id || field.name;
             if (!id) return;
 
