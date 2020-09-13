@@ -58,11 +58,11 @@ const Tabs = createModule({
         };
 
         const createInvalidFieldObject = field => {
-            const label = field.parentNode.querySelector(`label[for=${field.id}]`);
+            const label = field.parentNode.querySelector(`label[for=${field.id}]`).childNodes[0].textContent;
 
             return {
                 id: field.id,
-                label: label.removeChild(label.childNodes[0]).textContent,
+                label,
             };
         };
 
@@ -134,6 +134,8 @@ const Tabs = createModule({
         };
 
         const removeError = field => {
+            // eslint-disable-next-line
+            console.log('removeError');
             const id = field.id || field.name;
             if (!id) return;
 

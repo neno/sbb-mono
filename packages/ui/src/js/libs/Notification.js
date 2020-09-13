@@ -6,11 +6,11 @@ const Notification = createModule({
         textContainerClass: 'a-notification__text',
     }),
     constructor: ({ el, state, options }) => {
-        let container = el.querySelector(`.${options.class.replace(/\s+/g, '.')}`);
-        let textContainer = container.querySelector(`.${options.textContainerClass.replace(/\s+/g, '.')}`);
+        let notification;
+        let textContainer;
 
         const addIcon = () => {
-            container.innerHTML = options.icon;
+            notification.innerHTML = options.icon;
         };
 
         const addContent = content => {
@@ -21,31 +21,40 @@ const Notification = createModule({
             if (!textContainer) {
                 textContainer = document.createElement('div');
                 textContainer.className = options.textContainerClass;
-                container.appendChild(textContainer);
+                notification.appendChild(textContainer);
             }
         };
 
-        const createContainer = () => {
-            if (!container) {
-                container = document.createElement('div');
-                container.setAttribute('role', 'alert');
-                container.className = options.class;
+        const createNotification = () => {
+            checkForExistingNotification();
+
+            if (!notification) {
+                notification = document.createElement('div');
+                notification.setAttribute('role', 'alert');
+                notification.className = options.class;
 
                 if (options.icon) {
                     addIcon();
                 }
                 addTextContainer();
 
-                el.insertBefore(container, el.firstChild);
+                el.insertBefore(notification, el.firstChild);
             }
         };
 
-        const createNotification = () => {
-            createContainer();
+        const checkForExistingNotification = () => {
+            notification = el.querySelector(`.${options.class.replace(/\s+/g, '.')}`);
+            if (notification) {
+                textContainer = notification.querySelector(`.${options.textContainerClass.replace(/\s+/g, '.')}`);
+            }
+        };
+
+        const init = () => {
+            createNotification();
         };
 
         const destoryNotification = () => {
-            container.parentNode.removeChild(container);
+            notification.parentNode.removeChild(notification);
         };
 
         // Public Methods
@@ -54,7 +63,7 @@ const Notification = createModule({
         };
 
         state.init = () => {
-            createNotification();
+            init();
         };
 
         state.destroy = () => {
