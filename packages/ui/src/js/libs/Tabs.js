@@ -2,12 +2,14 @@ import createModule from './create-module';
 
 const Tabs = createModule({
     options: () => ({
+        tabListSelector: '.m-tablist',
         tabsSelector: '.a-tab',
         panelsSelector: '.a-tab-panel',
         tabActiveClass: 'a-tab--active',
         panelActiveClass: 'a-tab-panel--active',
     }),
     constructor: ({ el, state, options }) => {
+        const tabList = el.querySelector(options.tabListSelector);
         const tabs = el.querySelectorAll(options.tabsSelector);
         const panels = el.querySelectorAll(options.panelsSelector);
         const direction = {
@@ -94,13 +96,13 @@ const Tabs = createModule({
         };
 
         const bindEvents = () => {
-            el.addEventListener('click', handleClick);
-            el.addEventListener('keyup', handleKeyup);
+            tabList.addEventListener('click', handleClick);
+            tabList.addEventListener('keyup', handleKeyup);
         };
 
         const unbindEvents = () => {
-            el.removeEventListener('click', handleClick);
-            el.removeEventListener('keyup', handleKeyup);
+            tabList.removeEventListener('click', handleClick);
+            tabList.removeEventListener('keyup', handleKeyup);
         };
 
         const setIndexOnTabs = () => {
