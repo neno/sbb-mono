@@ -1,4 +1,5 @@
 import '../styles/index.scss';
+import './libs/detect-touch';
 import Collapsible from './libs/Collapsible';
 import Tabs from './libs/Tabs';
 import FormValidation from './libs/FormValidation';

@@ -99,8 +99,10 @@ $button-arrow-hover-position-x: em(36, 15);
       }
     }
 
-    @include hover {
-      @include hover-animation();
+    .no-touchdevice & {
+      @include hover {
+        @include hover-animation();
+      }
     }
 
     &:focus {
