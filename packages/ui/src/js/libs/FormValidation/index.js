@@ -1,96 +1,97 @@
 import createModule from '../create-module';
 import hasError from './hasError';
+import InvalidFields from './InvalidFields';
 import Notification from '../Notification';
-import { signExclamationPoint } from '../../utils/icons';
+import ErrorList from './ErrorList';
 
-const Tabs = createModule({
+const FormValidation = createModule({
     options: () => ({
         fieldErrorClass: 'a-input--error',
         errorClass: 'a-error',
+        errorsListClass: 'a-notification__error-list',
         notificationContainerClass: 'o-form__notification',
         notificationTitle: 'Check following entries:',
         notificationClass: 'a-notification a-notification--error',
     }),
     constructor: ({ el, state, options }) => {
+        const invalidFields = new InvalidFields();
         let notification;
+        let errorList;
         let notificationContainer = el.querySelector(`.${options.notificationContainerClass}`);
-
-        const createErrorList = fields => {
-            let errorList = '<ul class="a-notification__error-list">';
-
-            for (let i = 0; i < fields.length; i++) {
-                const field = fields[i];
-                errorList += `<li><a href="#${field.id}">${field.label}</a></li>`;
-            }
-
-            errorList += '</ul>';
-
-            return errorList;
-        };
-
-        const createNotificationContent = fields => {
-            let content = `<strong>${options.notificationTitle}</strong>`;
-
-            content += createErrorList(fields);
-
-            return content;
-        };
 
         const createNotificationContainer = () => {
             if (!notificationContainer) {
                 notificationContainer = document.createElement('div');
                 notificationContainer.className = options.notificationContainerClass;
                 el.insertBefore(notificationContainer, el.firstChild);
+            } else {
+                notificationContainer.innerHTML = '';
             }
         };
 
-        const addNotification = invalidFields => {
-            if (!notification) {
-                createNotificationContainer();
-
-                notification = new Notification(notificationContainer, {
-                    class: options.notificationClass,
-                    icon: signExclamationPoint,
-                });
-            }
-
-            notification.addContent(createNotificationContent(invalidFields));
+        const createNotificationTitle = () => {
+            const title = document.createElement('strong');
+            title.textContent = options.notificationTitle;
+            notification.append(title);
         };
 
-        const createInvalidFieldObject = field => {
-            const label = field.parentNode.querySelector(`label[for=${field.id}]`).childNodes[0].textContent;
+        const createNotification = () => {
+            createNotificationContainer();
 
-            return {
-                id: field.id,
-                label,
-            };
+            notification = new Notification(notificationContainer, {
+                type: 'error',
+            });
+
+            createNotificationTitle();
+        };
+
+        const createErrorList = () => {
+            const list = document.createElement('ul');
+
+            list.classList.add(options.errorsListClass);
+            errorList = new ErrorList(list);
+            notification.append(list);
+        };
+
+        const checkForInvalidFields = fields => {
+            for (let i = 0; i < fields.length; i++) {
+                const field = fields[i];
+                const error = hasError(field);
+
+                if (error) {
+                    invalidFields.add(field.id, field, error);
+                }
+            }
         };
 
         const handleSubmit = event => {
             const fields = event.target.elements;
-            const invalidFields = [];
 
-            let hasErrors;
-            for (let i = 0; i < fields.length; i++) {
-                const error = hasError(fields[i]);
-                if (error) {
-                    const field = fields[i];
-                    showError(field, error);
+            invalidFields.reset();
+            checkForInvalidFields(fields);
 
-                    const invalidField = createInvalidFieldObject(field);
-                    invalidFields.push(invalidField);
-
-                    if (!hasErrors) {
-                        hasErrors = field;
-                    }
-                }
-            }
-
-            if (hasErrors) {
+            if (invalidFields.hasFields()) {
                 event.preventDefault();
 
-                addNotification(invalidFields);
-                hasErrors.focus();
+                if (!notification) {
+                    createNotification();
+                }
+
+                if (!errorList) {
+                    createErrorList();
+                } else {
+                    errorList.removeAll();
+                }
+
+                for (let i = 0; i < invalidFields.fields.length; i++) {
+                    const field = invalidFields.fields[i];
+                    showError(field.el, field.error);
+                    errorList.addItem(field);
+                }
+
+                invalidFields.first().el.focus();
+            } else {
+                destroy();
             }
         };
 
@@ -109,7 +110,7 @@ const Tabs = createModule({
             message.style.visibility = 'visible';
         };
 
-        const setInputAsInvalid = (field, id) => {
+        const addInvalidInputAttr = (field, id) => {
             field.classList.add(options.fieldErrorClass);
             field.setAttribute('aria-describedby', `error-for-${id}`);
         };
@@ -119,7 +120,7 @@ const Tabs = createModule({
             if (!id) return;
 
             createErrorMessage(field, error, id);
-            setInputAsInvalid(field, id);
+            addInvalidInputAttr(field, id);
 
             field.addEventListener('input', handleInput);
         };
@@ -133,16 +134,19 @@ const Tabs = createModule({
             message.style.visibility = 'hidden';
         };
 
+        const removeInvalidInputAttr = field => {
+            field.classList.remove(options.fieldErrorClass);
+            field.removeAttribute('aria-describedby');
+
+            field.removeEventListener('input', handleInput);
+        };
+
         const removeError = field => {
             const id = field.id || field.name;
             if (!id) return;
 
             hideErrorMessage(field, id);
-
-            field.classList.remove(options.fieldErrorClass);
-            field.removeAttribute('aria-describedby');
-
-            field.removeEventListener('input', handleInput);
+            removeInvalidInputAttr(field);
         };
 
         const handleBlur = event => {
@@ -158,9 +162,7 @@ const Tabs = createModule({
         };
 
         const handleInput = event => {
-            const error = hasError(event.target);
-
-            if (!error) {
+            if (!hasError(event.target)) {
                 removeError(event.target);
             }
         };
@@ -179,6 +181,27 @@ const Tabs = createModule({
             el.setAttribute('novalidate', true);
         };
 
+        const destroyErrorlist = () => {
+            if (errorList) {
+                errorList.destroy();
+                errorList = null;
+            }
+        };
+
+        const destroyNotification = () => {
+            if (notification) {
+                destroyErrorlist();
+
+                notification.destroy();
+                notification = null;
+            }
+        };
+
+        const destroy = () => {
+            unbindEvents();
+            destroyNotification();
+        };
+
         // Public Methods
         state.init = () => {
             disableNativeValidation();
@@ -186,7 +209,7 @@ const Tabs = createModule({
         };
 
         state.destroy = () => {
-            unbindEvents();
+            destroy();
         };
 
         state.init();
@@ -194,4 +217,4 @@ const Tabs = createModule({
     },
 });
 
-export default Tabs;
+export default FormValidation;

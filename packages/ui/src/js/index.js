@@ -1,6 +1,5 @@
 import '../styles/index.scss';
 import './libs/detect-touch';
-import Collapsible from './libs/Collapsible';
 import Tabs from './libs/Tabs';
 import FormValidation from './libs/FormValidation';
 
@@ -12,10 +11,6 @@ const timeout = process.env.STORYBOOK_TIMEOUT || 0;
  */
 
 setTimeout(() => {
-    document.querySelectorAll("[data-module='collapsible']").forEach(el => {
-        Collapsible(el);
-    });
-
     document.querySelectorAll("[data-module='tabs']").forEach(el => {
         Tabs(el);
     });

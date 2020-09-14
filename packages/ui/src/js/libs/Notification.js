@@ -1,8 +1,16 @@
 import createModule from './create-module';
+import { signExclamationPoint } from '../utils/icons';
+
+const icons = {
+    error: signExclamationPoint,
+};
 
 const Notification = createModule({
     options: () => ({
         class: 'a-notification',
+        classes: {
+            error: 'a-notification--error',
+        },
         textContainerClass: 'a-notification__text',
     }),
     constructor: ({ el, state, options }) => {
@@ -10,11 +18,11 @@ const Notification = createModule({
         let textContainer;
 
         const addIcon = () => {
-            notification.innerHTML = options.icon;
+            notification.innerHTML = icons[options.type];
         };
 
-        const addContent = content => {
-            textContainer.innerHTML = content;
+        const append = node => {
+            textContainer.appendChild(node);
         };
 
         const addTextContainer = () => {
@@ -25,28 +33,23 @@ const Notification = createModule({
             }
         };
 
-        const createNotification = () => {
-            checkForExistingNotification();
-
-            if (!notification) {
-                notification = document.createElement('div');
-                notification.setAttribute('role', 'alert');
-                notification.className = options.class;
-
-                if (options.icon) {
-                    addIcon();
-                }
-                addTextContainer();
-
-                el.insertBefore(notification, el.firstChild);
-            }
+        const setType = () => {
+            notification.classList.add(options.classes[options.type]);
+            addIcon();
         };
 
-        const checkForExistingNotification = () => {
-            notification = el.querySelector(`.${options.class.replace(/\s+/g, '.')}`);
-            if (notification) {
-                textContainer = notification.querySelector(`.${options.textContainerClass.replace(/\s+/g, '.')}`);
+        const createNotification = () => {
+            notification = document.createElement('div');
+            notification.setAttribute('role', 'alert');
+            notification.className = options.class;
+
+            if (options.type) {
+                setType();
             }
+
+            addTextContainer();
+
+            el.insertBefore(notification, el.firstChild);
         };
 
         const init = () => {
@@ -58,8 +61,9 @@ const Notification = createModule({
         };
 
         // Public Methods
-        state.addContent = content => {
-            addContent(content);
+
+        state.append = node => {
+            append(node);
         };
 
         state.init = () => {
