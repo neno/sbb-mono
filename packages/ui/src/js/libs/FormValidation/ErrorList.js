@@ -1,72 +1,86 @@
-import createModule from '../create-module';
+export default class ErrorList {
+    constructor(invalidFields, listClass) {
+        this.invalidFields = invalidFields;
+        this.listClass = listClass;
+        this.handleClick = this.handleClick.bind(this);
 
-const ErrorList = createModule({
-    constructor: ({ el, state }) => {
-        const handleAnchorClick = (event, anchor) => {
-            event.preventDefault();
-            anchor.fieldEl.focus();
-        };
+        this.init();
+    }
 
-        const getFieldLabelText = field => (
-            field.el.parentNode.querySelector(`label[for=${field.id}]`).childNodes[0].textContent
-        );
+    handleAnchorClick(event, anchor) {
+        event.preventDefault();
+        anchor.fieldEl.focus();
+    }
 
-        const addErrorAnchor = field => {
-            const anchor = document.createElement('a');
-            anchor.textContent = getFieldLabelText(field);
-            anchor.href = `#${field.id}`;
-            anchor.fieldEl = field.el;
+    getFieldLabelText(field) {
+        return field.el.parentNode.querySelector(`label[for=${field.id}]`).childNodes[0].textContent;
+    }
 
-            return anchor;
-        };
+    addErrorAnchor(field) {
+        const anchor = document.createElement('a');
+        anchor.textContent = this.getFieldLabelText(field);
+        anchor.href = `#${field.id}`;
+        anchor.fieldEl = field.el;
 
-        const addItem = field => {
-            const listItem = document.createElement('li');
-            const errorAnchor = addErrorAnchor(field);
+        return anchor;
+    }
 
-            listItem.appendChild(errorAnchor);
-            el.appendChild(listItem);
-        };
+    addItem(field) {
+        const listItem = document.createElement('li');
+        const errorAnchor = this.addErrorAnchor(field);
 
-        const removeAll = () => {
-            el.innerHTML = '';
-        };
+        listItem.appendChild(errorAnchor);
+        this.list.appendChild(listItem);
+    }
 
-        const handleClick = event => {
-            const anchor = event.target.closest('a');
-            if (anchor) {
-                handleAnchorClick(event, anchor);
-            }
-        };
+    createListItem() {
+        this.invalidFields.forEach(field => {
+            this.addItem(field);
+        })
+    }
 
-        const bindEvents = () => {
-            el.addEventListener('click', handleClick);
-        };
+    removeAll() {
+        this.list.innerHTML = '';
+    }
 
-        const unbindEvents = () => {
-            el.removeEventListener('click', handleClick);
-        };
+    update(invalidFields) {
+        this.invalidFields = invalidFields;
+        this.removeAll();
+        this.createListItem()
+    }
 
-        // Public Methods
-        state.addItem = field => {
-            addItem(field);
-        };
+    handleClick(event) {
+        const anchor = event.target.closest('a');
+        if (anchor) {
+            this.handleAnchorClick(event, anchor);
+        }
+    }
 
-        state.removeAll = () => {
-            removeAll();
-        };
+    createList() {
+        if (!this.list) {
+            this.list = document.createElement('ul');
+            this.list.classList.add(this.listClass);
+        }
 
-        state.init = () => {
-            bindEvents();
-        };
+        this.createListItem()
+    }
 
-        state.destroy = () => {
-            unbindEvents();
-        };
+    bindEvents() {
+        this.list.addEventListener('click', this.handleClick);
+    }
 
-        state.init();
-        return state;
-    },
-});
+    unbindEvents() {
+        this.list.removeEventListener('click', this.handleClick);
+    }
 
-export default ErrorList;
+    init() {
+        this.createList();
+        this.bindEvents();
+    }
+
+    destroy() {
+        this.unbindEvents();
+        this.list.remove();
+        this.list = null;
+    }
+}

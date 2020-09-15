@@ -12,7 +12,6 @@ const FormValidation = createModule({
         errorsListClass: 'a-notification__error-list',
         notificationContainerClass: 'o-form__notification',
         notificationTitle: 'Check following entries:',
-        notificationClass: 'a-notification a-notification--error',
     }),
     constructor: ({ el, state, options }) => {
         const invalidFields = new InvalidFields();
@@ -33,12 +32,10 @@ const FormValidation = createModule({
 
         const createErrorList = () => {
             if (!errorList) {
-                const list = document.createElement('ul');
-                list.classList.add(options.errorsListClass);
-                errorList = new ErrorList(list);
-                notification.append(list);
+                errorList = new ErrorList(invalidFields.fields, options.errorsListClass);
+                notification.append(errorList.list);
             } else {
-                errorList.removeAll();
+                errorList.update(invalidFields.fields);
             }
         };
 
@@ -61,6 +58,7 @@ const FormValidation = createModule({
                 const error = hasError(field);
 
                 if (error) {
+                    errorHandler.show(field, error);
                     invalidFields.add(field.id, field, error);
                 }
             });
@@ -68,11 +66,6 @@ const FormValidation = createModule({
 
         const handleInvalidSubmit = () => {
             handleNotification();
-
-            invalidFields.fields.forEach(field => {
-                errorHandler.show(field.el, field.error);
-                errorList.addItem(field);
-            });
 
             invalidFields.first().el.focus();
         };
