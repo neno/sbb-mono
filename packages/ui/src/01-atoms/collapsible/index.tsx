@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Collapsible = ({
+interface Props {
+    children: React.ReactNode;
+    triggerSelector: string;
+    targetSelector: string;
+    classes?: string[];
+}
+
+const Collapsible: React.FC<Props> = ({
     children,
     triggerSelector,
     targetSelector,

@@ -1,18 +1,50 @@
-.plf-to-top {
-  align-items: center;
-  background: rgba($color-white, 0.75);
-  border: 0;
-  border-radius: 50%;
-  color: $color-metal;
-  cursor: pointer;
-  display: flex;
-  font-size: rem(42);
-  justify-content: center;
-  line-height: 1;
-  padding: 0;
+.a-btn {
+  &--to-top {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
 
-  &:hover,
-  &:focus {
-    color: $color-red;
+  &__inner {
+    align-items: center;
+    background: rgba($color-white, 0.75);
+    border: 0;
+    border-radius: 50%;
+    color: $color-metal;
+    cursor: pointer;
+    display: flex;
+    font-size: rem(42);
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      color: $color-red;
+    }
   }
 }
+
+// .a-btn--to-top {
+//   align-items: center;
+//   background: rgba($color-white, 0.75);
+//   border: 0;
+//   border-radius: 50%;
+//   color: $color-metal;
+//   cursor: pointer;
+//   display: flex;
+//   // font-size: rem(42);
+//   justify-content: center;
+//   line-height: 1;
+//   padding: 0;
+
+//   &:hover,
+//   &:focus {
+//     color: $color-red;
+//   }
+
+//   .a-icon {
+//     height: rem(42);
+//     width: rem(42);
+//   }
+// }

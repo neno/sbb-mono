@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Tab = ({ label, id, active = false }) => (
+export interface ITab {
+    id: string;
+    label: string;
+    active: boolean;
+}
+
+const Tab: React.FC<ITab> = ({ label, id, active = false }) => (
     <button
         role="tab"
         type="button"

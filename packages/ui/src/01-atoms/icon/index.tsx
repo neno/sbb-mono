@@ -16,7 +16,7 @@ const icons = {
     'sign-exclamation-point': SignExclamationPoint,
 };
 
-const Icon = ({ name }) => {
+const Icon: React.FC<{ name: string }> = ({ name }) => {
     const Ico = icons[name];
     return <Ico />;
 };
