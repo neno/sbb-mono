@@ -29,6 +29,11 @@ const Notification = createModule({
             if (!textContainer) {
                 textContainer = document.createElement('div');
                 textContainer.className = options.textContainerClass;
+
+                if (options.title) {
+                    textContainer.innerHTML = `<strong>${options.title}</strong>`;
+                }
+
                 notification.appendChild(textContainer);
             }
         };

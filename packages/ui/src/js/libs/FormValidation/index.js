@@ -1,5 +1,6 @@
 import createModule from '../create-module';
 import hasError from './hasError';
+import ErrorHandler from './ErrorHandler';
 import InvalidFields from './InvalidFields';
 import Notification from '../Notification';
 import ErrorList from './ErrorList';
@@ -15,6 +16,7 @@ const FormValidation = createModule({
     }),
     constructor: ({ el, state, options }) => {
         const invalidFields = new InvalidFields();
+        const errorHandler = new ErrorHandler(options.errorClass, options.fieldErrorClass);
         let notification;
         let errorList;
         let notificationContainer = el.querySelector(`.${options.notificationContainerClass}`);
@@ -29,124 +31,62 @@ const FormValidation = createModule({
             }
         };
 
-        const createNotificationTitle = () => {
-            const title = document.createElement('strong');
-            title.textContent = options.notificationTitle;
-            notification.append(title);
-        };
-
-        const createNotification = () => {
-            createNotificationContainer();
-
-            notification = new Notification(notificationContainer, {
-                type: 'error',
-            });
-
-            createNotificationTitle();
-        };
-
         const createErrorList = () => {
-            const list = document.createElement('ul');
+            if (!errorList) {
+                const list = document.createElement('ul');
+                list.classList.add(options.errorsListClass);
+                errorList = new ErrorList(list);
+                notification.append(list);
+            } else {
+                errorList.removeAll();
+            }
+        };
 
-            list.classList.add(options.errorsListClass);
-            errorList = new ErrorList(list);
-            notification.append(list);
+        const handleNotification = () => {
+            if (!notification) {
+                createNotificationContainer();
+                notification = new Notification(notificationContainer, {
+                    type: 'error',
+                    title: options.notificationTitle,
+                });
+            }
+
+            createErrorList();
         };
 
         const checkForInvalidFields = fields => {
-            for (let i = 0; i < fields.length; i++) {
-                const field = fields[i];
+            invalidFields.reset();
+
+            fields.forEach(field => {
                 const error = hasError(field);
 
                 if (error) {
                     invalidFields.add(field.id, field, error);
                 }
-            }
+            });
+        };
+
+        const handleInvalidSubmit = () => {
+            handleNotification();
+
+            invalidFields.fields.forEach(field => {
+                errorHandler.show(field.el, field.error);
+                errorList.addItem(field);
+            });
+
+            invalidFields.first().el.focus();
         };
 
         const handleSubmit = event => {
             const fields = event.target.elements;
-
-            invalidFields.reset();
             checkForInvalidFields(fields);
 
             if (invalidFields.hasFields()) {
                 event.preventDefault();
-
-                if (!notification) {
-                    createNotification();
-                }
-
-                if (!errorList) {
-                    createErrorList();
-                } else {
-                    errorList.removeAll();
-                }
-
-                for (let i = 0; i < invalidFields.fields.length; i++) {
-                    const field = invalidFields.fields[i];
-                    showError(field.el, field.error);
-                    errorList.addItem(field);
-                }
-
-                invalidFields.first().el.focus();
+                handleInvalidSubmit();
             } else {
                 destroy();
             }
-        };
-
-        const createErrorMessage = (field, error, id) => {
-            let message = field.form.querySelector(`#error-for-${id}`);
-
-            if (!message) {
-                message = document.createElement('div');
-                message.className = options.errorClass;
-                message.id = `error-for-${id}`;
-                field.parentNode.insertBefore(message, field.nextSibling);
-            }
-
-            message.innerHTML = error;
-            message.style.display = 'block';
-            message.style.visibility = 'visible';
-        };
-
-        const addInvalidInputAttr = (field, id) => {
-            field.classList.add(options.fieldErrorClass);
-            field.setAttribute('aria-describedby', `error-for-${id}`);
-        };
-
-        const showError = (field, error) => {
-            const id = field.id || field.name;
-            if (!id) return;
-
-            createErrorMessage(field, error, id);
-            addInvalidInputAttr(field, id);
-
-            field.addEventListener('input', handleInput);
-        };
-
-        const hideErrorMessage = (field, id) => {
-            const message = field.form.querySelector(`#error-for-${id}`);
-            if (!message) return;
-
-            message.innerHTML = '';
-            message.style.display = 'none';
-            message.style.visibility = 'hidden';
-        };
-
-        const removeInvalidInputAttr = field => {
-            field.classList.remove(options.fieldErrorClass);
-            field.removeAttribute('aria-describedby');
-
-            field.removeEventListener('input', handleInput);
-        };
-
-        const removeError = field => {
-            const id = field.id || field.name;
-            if (!id) return;
-
-            hideErrorMessage(field, id);
-            removeInvalidInputAttr(field);
         };
 
         const handleBlur = event => {
@@ -154,16 +94,10 @@ const FormValidation = createModule({
                 const error = hasError(event.target);
 
                 if (error) {
-                    showError(event.target, error);
+                    errorHandler.show(event.target, error);
                 } else {
-                    removeError(event.target);
+                    errorHandler.hide(event.target);
                 }
-            }
-        };
-
-        const handleInput = event => {
-            if (!hasError(event.target)) {
-                removeError(event.target);
             }
         };
 

@@ -2,9 +2,9 @@ import createModule from '../create-module';
 
 const ErrorList = createModule({
     constructor: ({ el, state }) => {
-        const handleAnchorClick = (event, fieldEl) => {
+        const handleAnchorClick = (event, anchor) => {
             event.preventDefault();
-            fieldEl.focus();
+            anchor.fieldEl.focus();
         };
 
         const getFieldLabelText = field => (
@@ -15,10 +15,7 @@ const ErrorList = createModule({
             const anchor = document.createElement('a');
             anchor.textContent = getFieldLabelText(field);
             anchor.href = `#${field.id}`;
-
-            anchor.addEventListener('click', event => {
-                handleAnchorClick(event, field.el);
-            });
+            anchor.fieldEl = field.el;
 
             return anchor;
         };
@@ -35,6 +32,21 @@ const ErrorList = createModule({
             el.innerHTML = '';
         };
 
+        const handleClick = event => {
+            const anchor = event.target.closest('a');
+            if (anchor) {
+                handleAnchorClick(event, anchor);
+            }
+        };
+
+        const bindEvents = () => {
+            el.addEventListener('click', handleClick);
+        };
+
+        const unbindEvents = () => {
+            el.removeEventListener('click', handleClick);
+        };
+
         // Public Methods
         state.addItem = field => {
             addItem(field);
@@ -44,9 +56,15 @@ const ErrorList = createModule({
             removeAll();
         };
 
-        state.destroy = () => {
+        state.init = () => {
+            bindEvents();
         };
 
+        state.destroy = () => {
+            unbindEvents();
+        };
+
+        state.init();
         return state;
     },
 });
