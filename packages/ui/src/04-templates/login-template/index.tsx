@@ -6,18 +6,7 @@ import Button from '../../01-atoms/button';
 
 import LoginForm from './LoginForm';
 import Tabs from '../../03-organisms/tabs';
-
-const tabs = [
-    {
-        label: 'Mitarbeitende',
-        id: 'mitarbeitende',
-        active: 'true',
-    },
-    {
-        label: 'Pensionierte',
-        id: 'pensionierte',
-    },
-];
+import { tabs, loginTemplateData } from './stories/login-template.data';
 
 const OverviewTemplate = () => (
     <Layout classes={['t-template--overview']}>
@@ -25,15 +14,15 @@ const OverviewTemplate = () => (
             <h1>Login</h1>
         </div>
         <div className="l-divider-medium">
-            <Tabs tabs={tabs} tabsListCentered="true">
-                <TabPanel id="mitarbeitende" active="true">
+            <Tabs tabs={tabs} isTabListCentered>
+                <TabPanel id="mitarbeitende" active>
                     <div className="u-text-center">
-                        <Button classes={['a-btn--primary a-btn--arrows']} arrows="true" url="/">
+                        <Button classes={['a-btn--primary a-btn--arrows']} arrows url="/">
                             Login
                         </Button>
                     </div>
                 </TabPanel>
-                <TabPanel id="pensionierte">
+                <TabPanel id="pensionierte" active={false}>
                     <div className="l-login-panel">
                         <div className="u-text-center">
                             <p>
@@ -42,12 +31,11 @@ const OverviewTemplate = () => (
                                 www.sbb.ch/benefit benutzen.
                             </p>
                         </div>
-                        <LoginForm />
+                        <LoginForm username={loginTemplateData.username} password={loginTemplateData.password} />
                     </div>
                 </TabPanel>
             </Tabs>
         </div>
-
         <div className="u-text-center">
             <p>Probleme beim Login?</p>
             <p>

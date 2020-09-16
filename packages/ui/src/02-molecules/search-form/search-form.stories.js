@@ -7,4 +7,4 @@ export default {
     title: '02-Molecules/Search Form',
 };
 
-export const Default = () => renderToStaticMarkup(<SearchForm />);
+export const Default = () => renderToStaticMarkup(<SearchForm label="Suchbegriff" placeholder="Suchtext eingeben" buttonText="Suche" />);

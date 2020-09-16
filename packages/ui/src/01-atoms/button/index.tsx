@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import Icon from '../icon';
 
-const Button = ({
+interface Props extends ComponentProps<'button'> {
+    handleClick?: () => void;
+    classes?: string[];
+    attrs?: {};
+    url?: string;
+    arrows?: boolean;
+}
+
+const Button: React.FC<Props> = ({
     children,
     handleClick,
     classes = [],
-    attr = {},
-    type,
+    attrs = {},
+    type = 'button',
     url,
     arrows,
 }) => {
@@ -16,10 +24,10 @@ const Button = ({
         <CustomTag
             onClick={handleClick}
             className={cls.join(' ')}
-            type={`${type || 'button'}`}
+            type={type}
             href={url}
             // eslint-disable-next-line react/jsx-props-no-spreading
-            {...attr}
+            {...attrs}
         >
             {arrows && <Icon name="arrow-right" />}
             {children}

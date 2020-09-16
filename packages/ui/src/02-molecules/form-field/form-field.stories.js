@@ -5,7 +5,7 @@ import FormField from './index';
 
 import Label from '../../01-atoms/label';
 import Input from '../../01-atoms/input';
-import Error from '../../01-atoms/error';
+import FieldError from '../../01-atoms/field-error';
 
 export default {
     title: '02-Molecules/Form Field',
@@ -51,8 +51,8 @@ export const HasError = () => renderToStaticMarkup(
                 name: 'field_name',
             }}
         />
-        <Error>
+        <FieldError>
             Pflichtfeld, bitte ausfüllen.
-        </Error>
+        </FieldError>
     </FormField>,
 );

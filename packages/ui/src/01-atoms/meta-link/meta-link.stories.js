@@ -9,13 +9,13 @@ export default {
 };
 
 export const Default = () => renderToStaticMarkup(
-    <MetaLink url="/">
+    <MetaLink href="/">
         Sbb.ch
     </MetaLink>,
 );
 
 export const MetaLinkWithIcon = () => renderToStaticMarkup(
-    <MetaLink url="/">
+    <MetaLink href="/">
         <Icon name="magnifying-glass" />
         Suche
     </MetaLink>,

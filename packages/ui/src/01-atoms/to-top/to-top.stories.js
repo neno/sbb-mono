@@ -7,4 +7,4 @@ export default {
     title: '01-Atoms/To Top',
 };
 
-export const Default = () => renderToStaticMarkup(<ToTop />);
+export const Default = () => renderToStaticMarkup(<ToTop label="Nach Oben" />);

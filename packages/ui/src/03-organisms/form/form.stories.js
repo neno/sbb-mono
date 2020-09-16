@@ -8,7 +8,7 @@ import FormField from '../../02-molecules/form-field';
 import Label from '../../01-atoms/label';
 import Icon from '../../01-atoms/icon';
 import Input from '../../01-atoms/input';
-import Error from '../../01-atoms/error';
+import FieldError from '../../01-atoms/field-error';
 import Button from '../../01-atoms/button';
 import Notification from '../../01-atoms/notification';
 
@@ -16,8 +16,13 @@ export default {
     title: '03-Organisms/Form',
 };
 
+const module = 'form-validation';
+const handleSubmit = event => {
+    event.preventDefault();
+};
+
 export const Default = () => renderToStaticMarkup(
-    <Form>
+    <Form module={module} handleSubmit={handleSubmit}>
         <ol className="o-form__list">
             <li className="o-form__list-item">
                 <FormField>
@@ -73,7 +78,7 @@ export const Default = () => renderToStaticMarkup(
 );
 
 export const Invalid = () => renderToStaticMarkup(
-    <Form>
+    <Form module={module} handleSubmit={handleSubmit}>
         <div className="o-form__notification">
             <Notification classes={['a-notification--error']}>
                 <Icon name="sign-exclamation-point" />
@@ -99,9 +104,9 @@ export const Invalid = () => renderToStaticMarkup(
                             name: 'firstname',
                         }}
                     />
-                    <Error>
+                    <FieldError>
                         Pflichtfeld, bitte ausfüllen.
-                    </Error>
+                    </FieldError>
                 </FormField>
             </li>
             <li className="o-form__list-item">
@@ -116,9 +121,9 @@ export const Invalid = () => renderToStaticMarkup(
                             name: 'lastname',
                         }}
                     />
-                    <Error>
+                    <FieldError>
                         Pflichtfeld, bitte ausfüllen.
-                    </Error>
+                    </FieldError>
                 </FormField>
             </li>
         </ol>
