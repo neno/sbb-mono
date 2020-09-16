@@ -8,7 +8,7 @@ import ErrorList from './ErrorList';
 const FormValidation = createModule({
     options: () => ({
         fieldErrorClass: 'a-input--error',
-        errorClass: 'a-error',
+        errorClass: 'a-field-error',
         errorsListClass: 'a-notification__error-list',
         notificationContainerClass: 'o-form__notification',
         notificationTitle: 'Check following entries:',

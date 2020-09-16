@@ -19,6 +19,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ username, password }) => (
                 <FormField>
                     <Label htmlFor={username.id}>{username.label}</Label>
                     <Input
+                        required
                         id={username.id}
                         name={username.name}
                     />
@@ -28,6 +29,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ username, password }) => (
                 <FormField>
                     <Label htmlFor={password.id}>{password.label}</Label>
                     <Input
+                        required
                         id={password.id}
                         name={password.name}
                     />

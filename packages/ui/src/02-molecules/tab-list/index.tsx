@@ -4,7 +4,7 @@ import Tab, { ITab } from '../../01-atoms/tab';
 interface Props {
     label: string;
     tabs: ITab[];
-    isCentered: boolean;
+    isCentered?: boolean;
 }
 
 const TabList: React.FC<Props> = ({ label, tabs, isCentered }) => (
