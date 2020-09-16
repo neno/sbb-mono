@@ -1,10 +1,10 @@
 .a-field-error {
+  animation: errorShow 0.25s ease-out forwards;
   color: $color-red;
   display: block;
   font-size: em(14, 15);
   line-height: (21 / 14);
   margin-top: em(2, 14);
-  animation: errorShow 0.25s ease-out forwards;
 }
 
 @keyframes errorShow {
@@ -12,9 +12,11 @@
     opacity: 0;
     transform: translate3d(-5%, 5%, 0);
   }
+
   25% {
     opacity: 0;
   }
+
   to {
     opacity: 0.9999;
     transform: translateZ(0);

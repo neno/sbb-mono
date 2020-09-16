@@ -1,12 +1,12 @@
 .a-meta-link {
-  display: flex;
   align-items: center;
-  border: none;
+  background: transparent;
+  border: 0;
+  color: $color-metal;
+  display: flex;
   font-size: rem(14);
   line-height: 17/14;
   text-decoration: none;
-  color: $color-metal;
-  background: transparent;
 
   @include media-breakpoint-up(wide) {
     font-size: rem(21);

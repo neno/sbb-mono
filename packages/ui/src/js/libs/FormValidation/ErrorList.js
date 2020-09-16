@@ -36,7 +36,7 @@ export default class ErrorList {
     createListItem() {
         this.invalidFields.forEach(field => {
             this.addItem(field);
-        })
+        });
     }
 
     removeAll() {
@@ -46,7 +46,7 @@ export default class ErrorList {
     update(invalidFields) {
         this.invalidFields = invalidFields;
         this.removeAll();
-        this.createListItem()
+        this.createListItem();
     }
 
     handleClick(event) {
@@ -62,7 +62,7 @@ export default class ErrorList {
             this.list.classList.add(this.listClass);
         }
 
-        this.createListItem()
+        this.createListItem();
     }
 
     bindEvents() {

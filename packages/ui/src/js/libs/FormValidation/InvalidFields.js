@@ -1,4 +1,4 @@
-export default class invalidFields {
+export default class InvalidFields {
     constructor() {
         this.fields = [];
     }

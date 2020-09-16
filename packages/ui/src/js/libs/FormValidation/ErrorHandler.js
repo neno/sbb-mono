@@ -1,6 +1,6 @@
 import hasError from './hasError';
 
-export default class errorHandler {
+export default class ErrorHandler {
     constructor(errorClass, fieldErrorClass) {
         this.errorClass = errorClass;
         this.fieldErrorClass = fieldErrorClass;

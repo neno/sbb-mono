@@ -2,15 +2,15 @@
   &--to-top {
     background: rgba($color-white, 0.75);
     border: 0;
-    padding: 0;
     color: $color-metal;
+    padding: 0;
     will-change: color;
 
     > .a-icon {
-      position: static;
-      margin: 0;
-      width: em(42, 15);
       height: em(42, 15);
+      margin: 0;
+      position: static;
+      width: em(42, 15);
     }
 
     &:hover,
