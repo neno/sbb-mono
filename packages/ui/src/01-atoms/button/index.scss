@@ -3,6 +3,8 @@ $button-padding-x: em(40, 15);
 $button-arrow-padding-x: em(66, 15);
 $button-arrow-position-x: em(10, 15);
 $button-arrow-hover-position-x: em(36, 15);
+$button-arrow-animation-duration: 0.4s;
+$button-arrow-animation-easing: ease;
 
 .a-btn {
   align-items: center;
@@ -32,21 +34,22 @@ $button-arrow-hover-position-x: em(36, 15);
   }
 
   &--primary {
+    @mixin hover-animation() {
+      background-color: $color-red-125;
+      border-color: $color-red-125;
+      color: $color-white;
+    }
     background-color: $color-red;
     border-color: $color-red;
     color: $color-white;
     will-change: background-color, border-color;
 
     @include hover {
-      background-color: $color-red-125;
-      border-color: $color-red-125;
-      color: $color-white;
+      @include hover-animation;
     }
 
     &:focus {
-      background-color: $color-red-125;
-      border-color: $color-red-125;
-      color: $color-white;
+      @include hover-animation;
     }
   }
 
@@ -80,12 +83,19 @@ $button-arrow-hover-position-x: em(36, 15);
 
     padding-right: $button-arrow-padding-x;
     position: relative;
-    transition: background-color 0.4s ease, border-color 0.4s ease,
-      padding-left 0.4s ease, padding-right 0.4s ease;
+    transition: background-color $button-arrow-animation-duration
+        $button-arrow-animation-easing,
+      border-color $button-arrow-animation-duration
+        $button-arrow-animation-easing,
+      padding-left $button-arrow-animation-duration
+        $button-arrow-animation-easing,
+      padding-right $button-arrow-animation-duration
+        $button-arrow-animation-easing;
     will-change: background-color, border-color, padding-left, padding-right;
 
     > .a-icon {
-      transition: opacity 0.4s ease;
+      transition: opacity $button-arrow-animation-duration
+        $button-arrow-animation-easing;
       will-change: opacity;
 
       &:last-child {
@@ -101,12 +111,12 @@ $button-arrow-hover-position-x: em(36, 15);
 
     .no-touchdevice & {
       @include hover {
-        @include hover-animation();
+        @include hover-animation;
       }
     }
 
     &:focus {
-      @include hover-animation();
+      @include hover-animation;
     }
   }
 }

@@ -1,3 +1,5 @@
 .m-tablist {
-  @extend .l-divider-medium;
+  &.--centered {
+    text-align: center;
+  }
 }

@@ -96,7 +96,7 @@
 
 @mixin font-regular {
   font-size: $font-size-regular;
-  font-weight: 300;
+  font-weight: $font-light;
   line-height: (26 / 15);
 
   @include media-breakpoint-up(wide) {
@@ -105,5 +105,33 @@
 
   @include media-breakpoint-up(ultra) {
     font-size: $font-size-regular-xxlarge;
+  }
+}
+
+@mixin divider-thin {
+  margin-top: em(8, 15);
+}
+
+@mixin divider-small {
+  margin-top: em(24, 15);
+}
+
+@mixin divider-medium {
+  margin-top: em(36, 15);
+
+  @include media-breakpoint-up(mobile) {
+    margin-top: em(48, 15);
+  }
+}
+
+@mixin divider-big {
+  margin-top: em(48, 15);
+
+  @include media-breakpoint-up(mobile) {
+    margin-top: em(72, 15);
+  }
+
+  @include media-breakpoint-up(tablet) {
+    margin-top: em(96, 15);
   }
 }
