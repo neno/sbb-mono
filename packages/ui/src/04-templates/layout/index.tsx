@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ classes, children }) => (
-    <div className={['t-template', ...classes].join(' ')}>
+    <div className={[...classes].join(' ')}>
         <main id="main">{children}</main>
     </div>
 );
