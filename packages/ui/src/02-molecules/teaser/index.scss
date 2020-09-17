@@ -1,0 +1,24 @@
+.m-teaser {
+  background-color: $color-milk;
+  display: block;
+  text-decoration: inherit;
+  transition: background-color 225ms ease-in-out;
+  will-change: background-color;
+
+  &__title {
+    @include h3;
+  }
+
+  &__body {
+    padding: em(24, 15) em(24, 15) em(27, 15);
+  }
+
+  @include hover {
+    background-color: $color-aluminum;
+    color: $color-black;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+}

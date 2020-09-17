@@ -1,0 +1,23 @@
+@mixin font-regular {
+  font-size: $font-size-regular;
+  font-weight: $font-light;
+  line-height: (26 / 15);
+
+  @include media-breakpoint-up(wide) {
+    font-size: $font-size-regular-xlarge;
+  }
+
+  @include media-breakpoint-up(ultra) {
+    font-size: $font-size-regular-xxlarge;
+  }
+}
+
+@mixin h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-light;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(mobile) {
+    font-size: $font-size-h3-mobile-up;
+  }
+}
