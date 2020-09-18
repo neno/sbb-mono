@@ -3,7 +3,6 @@ export default class ErrorList {
         this.invalidFields = invalidFields;
         this.listClass = listClass;
         this.handleClick = this.handleClick.bind(this);
-
         this.init();
     }
 

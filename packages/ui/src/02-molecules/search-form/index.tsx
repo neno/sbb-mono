@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Icon from '../../01-atoms/icon';
-import Input from '../../01-atoms/input';
+import TextInput from '../../01-atoms/text-input';
 import Button from '../../01-atoms/button';
 
 interface Props {
@@ -16,7 +16,7 @@ const SearchForm: React.FC<Props> = ({ label, buttonText, placeholder }) => (
         <label className="u-sr-only" htmlFor="search-term">
             {label}
         </label>
-        <Input
+        <TextInput
             name="search-term"
             id="search-term"
             classes={['a-input--search']}

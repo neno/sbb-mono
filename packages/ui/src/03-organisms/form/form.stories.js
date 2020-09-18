@@ -3,11 +3,11 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Form from './index';
 
-import FormField from '../../02-molecules/form-field';
+import TextField from '../../02-molecules/text-field';
 
 import Label from '../../01-atoms/label';
 import Icon from '../../01-atoms/icon';
-import Input from '../../01-atoms/input';
+import TextInput from '../../01-atoms/text-input';
 import FieldError from '../../01-atoms/field-error';
 import Button from '../../01-atoms/button';
 import Notification from '../../01-atoms/notification';
@@ -25,38 +25,38 @@ export const Default = () => renderToStaticMarkup(
     <Form module={module} handleSubmit={handleSubmit}>
         <ol className="o-form__list">
             <li className="o-form__list-item">
-                <FormField>
+                <TextField>
                     <Label htmlFor="firstname">
                         First Name
                     </Label>
-                    <Input
+                    <TextInput
                         attr={{
                             id: 'firstname',
                             name: 'firstname',
                             'data-error-message-required': 'Custom error for missing text',
                         }}
                     />
-                </FormField>
+                </TextField>
             </li>
             <li className="o-form__list-item">
-                <FormField>
+                <TextField>
                     <Label htmlFor="lastname">
                         Last Name
                     </Label>
-                    <Input
+                    <TextInput
                         attr={{
                             id: 'lastname',
                             name: 'lastname',
                         }}
                     />
-                </FormField>
+                </TextField>
             </li>
             <li className="o-form__list-item">
-                <FormField>
+                <TextField>
                     <Label htmlFor="email">
                         Email
                     </Label>
-                    <Input
+                    <TextInput
                         type="email"
                         attr={{
                             id: 'email',
@@ -64,7 +64,7 @@ export const Default = () => renderToStaticMarkup(
                             'data-error-message-type-mismatch': 'Custom error for type mismatch',
                         }}
                     />
-                </FormField>
+                </TextField>
             </li>
         </ol>
         <div className="o-form__footer">
@@ -93,11 +93,11 @@ export const Invalid = () => renderToStaticMarkup(
         </div>
         <ol className="o-form__list">
             <li className="o-form__list-item">
-                <FormField>
+                <TextField>
                     <Label htmlFor="firstname">
                         First Name
                     </Label>
-                    <Input
+                    <TextInput
                         classes={['a-input--error']}
                         attr={{
                             id: 'firstname',
@@ -107,14 +107,14 @@ export const Invalid = () => renderToStaticMarkup(
                     <FieldError>
                         Pflichtfeld, bitte ausfüllen.
                     </FieldError>
-                </FormField>
+                </TextField>
             </li>
             <li className="o-form__list-item">
-                <FormField>
+                <TextField>
                     <Label htmlFor="lastname">
                         Last Name
                     </Label>
-                    <Input
+                    <TextInput
                         classes={['a-input--error']}
                         attr={{
                             id: 'lastname',
@@ -124,7 +124,7 @@ export const Invalid = () => renderToStaticMarkup(
                     <FieldError>
                         Pflichtfeld, bitte ausfüllen.
                     </FieldError>
-                </FormField>
+                </TextField>
             </li>
         </ol>
         <div className="o-form__footer">

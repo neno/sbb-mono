@@ -13,7 +13,7 @@ const Input: React.FC<Props> = ({
     attrs,
     ...props
 }) => {
-    const cls = ['a-input', ...classes];
+    const cls = ['a-text-input', ...classes];
     return (
         <input
             name={props.name}

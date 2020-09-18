@@ -2,8 +2,7 @@ import React from 'react';
 
 interface Props {
     src:string;
-    dataSrc: string;
-    dataSrcset: string;
+    srcset: string;
     sizes?: string;
     alt?: string;
     classes?: string[];
@@ -11,8 +10,7 @@ interface Props {
 
 const Image: React.FC<Props> = ({
     src,
-    dataSrc,
-    dataSrcset,
+    srcset,
     sizes = '100vw',
     alt,
     classes = [],
@@ -20,11 +18,9 @@ const Image: React.FC<Props> = ({
     <span className={`a-img ${classes.join(' ')}`}>
         <img
             data-image="image"
-            data-src={dataSrc}
-            data-srcset={dataSrcset}
             alt={alt}
             className="a-img__image"
-            srcSet={dataSrcset}
+            srcSet={srcset}
             src={src}
             sizes={sizes}
         />

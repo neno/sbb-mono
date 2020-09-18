@@ -61,7 +61,7 @@ const Notification = createModule({
             createNotification();
         };
 
-        const destoryNotification = () => {
+        const destroy = () => {
             notification.parentNode.removeChild(notification);
         };
 
@@ -76,7 +76,7 @@ const Notification = createModule({
         };
 
         state.destroy = () => {
-            destoryNotification();
+            destroy();
         };
 
         state.init();
