@@ -8,7 +8,7 @@ interface Props {
 }
 
 const TabList: React.FC<Props> = ({ label, tabs, isCentered }) => (
-    <div className={`m-tablist${isCentered ? ' u-text-center' : ''}`} role="tablist" aria-label={label}>
+    <div className={`m-tablist${isCentered ? ' m-tablist--centered' : ''}`} role="tablist" aria-label={label}>
         {tabs.map(tab => (
             <Tab key={tab.id} id={tab.id} label={tab.label} active={tab.active} />
         ))}

@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import LoginTemplate from '../index';
+import Login from '../index';
 
 export default {
-    title: '04-Templates/Login',
+    title: '03-Organisms/Login',
 };
 
-export const Template = () => renderToStaticMarkup(<LoginTemplate />);
+export const Template = () => renderToStaticMarkup(<Login />);

@@ -1,18 +1,15 @@
 import React from 'react';
-import Layout from '../layout';
 
 import TabPanel from '../../01-atoms/tab-panel';
 import Button from '../../01-atoms/button';
 
 import LoginForm from './LoginForm';
-import Tabs from '../../03-organisms/tabs';
+import Tabs from '../tabs';
 import { tabs, loginTemplateData } from './stories/login.data';
 
 const OverviewTemplate = () => (
-    <Layout classes={['t-login']}>
-        <div>
-            <h1>Login</h1>
-        </div>
+    <div className="o-login">
+        <h1>Login</h1>
         <div className="l-divider-big">
             <Tabs tabs={tabs} isTabListCentered>
                 <TabPanel id="mitarbeitende" active>
@@ -46,7 +43,7 @@ const OverviewTemplate = () => (
                 <a href="mailto:ict.servicedesk@sbb.ch">ict.servicedesk@sbb.ch</a>
             </p>
         </div>
-    </Layout>
+    </div>
 );
 
 export default OverviewTemplate;

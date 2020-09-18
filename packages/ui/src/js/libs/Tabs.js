@@ -59,7 +59,7 @@ const Tabs = createModule({
         };
 
         const switchTabOnArrowPress = event => {
-            const key = event.key || event.keyCode;
+            const key = event.key;
 
             if (direction[key]) {
                 const target = event.target;
@@ -77,7 +77,7 @@ const Tabs = createModule({
         };
 
         const handleKeyup = event => {
-            const key = event.key || event.keyCode;
+            const key = event.key;
             switch (key) {
             case 'ArrowLeft':
             case 'ArrowRight':
