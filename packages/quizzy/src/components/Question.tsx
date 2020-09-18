@@ -1,5 +1,5 @@
 import React from 'react';
-import { IQuestion } from '../models.d';
+import { IQuestion } from '../models';
 import Answer from './Answer';
 import { isCorrectlyAnswered } from '../helpers/helpers';
 

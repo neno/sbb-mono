@@ -1,5 +1,5 @@
 import React from 'react';
-import { IResult, IQuestion } from '../models.d';
+import { IResult, IQuestion } from '../models';
 import { isCorrectlyAnswered } from '../helpers/helpers';
 
 interface Props {

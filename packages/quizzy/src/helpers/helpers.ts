@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { IAnswer } from '../models.d';
+import { IAnswer } from '../models';
 
 export const isCorrectlyAnswered = (answers: IAnswer[]): boolean => {
     let isCorrect = true;

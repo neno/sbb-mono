@@ -1,5 +1,6 @@
 import React, { useReducer, FormEventHandler } from 'react';
-import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models.d';
+import MyButton from '@sbb-mono/ui/src/01-atoms/button';
+import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models';
 import { apiEndpoint } from '../config';
 import reducer, { INITIAL_STATE } from '../reducer';
 import useFetch from '../useFetch';
@@ -56,6 +57,7 @@ const App: React.FC = () => {
                     <button type="button" onClick={handleReset}>
                         Reset
                     </button>
+                    <MyButton>My Button</MyButton>
                 </div>
             </form>
             <div className="t-quiz__results">

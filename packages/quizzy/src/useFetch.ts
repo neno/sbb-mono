@@ -5,7 +5,7 @@ import {
     FETCH_RESPONSE_COMPLETE,
     FETCH_ERROR,
     IApiData,
-} from './models.d';
+} from './models';
 import { excludeApi } from './config';
 
 const useFetch = (url: string, dispatch: React.Dispatch<QuizAction>): void => {

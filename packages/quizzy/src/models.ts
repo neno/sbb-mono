@@ -16,7 +16,7 @@ export interface IQuestion {
     id: number;
     title: string;
     text: string;
-    questionType: typeof QuestionType;
+    questionType: QuestionType;
     answers: IAnswer[];
 }
 
