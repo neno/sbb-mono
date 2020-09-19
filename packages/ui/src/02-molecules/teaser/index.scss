@@ -1,10 +1,9 @@
 .m-teaser {
   background-color: $color-milk;
   display: block;
-  color: inherit;
-  text-decoration: inherit;
+  height: 100%;
+  position: relative;
   transition: background-color 225ms ease-in-out;
-  will-change: background-color;
 
   &__title {
     @include h3;
@@ -14,12 +13,35 @@
     padding: em(24, 15) em(24, 15) em(27, 15);
   }
 
-  @include hover {
-    background-color: $color-aluminum;
-    color: $color-black;
+  &__block-link {
+    color: inherit !important;
+    text-decoration: inherit !important;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 
   &--centered {
     text-align: center;
+  }
+
+  @mixin hover-animation {
+    background-color: $color-aluminum;
+    color: $color-black;
+  }
+
+  @include hover {
+    @include hover-animation;
+  }
+
+  &:focus {
+    @include hover-animation;
   }
 }

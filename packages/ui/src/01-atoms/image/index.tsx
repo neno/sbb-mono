@@ -17,7 +17,6 @@ const Image: React.FC<Props> = ({
 }) => (
     <span className={`a-img ${classes.join(' ')}`}>
         <img
-            data-image="image"
             alt={alt}
             className="a-img__image"
             srcSet={srcset}
