@@ -12,6 +12,7 @@ export const teaserData = {
           https://placehold.it/1236x804 1236w
         `,
         src: 'https://placehold.it/387x252',
+        sizes: '(min-width: 64.0625em) 24.125rem, (min-width: 40.1875em) 30rem, 100%',
     },
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
