@@ -15,7 +15,13 @@
     }
 
     .m-teaser {
-      max-width: 24.125rem;
+      @media (min-width: 40.1875em) {
+        max-width: 30rem;
+      }
+
+      @media (min-width: 64.0625em) {
+        max-width: 24.125rem;
+      }
     }
   }
 }

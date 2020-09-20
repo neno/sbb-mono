@@ -4,15 +4,14 @@ export const teaserData = {
     title: 'Schritt für Schritt zu klimafreundlichen Bahnhöfen',
     image: {
         srcset: `
-          https://placehold.it/300x180 300w,
-          https://placehold.it/400x240 400w,
-          https://placehold.it/600x360 600w,
-          https://placehold.it/800x480 800w,
-          https://placehold.it/1200x720 1200w,
-          https://placehold.it/1600x960 1600w,
-          https://placehold.it/2000x1200 2000w
+          https://placehold.it/387x252 387w,
+          https://placehold.it/480x313 480w,
+          https://placehold.it/618x402 618w,
+          https://placehold.it/774x504 774w,
+          https://placehold.it/960x616 960w,
+          https://placehold.it/1236x804 1236w
         `,
-        src: 'https://placehold.it/300x180',
+        src: 'https://placehold.it/387x252',
     },
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna

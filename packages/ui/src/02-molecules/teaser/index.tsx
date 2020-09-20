@@ -1,38 +1,36 @@
-/* eslint-disable react/jsx-props-no-spreading */
+// eslint-disable react/jsx-props-no-spreading
 import React from 'react';
 
 import Image from '../../01-atoms/image';
+import ArrowLink from '../../01-atoms/arrow-link';
 
 interface Props {
-    url:string;
     imageData: object[];
-    cta: boolean;
+    hasLink: boolean;
+    href?: string;
     classes?: string[];
     title?: string;
     text?: string;
 }
 
 const Teaser: React.FC<Props> = ({
-    imageData, title, text, url = '#', classes = [], cta,
-}) => (
-    <article className={`m-teaser ${classes.join(' ')}`}>
-        <Image {...imageData} />
-        <div className="m-teaser__body">
-            {title && (
-                cta
-                    ? <h3 className="m-teaser__title">{title}</h3>
-                    : (
-                        <a className="m-teaser__block-link" href="url">
-                            <h3 className="m-teaser__title">{title}</h3>
-
-                        </a>
-                    )
-
-            )}
-            {text && <p>{text}</p>}
-            {cta && <p>Mehr Info</p>}
-        </div>
-    </article>
-);
+    imageData, title, text, href = '#', classes = [], hasLink,
+}) => {
+    const cls = hasLink ? 'm-teaser m-teaser--has-link' : 'm-teaser';
+    return (
+        <article className={`${cls} ${classes.join(' ')}`}>
+            <Image {...imageData} />
+            <div className="m-teaser__body">
+                {title && (
+                    <a className="m-teaser__block-link" href={href}>
+                        <h3 className="m-teaser__title">{title}</h3>
+                    </a>
+                )}
+                {text && <p className="m-teaser__text">{text}</p>}
+                {hasLink && <ArrowLink />}
+            </div>
+        </article>
+    );
+};
 
 export default Teaser;
