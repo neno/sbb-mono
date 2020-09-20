@@ -8,7 +8,7 @@ import Input from '../../01-atoms/input';
 import FieldError from '../../01-atoms/field-error';
 
 export default {
-    title: '02-Molecules/Form Field',
+    title: '02-Molecules/Form Fields/Text Field',
 };
 
 export const Default = () => renderToStaticMarkup(
