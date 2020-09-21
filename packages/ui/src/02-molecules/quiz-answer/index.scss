@@ -1,6 +1,7 @@
 .m-quiz-answer {
   background-color: $color-white;
   border-bottom: 2px solid $color-white;
+  padding: rem(8) rem(8) 0 rem(8);
 
   &--correct,
   &--incorrect {

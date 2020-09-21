@@ -1,5 +1,5 @@
 import React from 'react';
-import Checkmark from '../icon/icons/Checkmark';
+import Icon from '../icon';
 
 interface Props {
     id: string;
@@ -31,7 +31,7 @@ const Checkbox:React.FC<Props> = ({
                 onChange={() => handleChange(id)}
                 disabled={disabled}
             />
-            <Checkmark />
+            <Icon name="checkmark" />
         </div>
     );
 };

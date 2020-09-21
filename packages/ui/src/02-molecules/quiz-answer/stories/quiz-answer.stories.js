@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import QuizAnswer from '../index';
 
 export default {
-    title: '02-Molecules/Quiz/Answer',
+    title: '02-Molecules/Quiz Answer',
 };
 
 const handleChange = id => {

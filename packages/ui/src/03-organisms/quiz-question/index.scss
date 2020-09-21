@@ -1,0 +1,29 @@
+.o-quiz-question {
+  background-color: $color-milk;
+  padding: rem(8);
+
+  &--correct {
+    .a-icon {
+      color: $color-green;
+    }
+  }
+
+  &--incorrect {
+    .a-icon {
+      color: $color-red;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__answers {
+    @include no-bullets;
+
+    li {
+      margin-top: rem(8);
+    }
+  }
+}
