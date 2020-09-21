@@ -47,6 +47,18 @@
     padding: em(19, 15) 0.8em;
   }
 
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-left {
+    text-align: left;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+
   @include media-breakpoint-up(mobile) {
     &__td,
     &__th {
