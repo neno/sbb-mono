@@ -25,15 +25,14 @@
 @mixin inline-list {
   @include no-bullets();
   align-items: center;
-
   display: inline-flex;
 }
 
-@mixin h-list {
+@mixin h-list($margin-left) {
   display: flex;
 
   li {
-    margin-left: rem(40);
+    margin-left: rem($margin-left);
 
     &:first-child {
       margin-left: 0;

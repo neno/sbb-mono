@@ -1,0 +1,9 @@
+.a-link {
+  @include link;
+
+  &--footer {
+    color: $color-granite;
+    font-size: em(14, 15);
+    line-height: 21 / 14;
+  }
+}

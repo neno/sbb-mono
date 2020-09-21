@@ -1,0 +1,20 @@
+.o-footer {
+  &__sections-container {
+    background: $color-cloud;
+
+    @include media-breakpoint-up(tablet) {
+      padding: em(80, 15) 0;
+    }
+  }
+
+  &__sections {
+    @include media-breakpoint-up(tablet) {
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: rem(30);
+      }
+    }
+  }
+}

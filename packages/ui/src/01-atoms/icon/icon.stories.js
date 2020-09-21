@@ -18,3 +18,5 @@ export const Globe = () => renderToStaticMarkup(<Icon name="globe" />);
 export const MagnifyingGlass = () => renderToStaticMarkup(<Icon name="magnifying-glass" />);
 
 export const SignExclamationPoint = () => renderToStaticMarkup(<Icon name="sign-exclamation-point" />);
+
+export const Facebook = () => renderToStaticMarkup(<Icon name="facebook" />);
