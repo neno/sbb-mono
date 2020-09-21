@@ -1,0 +1,27 @@
+.m-quiz-answer {
+  background-color: $color-white;
+  border-bottom: 2px solid $color-white;
+
+  &--correct,
+  &--incorrect {
+    .a-checkbox,
+    .a-radio-button {
+      &--disabled {
+        background-color: $color-white;
+        color: $color-red;
+
+        &::before {
+          background-color: $color-red;
+        }
+      }
+    }
+  }
+
+  &--correct {
+    border-color: $color-green;
+  }
+
+  &--incorrect {
+    border-color: $color-red;
+  }
+}

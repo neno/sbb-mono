@@ -30,7 +30,7 @@
 @import '../01-atoms/input/index';
 @import '../01-atoms/label/index';
 @import '../01-atoms/meta-link/index';
-@import '../01-atoms/radiobutton/index';
+@import '../01-atoms/radio-button/index';
 @import '../01-atoms/table/index';
 @import '../01-atoms/tab/index';
 @import '../01-atoms/tab-panel/index';
@@ -38,9 +38,11 @@
 @import '../01-atoms/notification/index';
 
 /// Molecules
+@import '../02-molecules/quiz-answer/index';
 @import '../02-molecules/checkbox-field/index';
 @import '../02-molecules/form-field/index';
-@import '../02-molecules/radiobutton-field/index';
+@import '../02-molecules/radio-button-field/index';
+@import '../02-molecules/radio-button-list/index';
 @import '../02-molecules/search-form/index';
 
 /// Organisms

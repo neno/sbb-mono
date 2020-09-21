@@ -1,8 +1,8 @@
 import React from 'react';
 import Label from '../../01-atoms/label';
-import Checkbox from '../../01-atoms/checkbox';
+import RadioButton from '../../01-atoms/radio-button';
 
-interface Props {
+export interface RadioButtonProps {
     id: string;
     name: string;
     handleChange: (id: string) => void;
@@ -12,12 +12,12 @@ interface Props {
     classes?: string[];
 }
 
-const CheckboxField:React.FC<Props> = ({
+const RadioButtonField:React.FC<RadioButtonProps> = ({
     id, name, handleChange, checked, disabled, label, classes = [],
 }) => (
-    <div className={['m-checkbox-field', ...classes].join(' ')}>
+    <div className={['m-radio-button-field', ...classes].join(' ')}>
         <Label htmlFor={id}>
-            <Checkbox
+            <RadioButton
                 name={name}
                 id={id}
                 checked={checked}
@@ -29,4 +29,4 @@ const CheckboxField:React.FC<Props> = ({
     </div>
 );
 
-export default CheckboxField;
+export default RadioButtonField;

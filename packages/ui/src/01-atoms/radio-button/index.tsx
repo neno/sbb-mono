@@ -8,10 +8,10 @@ interface Props {
     disabled: boolean;
 }
 
-const Radiobutton:React.FC<Props> = ({
+const RadioButton:React.FC<Props> = ({
     id, name, handleChange, checked = false, disabled = false,
 }) => {
-    const baseCls = 'a-radiobutton';
+    const baseCls = 'a-radio-button';
     const cls = [baseCls];
     if (checked) {
         cls.push(`${baseCls}--checked`);
@@ -23,7 +23,7 @@ const Radiobutton:React.FC<Props> = ({
     return (
         <div className={cls.join(' ')}>
             <input
-                className="a-radiobutton__input"
+                className="a-radio-button__input"
                 type="radio"
                 name={name}
                 id={id}
@@ -35,4 +35,4 @@ const Radiobutton:React.FC<Props> = ({
     );
 };
 
-export default Radiobutton;
+export default RadioButton;

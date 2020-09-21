@@ -1,4 +1,4 @@
-.a-radiobutton {
+.a-radio-button {
   @include check-radio;
   border-radius: 50%;
 
@@ -16,7 +16,7 @@
     }
   }
 
-  &--disabled.a-radiobutton--checked::before {
+  &--disabled.a-radio-button--checked::before {
     background-color: $color-granite;
   }
 }

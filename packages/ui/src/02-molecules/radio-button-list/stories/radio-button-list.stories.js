@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import RadiobuttonField from '../index';
 
 export default {
-    title: '02-Molecules/Form Fields/Radiobutton Field',
+    title: '02-Molecules/Form Fields/Radio Button List',
 };
 
 const handleChange = id => {
