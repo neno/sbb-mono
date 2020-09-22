@@ -10,11 +10,9 @@ export const Standard = () => renderToStaticMarkup(<Link>Das ist ein inline Link
 
 export const FooterLink = ({ label = 'Footer Link' }) => renderToStaticMarkup(<Link classes={['a-link--footer']}>{label}</Link>);
 
-// export const IconLink = () => renderToStaticMarkup(
-//     <Link classes={['a-link--icon']}>
-//       <Icon name='home' />
-//     </Link>
-//   );
+export const ArrowsLink = () => renderToStaticMarkup(
+    <Link arrows>More information</Link>,
+);
 
 // export const WithLabelIcon = () => renderToStaticMarkup(
 //     <Link classes={['a-link--lbl-icon']}>

@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 
-export interface ILink {
+import Icon from '../icon';
+
+export interface ILink extends ComponentProps<'a'> {
     children: React.ReactNode;
-    label?: string;
-    href?:string;
+    attrs?: {};
+    url?: string;
+    tag?: string;
     classes?: string[];
+    arrows?: boolean;
 }
 
 const Link: React.FC<ILink> = ({
-    children, classes = [], href = '#',
+    children, tag, classes = [], url, attrs = {}, arrows,
 }) => {
     const cls = ['a-link', ...classes];
+    if (arrows) {
+        cls.push('a-link__arrows');
+    }
+    const CustomTag = url ? 'a' : (tag || 'span');
     return (
-        <a href={href} className={cls.join(' ')}>
+        <CustomTag
+            href={url}
+            className={cls.join(' ')}
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...attrs}
+        >
+            {arrows && <Icon name="arrow-right" />}
             {children}
-        </a>
+            {arrows && <Icon name="arrow-right" />}
+        </CustomTag>
     );
 };
 

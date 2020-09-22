@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import Button from '../../01-atoms/button';
+import Link from '../../01-atoms/link';
 import LinkList from '../../02-molecules/link-list';
 import FooterSection from '../../02-molecules/footer-section';
 import { footerSectionData } from '../../02-molecules/footer-section/stories/footer-section.data';
@@ -13,13 +14,14 @@ const Footer = () => (
             <div className="l-constrainer">
                 <div className="o-footer__sections">
                     <FooterSection title="Kontakt">
-                        <Button classes={['a-btn--primary a-btn--arrows']} arrows>
-                            Label
+                        <Button url="#" classes={['a-btn--primary a-btn--arrows']} arrows>
+                            Kontakt
                         </Button>
                         <p>
                             Haben Sie Fragen? Wir helfen Ihnen gerne.
                             Bitte lesen Sie auch unsere Erklärung zum
-                            <a href="#">Datenschutz.</a>
+                            {' '}
+                            <Link url="#" classes={['a-link--footer']}>Datenschutz.</Link>
                         </p>
                     </FooterSection>
                     <FooterSection title="Bahnverkehrsinformationen">
@@ -27,17 +29,17 @@ const Footer = () => (
                             Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
                         </p>
                         <p>
-                            <a href="#">
+                            <Link url="#" classes={['a-link--footer']} arrows>
                                 Aktuelle Hinweise
-                            </a>
+                            </Link>
                         </p>
                     </FooterSection>
                     <FooterSection title="Newsletter & Social Media">
                         <p>Jeden Monat über Angebote und Neuigkeiten informiert sein.</p>
                         <p>
-                            <a href="#">
+                            <Link url="#" classes={['a-link--footer']} arrows>
                                 Newsletter abonnieren
-                            </a>
+                            </Link>
                         </p>
                         <SocialLinks socialLinks={socialLinks} />
                     </FooterSection>
