@@ -8,10 +8,10 @@
   }
 
   &__footer {
-    margin-top: em(48, 15);
+    @include divider-medium;
   }
 
-  &__notification {
-    @extend .l-divider-big;
+  &__notification + &__list {
+    @include divider-medium;
   }
 }

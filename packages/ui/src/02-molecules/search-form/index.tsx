@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Icon from '../../01-atoms/icon';
-import Input from '../../01-atoms/input';
+import TextInput from '../../01-atoms/text-input';
 import Button from '../../01-atoms/button';
 
 interface Props {
@@ -13,10 +13,10 @@ interface Props {
 /* stylelint-disable jsx-a11y/label-has-associated-control */
 const SearchForm: React.FC<Props> = ({ label, buttonText, placeholder }) => (
     <form className="m-search-form">
-        <label className="sr-only" htmlFor="search-term">
+        <label className="u-sr-only" htmlFor="search-term">
             {label}
         </label>
-        <Input
+        <TextInput
             name="search-term"
             id="search-term"
             classes={['a-input--search']}
@@ -26,7 +26,7 @@ const SearchForm: React.FC<Props> = ({ label, buttonText, placeholder }) => (
         />
         <div className="m-search-form__submit">
             <Button classes={['a-btn--primary a-btn--icon a-btn--search']} type="submit">
-                <span className="sr-only">
+                <span className="u-sr-only">
                     {buttonText}
                 </span>
                 <Icon name="magnifying-glass" />

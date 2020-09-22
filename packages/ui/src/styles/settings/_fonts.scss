@@ -1,6 +1,10 @@
 $font-primary: 'Sbb';
 $font-secondary: Helvetica, Arial, sans-serif;
 
+$font-extra-light: 200;
+$font-light: 300;
+$font-bold: 700;
+
 /* stylelint-disable */
 :export {
   fontPrimary: $font-primary;

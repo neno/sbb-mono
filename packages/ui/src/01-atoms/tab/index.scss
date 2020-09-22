@@ -3,11 +3,11 @@
   border: 0;
   cursor: pointer;
   font-size: em(20, 15);
-  font-weight: 300;
-  font-weight: 300;
+  font-weight: $font-light;
   line-height: 1;
   padding: 0 0 em(9, 20);
   position: relative;
+  will-change: color;
 
   @include media-breakpoint-up(mobile) {
     font-size: em(26, 15);

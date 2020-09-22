@@ -1,10 +1,10 @@
 import React, { ComponentProps } from 'react';
-import Form from '../../03-organisms/form';
+import Form from '../form';
 
-import FormField, { IFormField } from '../../02-molecules/form-field';
+import FormField, { IFormField } from '../../02-molecules/text-field';
 
 import Label from '../../01-atoms/label';
-import Input from '../../01-atoms/input';
+import TextInput from '../../01-atoms/text-input';
 import Button from '../../01-atoms/button';
 
 export interface LoginFormProps extends ComponentProps<'form'> {
@@ -18,7 +18,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ username, password }) => (
             <li className="o-form__list-item">
                 <FormField>
                     <Label htmlFor={username.id}>{username.label}</Label>
-                    <Input
+                    <TextInput
+                        required
                         id={username.id}
                         name={username.name}
                     />
@@ -27,7 +28,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ username, password }) => (
             <li className="o-form__list-item">
                 <FormField>
                     <Label htmlFor={password.id}>{password.label}</Label>
-                    <Input
+                    <TextInput
+                        required
                         id={password.id}
                         name={password.name}
                     />

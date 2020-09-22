@@ -2,13 +2,13 @@ $input-height: em(48, 15);
 $input-border-width: em(2, 15);
 $search-submit-min-width: em(54, 15);
 
-.a-input {
+.a-text-input {
   background-color: $color-white;
   border: em(2, 15) solid $color-graphite;
   border-radius: em(2, 15);
   color: $color-granite;
   height: $input-height;
-  padding: em(10, 15) em(14, 15) em(11, 15);
+  padding: em(9, 15) em(14, 15) em(9, 15);
   width: 100%;
 
   @include placeholder {
