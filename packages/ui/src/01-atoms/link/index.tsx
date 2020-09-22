@@ -16,7 +16,7 @@ const Link: React.FC<ILink> = ({
 }) => {
     const cls = ['a-link', ...classes];
     if (arrows) {
-        cls.push('a-link__arrows');
+        cls.push('a-link--arrows');
     }
     const CustomTag = url ? 'a' : (tag || 'span');
     return (

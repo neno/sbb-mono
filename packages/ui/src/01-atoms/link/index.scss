@@ -3,11 +3,11 @@
 
   &--footer {
     color: $color-granite;
-    font-size: em(14, 15);
-    line-height: 21 / 14;
+    font-size: em(14, $footer-section-base-size);
+    line-height: (21 / 14);
   }
 
-  &__arrows {
+  &--arrows {
     $padding-x: em(30, 15);
     $arrow-padding-x: em(40, 15);
     $arrow-position-x: em(10, 15);
@@ -27,15 +27,20 @@
     }
 
     display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     position: relative;
+    text-decoration: none !important;
     padding-right: $arrow-padding-x;
     transition: color $arrow-animation-duration $arrow-animation-easing,
       padding-left $arrow-animation-duration $arrow-animation-easing,
       padding-right $arrow-animation-duration $arrow-animation-easing;
 
     > .a-icon {
+      margin-top: em(12, 15) * -1;
       position: absolute;
-      top: -#{em(1, 15)};
+      top: 50%;
       transition: opacity $arrow-animation-duration $arrow-animation-easing;
 
       &:last-child {

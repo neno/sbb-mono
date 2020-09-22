@@ -10,7 +10,7 @@ interface Props {
 const LinkList: React.FC<Props> = ({ links, classes = [], linkClasses }) => (
     <ul className={`m-link-list ${classes.join(' ')}`}>
         {links && links.map(link => (
-            <li key={encodeURIComponent(link.label)}>
+            <li className="m-link-list__item" key={encodeURIComponent(link.label)}>
                 <Link href={link.href} classes={linkClasses}>{link.label}</Link>
             </li>
         ))}

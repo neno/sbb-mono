@@ -27,6 +27,8 @@
 
   @include media-breakpoint-up(desktop-lg) {
     max-width: rem(1594);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include media-breakpoint-up(wide) {

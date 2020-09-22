@@ -1,18 +1,16 @@
-$footer-section-font-size: 14px;
-
 .m-footer-section {
   color: $color-granite;
-  font-size: em(strip-unit($footer-section-font-size), 15);
+  font-size: em($footer-section-base-size, 15);
 
   &__title {
-    border-bottom: rem(1) solid $color-silver;
-    font-size: em(16, 14);
-    line-height: 19 / 16;
+    border-bottom: rem(1) solid $color-platinum;
+    font-size: em(16, $footer-section-base-size);
+    line-height: (19 / 16);
     margin-bottom: em(24, 16);
     padding-bottom: em(24, 16);
   }
 
   .m-social-links {
-    margin-top: em(24, strip-unit($footer-section-font-size));
+    margin-top: em(24, $footer-section-base-size);
   }
 }
