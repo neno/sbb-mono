@@ -26,8 +26,14 @@ const AccordionBtn: React.FC<Props> = ({
         {...attrs}
     >
         {children}
-        <Icon name="plus" />
-        <Icon name="minus" />
+
+        <span className="a-accordion-btn__icon-plus">
+            <Icon name="plus" />
+        </span>
+
+        <span className="a-accordion-btn__icon-minus">
+            <Icon name="minus" />
+        </span>
     </button>
 );
 

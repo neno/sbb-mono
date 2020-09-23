@@ -5,43 +5,71 @@
   background: $color-milk;
   position: relative;
   text-align: left;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease-out;
 
-  .a-icon {
+  .a-accordion-btn__icon-minus,
+  .a-accordion-btn__icon-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
-    right: em(24, 16);
-    margin-top: -#{em(12, 16)};
+    border: rem(1) solid currentColor;
+    border-radius: 50%;
+    pointer-events: none;
   }
 
-  @include media-breakpoint-up(mobile) {
-    font-size: em(18, $footer-section-base-size);
+  &:not(&--active) {
+    .a-accordion-btn__icon-minus {
+      display: none;
+    }
   }
 
-  @include hover {
-    background-color: $color-milk;
+  &--active {
+    .a-accordion-btn__icon-plus {
+      display: none;
+    }
+  }
+
+  .a-icon {
+    width: (16 / 22) * 100%;
+    height: (16 / 22) * 100%;
   }
 
   &--footer {
     background-color: $color-cloud;
+    color: $color-anthracite;
     font-size: em(16, $footer-section-base-size);
     line-height: (19 / 16);
     padding: em(23, 16) em(24 * 3, 16) em(22, 16) em(24, 16);
-    transition: background 0.3s ease-out;
 
-    .a-icon {
+    .a-accordion-btn__icon-minus,
+    .a-accordion-btn__icon-plus {
+      border-color: $color-storm;
       width: em(24, 16);
       height: em(24, 16);
       right: em(24, 16);
+      margin-top: -#{em(12, 16)};
     }
 
     @include media-breakpoint-up(mobile) {
       font-size: em(18, $footer-section-base-size);
+      line-height: (24 / 18);
+      padding: em(28, 18) em((48 * 2) + 32, 18) em(28, 18) em(48, 18);
 
-      .a-icon {
+      .a-accordion-btn__icon-minus,
+      .a-accordion-btn__icon-plus {
         width: em(32, 18);
         height: em(32, 18);
         right: em(32, 18);
+        margin-top: -#{em(16, 18)};
       }
+    }
+
+    @include media-breakpoint-up(tablet) {
+      display: none;
     }
 
     @include hover {

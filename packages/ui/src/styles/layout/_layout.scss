@@ -7,12 +7,14 @@
 }
 
 .l-constrainer {
-  margin-left: 1.6rem;
-  margin-right: 1.6rem;
+  footer:not(.o-footer) & {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
 
-  @include media-breakpoint-up(mobile) {
-    margin-left: 3.2rem;
-    margin-right: 3.2rem;
+    @include media-breakpoint-up(mobile) {
+      margin-left: 3.2rem;
+      margin-right: 3.2rem;
+    }
   }
 
   @include media-breakpoint-up(tablet) {

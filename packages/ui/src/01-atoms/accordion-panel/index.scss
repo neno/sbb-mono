@@ -1,0 +1,7 @@
+.a-accordion-panel {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}

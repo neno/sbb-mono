@@ -10,3 +10,7 @@ export default {
 export const Default = () => renderToStaticMarkup(
     <AccordionBtn id="default">Some text</AccordionBtn>,
 );
+
+export const Footer = () => renderToStaticMarkup(
+    <AccordionBtn id="footer" classes={['a-accordion-btn--footer']}>Some text</AccordionBtn>,
+);

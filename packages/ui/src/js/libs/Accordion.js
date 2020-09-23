@@ -1,32 +1,59 @@
 import createModule from './create-module';
+import { slideDown, slideUp } from '../utils/animations';
 
 const Accordion = createModule({
+    options: () => ({
+        triggerSelector: '.a-accordion-btn',
+        targetSelector: '.a-accordion-panel',
+        activeCls: 'a-accordion-btn--active',
+        targetActiveCls: 'a-accordion-panel--active',
+        duration: 300,
+    }),
     constructor({ el, state, options }) {
         const triggers = Array.from(el.querySelectorAll(options.triggerSelector));
         const targets = Array.from(el.querySelectorAll(options.targetSelector));
-        const activeCls = `a-btn${options.activeClsModifier}`;
 
-        function getIndex(trigger) {
-            return triggers.indexOf(trigger);
-        }
+        const getIndex = trigger => triggers.indexOf(trigger);
 
-        function showTarget(trigger) {
+        const showTarget = trigger => {
+            const target = targets[getIndex(trigger)];
             trigger.setAttribute('aria-expanded', 'true');
-            trigger.classList.add(activeCls);
-            targets[getIndex(trigger)].setAttribute('aria-hidden', 'false');
-        }
+            trigger.classList.add(options.activeCls);
 
-        function hideTarget(trigger) {
+            target.setAttribute('aria-hidden', 'false');
+            slideDown(target, options.duration);
+            target.classList.add(options.targetActiveCls);
+        };
+
+        const showAllTargets = () => {
+            targets.forEach(target => {
+                target.setAttribute('aria-hidden', 'false');
+                target.classList.add(options.targetActiveCls);
+            });
+        };
+
+        const hideTarget = trigger => {
+            const target = targets[getIndex(trigger)];
+
             trigger.setAttribute('aria-expanded', 'false');
-            trigger.classList.remove(activeCls);
-            targets[getIndex(trigger)].setAttribute('aria-hidden', 'true');
-        }
+            trigger.classList.remove(options.activeCls);
 
-        function toggle(event) {
+            target.setAttribute('aria-hidden', 'true');
+            slideUp(target, options.duration);
+            target.classList.remove(options.targetActiveCls);
+        };
+
+        const hideAllTargets = () => {
+            targets.forEach(target => {
+                target.setAttribute('aria-hidden', 'true');
+                target.classList.remove(options.targetActiveCls);
+            });
+        };
+
+        const toggle = event => {
             const trigger = event.target;
-            const cls = options.triggerSelector.replace('.', '');
 
-            if (!trigger.classList.contains(cls)) {
+            if (!trigger.closest(options.triggerSelector)) {
                 return;
             }
 
@@ -35,17 +62,25 @@ const Accordion = createModule({
             } else {
                 showTarget(trigger);
             }
-        }
+        };
 
-        function bindEvents() {
+        const bindEvents = () => {
             el.addEventListener('click', toggle);
-        }
+        };
 
-        function unbindEvents() {
+        const unbindEvents = () => {
             el.addEventListener('click', toggle);
-        }
+        };
 
         // Public Methods
+        state.showAllTargets = () => {
+            showAllTargets();
+        };
+
+        state.hideAllTargets = () => {
+            hideAllTargets();
+        };
+
         state.init = () => {
             bindEvents();
         };

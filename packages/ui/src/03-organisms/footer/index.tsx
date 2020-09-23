@@ -10,10 +10,13 @@ import { socialLinks } from '../../02-molecules/social-links/stories/social-link
 
 const Footer = () => (
     <footer className="o-footer">
-        <div className="o-footer__sections-container">
+        <div
+            className="o-footer__sections-container"
+            data-module="accordion"
+        >
             <div className="l-constrainer">
                 <div className="o-footer__sections">
-                    <FooterSection title="Kontakt">
+                    <FooterSection id="footer-contact" title="Kontakt">
                         <Button url="#" classes={['a-btn--primary a-btn--arrows']} arrows>
                             Kontakt
                         </Button>
@@ -24,7 +27,7 @@ const Footer = () => (
                             <Link url="#" classes={['a-link--footer']}>Datenschutz.</Link>
                         </p>
                     </FooterSection>
-                    <FooterSection title="Bahnverkehrsinformationen">
+                    <FooterSection id="footer-railinfo" title="Bahnverkehrsinformationen">
                         <p>
                             Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
                         </p>
@@ -34,7 +37,7 @@ const Footer = () => (
                             </Link>
                         </p>
                     </FooterSection>
-                    <FooterSection title="Newsletter & Social Media">
+                    <FooterSection id="footer-social" title="Newsletter & Social Media">
                         <p>Jeden Monat über Angebote und Neuigkeiten informiert sein.</p>
                         <p>
                             <Link url="#" classes={['a-link--footer']} arrows>
@@ -43,7 +46,7 @@ const Footer = () => (
                         </p>
                         <SocialLinks socialLinks={socialLinks} />
                     </FooterSection>
-                    <FooterSection title={footerSectionData.title}>
+                    <FooterSection id="footer-company" title={footerSectionData.title}>
                         <LinkList
                             links={footerSectionData.links}
                             linkClasses={['a-link--footer']}
