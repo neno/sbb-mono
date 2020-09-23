@@ -9,7 +9,11 @@
     left: 0;
     position: absolute;
     top: 0;
-    transform: translate3d(-1px, rem(-3), 0);
+    transform: translate3d(
+      -#{em(2, $font-size-regular-px)},
+      -#{em(2, $font-size-regular-px)},
+      0
+    );
     visibility: hidden;
     z-index: 1;
   }

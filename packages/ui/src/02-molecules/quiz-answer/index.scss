@@ -1,11 +1,16 @@
-.m-quiz-answer {
+$quiz-answer-border: 2;
+$quiz-padding-vertical: 14;
 
+.m-quiz-answer {
   background-color: $color-milk;
-  border-bottom: 2px solid $color-white;
+  border-bottom: em($quiz-answer-border, $font-size-regular-px) solid
+    $color-white;
 
   &__field {
     background-color: $color-white;
-    padding: rem(8) rem(8) 0 rem(0);
+    padding: em($quiz-padding-vertical, $font-size-regular-px)
+      em(10, $font-size-regular-px)
+      em($quiz-padding-vertical - $quiz-answer-border, $font-size-regular-px);
   }
 
   /* stylelint-disable */
