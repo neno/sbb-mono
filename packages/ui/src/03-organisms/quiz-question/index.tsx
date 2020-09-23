@@ -1,11 +1,19 @@
 import React from 'react';
-import QuizAnswer, { Props as AnswerProps } from '../../02-molecules/quiz-answer';
+import QuizAnswer from '../../02-molecules/quiz-answer';
 import Icon from '../../01-atoms/icon';
 
 type QuestionType = 'multiple-choice' | 'single-choice';
 
+interface AnswerProps {
+    id: string;
+    title: string;
+    text: string;
+    correct: boolean;
+    checked?: boolean;
+}
+
 interface Props {
-    id: number;
+    id: string;
     title: string;
     text: string;
     questionType: QuestionType;
@@ -42,9 +50,11 @@ const Question: React.FC<Props> = ({
 
     return (
         <fieldset className={clsNames}>
-            <legend className="o-quiz-question__legend">
-                {title}
-                {showResults && (isCorrect ? <Correct /> : <Incorrect />)}
+            <legend>
+                <span className="o-quiz-question__legend">
+                    {title}
+                    {showResults && (isCorrect ? <Correct /> : <Incorrect />)}
+                </span>
             </legend>
             <div dangerouslySetInnerHTML={{ __html: text }} />
             <ol className="o-quiz-question__answers">
@@ -55,6 +65,7 @@ const Question: React.FC<Props> = ({
                             questionType={questionType}
                             id={answer.id}
                             title={answer.title}
+                            text={answer.text}
                             correct={answer.correct}
                             checked={answer.checked}
                             toggleAnswer={toggleAnswer}

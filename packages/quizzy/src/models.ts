@@ -13,7 +13,7 @@ export interface IQuiz {
 }
 
 export interface IQuestion {
-    id: number;
+    id: string;
     title: string;
     text: string;
     questionType: QuestionType;
@@ -23,7 +23,7 @@ export interface IQuestion {
 export type QuestionType = 'multiple-choice' | 'single-choice';
 
 export interface IAnswer {
-    id: number;
+    id: string;
     title: string;
     correct: boolean;
     checked?: boolean;
@@ -46,7 +46,7 @@ export const FETCH_RESPONSE_COMPLETE = 'FETCH_RESPONSE_COMPLETE';
 export const FETCH_ERROR = 'FETCH_ERROR';
 
 export type QuizAction =
-    | { type: typeof TOGGLE_ANSWER; payload: { id: number } }
+    | { type: typeof TOGGLE_ANSWER; payload: { id: string } }
     | { type: typeof SHOW_RESULTS }
     | { type: typeof RESET_QUIZ }
     | { type: typeof FETCH_LOADING }
@@ -54,8 +54,8 @@ export type QuizAction =
     | { type: typeof FETCH_ERROR; payload: { error: string } };
 
 export interface AnswerProps extends IAnswer {
-    questionId: number;
+    questionId: string;
     questionType: string;
     showResults: boolean;
-    toggleAnswer: (id: number) => void;
+    toggleAnswer: (id: string) => void;
 }

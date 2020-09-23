@@ -100,26 +100,41 @@
   height: rem(20);
   position: relative;
   width: rem(20);
-
-  &--disabled {
-    background-color: $color-milk;
-    color: $color-granite;
-  }
-
-  &__input {
-    @include hide-visually;
-  }
 }
 
 @mixin check-radio-field {
+  &,
   .a-label {
     align-items: center;
     display: flex;
   }
 
-  .a-checkbox,
-  .a-radio-button {
-    flex: 0 0 auto;
-    margin-right: rem(8);
+  &__input {
+    @include hide-visually;
+  }
+
+  &__label {
+    padding-left: 0;
+    position: relative;
+
+    &::before {
+      @include check-radio;
+
+      border-radius: rem(2);
+      content: '';
+      margin-right: rem(8);
+      position: relative;
+      z-index: 0;
+    }
+  }
+
+  &__input:checked + &__label {
+    color: $color-black;
+  }
+
+  &__input:disabled + &__label {
+    &::before {
+      background-color: $color-milk;
+    }
   }
 }

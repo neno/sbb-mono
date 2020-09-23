@@ -9,18 +9,9 @@ export default {
 };
 
 const toggleAnswer = id => {
+    // eslint-disable-next-line no-console
     console.log(id);
 };
-
-// id,
-// questionType,
-// title,
-// text,
-// answers,
-// toggleAnswer,
-// showResults,
-// isCorrect,
-// classes = [],
 
 export const SingleChoice = () => renderToStaticMarkup(
     <QuizQuestion

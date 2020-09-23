@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioButtonField, { RadioButtonProps } from '../radio-button-field';
+import RadioButton, { RadioButtonProps } from '../radio-button';
 
 interface Props {
     items: RadioButtonProps[]
@@ -12,7 +12,7 @@ const RadioButtonList:React.FC<Props> = ({
         <ol className="m-radio-button-list__list">
             {items.map(item => (
                 <li key={item.id}>
-                    <RadioButtonField
+                    <RadioButton
                         id={item.id}
                         name={item.name}
                         checked={item.checked}

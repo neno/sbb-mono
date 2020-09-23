@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import RadiobuttonField from '../index';
+import RadioButtonList from '../index';
 
 export default {
     title: '02-Molecules/Form Fields/Radio Button List',
@@ -29,5 +29,5 @@ const items = [
 ];
 
 export const Default = () => renderToStaticMarkup(
-    <RadiobuttonField items={items} />,
+    <RadioButtonList items={items} />,
 );

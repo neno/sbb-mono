@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Globe = () => (
+const Globe: React.FC = () => (
     <svg
         focusable="false"
         aria-hidden="true"

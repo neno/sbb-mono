@@ -11,7 +11,7 @@ const App: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
     useFetch(apiEndpoint, dispatch);
 
-    const toggleAnswer = (id: number): void => {
+    const toggleAnswer = (id: string): void => {
         dispatch({
             type: TOGGLE_ANSWER,
             payload: { id },

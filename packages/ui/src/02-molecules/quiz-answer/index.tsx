@@ -1,17 +1,20 @@
 import React, { memo } from 'react';
-import RadioButtonField from '../radio-button-field';
-import CheckboxField from '../checkbox-field';
+import RadioButton from '../radio-button';
+import Checkbox from '../checkbox';
 
 export interface Props {
     id: string;
     title: string;
+    text?: string;
     correct: boolean;
     checked?: boolean;
-    questionId: number;
+    questionId: string;
     questionType: string;
     showResults: boolean;
     toggleAnswer: (id: string) => void;
 }
+
+/* eslint-disable react/no-danger */
 
 const QuizAnswer: React.FC<Props> = memo(
     ({
@@ -19,6 +22,7 @@ const QuizAnswer: React.FC<Props> = memo(
         questionId,
         questionType,
         title,
+        text,
         correct,
         checked,
         toggleAnswer,
@@ -31,12 +35,35 @@ const QuizAnswer: React.FC<Props> = memo(
                 : ' m-quiz-answer--incorrect';
         }
 
+        const fieldPrefix = 'quiz-answer-';
+
+        const handleChange = () => {
+            toggleAnswer(id);
+        };
+
         return (
             <div className={clsNames}>
+                {text && <div className="m-quiz-answer__text" dangerouslySetInnerHTML={{ __html: text }} />}
                 {questionType === 'single-choice' ? (
-                    <RadioButtonField id={`quiz-answer-${id}`} name={`quiz-answer-${questionId}`} checked={checked} disabled={showResults} label={title} handleChange={toggleAnswer} />
+                    <RadioButton
+                        id={`${fieldPrefix}${id}`}
+                        name={`${fieldPrefix}${questionId}`}
+                        checked={checked}
+                        disabled={showResults}
+                        label={title}
+                        handleChange={handleChange}
+                        classes={['m-quiz-answer__field']}
+                    />
                 ) : (
-                    <CheckboxField id={`quiz-answer-${id}`} name={`quiz-answer-${id}`} checked={checked} disabled={showResults} label={title} handleChange={toggleAnswer} />
+                    <Checkbox
+                        id={`${fieldPrefix}${id}`}
+                        name={`${fieldPrefix}${id}`}
+                        checked={checked}
+                        disabled={showResults}
+                        label={title}
+                        handleChange={handleChange}
+                        classes={['m-quiz-answer__field']}
+                    />
                 )}
             </div>
         );

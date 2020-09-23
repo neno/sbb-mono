@@ -1,13 +1,13 @@
 import React from 'react';
 
-import ArrowRight from './icons/arrow-right';
-import ArrowUpCircle from './icons/arrow-up-circle';
+import ArrowRight from './icons/ArrowRight';
+import ArrowUpCircle from './icons/ArrowUpCircle';
 import Checkmark from './icons/Checkmark';
-import ChevronDown from './icons/chevron-down';
+import ChevronDown from './icons/ChevronDown';
 import Cross from './icons/Cross';
-import Globe from './icons/globe';
-import MagnifyingGlass from './icons/magnifying-glass';
-import SignExclamationPoint from './icons/sign-exclamation-point';
+import Globe from './icons/Globe';
+import MagnifyingGlass from './icons/MagnifyingGlass';
+import SignExclamationPoint from './icons/SignExclamationPoint';
 
 const icons = {
     'arrow-right': ArrowRight,

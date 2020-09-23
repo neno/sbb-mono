@@ -8,6 +8,7 @@ export const singleChoice = {
         {
             id: '101',
             title: 'Antwort 1.1',
+            text: '<p>Erklärungstext zur Antwort</p><p>Und noch ein Link: <a href="http://google.ch" target="_blank">http://google.ch</a></p>',
             correct: true,
             checked: true,
         },
@@ -39,6 +40,7 @@ export const multipleChoice = {
         {
             id: '202',
             title: 'Antwort 2.2',
+            text: '<p>Hier ein Bild:</p><img class="lazy-loaded" src="//via.placeholder.com/350x150" data-lazy-type="image" data-src="//via.placeholder.com/350x150" data-pin-nopin="true">',
             correct: true,
         },
         {
