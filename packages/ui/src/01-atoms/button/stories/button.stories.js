@@ -20,7 +20,7 @@ export const ButtonWithArrows = () => renderToStaticMarkup(
 
 export const ButtonSearch = () => renderToStaticMarkup(
     <Button classes={['a-btn--primary a-btn--search']}>
-        <span className="sr-only">Label</span>
+        <span className="u-sr-only">Label</span>
         <Icon name="magnifying-glass" />
     </Button>,
 );

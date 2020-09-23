@@ -1,17 +1,24 @@
 $font-size-h1: em(28, 15);
-$font-size-h1-mobile: em(30, 15);
-$font-size-h1-tablet: em(40, 15);
+$font-size-h1-mobile-up: em(30, 15);
+$font-size-h1-tablet-up: em(40, 15);
 
-$font-size-h2: rem(24);
-$font-size-h2-large: rem(40);
+$font-size-h2: em(24, 15);
+$font-size-h2-tablet-up: em(32, 15);
 
-$font-size-h3: rem(20);
-$font-size-h3-large: rem(30);
-
-$font-size-h4: rem(16);
-$font-size-h4-large: rem(20);
+$font-size-h3: em(20, 15);
+$font-size-h3-mobile-up: em(21, 15);
 
 $font-size-regular-px: 15px;
 $font-size-regular: rem($font-size-regular-px);
 $font-size-regular-xlarge: rem(23);
 $font-size-regular-xxlarge: rem(30);
+
+// arrows animation
+
+$arrow-animation-duration: 0.4s;
+$arrow-animation-easing: ease;
+
+// arrow-link
+
+$arrow-link-padding-x: em(30, 15);
+$arrow-padding-x: em(40, 15);

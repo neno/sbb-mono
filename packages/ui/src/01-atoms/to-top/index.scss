@@ -1,22 +1,16 @@
 .a-btn {
   &--to-top {
-    background: transparent;
-    border: 0;
-    padding: 0;
-  }
-
-  &__inner {
-    align-items: center;
     background: rgba($color-white, 0.75);
     border: 0;
-    border-radius: 50%;
     color: $color-metal;
-    cursor: pointer;
-    display: flex;
-    font-size: rem(42);
-    justify-content: center;
-    line-height: 1;
     padding: 0;
+
+    > .a-icon {
+      height: em(42, 15);
+      margin: 0;
+      position: static;
+      width: em(42, 15);
+    }
 
     &:hover,
     &:focus {
@@ -24,27 +18,3 @@
     }
   }
 }
-
-// .a-btn--to-top {
-//   align-items: center;
-//   background: rgba($color-white, 0.75);
-//   border: 0;
-//   border-radius: 50%;
-//   color: $color-metal;
-//   cursor: pointer;
-//   display: flex;
-//   // font-size: rem(42);
-//   justify-content: center;
-//   line-height: 1;
-//   padding: 0;
-
-//   &:hover,
-//   &:focus {
-//     color: $color-red;
-//   }
-
-//   .a-icon {
-//     height: rem(42);
-//     width: rem(42);
-//   }
-// }

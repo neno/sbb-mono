@@ -6,17 +6,18 @@ interface Props {
     tabs: ITab[];
     label?: string;
     module?: string;
-    classes?: string[]
+    classes?: string[];
+    isTabListCentered?: boolean;
 }
 
 const Tabs: React.FC<Props> = ({
-    children, tabs, label, module = 'tabs', classes = [],
+    children, tabs, label, module = 'tabs', classes = [], isTabListCentered,
 }) => (
     <div
         className={['o-tabs', ...classes].join(' ')}
         data-module={module}
     >
-        <TabList tabs={tabs} label={label} />
+        <TabList tabs={tabs} label={label} isCentered={isTabListCentered} />
         {children}
     </div>
 );

@@ -1,94 +1,96 @@
 import createModule from '../create-module';
 import hasError from './hasError';
+import ErrorHandler from './ErrorHandler';
+import InvalidFields from './InvalidFields';
+import Notification from '../Notification';
+import ErrorList from './ErrorList';
 
-const Tabs = createModule({
+const FormValidation = createModule({
     options: () => ({
         fieldErrorClass: 'a-input--error',
-        errorClass: 'a-error',
+        errorClass: 'a-field-error',
+        errorsListClass: 'a-notification__error-list',
+        notificationContainerClass: 'o-form__notification',
+        notificationTitle: 'Check following entries:',
     }),
     constructor: ({ el, state, options }) => {
+        const invalidFields = new InvalidFields();
+        const errorHandler = new ErrorHandler(options.errorClass, options.fieldErrorClass);
+        let notification;
+        let errorList;
+        let notificationContainer = el.querySelector(`.${options.notificationContainerClass}`);
+
+        const createNotificationContainer = () => {
+            if (!notificationContainer) {
+                notificationContainer = document.createElement('div');
+                notificationContainer.className = options.notificationContainerClass;
+                el.insertBefore(notificationContainer, el.firstChild);
+            } else {
+                notificationContainer.innerHTML = '';
+            }
+        };
+
+        const createErrorList = () => {
+            if (!errorList) {
+                errorList = new ErrorList(invalidFields.fields, options.errorsListClass);
+                notification.append(errorList.list);
+            } else {
+                errorList.update(invalidFields.fields);
+            }
+        };
+
+        const handleNotification = () => {
+            if (!notification) {
+                createNotificationContainer();
+                notification = new Notification(notificationContainer, {
+                    type: 'error',
+                    title: options.notificationTitle,
+                });
+            }
+
+            createErrorList();
+        };
+
+        const checkForInvalidFields = fields => {
+            invalidFields.reset();
+
+            fields.forEach(field => {
+                const error = hasError(field);
+
+                if (error) {
+                    errorHandler.show(field, error);
+                    invalidFields.add(field.id, field, error);
+                }
+            });
+        };
+
+        const handleInvalidSubmit = () => {
+            handleNotification();
+
+            invalidFields.first().el.focus();
+        };
+
         const handleSubmit = event => {
             const fields = event.target.elements;
+            checkForInvalidFields(fields);
 
-            // Validate each field
-            // Store the first field with an error to a variable so we can bring it into focus later
-            let hasErrors;
-            for (let i = 0; i < fields.length; i++) {
-                const error = hasError(fields[i]);
-                if (error) {
-                    showError(fields[i], error);
-                    if (!hasErrors) {
-                        hasErrors = fields[i];
-                    }
-                }
-            }
-
-            // If there are errrors, don't submit form and focus on first element with error
-            if (hasErrors) {
+            if (invalidFields.hasFields()) {
                 event.preventDefault();
-                hasErrors.focus();
+                handleInvalidSubmit();
+            } else {
+                destroy();
             }
-        };
-
-        const createErrorMessage = (field, error, id) => {
-            let message = field.form.querySelector(`#error-for-${id}`);
-
-            if (!message) {
-                message = document.createElement('div');
-                message.className = options.errorClass;
-                message.id = `error-for-${id}`;
-                field.parentNode.insertBefore(message, field.nextSibling);
-            }
-
-            message.innerHTML = error;
-            message.style.display = 'block';
-            message.style.visibility = 'visible';
-        };
-
-        const setInputAsInvalid = (field, id) => {
-            field.classList.add(options.fieldErrorClass);
-            field.setAttribute('aria-describedby', `error-for-${id}`);
-        };
-
-        const showError = (field, error) => {
-            const id = field.id || field.name;
-            if (!id) return;
-
-            createErrorMessage(field, error, id);
-            setInputAsInvalid(field, id);
-        };
-
-        const hideErrorMessage = (field, id) => {
-            // Check if an error message is in the DOM
-            const message = field.form.querySelector(`#error-for-${id}`);
-            if (!message) return;
-
-            // If so, hide it
-            message.innerHTML = '';
-            message.style.display = 'none';
-            message.style.visibility = 'hidden';
-        };
-
-        // Remove the error message
-        const removeError = field => {
-            const id = field.id || field.name;
-            if (!id) return;
-
-            hideErrorMessage(field, id);
-
-            field.classList.remove(options.fieldErrorClass);
-            field.removeAttribute('aria-describedby');
         };
 
         const handleBlur = event => {
-            // Validate the field
-            const error = hasError(event.target);
+            if (event.target.type === 'text' || event.target.type === 'email' || event.target.type === 'password') {
+                const error = hasError(event.target);
 
-            // If there's an error, show it
-            if (error) {
-                showError(event.target, error);
-            } else {
-                removeError(event.target);
+                if (error) {
+                    errorHandler.show(event.target, error);
+                } else {
+                    errorHandler.hide(event.target);
+                }
             }
         };
 
@@ -106,6 +108,27 @@ const Tabs = createModule({
             el.setAttribute('novalidate', true);
         };
 
+        const destroyErrorlist = () => {
+            if (errorList) {
+                errorList.destroy();
+                errorList = null;
+            }
+        };
+
+        const destroyNotification = () => {
+            if (notification) {
+                destroyErrorlist();
+
+                notification.destroy();
+                notification = null;
+            }
+        };
+
+        const destroy = () => {
+            unbindEvents();
+            destroyNotification();
+        };
+
         // Public Methods
         state.init = () => {
             disableNativeValidation();
@@ -113,7 +136,7 @@ const Tabs = createModule({
         };
 
         state.destroy = () => {
-            unbindEvents();
+            destroy();
         };
 
         state.init();
@@ -121,4 +144,4 @@ const Tabs = createModule({
     },
 });
 
-export default Tabs;
+export default FormValidation;

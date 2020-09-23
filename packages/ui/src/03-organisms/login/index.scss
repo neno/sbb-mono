@@ -1,0 +1,8 @@
+.o-login {
+  text-align: center;
+
+  @include media-breakpoint-up(mobile) {
+    margin: 0 auto;
+    max-width: 21.33333em;
+  }
+}

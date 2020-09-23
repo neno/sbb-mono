@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import LoginTemplate from '../index';
+import ArrowLink from './index';
 
 export default {
-    title: '04-Templates/Login Template',
+    title: '01-Atoms/Arrow Link',
 };
 
-export const Template = () => renderToStaticMarkup(<LoginTemplate />);
+export const Default = () => renderToStaticMarkup(
+    <ArrowLink />,
+);
