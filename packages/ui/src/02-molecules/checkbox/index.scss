@@ -11,7 +11,7 @@
     top: 0;
     transform: translate3d(
       -#{em(2, $font-size-regular-px)},
-      -#{em(2, $font-size-regular-px)},
+      em(1, $font-size-regular-px),
       0
     );
     visibility: hidden;

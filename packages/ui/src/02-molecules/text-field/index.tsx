@@ -1,15 +1,15 @@
 import React from 'react';
 
-export interface IFormField {
+export interface ITextField {
     id: string;
     name: string;
     label: string;
 }
 
-const FormField: React.FC<{}> = ({ children }) => (
-    <div className="m-form-field">
+const TextField: React.FC<{}> = ({ children }) => (
+    <div className="m-text-field">
         {children}
     </div>
 );
 
-export default FormField;
+export default TextField;

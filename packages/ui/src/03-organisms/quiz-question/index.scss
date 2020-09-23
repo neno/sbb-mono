@@ -1,7 +1,7 @@
 .o-quiz-question {
   background-color: $color-milk;
-  margin-bottom: rem(25);
-  padding: rem(8);
+  margin-bottom: em(25, $font-size-regular-px);
+  padding: em(8, $font-size-regular-px);
 
   &--correct {
     .a-icon {
@@ -16,15 +16,21 @@
   }
 
   &__legend {
+    @include h3;
     display: flex;
     justify-content: space-between;
+
+    .a-icon {
+      width: em(32, 21);
+      height: em(32, 21);
+    }
   }
 
   &__answers {
     @include no-bullets;
 
     li {
-      margin-top: rem(8);
+      margin-top: em(8, $font-size-regular-px);
     }
   }
 }
