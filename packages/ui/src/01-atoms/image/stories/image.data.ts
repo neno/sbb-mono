@@ -1,6 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 
 export const imageData = {
+    width: 800,
+    height: 450,
     srcset: `
       https://placehold.it/300x169 300w,
       https://placehold.it/400x225 400w,
