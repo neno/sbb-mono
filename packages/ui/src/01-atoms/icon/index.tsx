@@ -10,6 +10,8 @@ import Facebook from './icons/facebook';
 import Twitter from './icons/twitter';
 import Youtube from './icons/youtube';
 import Instagram from './icons/instagram';
+import Plus from './icons/plus';
+import Minus from './icons/minus';
 
 const icons = {
     'arrow-right': ArrowRight,
@@ -22,6 +24,8 @@ const icons = {
     twitter: Twitter,
     youtube: Youtube,
     instagram: Instagram,
+    minus: Minus,
+    plus: Plus,
 };
 
 const Icon: React.FC<{ name: string }> = ({ name }) => {

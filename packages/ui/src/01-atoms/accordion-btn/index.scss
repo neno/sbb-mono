@@ -1,0 +1,51 @@
+.a-accordion-btn {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: $color-milk;
+  position: relative;
+  text-align: left;
+
+  .a-icon {
+    position: absolute;
+    top: 50%;
+    right: em(24, 16);
+    margin-top: -#{em(12, 16)};
+  }
+
+  @include media-breakpoint-up(mobile) {
+    font-size: em(18, $footer-section-base-size);
+  }
+
+  @include hover {
+    background-color: $color-milk;
+  }
+
+  &--footer {
+    background-color: $color-cloud;
+    font-size: em(16, $footer-section-base-size);
+    line-height: (19 / 16);
+    padding: em(23, 16) em(24 * 3, 16) em(22, 16) em(24, 16);
+    transition: background 0.3s ease-out;
+
+    .a-icon {
+      width: em(24, 16);
+      height: em(24, 16);
+      right: em(24, 16);
+    }
+
+    @include media-breakpoint-up(mobile) {
+      font-size: em(18, $footer-section-base-size);
+
+      .a-icon {
+        width: em(32, 18);
+        height: em(32, 18);
+        right: em(32, 18);
+      }
+    }
+
+    @include hover {
+      background-color: $color-milk;
+    }
+  }
+}
