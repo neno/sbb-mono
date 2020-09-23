@@ -13,21 +13,21 @@ export const HeadersTop = () => renderToStaticMarkup(
 );
 
 export const AlignCenter = () => renderToStaticMarkup(
-    <Table tableData={tableData} classes={['u-text-center']} />,
+    <Table tableData={tableData} classes={['a-table--align-center']} />,
 );
 
 export const AlignLeft = () => renderToStaticMarkup(
-    <Table tableData={tableData} classes={['u-text-left']} />,
+    <Table tableData={tableData} classes={['a-table--align-left']} />,
 );
 
 export const AlignRight = () => renderToStaticMarkup(
-    <Table tableData={tableData} classes={['u-text-right']} />,
+    <Table tableData={tableData} classes={['a-table--align-right']} />,
 );
 
 export const HeadersSide = () => renderToStaticMarkup(
-    <Table tableData={sideHeaderTableData} classes={['u-text-left']} />,
+    <Table tableData={sideHeaderTableData} classes={['a-table--align-left']} />,
 );
 
 export const TwoHeaders = () => renderToStaticMarkup(
-    <Table tableData={twoHeadersTableData} classes={['u-text-center']} />,
+    <Table tableData={twoHeadersTableData} classes={['a-table--align-center']} />,
 );

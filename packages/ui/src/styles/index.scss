@@ -20,27 +20,6 @@
 @import './base/typo';
 @import './base/global';
 
-/// Atoms
-@import '../01-atoms/box/index';
-@import '../01-atoms/button/index';
-@import '../01-atoms/field-error/index';
-@import '../01-atoms/icon/index';
-@import '../01-atoms/text-input/index';
-@import '../01-atoms/label/index';
-@import '../01-atoms/meta-link/index';
-@import '../01-atoms/table/index';
-@import '../01-atoms/tab/index';
-@import '../01-atoms/tab-panel/index';
-@import '../01-atoms/to-top/index';
-@import '../01-atoms/notification/index';
-
-/// Molecules
-@import '../02-molecules/search-form/index';
-@import '../02-molecules/text-field/index';
-@import '../02-molecules/tab-list/index';
-
-/// Organisms
-@import '../03-organisms/form/index';
-@import '../03-organisms/login/index';
-
-/// Templates
+@import '../01-atoms/index';
+@import '../02-molecules/index';
+@import '../03-organisms/index';

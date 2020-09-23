@@ -1,0 +1,50 @@
+@mixin grid-fallback($gutter) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -#{$gutter/2};
+  transform: translate3d(-#{$gutter/2}, -#{$gutter/2}, 0);
+  width: calc(100% + #{$gutter});
+}
+
+@mixin grid-fallback-cols($cols, $gutter, $sel: '.l-col') {
+  @for $i from 1 through $cols {
+    @if $i == 1 {
+      #{$sel} {
+        margin: $gutter/2;
+        width: grid-col-width-ie($i, $cols, $gutter);
+      }
+    }
+
+    #{$sel}--#{$i} {
+      width: grid-col-width-ie($i, $cols, $gutter);
+    }
+  }
+}
+
+@mixin divider-thin {
+  margin-top: em(8, 15);
+}
+
+@mixin divider-small {
+  margin-top: em(24, 15);
+}
+
+@mixin divider-medium {
+  margin-top: em(36, 15);
+
+  @include media-breakpoint-up(mobile) {
+    margin-top: em(48, 15);
+  }
+}
+
+@mixin divider-big {
+  margin-top: em(48, 15);
+
+  @include media-breakpoint-up(mobile) {
+    margin-top: em(72, 15);
+  }
+
+  @include media-breakpoint-up(tablet) {
+    margin-top: em(96, 15);
+  }
+}
