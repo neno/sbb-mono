@@ -1,0 +1,7 @@
+.m-btn-group {
+  @include media-breakpoint-up(mobile) {
+    .a-btn + .a-btn {
+      margin-left: em(24, $font-size-regular-px);
+    }
+  }
+}
