@@ -3,6 +3,8 @@
 export const teaserData = {
     title: 'Schritt für Schritt zu klimafreundlichen Bahnhöfen',
     image: {
+        width: 960,
+        height: 616,
         srcset: `
           https://placehold.it/387x252 387w,
           https://placehold.it/480x313 480w,
