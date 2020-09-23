@@ -3,14 +3,9 @@
   background-color: $color-milk;
   border-bottom: 2px solid $color-white;
 
-  &__text,
-  &__field {
-    padding: rem(8);
-  }
-
   &__field {
     background-color: $color-white;
-    padding-bottom: 0;
+    padding: rem(8) rem(8) 0 rem(0);
   }
 
   /* stylelint-disable */

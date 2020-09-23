@@ -31,6 +31,10 @@ const App: React.FC = () => {
         });
     };
 
+    const handleConfirm = (): void => {
+        console.log('handleConfirm');
+    };
+
     if (state.error) {
         return <div>{state.error}</div>;
     }
@@ -52,22 +56,39 @@ const App: React.FC = () => {
                         />
                     </div>
                 ))}
+                <div className="t-quiz__results">
+                    {state.showResults && (
+                        <Result
+                            questions={state.quiz.questions}
+                            results={state.quiz.results}
+                        />
+                    )}
+                </div>
+                <p>
+                    <strong>{state.quiz.changesEffective}</strong>
+                </p>
+                <p>{state.quiz.confirmMessage}</p>
                 <div className="t-quiz__actions">
-                    <button type="submit">Submit</button>
-                    <button type="button" onClick={handleReset}>
-                        Reset
-                    </button>
-                    <MyButton>My Button</MyButton>
+                    {!state.showResults && (
+                        <MyButton type="submit">{state.quiz.submit}</MyButton>
+                    )}
+                    {state.showResults && (
+                        <MyButton
+                            type="button"
+                            arrows
+                            classes={['a-btn--primary']}
+                            handleClick={handleConfirm}
+                        >
+                            {state.quiz.confirmChanges}
+                        </MyButton>
+                    )}
+                    {state.showResults && (
+                        <MyButton type="button" handleClick={handleReset}>
+                            {state.quiz.repeat}
+                        </MyButton>
+                    )}
                 </div>
             </form>
-            <div className="t-quiz__results">
-                {state.showResults && (
-                    <Result
-                        questions={state.quiz.questions}
-                        results={state.quiz.results}
-                    />
-                )}
-            </div>
         </article>
     ) : (
         <div>Loading…</div>

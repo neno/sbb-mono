@@ -40,7 +40,7 @@ export const multipleChoice = {
         {
             id: '202',
             title: 'Antwort 2.2',
-            text: '<p>Hier ein Bild:</p><img class="lazy-loaded" src="//via.placeholder.com/350x150" data-lazy-type="image" data-src="//via.placeholder.com/350x150" data-pin-nopin="true">',
+            text: '<p>Hier ein Bild:</p><img src="//via.placeholder.com/350x150" width="350" height="150">',
             correct: true,
         },
         {
