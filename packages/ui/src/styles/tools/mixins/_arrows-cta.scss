@@ -1,6 +1,7 @@
-@mixin arrows-animation {
-  padding-left: $arrow-padding-x;
-  padding-right: 0;
+@mixin arrows-animation($padding-right-hover: 0) {
+  color: $color-red-125;
+  padding-left: em(30, 15);
+  padding-right: $padding-right-hover;
 
   > .a-icon {
     opacity: 0;
@@ -8,30 +9,6 @@
 
     &:first-child {
       opacity: 1;
-    }
-  }
-}
-
-@mixin arrows-parent {
-  .a-arrows-cta {
-    color: currentColor !important;
-
-    > .a-icon {
-      color: currentColor;
-    }
-  }
-
-  .no-touchdevice & {
-    @include hover {
-      .a-arrows-cta {
-        @include arrows-animation;
-      }
-    }
-  }
-
-  &:focus {
-    .a-arrows-cta {
-      @include arrows-animation;
     }
   }
 }

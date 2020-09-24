@@ -1,9 +1,8 @@
 .a-arrows-cta {
-  $arrow-padding-x: em(40, $font-size-regular-px);
   $arrow-position-x: em(10, $font-size-regular-px);
-
+  display: inline-block;
   cursor: pointer;
-  padding-right: $arrow-padding-x;
+  padding-right: em(40, $font-size-regular-px);
   position: relative;
   text-decoration: none !important;
   text-overflow: ellipsis;
@@ -32,7 +31,6 @@
 
   .no-touchdevice & {
     @include hover {
-      color: $color-red-125;
       @include arrows-animation;
     }
   }

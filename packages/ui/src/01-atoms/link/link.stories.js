@@ -11,6 +11,6 @@ export const Standard = () => renderToStaticMarkup(<Link href="/">Das ist ein in
 
 export const FooterLink = ({ label = 'Footer Link' }) => renderToStaticMarkup(<Link href="/" classes={['a-link--footer']}>{label}</Link>);
 
-export const ArrowsLink = () => renderToStaticMarkup(
+export const LinkWithArrowsCTA = () => renderToStaticMarkup(
     <Link href="/" arrows>More information</Link>,
 );

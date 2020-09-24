@@ -38,7 +38,7 @@ const Footer: React.FC<Props> = ({
                         <div className="l-constrainer">
                             <div className="o-footer__sections">
                                 <FooterSection id="footer-contact" title="Kontakt">
-                                    <Button url="/" classes={['a-btn--primary']} arrows>
+                                    <Button url="/" classes={['a-btn--footer']} arrows>
                                         Kontakt
                                     </Button>
                                     <p>
@@ -83,11 +83,11 @@ const Footer: React.FC<Props> = ({
                 <div className="l-constrainer">
                     <div className="o-footer__sections">
                         <FooterSection id="footer-contact" title="Kontakt">
-                            <Button url="/" classes={['a-btn--primary']} arrows>
+                            <Button url="/" classes={['a-btn--footer']} arrows>
                                 Kontakt
                             </Button>
                             <p>
-                                Haben Sie Fragen? Wir helfen Ihnen gerne.
+                                Haben Sie Fragen?Wir helfen Ihnen gerne.
                                 Bitte lesen Sie auch unsere Erklärung zum
                                 {' '}
                                 <Link href="/" classes={['a-link--footer']}>Datenschutz.</Link>

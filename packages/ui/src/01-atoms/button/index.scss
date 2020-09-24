@@ -1,7 +1,5 @@
 $button-min-width: rem(60);
 $button-padding-x: em(40, 15);
-$button-arrow-padding-x: em(66, 15);
-$button-arrow-position-x: em(10, 15);
 $button-arrow-hover-position-x: em(36, 15);
 
 .a-btn {
@@ -28,7 +26,27 @@ $button-arrow-hover-position-x: em(36, 15);
     top: 50%;
   }
 
-  @include arrows-parent;
+  .a-arrows-cta {
+    color: currentColor !important;
+
+    > .a-icon {
+      color: currentColor;
+    }
+  }
+
+  .no-touchdevice & {
+    @include hover {
+      .a-arrows-cta {
+        @include arrows-animation(em(10, 15));
+      }
+    }
+  }
+
+  &:focus {
+    .a-arrows-cta {
+      @include arrows-animation(em(10, 15));
+    }
+  }
 
   &--primary {
     background-color: $color-red;
