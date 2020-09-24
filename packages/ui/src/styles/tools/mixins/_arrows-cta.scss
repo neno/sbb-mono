@@ -1,0 +1,37 @@
+@mixin arrows-animation {
+  padding-left: $arrow-padding-x;
+  padding-right: 0;
+
+  > .a-icon {
+    opacity: 0;
+    color: currentColor;
+
+    &:first-child {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin arrows-parent {
+  .a-arrows-cta {
+    color: currentColor !important;
+
+    > .a-icon {
+      color: currentColor;
+    }
+  }
+
+  .no-touchdevice & {
+    @include hover {
+      .a-arrows-cta {
+        @include arrows-animation;
+      }
+    }
+  }
+
+  &:focus {
+    .a-arrows-cta {
+      @include arrows-animation;
+    }
+  }
+}

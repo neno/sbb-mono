@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import Icon from '../icon';
+import ArrowsCta from '../arrows-cta';
 
 interface Props extends ComponentProps<'button'> {
     handleClick?: () => void;
@@ -19,9 +19,6 @@ const Button: React.FC<Props> = ({
     arrows,
 }) => {
     const cls = ['a-btn', ...classes];
-    if (arrows) {
-        cls.push('a-btn--arrows');
-    }
     const CustomTag = url ? 'a' : 'button';
     return (
         <CustomTag
@@ -32,9 +29,9 @@ const Button: React.FC<Props> = ({
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...attrs}
         >
-            {arrows && <Icon name="arrow-right" />}
-            {children}
-            {arrows && <Icon name="arrow-right" />}
+            {arrows ? (
+                <ArrowsCta>{children}</ArrowsCta>
+            ) : children }
         </CustomTag>
     );
 };

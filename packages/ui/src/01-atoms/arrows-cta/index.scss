@@ -1,0 +1,43 @@
+.a-arrows-cta {
+  $arrow-padding-x: em(40, $font-size-regular-px);
+  $arrow-position-x: em(10, $font-size-regular-px);
+
+  cursor: pointer;
+  padding-right: $arrow-padding-x;
+  position: relative;
+  text-decoration: none !important;
+  text-overflow: ellipsis;
+  transition: color $arrow-animation-duration $arrow-animation-easing,
+    padding-left $arrow-animation-duration $arrow-animation-easing,
+    padding-right $arrow-animation-duration $arrow-animation-easing;
+  white-space: nowrap;
+
+  .a-icon {
+    position: absolute;
+    top: 50%;
+    color: $color-red;
+    transform: translateY(-50%);
+    transition: opacity $arrow-animation-duration $arrow-animation-easing;
+
+    &:last-child {
+      margin-left: em(6, $font-size-regular-px);
+      opacity: 1;
+    }
+
+    &:first-child {
+      margin-left: em(30, $font-size-regular-px) * -1;
+      opacity: 0;
+    }
+  }
+
+  .no-touchdevice & {
+    @include hover {
+      color: $color-red-125;
+      @include arrows-animation;
+    }
+  }
+
+  &:focus {
+    @include arrows-animation;
+  }
+}

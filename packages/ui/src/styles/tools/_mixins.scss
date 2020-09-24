@@ -1,6 +1,7 @@
 @import './mixins/global';
 @import './mixins/typo';
 @import './mixins/layout';
+@import './mixins/arrows-cta';
 
 @mixin check-radio {
   border: em(2, $font-size-regular-px) solid $color-aluminum;
