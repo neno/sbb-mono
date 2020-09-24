@@ -14,6 +14,10 @@
   &__body {
     padding: em(16, $footer-section-base-size) em(24, $footer-section-base-size)
       em(36, $footer-section-base-size);
+
+    > *:first-child {
+      margin-top: 0;
+    }
   }
 
   .m-social-links {

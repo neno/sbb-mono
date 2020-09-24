@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Footer from '../../03-organisms/footer';
+
 interface Props {
     classes?: string[]
 }
@@ -7,6 +9,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ classes, children }) => (
     <div className={[...classes].join(' ')}>
         <main id="main">{children}</main>
+        <Footer fixed />
     </div>
 );
 
