@@ -1,7 +1,4 @@
-import {
-    getQuestionByAnswerId,
-    getQuestionIdFromAnswerId,
-} from './helpers/helpers';
+import { getQuestionByAnswerId } from './helpers/helpers';
 import {
     QuizAction,
     IState,
@@ -13,7 +10,7 @@ import {
     SHOW_RESULTS,
     RESET_QUIZ,
     IAnswer,
-    QuestionType,
+    IQuestion,
 } from './models';
 
 export const INITIAL_STATE: IState = {
@@ -24,72 +21,33 @@ export const INITIAL_STATE: IState = {
     showResults: false,
 };
 
-// const checkSingleChoice = (
-//     questionId: string,
-//     questionType: QuestionType,
-//     answer: IAnswer,
-//     checkedId: string | undefined
-// ): boolean => {
-//     console.log('checkSingleChoice', answer, checkedId);
-//     if (!checkedId) {
-//         return false;
-//     }
-
-//     if (answer.id === checkedId) {
-//         return true;
-//     }
-//     if (answer.id !== checkedId) {
-//         return false;
-//     }
-
-//     // return !answer.checked || false;
-
-//     // return answer.checked || false;
-// };
-
-// const checkMultipleChoice = (
-//     questionId: string,
-//     questionType: QuestionType,
-//     answer: IAnswer,
-//     checkedId: string | undefined
-// ): boolean => {
-//     if (!checkedId) {
-//         return false;
-//     }
-
-//     return false;
-// };
-
 const checkAnswer = (
-    questionId: string,
     answer: IAnswer,
-    checkedQuestionType: QuestionType,
-    checkedId: string | undefined
-): boolean => {
-    if (!checkedId) {
-        return false;
-    }
+    currentQuestion: IQuestion,
+    questions: IQuestion[],
+    checkedAnswerId?: string
+) => {
+    const { id } = getQuestionByAnswerId(questions, checkedAnswerId);
+    const newAnswer: IAnswer = {
+        ...answer,
+        id: answer.id.toString(),
+        checked: !!answer.checked,
+    };
 
-    if (checkedQuestionType === 'multiple-choice') {
-        if (checkedId === answer.id) {
-            return !answer.checked;
+    if (checkedAnswerId && id === currentQuestion.id.toString()) {
+        if (currentQuestion.questionType === 'single-choice') {
+            newAnswer.checked = false;
         }
-        return answer.checked || false;
     }
 
-    if (checkedQuestionType === 'single-choice') {
-        if (checkedId === answer.id) {
-            return true;
-        }
-        return false;
+    if (newAnswer.id === checkedAnswerId) {
+        newAnswer.checked = !newAnswer.checked;
     }
 
-    return false;
+    return newAnswer;
 };
 
 const mapResult = (data: IQuiz, checkedId?: string) => {
-    const { id } = getQuestionByAnswerId(data.questions, checkedId);
-
     return {
         ...data,
         questions: data.questions.map((question) => {
@@ -97,23 +55,12 @@ const mapResult = (data: IQuiz, checkedId?: string) => {
                 ...question,
                 id: question.id.toString(),
                 answers: question.answers.map((answer) => {
-                    const newAnswer = {
-                        ...answer,
-                        id: answer.id.toString(),
-                        checked: !!answer.checked,
-                    };
-
-                    if (checkedId && id === question.id.toString()) {
-                        if (question.questionType === 'single-choice') {
-                            newAnswer.checked = false;
-                        }
-                    }
-
-                    if (newAnswer.id === checkedId) {
-                        newAnswer.checked = !newAnswer.checked;
-                    }
-
-                    return newAnswer;
+                    return checkAnswer(
+                        answer,
+                        question,
+                        data.questions,
+                        checkedId
+                    );
                 }),
             };
         }),

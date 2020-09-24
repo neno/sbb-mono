@@ -31,9 +31,7 @@ const App: React.FC = () => {
         });
     };
 
-    const handleConfirm = (): void => {
-        console.log('handleConfirm');
-    };
+    const handleConfirm = (): void => {};
 
     if (state.error) {
         return <div>{state.error}</div>;
