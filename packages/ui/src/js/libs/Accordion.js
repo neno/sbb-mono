@@ -28,6 +28,7 @@ const Accordion = createModule({
         const showAllTargets = () => {
             targets.forEach(target => {
                 target.setAttribute('aria-hidden', 'false');
+                slideDown(target, 1);
                 target.classList.add(options.targetActiveCls);
             });
         };
@@ -46,6 +47,7 @@ const Accordion = createModule({
         const hideAllTargets = () => {
             targets.forEach(target => {
                 target.setAttribute('aria-hidden', 'true');
+                slideUp(target, 1);
                 target.classList.remove(options.targetActiveCls);
             });
         };

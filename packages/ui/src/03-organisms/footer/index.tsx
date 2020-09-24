@@ -9,10 +9,9 @@ import SocialLinks from '../../02-molecules/social-links';
 import { socialLinks } from '../../02-molecules/social-links/stories/social-links.data';
 
 const Footer = () => (
-    <footer className="o-footer">
+    <footer className="o-footer" data-module="footer">
         <div
             className="o-footer__sections-container"
-            data-module="accordion"
         >
             <div className="l-constrainer">
                 <div className="o-footer__sections">

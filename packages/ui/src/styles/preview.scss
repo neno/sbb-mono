@@ -24,7 +24,7 @@
       }
     }
 
-    .a-accordion-btn {
+    aside:not(.m-footer-section).a-accordion-btn {
       display: block !important;
     }
   }
