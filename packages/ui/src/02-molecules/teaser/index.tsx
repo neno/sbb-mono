@@ -1,12 +1,9 @@
-// eslint-disable react/jsx-props-no-spreading
 import React from 'react';
-
-import Image from '../../01-atoms/image';
-import Link from '../../01-atoms/link';
+import Image, { ImageProps } from '../../01-atoms/image';
 
 interface Props {
-    imageData: object[];
-    hasLink: boolean;
+    imageData: ImageProps;
+    hasCTA: boolean;
     href?: string;
     classes?: string[];
     title?: string;
@@ -14,12 +11,18 @@ interface Props {
 }
 
 const Teaser: React.FC<Props> = ({
-    imageData, title, text, href = '#', classes = [], hasLink,
+    imageData, title, text, href = '#', classes = [], hasCTA,
 }) => {
-    const cls = hasLink ? 'm-teaser m-teaser--has-link' : 'm-teaser';
+    const cls = hasCTA ? 'm-teaser m-teaser--cta' : 'm-teaser';
     return (
         <article className={`${cls} ${classes.join(' ')}`}>
-            <Image {...imageData} />
+            <Image
+                src={imageData.src}
+                srcset={imageData.srcset}
+                width={imageData.width}
+                height={imageData.height}
+                sizes={imageData.sizes}
+            />
             <div className="m-teaser__body">
                 {title && (
                     <a className="m-teaser__block-link" href={href}>
@@ -27,7 +30,7 @@ const Teaser: React.FC<Props> = ({
                     </a>
                 )}
                 {text && <p className="m-teaser__text">{text}</p>}
-                {hasLink && <Link arrows>Mehr Info</Link>}
+                {hasCTA && <span className="m-teaser__more">Mehr Info</span>}
             </div>
         </article>
     );
