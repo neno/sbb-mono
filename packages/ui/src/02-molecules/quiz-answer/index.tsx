@@ -43,7 +43,6 @@ const QuizAnswer: React.FC<Props> = memo(
 
         return (
             <div className={clsNames}>
-                {text && <div className="m-quiz-answer__text" dangerouslySetInnerHTML={{ __html: text }} />}
                 {questionType === 'single-choice' ? (
                     <RadioButton
                         id={`${fieldPrefix}${id}`}
@@ -65,6 +64,7 @@ const QuizAnswer: React.FC<Props> = memo(
                         classes={['m-quiz-answer__field']}
                     />
                 )}
+                {text && <div className="m-quiz-answer__text" dangerouslySetInnerHTML={{ __html: text }} />}
             </div>
         );
     },
