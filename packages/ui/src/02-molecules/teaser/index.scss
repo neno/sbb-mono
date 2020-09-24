@@ -5,8 +5,23 @@
   position: relative;
   transition: background-color 225ms ease-in-out;
 
+  @mixin hover-animation {
+    background-color: $color-aluminum;
+    color: $color-black;
+
+    .a-img {
+      &__image {
+        transform: scale3d(1.07, 1.07, 1.07);
+      }
+    }
+  }
+
+  @include hover {
+    @include hover-animation;
+  }
+
   &__title {
-    @include h3;
+    @include font-h3;
   }
 
   &__body {
@@ -17,14 +32,14 @@
     color: inherit !important;
     text-decoration: inherit !important;
 
-    &:after {
+    &::after {
+      bottom: 0;
       content: '';
       display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
       left: 0;
+      position: absolute;
       right: 0;
+      top: 0;
       z-index: 1;
     }
   }
@@ -42,7 +57,7 @@
     }
   }
 
-  .a-arrow-link {
+  .a-link {
     margin-top: em(9, 15);
   }
 
@@ -54,21 +69,6 @@
     .m-teaser__body {
       padding-bottom: em(32, 15);
     }
-  }
-
-  @mixin hover-animation {
-    background-color: $color-aluminum;
-    color: $color-black;
-
-    .a-img {
-      &__image {
-        transform: scale3d(1.07, 1.07, 1.07);
-      }
-    }
-  }
-
-  @include hover {
-    @include hover-animation;
   }
 
   &:focus-within {
@@ -90,10 +90,10 @@
       display: block;
     }
 
-    .a-arrow-link {
-      margin-top: 0;
-      left: em(24, 15);
+    .a-link {
       bottom: 3.2em;
+      left: em(24, 15);
+      margin-top: 0;
       position: absolute;
     }
   }

@@ -68,10 +68,8 @@ export const Default = () => renderToStaticMarkup(
             </li>
         </ol>
         <div className="o-form__footer">
-            <Button classes={['a-btn--primary a-btn--arrows']} type="submit">
-                <Icon name="arrow-right" />
+            <Button arrows classes={['a-btn--primary']} type="submit">
                 Submit
-                <Icon name="arrow-right" />
             </Button>
         </div>
     </Form>,
@@ -128,10 +126,8 @@ export const Invalid = () => renderToStaticMarkup(
             </li>
         </ol>
         <div className="o-form__footer">
-            <Button classes={['a-btn--primary a-btn--arrows']} type="submit">
-                <Icon name="arrow-right" />
+            <Button arrows classes={['a-btn--primary']} type="submit">
                 Submit
-                <Icon name="arrow-right" />
             </Button>
         </div>
     </Form>,

@@ -1,0 +1,15 @@
+.a-social-link {
+  align-items: center;
+  background: $color-granite;
+  border-radius: 50%;
+  color: $color-white !important;
+  display: inline-flex;
+  height: 2.85714em;
+  justify-content: center;
+  transition: background-color 0.3s;
+  width: 2.85714em;
+
+  @include hover {
+    background-color: $color-red-125;
+  }
+}

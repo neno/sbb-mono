@@ -12,7 +12,7 @@
   }
 }
 
-@mixin h3 {
+@mixin font-h3 {
   font-size: $font-size-h3;
   font-weight: $font-light;
   line-height: 1.2;
@@ -20,5 +20,19 @@
 
   @include media-breakpoint-up(mobile) {
     font-size: $font-size-h3-mobile-up;
+  }
+}
+
+@mixin link {
+  color: $color-black;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-red-125;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

@@ -30,7 +30,7 @@ h2,
 
 h3,
 .h3 {
-  @include h3;
+  @include font-h3;
 }
 
 h4,
@@ -54,17 +54,7 @@ button {
 }
 
 a {
-  color: $color-black;
-  text-decoration: underline;
-
-  &:hover,
-  &:focus {
-    color: $color-red-125;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
+  @include link;
 }
 
 b,

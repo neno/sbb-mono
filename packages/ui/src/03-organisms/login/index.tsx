@@ -14,7 +14,7 @@ const OverviewTemplate = () => (
             <Tabs tabs={tabs} isTabListCentered>
                 <TabPanel id="mitarbeitende" active>
                     <div className="l-login-panel">
-                        <Button classes={['a-btn--primary a-btn--arrows']} arrows url="/">
+                        <Button classes={['a-btn--primary']} arrows url="/">
                             Login
                         </Button>
                     </div>

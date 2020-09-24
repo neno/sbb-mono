@@ -19,6 +19,9 @@ const Button: React.FC<Props> = ({
     arrows,
 }) => {
     const cls = ['a-btn', ...classes];
+    if (arrows) {
+        cls.push('a-btn--arrows');
+    }
     const CustomTag = url ? 'a' : 'button';
     return (
         <CustomTag

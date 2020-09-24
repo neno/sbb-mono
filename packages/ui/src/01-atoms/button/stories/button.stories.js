@@ -13,7 +13,7 @@ export const Default = () => renderToStaticMarkup(<Button>Default Button</Button
 export const ButtonPrimary = () => renderToStaticMarkup(<Button classes={['a-btn--primary']}>Label</Button>);
 
 export const ButtonWithArrows = () => renderToStaticMarkup(
-    <Button classes={['a-btn--primary a-btn--arrows']} arrows="true">
+    <Button classes={['a-btn--primary']} arrows>
         Label
     </Button>,
 );

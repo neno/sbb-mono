@@ -23,6 +23,10 @@
         max-width: 24.125rem;
       }
     }
+
+    aside:not(.m-footer-section).a-accordion-btn {
+      display: block !important;
+    }
   }
 }
 /* stylelint-enable */

@@ -11,7 +11,7 @@ export default {
 
 export const Default = () => renderToStaticMarkup(
     <ButtonGroup>
-        <Button arrows classes={['a-btn--arrows']}>Default Button</Button>
-        <Button arrows classes={['a-btn--primary a-btn--arrows']}>Primary Button</Button>
+        <Button>Default Button</Button>
+        <Button arrows classes={['a-btn--primary']}>Primary Button</Button>
     </ButtonGroup>,
 );

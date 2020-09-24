@@ -1,12 +1,10 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import ArrowLink from './index';
+import Footer from '../index';
 
 export default {
-    title: '01-Atoms/Arrow Link',
+    title: '03-Organisms/Footer',
 };
 
-export const Default = () => renderToStaticMarkup(
-    <ArrowLink />,
-);
+export const Desktop = () => renderToStaticMarkup(<Footer />);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Props {
+export interface ImageProps {
     src:string;
     width: number;
     height: number;
@@ -10,7 +10,7 @@ interface Props {
     classes?: string[];
 }
 
-const Image: React.FC<Props> = ({
+const Image: React.FC<ImageProps> = ({
     src,
     width,
     height,
