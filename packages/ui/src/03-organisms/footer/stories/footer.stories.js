@@ -7,4 +7,6 @@ export default {
     title: '03-Organisms/Footer',
 };
 
-export const Desktop = () => renderToStaticMarkup(<Footer />);
+export const Default = () => renderToStaticMarkup(<Footer />);
+
+export const Fixed = () => renderToStaticMarkup(<Footer fixed />);
