@@ -5,7 +5,6 @@ $button-arrow-position-x: em(10, 15);
 $button-arrow-hover-position-x: em(36, 15);
 
 .a-btn {
-  align-items: center;
   background-color: $color-silver;
   border: em(1, 15) solid $color-silver;
   border-radius: em(2, 15);
@@ -31,14 +30,15 @@ $button-arrow-hover-position-x: em(36, 15);
   }
 
   &--primary {
+    background-color: $color-red;
+    border-color: $color-red;
+    color: $color-white;
+
     @mixin hover-animation() {
       background-color: $color-red-125;
       border-color: $color-red-125;
       color: $color-white;
     }
-    background-color: $color-red;
-    border-color: $color-red;
-    color: $color-white;
 
     @include hover {
       @include hover-animation;
@@ -80,7 +80,7 @@ $button-arrow-hover-position-x: em(36, 15);
     padding-right: $button-arrow-padding-x;
     position: relative;
     transition: background-color $arrow-animation-duration
-        $arrow-animation-easing,
+      $arrow-animation-easing,
       border-color $arrow-animation-duration $arrow-animation-easing,
       padding-left $arrow-animation-duration $arrow-animation-easing,
       padding-right $arrow-animation-duration $arrow-animation-easing;
@@ -103,6 +103,28 @@ $button-arrow-hover-position-x: em(36, 15);
       @include hover {
         @include hover-animation;
       }
+    }
+
+    &:focus {
+      @include hover-animation;
+    }
+  }
+
+  &--footer {
+    background-color: $color-granite;
+    border-color: $color-granite;
+    color: $color-white;
+    display: block;
+    width: 100%;
+
+    @mixin hover-animation() {
+      background-color: $color-red-125;
+      border-color: $color-red-125;
+      color: $color-white;
+    }
+
+    @include hover {
+      @include hover-animation;
     }
 
     &:focus {

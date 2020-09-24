@@ -1,0 +1,10 @@
+.m-social-links {
+  $list-item-margin: rem(8, 15);
+
+  @include inline-list;
+  margin-left: -#{$list-item-margin};
+
+  &__item {
+    padding-left: $list-item-margin;
+  }
+}

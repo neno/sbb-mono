@@ -8,6 +8,12 @@ import Cross from './icons/Cross';
 import Globe from './icons/Globe';
 import MagnifyingGlass from './icons/MagnifyingGlass';
 import SignExclamationPoint from './icons/SignExclamationPoint';
+import Facebook from './icons/Facebook';
+import Twitter from './icons/Twitter';
+import Youtube from './icons/Youtube';
+import Instagram from './icons/Instagram';
+import Plus from './icons/Plus';
+import Minus from './icons/Minus';
 
 const icons = {
     'arrow-right': ArrowRight,
@@ -18,6 +24,12 @@ const icons = {
     globe: Globe,
     'magnifying-glass': MagnifyingGlass,
     'sign-exclamation-point': SignExclamationPoint,
+    facebook: Facebook,
+    twitter: Twitter,
+    youtube: Youtube,
+    instagram: Instagram,
+    minus: Minus,
+    plus: Plus,
 };
 
 const Icon: React.FC<{ name: string }> = ({ name }) => {

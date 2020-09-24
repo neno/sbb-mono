@@ -2,7 +2,7 @@
 import React from 'react';
 
 import Image from '../../01-atoms/image';
-import ArrowLink from '../../01-atoms/arrow-link';
+import Link from '../../01-atoms/link';
 
 interface Props {
     imageData: object[];
@@ -27,7 +27,7 @@ const Teaser: React.FC<Props> = ({
                     </a>
                 )}
                 {text && <p className="m-teaser__text">{text}</p>}
-                {hasLink && <ArrowLink />}
+                {hasLink && <Link arrows>Mehr Info</Link>}
             </div>
         </article>
     );

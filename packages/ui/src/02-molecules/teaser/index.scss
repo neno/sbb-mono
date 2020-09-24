@@ -5,57 +5,6 @@
   position: relative;
   transition: background-color 225ms ease-in-out;
 
-  &__title {
-    @include h3;
-  }
-
-  &__body {
-    padding: em(24, 15) em(12, 15);
-  }
-
-  &__block-link {
-    color: inherit !important;
-    text-decoration: inherit !important;
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-    }
-  }
-
-  &__text {
-    display: none;
-  }
-
-  .a-img {
-    padding-top: 62.0155%;
-
-    &__image {
-      transform: scaleX(1);
-      transition: transform 0.3s ease-out, opacity 0.35s ease-in;
-    }
-  }
-
-  .a-arrow-link {
-    margin-top: em(9, 15);
-  }
-
-  &--centered {
-    text-align: center;
-  }
-
-  &--has-link {
-    .m-teaser__body {
-      padding-bottom: em(32, 15);
-    }
-  }
-
   @mixin hover-animation {
     background-color: $color-aluminum;
     color: $color-black;
@@ -68,10 +17,6 @@
   }
 
   @include hover {
-    @include hover-animation;
-  }
-
-  &:focus-within {
     @include hover-animation;
   }
 
@@ -90,10 +35,10 @@
       display: block;
     }
 
-    .a-arrow-link {
-      margin-top: 0;
-      left: em(24, 15);
+    .a-link {
       bottom: 3.2em;
+      left: em(24, 15);
+      margin-top: 0;
       position: absolute;
     }
   }
@@ -106,5 +51,60 @@
         }
       }
     }
+  }
+
+  &__title {
+    @include h3;
+  }
+
+  &__body {
+    padding: em(24, 15) em(12, 15);
+  }
+
+  &__block-link {
+    color: inherit !important;
+    text-decoration: inherit !important;
+
+    &::after {
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    display: none;
+  }
+
+  .a-img {
+    padding-top: 62.0155%;
+
+    &__image {
+      transform: scaleX(1);
+      transition: transform 0.3s ease-out, opacity 0.35s ease-in;
+    }
+  }
+
+  .a-link {
+    margin-top: em(9, 15);
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
+  &--has-link {
+    .m-teaser__body {
+      padding-bottom: em(32, 15);
+    }
+  }
+
+  &:focus-within {
+    @include hover-animation;
   }
 }

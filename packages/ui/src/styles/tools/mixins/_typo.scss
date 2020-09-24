@@ -22,3 +22,17 @@
     font-size: $font-size-h3-mobile-up;
   }
 }
+
+@mixin link {
+  color: $color-black;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-red-125;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

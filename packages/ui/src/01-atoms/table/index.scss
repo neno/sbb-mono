@@ -2,6 +2,14 @@
   overflow: auto;
   width: 100%;
 
+  @include media-breakpoint-up(mobile) {
+    &__td,
+    &__th {
+      padding-left: 1.0667em;
+      padding-right: 1.0667em;
+    }
+  }
+
   &__table {
     background-color: $color-white;
     border: rem(1) solid $color-cloud;
@@ -57,13 +65,5 @@
 
   &--align-right {
     text-align: right;
-  }
-
-  @include media-breakpoint-up(mobile) {
-    &__td,
-    &__th {
-      padding-left: 1.0667em;
-      padding-right: 1.0667em;
-    }
   }
 }
