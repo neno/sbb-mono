@@ -2,21 +2,11 @@
   padding-top: em(36, 15);
 
   @include media-breakpoint-up(mobile) {
-    paddin-top: em(48, 15);
+    padding-top: em(48, 15);
   }
 }
 
 .l-constrainer {
-  footer:not(.o-footer) & {
-    margin-left: 1.6rem;
-    margin-right: 1.6rem;
-
-    @include media-breakpoint-up(mobile) {
-      margin-left: 3.2rem;
-      margin-right: 3.2rem;
-    }
-  }
-
   @include media-breakpoint-up(tablet) {
     margin-left: 5.5%;
     margin-right: 5.5%;
@@ -28,21 +18,31 @@
   }
 
   @include media-breakpoint-up(desktop-lg) {
-    max-width: rem(1594);
     margin-left: auto;
     margin-right: auto;
+    max-width: rem(1594);
   }
 
   @include media-breakpoint-up(wide) {
-    max-width: none;
     margin-left: 19%;
     margin-right: 19%;
+    max-width: none;
   }
 
   @include media-breakpoint-up(ultra) {
-    max-width: rem(2656);
     margin-left: auto;
     margin-right: auto;
+    max-width: rem(2656);
+  }
+
+  footer:not(.o-footer) & {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+
+    @include media-breakpoint-up(mobile) {
+      margin-left: 3.2rem;
+      margin-right: 3.2rem;
+    }
   }
 }
 

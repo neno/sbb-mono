@@ -5,6 +5,43 @@
   position: relative;
   transition: background-color 225ms ease-in-out;
 
+  @include hover {
+    @include hover-animation;
+  }
+
+  @include media-breakpoint-up(mobile) {
+    .m-teaser__body {
+      padding: em(32, 15) em(24, 15);
+    }
+
+    &--has-link {
+      .m-teaser__body {
+        padding-bottom: em(104, 15);
+      }
+    }
+
+    &__text {
+      display: block;
+    }
+
+    .a-link {
+      bottom: 3.2em;
+      left: em(24, 15);
+      margin-top: 0;
+      position: absolute;
+    }
+  }
+
+  @include media-breakpoint-up(tablet) {
+    &--has-link {
+      .m-teaser__body {
+        &__body {
+          padding-bottom: em(112, 15);
+        }
+      }
+    }
+  }
+
   &__title {
     @include h3;
   }
@@ -17,14 +54,14 @@
     color: inherit !important;
     text-decoration: inherit !important;
 
-    &:after {
+    &::after {
+      bottom: 0;
       content: '';
       display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
       left: 0;
+      position: absolute;
       right: 0;
+      top: 0;
       z-index: 1;
     }
   }
@@ -56,6 +93,10 @@
     }
   }
 
+  &:focus-within {
+    @include hover-animation;
+  }
+
   @mixin hover-animation {
     background-color: $color-aluminum;
     color: $color-black;
@@ -63,47 +104,6 @@
     .a-img {
       &__image {
         transform: scale3d(1.07, 1.07, 1.07);
-      }
-    }
-  }
-
-  @include hover {
-    @include hover-animation;
-  }
-
-  &:focus-within {
-    @include hover-animation;
-  }
-
-  @include media-breakpoint-up(mobile) {
-    .m-teaser__body {
-      padding: em(32, 15) em(24, 15);
-    }
-
-    &--has-link {
-      .m-teaser__body {
-        padding-bottom: em(104, 15);
-      }
-    }
-
-    &__text {
-      display: block;
-    }
-
-    .a-link {
-      margin-top: 0;
-      left: em(24, 15);
-      bottom: 3.2em;
-      position: absolute;
-    }
-  }
-
-  @include media-breakpoint-up(tablet) {
-    &--has-link {
-      .m-teaser__body {
-        &__body {
-          padding-bottom: em(112, 15);
-        }
       }
     }
   }

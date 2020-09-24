@@ -1,7 +1,31 @@
 .m-footer-section {
+  border-top: rem(1) solid $color-platinum;
   color: $color-granite;
   font-size: em($footer-section-base-size, 15);
-  border-top: rem(1) solid $color-platinum;
+
+  @include media-breakpoint-up(mobile) {
+    &__body {
+      padding-left: em(48, $footer-section-base-size);
+      padding-right: em(48, $footer-section-base-size);
+    }
+  }
+
+  @include media-breakpoint-up(tablet) {
+    border-top: 0;
+
+    &__title {
+      border-bottom: rem(1) solid $color-platinum;
+      display: block;
+      font-size: em(16, $footer-section-base-size);
+      line-height: (19 / 16);
+      margin-bottom: em(24, 16);
+      padding-bottom: em(24, 16);
+    }
+
+    &__body {
+      padding: 0;
+    }
+  }
 
   &:first-child {
     border-top: 0;
@@ -18,29 +42,5 @@
 
   .m-social-links {
     margin-top: em(24, $footer-section-base-size);
-  }
-
-  @include media-breakpoint-up(mobile) {
-    &__body {
-      padding-left: em(48, $footer-section-base-size);
-      padding-right: em(48, $footer-section-base-size);
-    }
-  }
-
-  @include media-breakpoint-up(tablet) {
-    border-top: 0;
-
-    &__title {
-      display: block;
-      border-bottom: rem(1) solid $color-platinum;
-      font-size: em(16, $footer-section-base-size);
-      line-height: (19 / 16);
-      margin-bottom: em(24, 16);
-      padding-bottom: em(24, 16);
-    }
-
-    &__body {
-      padding: 0;
-    }
   }
 }

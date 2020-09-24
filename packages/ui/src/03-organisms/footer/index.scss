@@ -11,9 +11,9 @@
     @include media-breakpoint-up(tablet) {
       @supports (display: grid) {
         display: grid;
+        grid-gap: em(48, 15);
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
-        grid-gap: em(48, 15);
       }
     }
   }

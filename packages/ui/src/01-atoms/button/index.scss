@@ -80,7 +80,7 @@ $button-arrow-hover-position-x: em(36, 15);
     padding-right: $button-arrow-padding-x;
     position: relative;
     transition: background-color $arrow-animation-duration
-        $arrow-animation-easing,
+      $arrow-animation-easing,
       border-color $arrow-animation-duration $arrow-animation-easing,
       padding-left $arrow-animation-duration $arrow-animation-easing,
       padding-right $arrow-animation-duration $arrow-animation-easing;
@@ -111,11 +111,11 @@ $button-arrow-hover-position-x: em(36, 15);
   }
 
   &--footer {
-    display: block;
-    width: 100%;
     background-color: $color-granite;
     border-color: $color-granite;
     color: $color-white;
+    display: block;
+    width: 100%;
 
     @mixin hover-animation() {
       background-color: $color-red-125;

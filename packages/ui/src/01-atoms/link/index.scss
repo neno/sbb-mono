@@ -27,15 +27,15 @@
     }
 
     display: inline-block;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    padding-right: $arrow-padding-x;
     position: relative;
     text-decoration: none !important;
-    padding-right: $arrow-padding-x;
+    text-overflow: ellipsis;
     transition: color $arrow-animation-duration $arrow-animation-easing,
       padding-left $arrow-animation-duration $arrow-animation-easing,
       padding-right $arrow-animation-duration $arrow-animation-easing;
+    white-space: nowrap;
 
     > .a-icon {
       margin-top: em(12, 15) * -1;
