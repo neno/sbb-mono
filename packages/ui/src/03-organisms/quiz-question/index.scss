@@ -16,13 +16,13 @@
   }
 
   &__legend {
-    @include h3;
+    @include font-h3;
     display: flex;
     justify-content: space-between;
 
     .a-icon {
-      width: em(32, 21);
       height: em(32, 21);
+      width: em(32, 21);
     }
   }
 

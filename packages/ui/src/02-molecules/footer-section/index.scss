@@ -3,23 +3,6 @@
   color: $color-granite;
   font-size: em($footer-section-base-size, 15);
 
-  &__title {
-    display: none;
-  }
-
-  &:first-child {
-    border-top: 0;
-  }
-
-  &__body {
-    padding: em(16, $footer-section-base-size) em(24, $footer-section-base-size)
-      em(36, $footer-section-base-size);
-  }
-
-  .m-social-links {
-    margin-top: em(24, $footer-section-base-size);
-  }
-
   @include media-breakpoint-up(mobile) {
     &__body {
       padding-left: em(48, $footer-section-base-size);
@@ -42,5 +25,22 @@
     &__body {
       padding: 0;
     }
+  }
+
+  &__title {
+    display: none;
+  }
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  &__body {
+    padding: em(16, $footer-section-base-size) em(24, $footer-section-base-size)
+      em(36, $footer-section-base-size);
+  }
+
+  .m-social-links {
+    margin-top: em(24, $footer-section-base-size);
   }
 }

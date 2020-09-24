@@ -22,9 +22,7 @@
 }
 
 @function col-width($cols, $total-cols: 12, $width: 100%, $grid-gutter: 30) {
-  $available-width: calc(
-    #{$width} - ((#{$total-cols} - 1) * #{rem($grid-gutter)})
-  );
+  $available-width: calc(#{$width} - ((#{$total-cols} - 1) * #{rem($grid-gutter)}));
   $one-col: calc(#{$available-width}/#{$total-cols});
   @return calc(#{$cols} * #{$one-col});
 }
