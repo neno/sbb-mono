@@ -20,39 +20,6 @@
     @include hover-animation;
   }
 
-  @include media-breakpoint-up(mobile) {
-    .m-teaser__body {
-      padding: em(32, 15) em(24, 15);
-    }
-
-    &--has-link {
-      .m-teaser__body {
-        padding-bottom: em(104, 15);
-      }
-    }
-
-    &__text {
-      display: block;
-    }
-
-    .a-link {
-      bottom: 3.2em;
-      left: em(24, 15);
-      margin-top: 0;
-      position: absolute;
-    }
-  }
-
-  @include media-breakpoint-up(tablet) {
-    &--has-link {
-      .m-teaser__body {
-        &__body {
-          padding-bottom: em(112, 15);
-        }
-      }
-    }
-  }
-
   &__title {
     @include font-h3;
   }
@@ -106,5 +73,38 @@
 
   &:focus-within {
     @include hover-animation;
+  }
+
+  @include media-breakpoint-up(mobile) {
+    .m-teaser__body {
+      padding: em(32, 15) em(24, 15);
+    }
+
+    &--has-link {
+      .m-teaser__body {
+        padding-bottom: em(104, 15);
+      }
+    }
+
+    &__text {
+      display: block;
+    }
+
+    .a-link {
+      bottom: 3.2em;
+      left: em(24, 15);
+      margin-top: 0;
+      position: absolute;
+    }
+  }
+
+  @include media-breakpoint-up(tablet) {
+    &--has-link {
+      .m-teaser__body {
+        &__body {
+          padding-bottom: em(112, 15);
+        }
+      }
+    }
   }
 }
