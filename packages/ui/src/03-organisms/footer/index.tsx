@@ -17,7 +17,7 @@ const Footer = () => (
             <div className="l-constrainer">
                 <div className="o-footer__sections">
                     <FooterSection id="footer-contact" title="Kontakt">
-                        <Button url="#" classes={['a-btn--primary a-btn--arrows']} arrows>
+                        <Button url="#" classes={['a-btn--primary']} arrows>
                             Kontakt
                         </Button>
                         <p>

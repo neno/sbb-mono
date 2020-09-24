@@ -37,7 +37,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ username, password }) => (
             </li>
         </ol>
         <div className="o-form__footer u-text-center">
-            <Button classes={['a-btn--primary a-btn--arrows']} arrows type="submit">
+            <Button classes={['a-btn--primary']} arrows type="submit">
                 Login
             </Button>
         </div>

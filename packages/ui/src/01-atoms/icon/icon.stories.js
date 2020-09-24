@@ -15,10 +15,22 @@ export const Checkmark = () => renderToStaticMarkup(<Icon name="checkmark" />);
 
 export const ChevronDown = () => renderToStaticMarkup(<Icon name="chevron-down" />);
 
+export const Cross = () => renderToStaticMarkup(<Icon name="cross" />);
+
+export const Facebook = () => renderToStaticMarkup(<Icon name="facebook" />);
+
 export const Globe = () => renderToStaticMarkup(<Icon name="globe" />);
+
+export const Instagram = () => renderToStaticMarkup(<Icon name="instagram" />);
 
 export const MagnifyingGlass = () => renderToStaticMarkup(<Icon name="magnifying-glass" />);
 
+export const Minus = () => renderToStaticMarkup(<Icon name="minus" />);
+
+export const Plus = () => renderToStaticMarkup(<Icon name="plus" />);
+
 export const SignExclamationPoint = () => renderToStaticMarkup(<Icon name="sign-exclamation-point" />);
 
-export const Facebook = () => renderToStaticMarkup(<Icon name="facebook" />);
+export const Twitter = () => renderToStaticMarkup(<Icon name="twitter" />);
+
+export const Youtube = () => renderToStaticMarkup(<Icon name="youtube" />);

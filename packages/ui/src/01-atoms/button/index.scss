@@ -14,6 +14,7 @@ $button-arrow-hover-position-x: em(36, 15);
   min-width: $button-min-width;
   overflow: hidden;
   padding: em(10, 15) $button-padding-x;
+  position: relative;
   text-decoration: none !important;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -80,7 +81,7 @@ $button-arrow-hover-position-x: em(36, 15);
     padding-right: $button-arrow-padding-x;
     position: relative;
     transition: background-color $arrow-animation-duration
-      $arrow-animation-easing,
+        $arrow-animation-easing,
       border-color $arrow-animation-duration $arrow-animation-easing,
       padding-left $arrow-animation-duration $arrow-animation-easing,
       padding-right $arrow-animation-duration $arrow-animation-easing;
