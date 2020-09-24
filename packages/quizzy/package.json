@@ -12,6 +12,7 @@
     },
     "scripts": {
         "start": "parcel src/index.html --open",
+        "build": "parcel build src/index.html",
         "lint": "lint-staged",
         "lint-script": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
         "lint-style": "stylelint \"src/**/*.scss\" --fix"
