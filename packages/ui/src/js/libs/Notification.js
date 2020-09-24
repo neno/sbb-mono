@@ -1,90 +1,87 @@
-// import createModule from './create-module';
+import createModule from './create-module';
+import { signExclamationPoint } from '../utils/icons';
 
-// const Notification = createModule({
-//     options: () => ({
-//         class: 'a-notification',
-//     }),
-//     constructor: ({ el, state, options }) => {
-//         let instance;
+const icons = {
+    error: signExclamationPoint,
+};
 
-//         const handleSubmit = event => {
-//             const fields = event.target.elements;
+const Notification = createModule({
+    options: () => ({
+        class: 'a-notification',
+        classes: {
+            error: 'a-notification--error',
+        },
+        textContainerClass: 'a-notification__text',
+    }),
+    constructor: ({ el, state, options }) => {
+        let notification;
+        let textContainer;
 
-//             // Validate each field
-//             // Store the first field with an error to a variable so we can bring it into focus later
-//             let hasErrors;
-//             for (let i = 0; i < fields.length; i++) {
-//                 const error = hasError(fields[i]);
-//                 if (error) {
-//                     showError(fields[i], error);
-//                     if (!hasErrors) {
-//                         hasErrors = fields[i];
-//                     }
-//                 }
-//             }
+        const addIcon = () => {
+            notification.innerHTML = icons[options.type];
+        };
 
-//             // If there are errrors, don't submit form and focus on first element with error
-//             if (hasErrors) {
-//                 event.preventDefault();
-//                 hasErrors.focus();
-//             }
-//         };
+        const append = node => {
+            textContainer.appendChild(node);
+        };
 
-//         const createContainer = () => {
-//             let message = el.querySelector(`#error-for-${id}`);
+        const addTextContainer = () => {
+            if (!textContainer) {
+                textContainer = document.createElement('div');
+                textContainer.className = options.textContainerClass;
 
-//             if (!message) {
-//                 message = document.createElement('div');
-//                 message.className = options.errorClass;
-//                 message.id = `error-for-${id}`;
-//                 field.parentNode.insertBefore(message, field.nextSibling);
-//             }
+                if (options.title) {
+                    textContainer.innerHTML = `<strong>${options.title}</strong>`;
+                }
 
-//             message.innerHTML = error;
-//             message.style.display = 'block';
-//             message.style.visibility = 'visible';
-//         };
+                notification.appendChild(textContainer);
+            }
+        };
 
-//         const setInputAsInvalid = (field, id) => {
-//             field.classList.add(options.fieldErrorClass);
-//             field.setAttribute('aria-describedby', `error-for-${id}`);
-//         };
+        const setType = () => {
+            notification.classList.add(options.classes[options.type]);
+            addIcon();
+        };
 
-//         const showError = (field, error) => {
-//             const id = field.id || field.name;
-//             if (!id) return;
+        const createNotification = () => {
+            notification = document.createElement('div');
+            notification.setAttribute('role', 'alert');
+            notification.className = options.class;
 
-//             createErrorMessage(field, error, id);
-//             setInputAsInvalid(field, id);
-//         };
+            if (options.type) {
+                setType();
+            }
 
-//         const hideErrorMessage = (field, id) => {
-//             // Check if an error message is in the DOM
-//             const message = field.form.querySelector(`#error-for-${id}`);
-//             if (!message) return;
+            addTextContainer();
 
-//             // If so, hide it
-//             message.innerHTML = '';
-//             message.style.display = 'none';
-//             message.style.visibility = 'hidden';
-//         };
+            el.insertBefore(notification, el.firstChild);
+        };
 
-//         const createNotification = () => {
-//             const message = field.form.querySelector(`#error-for-${id}`);
-//         };
+        const init = () => {
+            createNotification();
+        };
 
-//         // Public Methods
-//         state.init = () => {
-//             createNotification();
-//         };
+        const destroy = () => {
+            notification.parentNode.removeChild(notification);
+        };
 
-//         state.destroy = () => {
+        // Public Methods
 
-//         };
+        state.append = node => {
+            append(node);
+        };
 
-//         state.init();
-//         return state;
-//     },
-// });
+        state.init = () => {
+            init();
+        };
 
-// export default Notification;
+        state.destroy = () => {
+            destroy();
+        };
+
+        state.init();
+        return state;
+    },
+});
+
+export default Notification;

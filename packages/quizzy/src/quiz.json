@@ -10,7 +10,7 @@
             {
                 "id": "100",
                 "title": "Frage 1",
-                "text": "Erklärungstext 1",
+                "text": "<p>Erklärungstext 1</p>",
                 "questionType": "single-choice",
                 "answers": [
                     {
@@ -34,7 +34,7 @@
             {
                 "id": "200",
                 "title": "Frage 2",
-                "text": "Erklärungstext 2",
+                "text": "<p>Erklärungstext 2</p>",
                 "questionType": "multiple-choice",
                 "answers": [
                     {

@@ -3,8 +3,7 @@
   border: 0;
   cursor: pointer;
   font-size: em(20, 15);
-  font-weight: 300;
-  font-weight: 300;
+  font-weight: $font-light;
   line-height: 1;
   padding: 0 0 em(9, 20);
   position: relative;
@@ -33,7 +32,6 @@
     transform: translateX(-50%);
     transition: width 0.3s ease;
     width: 0;
-    will-change: width;
   }
 
   + .a-tab {

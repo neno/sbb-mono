@@ -1,105 +1,13 @@
-@mixin media-breakpoint-up($name) {
-  $min: strip-unit(map-get($breakpoints, $name));
-
-  @if $min {
-    @media (min-width: #{em($min)}) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-
-@mixin hover($not: null) {
-  &:hover:not(.is-disabled):not([aria-disabled='true']):not(:disabled) {
-    @content;
-  }
-}
-
-@mixin no-bullets() {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-@mixin inline-list {
-  @include no-bullets();
-  align-items: center;
-
-  display: inline-flex;
-}
-
-@mixin h-list {
-  display: flex;
-
-  li {
-    margin-left: rem(40);
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-}
-
-@mixin grid-fallback($gutter) {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -#{$gutter/2};
-  transform: translate3d(-#{$gutter/2}, -#{$gutter/2}, 0);
-  width: calc(100% + #{$gutter});
-}
-
-@mixin grid-fallback-cols($cols, $gutter, $sel: '.l-col') {
-  @for $i from 1 through $cols {
-    @if $i == 1 {
-      #{$sel} {
-        margin: $gutter/2;
-        width: grid-col-width-ie($i, $cols, $gutter);
-      }
-    }
-
-    #{$sel}--#{$i} {
-      width: grid-col-width-ie($i, $cols, $gutter);
-    }
-  }
-}
-
-@mixin hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-@mixin placeholder {
-  /* stylelint-disable-next-line */
-  &::input-placeholder {
-    @content;
-  }
-
-  &:placeholder {
-    @content;
-  }
-
-  &::placeholder {
-    @content;
-  }
-
-  &:input-placeholder {
-    @content;
-  }
-}
+@import './mixins/global';
+@import './mixins/typo';
+@import './mixins/layout';
 
 @mixin check-radio {
-  border: 2px solid $color-aluminum;
+  border: em(2, $font-size-regular-px) solid $color-aluminum;
   display: inline-block;
-  height: rem(20);
+  height: em(20, $font-size-regular-px);
   position: relative;
-  width: rem(20);
+  width: em(20, $font-size-regular-px);
 }
 
 @mixin check-radio-field {
@@ -114,15 +22,18 @@
   }
 
   &__label {
-    padding-left: 0;
+    font-size: em($font-size-regular-px, $font-size-regular-px);
+    line-height: line-height(26, $font-size-regular-px);
+    padding: 0;
+    margin: 0;
     position: relative;
 
     &::before {
       @include check-radio;
 
-      border-radius: rem(2);
+      border-radius: em(2, $font-size-regular-px);
       content: '';
-      margin-right: rem(8);
+      margin-right: em(8, $font-size-regular-px);
       position: relative;
       z-index: 0;
     }

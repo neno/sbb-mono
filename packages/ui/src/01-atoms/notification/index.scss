@@ -5,8 +5,10 @@
   display: flex;
   line-height: (23 / 15);
   padding: em(22, 15) em(24, 15) em(22, 15) em(16, 15);
+  text-align: left;
 
   > .a-icon {
+    flex: 0 0 auto;
     height: em(36, 15);
     margin-right: em(16, 15);
     width: em(36, 15);
@@ -34,6 +36,7 @@
       }
 
       > a {
+        color: $color-white !important;
         text-decoration: underline;
       }
     }

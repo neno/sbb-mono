@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import Input from './index';
+import TextInput from './index';
 
 export default {
-    title: '01-Atoms/Input',
+    title: '01-Atoms/Text Input',
 };
 
-export const InputDefault = () => renderToStaticMarkup(
-    <Input
+export const Default = () => renderToStaticMarkup(
+    <TextInput
         name="field-1"
         id="field-1"
         attrs={{
@@ -18,8 +18,8 @@ export const InputDefault = () => renderToStaticMarkup(
     />,
 );
 
-export const InputPlaceholder = () => renderToStaticMarkup(
-    <Input
+export const Placeholder = () => renderToStaticMarkup(
+    <TextInput
         name="field-2"
         id="field-2"
         attrs={{
@@ -28,8 +28,8 @@ export const InputPlaceholder = () => renderToStaticMarkup(
     />,
 );
 
-export const InputDisabled = () => renderToStaticMarkup(
-    <Input
+export const Disabled = () => renderToStaticMarkup(
+    <TextInput
         name="field-3"
         id="field-3"
         attrs={{
@@ -39,8 +39,8 @@ export const InputDisabled = () => renderToStaticMarkup(
     />,
 );
 
-export const InputError = () => renderToStaticMarkup(
-    <Input
+export const Error = () => renderToStaticMarkup(
+    <TextInput
         name="field-4"
         id="field-4"
         classes={['a-input--error']}

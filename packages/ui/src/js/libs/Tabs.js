@@ -1,19 +1,22 @@
 import createModule from './create-module';
-import KeyCodes from '../utils/keycodes';
 
 const Tabs = createModule({
     options: () => ({
+        tabListSelector: '.m-tablist',
         tabsSelector: '.a-tab',
         panelsSelector: '.a-tab-panel',
         tabActiveClass: 'a-tab--active',
         panelActiveClass: 'a-tab-panel--active',
     }),
     constructor: ({ el, state, options }) => {
+        const tabList = el.querySelector(options.tabListSelector);
         const tabs = el.querySelectorAll(options.tabsSelector);
         const panels = el.querySelectorAll(options.panelsSelector);
         const direction = {
-            37: -1,
-            39: 1,
+            ArrowLeft: -1,
+            ArrowRight: 1,
+            Left: -1,
+            Right: 1,
         };
 
         const deactivateTabs = () => {
@@ -56,7 +59,7 @@ const Tabs = createModule({
         };
 
         const switchTabOnArrowPress = event => {
-            const key = event.which || event.keyCode;
+            const key = event.key;
 
             if (direction[key]) {
                 const target = event.target;
@@ -64,9 +67,9 @@ const Tabs = createModule({
                     const tab = tabs[target.index + direction[key]];
                     if (tab) {
                         tab.focus();
-                    } else if (key === KeyCodes.LEFT) {
+                    } else if (key === 'ArrowLeft' || key === 'Left') {
                         focusLastTab();
-                    } else if (key === KeyCodes.RIGHT) {
+                    } else if (key === 'ArrowRight' || key === 'Right') {
                         focusFirstTab();
                     }
                 }
@@ -74,14 +77,17 @@ const Tabs = createModule({
         };
 
         const handleKeyup = event => {
-            const key = event.which || event.keyCode;
+            const key = event.key;
             switch (key) {
-            case KeyCodes.LEFT:
-            case KeyCodes.RIGHT:
+            case 'ArrowLeft':
+            case 'ArrowRight':
+            case 'Left':
+            case 'Right':
                 switchTabOnArrowPress(event);
                 break;
-            case KeyCodes.ENTER:
-            case KeyCodes.SPACE:
+            case 'Enter':
+            case 'Space':
+            case 'Spacebar':
                 activateTab(event.target);
                 break;
             default:
@@ -90,13 +96,13 @@ const Tabs = createModule({
         };
 
         const bindEvents = () => {
-            el.addEventListener('click', handleClick);
-            el.addEventListener('keyup', handleKeyup);
+            tabList.addEventListener('click', handleClick);
+            tabList.addEventListener('keyup', handleKeyup);
         };
 
         const unbindEvents = () => {
-            el.removeEventListener('click', handleClick);
-            el.removeEventListener('keyup', handleKeyup);
+            tabList.removeEventListener('click', handleClick);
+            tabList.removeEventListener('keyup', handleKeyup);
         };
 
         const setIndexOnTabs = () => {

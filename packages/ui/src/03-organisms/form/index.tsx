@@ -5,7 +5,7 @@ interface Props extends ComponentProps<'form'> {
     handleSubmit?: () => void;
 }
 
-const Form: React.FC<Props> = ({ children, module, handleSubmit }) => (
+const Form: React.FC<Props> = ({ children, module = 'form-validation', handleSubmit }) => (
     <form className="o-form" data-module={module} onSubmit={handleSubmit}>
         {children}
     </form>

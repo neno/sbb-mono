@@ -65,31 +65,19 @@ $max-width-curve-full: (
   }
 }
 
+.l-login-panel {
+  padding-top: em(36, 15);
+
+  @include media-breakpoint-up(mobile) {
+    paddin-top: em(48, 15);
+  }
+}
+
 .l-constrainer {
   @include constrainer;
 
   .l-constrainer {
     max-width: 100%;
-  }
-
-  > {
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-      width: col-width(3, 4);
-    }
-  }
-
-  .l-constrainer {
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-      width: 100%;
-    }
   }
 }
 
@@ -97,14 +85,18 @@ $max-width-curve-full: (
   @include max-width-curve-full;
 }
 
+.l-divider-thin {
+  @include divider-thin;
+}
+
+.l-divider-small {
+  @include divider-small;
+}
+
+.l-divider-medium {
+  @include divider-medium;
+}
+
 .l-divider-big {
-  margin-bottom: em(48, 15);
-
-  @include media-breakpoint-up(mobile) {
-    margin-bottom: em(72, 15);
-  }
-
-  @include media-breakpoint-up(tablet) {
-    margin-bottom: em(96, 15);
-  }
+  @include divider-big;
 }

@@ -1,27 +1,49 @@
+@mixin block-margin {
+  margin: 1em 0 0;
+}
+
 h1,
 .h1 {
-  @extend %h-1;
+  font-size: $font-size-h1;
+  font-weight: $font-extra-light;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(mobile) {
+    font-size: $font-size-h1-mobile-up;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    font-size: $font-size-h1-tablet-up;
+  }
 }
 
 h2,
 .h2 {
-  @extend %h-2;
+  font-size: $font-size-h2;
+  font-weight: $font-extra-light;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(tablet) {
+    font-size: $font-size-h2-tablet-up;
+  }
 }
 
 h3,
 .h3 {
-  @extend %h-3;
+  @include h3;
 }
 
 h4,
 .h4 {
-  @extend %h-4;
+  font-size: 1em;
+  font-weight: $font-bold;
+  line-height: 1.5;
 }
 
 p,
 ul,
 ol {
-  @extend %block-margin;
+  @include block-margin;
 }
 
 input,
@@ -32,6 +54,20 @@ button {
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  color: $color-black;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-red-125;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
 }

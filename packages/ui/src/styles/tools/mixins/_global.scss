@@ -1,0 +1,72 @@
+@mixin media-breakpoint-up($name) {
+  $min: strip-unit(map-get($breakpoints, $name));
+
+  @if $min {
+    @media (min-width: #{em($min)}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin hover($not: null) {
+  &:hover:not(.is-disabled):not([aria-disabled='true']):not(:disabled) {
+    @content;
+  }
+}
+
+@mixin no-bullets() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin inline-list {
+  @include no-bullets();
+  align-items: center;
+
+  display: inline-flex;
+}
+
+@mixin h-list {
+  display: flex;
+
+  li {
+    margin-left: em(40, $font-size-regular-px);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin hide-visually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin placeholder {
+  /* stylelint-disable-next-line */
+  &::input-placeholder {
+    @content;
+  }
+
+  &:placeholder {
+    @content;
+  }
+
+  &::placeholder {
+    @content;
+  }
+
+  &:input-placeholder {
+    @content;
+  }
+}

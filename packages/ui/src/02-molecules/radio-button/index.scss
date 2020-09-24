@@ -8,14 +8,14 @@
   &__input:checked + &__label {
     &::after {
       background-color: $color-red;
-      border: 2px solid $color-white;
+      border: em(2, $font-size-regular-px) solid $color-white;
       border-radius: 50%;
       content: '';
-      height: rem(16);
-      left: rem(2);
+      height: em(16, $font-size-regular-px);
+      left: em(2, $font-size-regular-px);
       position: absolute;
-      top: rem(2);
-      width: rem(16);
+      top: em(5, $font-size-regular-px);
+      width: em(16, $font-size-regular-px);
     }
   }
 

@@ -8,7 +8,7 @@ const Checkmark: React.FC = () => (
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
     >
-        <polyline fill="none" stroke="#000" points="6 15 10 19 19 10.01" />
+        <path d="M5.5,12.49l4,4,9-9" fill="none" stroke="#000" />
     </svg>
 );
 
