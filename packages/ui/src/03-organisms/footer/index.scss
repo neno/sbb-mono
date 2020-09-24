@@ -18,6 +18,11 @@
     }
   }
 
+  &__bottom {
+    height: em(96, 15);
+    width: 100%;
+  }
+
   &--fixed {
     bottom: 0;
     left: 0;

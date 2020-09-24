@@ -3,25 +3,20 @@ import React, { ComponentProps } from 'react';
 import Icon from '../icon';
 
 export interface ILink extends ComponentProps<'a'> {
-    children: React.ReactNode;
+    href: string;
     attrs?: {};
-    url?: string;
-    tag?: string;
     classes?: string[];
     arrows?: boolean;
 }
 
 const Link: React.FC<ILink> = ({
-    children, tag, classes = [], url, attrs = {}, arrows,
+    children, href, classes = [], attrs = {}, arrows,
 }) => {
-    const cls = ['a-link', ...classes];
-    if (arrows) {
-        cls.push('a-link--arrows');
-    }
-    const CustomTag = url ? 'a' : (tag || 'span');
+    const cls = ['a-link', ...classes, arrows && 'a-link--arrows'];
+
     return (
-        <CustomTag
-            href={url}
+        <a
+            href={href}
             className={cls.join(' ')}
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...attrs}
@@ -29,7 +24,7 @@ const Link: React.FC<ILink> = ({
             {arrows && <Icon name="arrow-right" />}
             {children}
             {arrows && <Icon name="arrow-right" />}
-        </CustomTag>
+        </a>
     );
 };
 

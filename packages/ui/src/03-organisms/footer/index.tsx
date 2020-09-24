@@ -38,14 +38,14 @@ const Footer: React.FC<Props> = ({
                         <div className="l-constrainer">
                             <div className="o-footer__sections">
                                 <FooterSection id="footer-contact" title="Kontakt">
-                                    <Button url="#" classes={['a-btn--primary']} arrows>
+                                    <Button url="/" classes={['a-btn--primary']} arrows>
                                         Kontakt
                                     </Button>
                                     <p>
                                         Haben Sie Fragen?Wir helfen Ihnen gerne.
                                         Bitte lesen Sie auch unsere Erklärung zum
                                         {' '}
-                                        <Link url="#" classes={['a-link--footer']}>Datenschutz.</Link>
+                                        <Link href="/" classes={['a-link--footer']}>Datenschutz.</Link>
                                     </p>
                                 </FooterSection>
                                 <FooterSection id="footer-railinfo" title="Bahnverkehrsinformationen">
@@ -53,7 +53,7 @@ const Footer: React.FC<Props> = ({
                                         Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
                                     </p>
                                     <p>
-                                        <Link url="#" classes={['a-link--footer']} arrows>
+                                        <Link href="/" classes={['a-link--footer']} arrows>
                                             Aktuelle Hinweise
                                         </Link>
                                     </p>
@@ -61,7 +61,7 @@ const Footer: React.FC<Props> = ({
                                 <FooterSection id="footer-social" title="Newsletter & Social Media">
                                     <p>Jeden Monat über Angebote und Neuigkeiten informiert sein.</p>
                                     <p>
-                                        <Link url="#" classes={['a-link--footer']} arrows>
+                                        <Link href="/" classes={['a-link--footer']} arrows>
                                             Newsletter abonnieren
                                         </Link>
                                     </p>
@@ -83,14 +83,14 @@ const Footer: React.FC<Props> = ({
                 <div className="l-constrainer">
                     <div className="o-footer__sections">
                         <FooterSection id="footer-contact" title="Kontakt">
-                            <Button url="#" classes={['a-btn--primary']} arrows>
+                            <Button url="/" classes={['a-btn--primary']} arrows>
                                 Kontakt
                             </Button>
                             <p>
                                 Haben Sie Fragen? Wir helfen Ihnen gerne.
                                 Bitte lesen Sie auch unsere Erklärung zum
                                 {' '}
-                                <Link url="#" classes={['a-link--footer']}>Datenschutz.</Link>
+                                <Link href="/" classes={['a-link--footer']}>Datenschutz.</Link>
                             </p>
                         </FooterSection>
                         <FooterSection id="footer-railinfo" title="Bahnverkehrsinformationen">
@@ -98,7 +98,7 @@ const Footer: React.FC<Props> = ({
                                 Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
                             </p>
                             <p>
-                                <Link url="#" classes={['a-link--footer']} arrows>
+                                <Link href="/" classes={['a-link--footer']} arrows>
                                     Aktuelle Hinweise
                                 </Link>
                             </p>
@@ -106,7 +106,7 @@ const Footer: React.FC<Props> = ({
                         <FooterSection id="footer-social" title="Newsletter & Social Media">
                             <p>Jeden Monat über Angebote und Neuigkeiten informiert sein.</p>
                             <p>
-                                <Link url="#" classes={['a-link--footer']} arrows>
+                                <Link href="/" classes={['a-link--footer']} arrows>
                                     Newsletter abonnieren
                                 </Link>
                             </p>
@@ -122,6 +122,7 @@ const Footer: React.FC<Props> = ({
                 </div>
             </div>
         )}
+        <div className="o-footer__bottom" />
     </footer>
 );
 
