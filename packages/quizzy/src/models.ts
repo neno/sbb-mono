@@ -30,6 +30,7 @@ export type QuestionType = 'multiple-choice' | 'single-choice';
 export interface IAnswer {
     id: string;
     title: string;
+    text: string;
     correct: boolean;
     checked?: boolean;
 }
