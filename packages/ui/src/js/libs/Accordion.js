@@ -15,40 +15,46 @@ const Accordion = createModule({
 
         const getIndex = trigger => triggers.indexOf(trigger);
 
-        const showTarget = trigger => {
+        const showTarget = (trigger, duration = options.duration) => {
             const target = targets[getIndex(trigger)];
             trigger.setAttribute('aria-expanded', 'true');
             trigger.classList.add(options.activeCls);
 
             target.setAttribute('aria-hidden', 'false');
-            slideDown(target, options.duration);
+            slideDown(target, duration);
             target.classList.add(options.targetActiveCls);
         };
 
         const showAllTargets = () => {
-            targets.forEach(target => {
-                target.setAttribute('aria-hidden', 'false');
-                slideDown(target, 1);
-                target.classList.add(options.targetActiveCls);
+            triggers.forEach(trigger => {
+                showTarget(trigger, 1);
             });
         };
 
-        const hideTarget = trigger => {
+        const setAllAriaAttrs = expanded => {
+            triggers.forEach(trigger => {
+                trigger.setAttribute('aria-expanded', expanded);
+            });
+
+            targets.forEach(target => {
+                target.setAttribute('aria-hidden', !expanded);
+            });
+        };
+
+        const hideTarget = (trigger, duration = options.duration) => {
             const target = targets[getIndex(trigger)];
 
             trigger.setAttribute('aria-expanded', 'false');
             trigger.classList.remove(options.activeCls);
 
             target.setAttribute('aria-hidden', 'true');
-            slideUp(target, options.duration);
+            slideUp(target, duration);
             target.classList.remove(options.targetActiveCls);
         };
 
         const hideAllTargets = () => {
-            targets.forEach(target => {
-                target.setAttribute('aria-hidden', 'true');
-                slideUp(target, 1);
-                target.classList.remove(options.targetActiveCls);
+            triggers.forEach(trigger => {
+                hideTarget(trigger, 1);
             });
         };
 
@@ -75,6 +81,10 @@ const Accordion = createModule({
         };
 
         // Public Methods
+        state.setAllAriaAttrs = expanded => {
+            setAllAriaAttrs(expanded);
+        };
+
         state.showAllTargets = () => {
             showAllTargets();
         };

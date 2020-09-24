@@ -9,15 +9,16 @@ const Footer = createModule({
         const accordion = Accordion(el);
         const breakpointer = new Breakpointer();
 
-        const handleResize = () => {
-            if (breakpointer.testBreachkpoint(breakpoints.tablet)) {
-                accordion.showAllTargets();
-            } else {
-                accordion.hideAllTargets();
-            }
+        const setAllAriaAttrs = () => {
+            const expanded = breakpointer.testBreachkpoint(breakpoints.tablet);
+            accordion.setAllAriaAttrs(expanded);
         };
 
-        const debouncedResize = debounce(handleResize, 200);
+        const handleResize = () => {
+            setAllAriaAttrs();
+        };
+
+        const debouncedResize = debounce(handleResize, 10);
 
         const bindEvents = () => {
             window.addEventListener('resize', debouncedResize);
@@ -28,6 +29,7 @@ const Footer = createModule({
         };
 
         state.init = () => {
+            setAllAriaAttrs();
             bindEvents();
         };
 
