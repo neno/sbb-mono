@@ -1,3 +1,4 @@
+import { getQuestionByAnswerId } from './helpers/helpers';
 import {
     QuizAction,
     IState,
@@ -8,7 +9,9 @@ import {
     IQuiz,
     SHOW_RESULTS,
     RESET_QUIZ,
-} from './models.d';
+    IAnswer,
+    IQuestion,
+} from './models';
 
 export const INITIAL_STATE: IState = {
     quizReset: null,
@@ -18,19 +21,47 @@ export const INITIAL_STATE: IState = {
     showResults: false,
 };
 
-const mapResult = (data: IQuiz, answerId?: number) => {
+const checkAnswer = (
+    answer: IAnswer,
+    currentQuestion: IQuestion,
+    questions: IQuestion[],
+    checkedAnswerId?: string
+) => {
+    const { id } = getQuestionByAnswerId(questions, checkedAnswerId);
+    const newAnswer: IAnswer = {
+        ...answer,
+        id: answer.id.toString(),
+        checked: !!answer.checked,
+    };
+
+    if (checkedAnswerId && id === currentQuestion.id.toString()) {
+        if (currentQuestion.questionType === 'single-choice') {
+            newAnswer.checked = false;
+        }
+    }
+
+    if (newAnswer.id === checkedAnswerId) {
+        newAnswer.checked = !newAnswer.checked;
+    }
+
+    return newAnswer;
+};
+
+const mapResult = (data: IQuiz, checkedId?: string) => {
     return {
         ...data,
         questions: data.questions.map((question) => {
             return {
                 ...question,
-                answers: question.answers.map((answer) => ({
-                    ...answer,
-                    checked:
-                        answerId && answerId === answer.id
-                            ? !answer.checked
-                            : answer.checked || false,
-                })),
+                id: question.id.toString(),
+                answers: question.answers.map((answer) => {
+                    return checkAnswer(
+                        answer,
+                        question,
+                        data.questions,
+                        checkedId
+                    );
+                }),
             };
         }),
     };

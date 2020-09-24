@@ -1,0 +1,27 @@
+.m-radio-button {
+  @include check-radio-field;
+
+  &__label::before {
+    border-radius: 50%;
+  }
+
+  &__input:checked + &__label {
+    &::after {
+      background-color: $color-red;
+      border: em(2, $font-size-regular-px) solid $color-white;
+      border-radius: 50%;
+      content: '';
+      height: em(16, $font-size-regular-px);
+      left: em(2, $font-size-regular-px);
+      position: absolute;
+      top: em(5, $font-size-regular-px);
+      width: em(16, $font-size-regular-px);
+    }
+  }
+
+  &__input:disabled + &__label {
+    &::after {
+      background-color: $color-granite;
+    }
+  }
+}

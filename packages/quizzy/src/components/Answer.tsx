@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { AnswerProps } from '../models.d';
+import { AnswerProps } from '../models';
 
 const Answer: React.FC<AnswerProps> = memo(
     ({

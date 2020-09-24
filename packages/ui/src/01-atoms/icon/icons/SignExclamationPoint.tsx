@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SignExclamationPoint = () => (
+const SignExclamationPoint: React.FC = () => (
     <svg
         focusable="false"
         aria-hidden="true"

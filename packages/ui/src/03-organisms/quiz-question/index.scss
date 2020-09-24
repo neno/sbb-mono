@@ -1,0 +1,36 @@
+.o-quiz-question {
+  background-color: $color-milk;
+  margin-bottom: em(25, $font-size-regular-px);
+  padding: em(8, $font-size-regular-px);
+
+  &--correct {
+    .a-icon {
+      color: $color-green;
+    }
+  }
+
+  &--incorrect {
+    .a-icon {
+      color: $color-red;
+    }
+  }
+
+  &__legend {
+    @include h3;
+    display: flex;
+    justify-content: space-between;
+
+    .a-icon {
+      width: em(32, 21);
+      height: em(32, 21);
+    }
+  }
+
+  &__answers {
+    @include no-bullets;
+
+    li {
+      margin-top: em(8, $font-size-regular-px);
+    }
+  }
+}

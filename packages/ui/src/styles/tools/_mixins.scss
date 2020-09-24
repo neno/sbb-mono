@@ -1,3 +1,51 @@
 @import './mixins/global';
 @import './mixins/typo';
 @import './mixins/layout';
+
+@mixin check-radio {
+  border: em(2, $font-size-regular-px) solid $color-aluminum;
+  display: inline-block;
+  height: em(20, $font-size-regular-px);
+  position: relative;
+  width: em(20, $font-size-regular-px);
+}
+
+@mixin check-radio-field {
+  &,
+  .a-label {
+    align-items: center;
+    display: flex;
+  }
+
+  &__input {
+    @include hide-visually;
+  }
+
+  &__label {
+    font-size: em($font-size-regular-px, $font-size-regular-px);
+    line-height: line-height(26, $font-size-regular-px);
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      @include check-radio;
+
+      border-radius: em(2, $font-size-regular-px);
+      content: '';
+      margin-right: em(8, $font-size-regular-px);
+      position: relative;
+      z-index: 0;
+    }
+  }
+
+  &__input:checked + &__label {
+    color: $color-black;
+  }
+
+  &__input:disabled + &__label {
+    &::before {
+      background-color: $color-milk;
+    }
+  }
+}

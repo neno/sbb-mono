@@ -5,6 +5,9 @@
         "packages/*"
     ],
     "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/preset-react": "^7.10.4",
         "eslint": "^7.8.0",
         "lerna": "^3.22.1"
     }
