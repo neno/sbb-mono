@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Youtube = () => (
+const Youtube: React.FC = () => (
     <svg
         focusable="false"
         aria-hidden="true"

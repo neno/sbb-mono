@@ -11,6 +11,8 @@ export const ArrowRight = () => renderToStaticMarkup(<Icon name="arrow-right" />
 
 export const ArrowUpCircle = () => renderToStaticMarkup(<Icon name="arrow-up-circle" />);
 
+export const Checkmark = () => renderToStaticMarkup(<Icon name="checkmark" />);
+
 export const ChevronDown = () => renderToStaticMarkup(<Icon name="chevron-down" />);
 
 export const Globe = () => renderToStaticMarkup(<Icon name="globe" />);

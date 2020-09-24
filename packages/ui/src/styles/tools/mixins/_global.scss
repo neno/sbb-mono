@@ -32,7 +32,7 @@
   display: flex;
 
   li {
-    margin-left: rem($margin-left);
+    margin-left: em(40, $font-size-regular-px);
 
     &:first-child {
       margin-left: 0;

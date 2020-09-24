@@ -1,5 +1,6 @@
 import React, { useReducer, FormEventHandler } from 'react';
-import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models.d';
+import MyButton from '@sbb-mono/ui/src/01-atoms/button';
+import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models';
 import { apiEndpoint } from '../config';
 import reducer, { INITIAL_STATE } from '../reducer';
 import useFetch from '../useFetch';
@@ -10,7 +11,7 @@ const App: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
     useFetch(apiEndpoint, dispatch);
 
-    const toggleAnswer = (id: number): void => {
+    const toggleAnswer = (id: string): void => {
         dispatch({
             type: TOGGLE_ANSWER,
             payload: { id },
@@ -29,6 +30,8 @@ const App: React.FC = () => {
             type: RESET_QUIZ,
         });
     };
+
+    const handleConfirm = (): void => {};
 
     if (state.error) {
         return <div>{state.error}</div>;
@@ -51,21 +54,39 @@ const App: React.FC = () => {
                         />
                     </div>
                 ))}
+                <div className="t-quiz__results">
+                    {state.showResults && (
+                        <Result
+                            questions={state.quiz.questions}
+                            results={state.quiz.results}
+                        />
+                    )}
+                </div>
+                <p>
+                    <strong>{state.quiz.changesEffective}</strong>
+                </p>
+                <p>{state.quiz.confirmMessage}</p>
                 <div className="t-quiz__actions">
-                    <button type="submit">Submit</button>
-                    <button type="button" onClick={handleReset}>
-                        Reset
-                    </button>
+                    {!state.showResults && (
+                        <MyButton type="submit">{state.quiz.submit}</MyButton>
+                    )}
+                    {state.showResults && (
+                        <MyButton
+                            type="button"
+                            arrows
+                            classes={['a-btn--primary']}
+                            handleClick={handleConfirm}
+                        >
+                            {state.quiz.confirmChanges}
+                        </MyButton>
+                    )}
+                    {state.showResults && (
+                        <MyButton type="button" handleClick={handleReset}>
+                            {state.quiz.repeat}
+                        </MyButton>
+                    )}
                 </div>
             </form>
-            <div className="t-quiz__results">
-                {state.showResults && (
-                    <Result
-                        questions={state.quiz.questions}
-                        results={state.quiz.results}
-                    />
-                )}
-            </div>
         </article>
     ) : (
         <div>Loading…</div>

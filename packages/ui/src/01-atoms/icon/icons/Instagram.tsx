@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Instagram = () => (
+const Instagram: React.FC = () => (
     <svg
         focusable="false"
         aria-hidden="true"

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Twitter = () => (
+const Twitter: React.FC = () => (
     <svg
         focusable="false"
         aria-hidden="true"

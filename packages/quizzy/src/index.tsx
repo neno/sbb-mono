@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
-import './index.css';
 import App from './components/App';
+import '@sbb-mono/ui/src/styles/index.scss';
 
-ReactDOM.render(
+render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,

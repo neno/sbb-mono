@@ -1,0 +1,5 @@
+.m-radio-button-list {
+  &__list {
+    @include no-bullets;
+  }
+}

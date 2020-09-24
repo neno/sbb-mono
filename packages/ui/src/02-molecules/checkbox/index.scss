@@ -1,0 +1,32 @@
+.m-checkbox {
+  @include check-radio-field;
+
+  align-items: center;
+  display: flex;
+
+  .a-icon {
+    color: $color-red;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate3d(
+      -#{em(2, $font-size-regular-px)},
+      em(1, $font-size-regular-px),
+      0
+    );
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  &__input:checked + &__label {
+    .a-icon {
+      visibility: visible;
+    }
+  }
+
+  &__input:disabled + &__label {
+    .a-icon {
+      color: $color-granite;
+    }
+  }
+}

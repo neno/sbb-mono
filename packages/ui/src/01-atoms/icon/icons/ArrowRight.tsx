@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArrowRight = () => (
+const ArrowRight: React.FC = () => (
     <svg
         focusable="false"
         aria-hidden="true"

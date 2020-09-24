@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChevronDown = () => (
+const ChevronDown: React.FC = () => (
     <svg
         focusable="false"
         aria-hidden="true"

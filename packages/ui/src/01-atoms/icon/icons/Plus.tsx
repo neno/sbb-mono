@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Minus = () => (
+const Plus: React.FC = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -10,9 +10,8 @@ const Minus = () => (
         className="a-icon"
         viewBox="0 0 24 24"
     >
-        <path d="M20 12.5H4v-1h16v1z" />
+        <path d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z" />
     </svg>
-
 );
 
-export default Minus;
+export default Plus;

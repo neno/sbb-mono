@@ -1,0 +1,37 @@
+$quiz-answer-border: 2;
+$quiz-padding-vertical: 14;
+
+.m-quiz-answer {
+  background-color: $color-white;
+  border-bottom: em($quiz-answer-border, $font-size-regular-px) solid $color-white;
+  padding: em($quiz-padding-vertical, $font-size-regular-px) em(10, $font-size-regular-px) em($quiz-padding-vertical - $quiz-answer-border, $font-size-regular-px);
+
+  &__text {
+    margin-left: em(28, $font-size-regular-px);
+  }
+
+  /* stylelint-disable */
+  .m-checkbox__input:disabled + .m-checkbox__label,
+  .m-radio-button__input:disabled + .m-radio-button__label {
+    &::before {
+      background-color: $color-white;
+    }
+
+    &::after {
+      background-color: $color-red;
+    }
+
+    .a-icon {
+      color: $color-red;
+    }
+  }
+  /* stylelint-enable */
+
+  &--correct {
+    border-color: $color-green;
+  }
+
+  &--incorrect {
+    border-color: $color-red;
+  }
+}
