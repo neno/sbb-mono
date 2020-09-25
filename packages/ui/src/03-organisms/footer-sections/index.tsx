@@ -17,7 +17,7 @@ const FooterSections = () => (
                 Kontakt
             </Button>
             <p>
-                Haben Sie Fragen?Wir helfen Ihnen gerne.
+                Haben Sie Fragen? Wir helfen Ihnen gerne.
                 Bitte lesen Sie auch unsere Erklärung zum
                 {' '}
                 <Link href="/" classes={['a-link--footer']}>Datenschutz.</Link>

@@ -23,16 +23,24 @@
   }
 }
 
+@mixin link-hover-animation {
+  color: $color-red-125;
+
+  .a-arrows-cta {
+    @include arrows-animation;
+  }
+}
+
 @mixin link {
+  cursor: pointer;
   color: $color-black;
   text-decoration: underline;
 
-  &:hover,
-  &:focus {
-    color: $color-red-125;
+  @include hover {
+    @include link-hover-animation();
   }
 
-  &:hover {
-    cursor: pointer;
+  &:focus {
+    @include link-hover-animation();
   }
 }

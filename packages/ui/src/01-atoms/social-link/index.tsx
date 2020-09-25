@@ -18,7 +18,6 @@ const SocialLink: React.FC<ISocialLink> = ({
             <Icon name={icon} />
             <span className="u-sr-only">
                 {label}
-                .
                 {' '}
                 {newWindowText}
             </span>
