@@ -8,11 +8,16 @@
   }
 
   &--footer-bottom {
+    align-items: center;
     justify-content: space-between;
-    @include h-list(em(48, $footer-section-base-size));
+    display: flex;
 
-    .m-link-list__item {
-      flex: 0 0 auto;
+    li {
+      margin-left: em(48, $font-size-regular-px);
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
 
     @include media-breakpoint-up(mobile) {
