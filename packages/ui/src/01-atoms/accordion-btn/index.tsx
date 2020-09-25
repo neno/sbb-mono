@@ -5,9 +5,7 @@ interface Props extends ComponentProps<'button'> {
     id: string;
     classes?: string[];
     attrs?: {};
-    url?: string;
     active?: boolean;
-    arrows?: boolean;
 }
 
 const AccordionBtn: React.FC<Props> = ({
