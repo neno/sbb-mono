@@ -7,12 +7,18 @@ export default {
     title: '01-Atoms/Text Input',
 };
 
+const handleInputChange = event => {
+    // eslint-disable-next-line no-console
+    console.log(event);
+};
+
 export const Default = () => renderToStaticMarkup(
     <TextInput
         name="field-1"
         id="field-1"
         attrs={{
             value: 'Value',
+            onChange: handleInputChange,
             required: true,
         }}
     />,
@@ -24,6 +30,7 @@ export const Placeholder = () => renderToStaticMarkup(
         id="field-2"
         attrs={{
             placeholder: 'Placeholder Text',
+            onChange: handleInputChange,
         }}
     />,
 );
@@ -35,6 +42,7 @@ export const Disabled = () => renderToStaticMarkup(
         attrs={{
             value: 'Value',
             disabled: true,
+            onChange: handleInputChange,
         }}
     />,
 );
@@ -46,6 +54,7 @@ export const Error = () => renderToStaticMarkup(
         classes={['a-input--error']}
         attr={{
             value: 'Value',
+            onChange: handleInputChange,
         }}
     />,
 );

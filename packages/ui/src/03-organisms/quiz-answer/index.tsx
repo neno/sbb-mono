@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import RadioButton from '../radio-button';
-import Checkbox from '../checkbox';
+import RadioButton from '../../02-molecules/radio-button';
+import Checkbox from '../../02-molecules/checkbox';
 
 export interface Props {
     id: string;

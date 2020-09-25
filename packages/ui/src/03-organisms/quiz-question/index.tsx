@@ -1,5 +1,5 @@
 import React from 'react';
-import QuizAnswer from '../../02-molecules/quiz-answer';
+import QuizAnswer from '../quiz-answer';
 import Icon from '../../01-atoms/icon';
 
 type QuestionType = 'multiple-choice' | 'single-choice';

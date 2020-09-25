@@ -9,10 +9,10 @@ export interface IState {
 export interface IQuiz {
     title: string;
     submit: string;
-    confirmChanges: string;
-    repeat: string;
-    changesEffective: string;
-    confirmMessage: string;
+    confirmChanges?: string;
+    repeat?: string;
+    changesEffective?: string;
+    confirmMessage?: string;
     questions: IQuestion[];
     results: IResult[];
 }
