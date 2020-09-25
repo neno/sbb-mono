@@ -24,8 +24,14 @@
       }
     }
 
-    aside:not(.m-footer-section).a-accordion-btn {
-      display: block !important;
+    .a-accordion-btn {
+      display: block;
+    }
+
+    .m-footer-section .a-accordion-btn {
+      @media (min-width: 64.0625em) {
+        display: none;
+      }
     }
   }
 }

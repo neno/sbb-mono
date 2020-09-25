@@ -10,7 +10,15 @@ export default {
 
 export const FooterQuickLinks = () => renderToStaticMarkup(
     <LinkList
-        links={links}
+        links={links.quicklinks}
         linkClasses={['a-link--footer']}
+    />,
+);
+
+export const FooterBottom = () => renderToStaticMarkup(
+    <LinkList
+        classes={['m-link-list--footer-bottom']}
+        links={links.footerBottomLinks}
+        linkClasses={['a-link--footer-bottom']}
     />,
 );

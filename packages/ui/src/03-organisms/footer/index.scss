@@ -7,24 +7,6 @@
     }
   }
 
-  &__sections {
-    @include media-breakpoint-up(tablet) {
-      @supports (display: grid) {
-        display: grid;
-        grid-gap: em(48, 15);
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-      }
-    }
-  }
-
-  &__bottom {
-    flex: 0 0 auto;
-    height: rem(96);
-    width: 100%;
-    background: $color-white;
-  }
-
   &--fixed {
     display: flex;
     flex-direction: column;

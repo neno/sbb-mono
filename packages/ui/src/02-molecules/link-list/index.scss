@@ -6,4 +6,23 @@
       margin-top: em(8, $footer-section-base-size);
     }
   }
+
+  &--footer-bottom {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+    li {
+      margin-left: em(48, $font-size-regular-px);
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    @include media-breakpoint-up(mobile) {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+    }
+  }
 }

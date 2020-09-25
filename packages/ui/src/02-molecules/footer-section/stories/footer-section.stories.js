@@ -6,7 +6,7 @@ import LinkList from '../../link-list';
 import { footerSectionData } from './footer-section.data';
 
 export default {
-    title: '02-Molecules/FooterSections',
+    title: '02-Molecules/Footer Section',
 };
 
 export const QuickLinks = () => renderToStaticMarkup(

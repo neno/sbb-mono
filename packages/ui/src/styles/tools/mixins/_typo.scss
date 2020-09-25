@@ -12,27 +12,35 @@
   }
 }
 
-@mixin font-h3 {
+@mixin font-h3($line-height: 1.2) {
   font-size: $font-size-h3;
   font-weight: $font-light;
-  line-height: 1.2;
+  line-height: $line-height;
   margin: 0;
 
   @include media-breakpoint-up(mobile) {
-    font-size: $font-size-h3-mobile-up;
+    font-size: $font-size-h3-mobile;
+  }
+}
+
+@mixin link-hover-animation {
+  color: $color-red-125;
+
+  .a-arrows-cta {
+    @include arrows-animation;
   }
 }
 
 @mixin link {
+  cursor: pointer;
   color: $color-black;
   text-decoration: underline;
 
-  &:hover,
-  &:focus {
-    color: $color-red-125;
+  @include hover {
+    @include link-hover-animation();
   }
 
-  &:hover {
-    cursor: pointer;
+  &:focus {
+    @include link-hover-animation();
   }
 }
