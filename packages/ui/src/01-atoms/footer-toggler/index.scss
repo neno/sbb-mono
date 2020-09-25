@@ -14,8 +14,11 @@
   top: 0;
   width: 100%;
 
-  @include hover {
-    @include hover-animation();
+  @include hoverFocus {
+    .a-icon {
+      color: $color-red-125;
+      transform: scale(1.1);
+    }
   }
 
   .a-icon {
@@ -27,34 +30,15 @@
     width: em($footer-toggler-height-px, 15);
   }
 
-  &:focus {
-    @include hover-animation();
-  }
-
   &--active {
-
-    @include hover {
-      @include hover-animation();
-    }
-
-    .a-icon {
-      transform: rotate(180deg);
-    }
-
-    &:focus {
-      @include hover-animation();
-    }
-    @mixin hover-animation {
+    @include hoverFocus {
       .a-icon {
         transform: scale(1.1) rotate(180deg);
       }
     }
-  }
 
-  @mixin hover-animation {
     .a-icon {
-      color: $color-red-125;
-      transform: scale(1.1);
+      transform: rotate(180deg);
     }
   }
 }

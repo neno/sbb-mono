@@ -6,7 +6,18 @@
   transition: background-color 225ms ease-in-out;
 
   @include hover {
-    @include hover-animation;
+    background-color: $color-aluminum;
+    color: $color-black;
+
+    .a-img {
+      &__image {
+        transform: scale3d(1.07, 1.07, 1.07);
+      }
+    }
+
+    .a-arrows-cta {
+      @include arrows-animation;
+    }
   }
 
   @include media-breakpoint-up(mobile) {
@@ -94,10 +105,6 @@
   }
 
   &:focus-within {
-    @include hover-animation;
-  }
-
-  @mixin hover-animation {
     background-color: $color-aluminum;
     color: $color-black;
 

@@ -16,6 +16,16 @@
   }
 }
 
+@mixin hoverFocus($not: null) {
+  @include hover($not) {
+    @content;
+  }
+
+  &:focus {
+    @content;
+  }
+}
+
 @mixin no-bullets() {
   list-style: none;
   margin: 0;
