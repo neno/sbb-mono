@@ -2,12 +2,12 @@
 export const footerSectionData = {
     title: 'Über die SBB',
     links: [
-        { label: 'Unternehmen', href: '#' },
-        { label: 'SBB Immobilien', href: '#' },
-        { label: 'SBB Cargo', href: '#' },
-        { label: 'Jobs & Karriere', href: '#' },
-        { label: 'Medien & Dossiers', href: '#' },
-        { label: 'Zahlen & Fakten', href: '#' },
+        { children: 'Unternehmen', href: '/' },
+        { children: 'SBB Immobilien', href: '/' },
+        { children: 'SBB Cargo', href: '/' },
+        { children: 'Jobs & Karriere', href: '/' },
+        { children: 'Medien & Dossiers', href: '/' },
+        { children: 'Zahlen & Fakten', href: '/' },
 
     ],
 };

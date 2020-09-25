@@ -1,0 +1,60 @@
+.a-footer-toggler {
+  align-items: center;
+  background: $color-cloud;
+  border: 0;
+  display: flex;
+  height: em(40, 15);
+  justify-content: center;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  cursor: pointer;
+
+  .a-icon {
+    color: $color-iron;
+    display: inline-block;
+    width: em(40, 15);
+    height: em(40, 15);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  @mixin hover-animation {
+    .a-icon {
+      color: $color-red-125;
+      transform: scale(1.1);
+    }
+  }
+
+  @include hover {
+    @include hover-animation();
+  }
+
+  &:focus {
+    @include hover-animation();
+  }
+
+  &--active {
+    @mixin hover-animation {
+      .a-icon {
+        transform: scale(1.1) rotate(180deg);
+      }
+    }
+
+    .a-icon {
+      transform: rotate(180deg);
+    }
+
+    @include hover {
+      @include hover-animation();
+    }
+
+    &:focus {
+      @include hover-animation();
+    }
+  }
+}

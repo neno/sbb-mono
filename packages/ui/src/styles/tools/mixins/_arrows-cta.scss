@@ -1,0 +1,14 @@
+@mixin arrows-animation($padding-right-hover: 0) {
+  color: $color-red-125;
+  padding-left: em(30, 15);
+  padding-right: $padding-right-hover;
+
+  > .a-icon {
+    opacity: 0;
+    color: currentColor;
+
+    &:first-child {
+      opacity: 1;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React, { ComponentProps } from 'react';
 
-import Icon from '../icon';
+import ArrowsCta from '../arrows-cta';
 
 export interface ILink extends ComponentProps<'a'> {
     href: string;
@@ -21,9 +21,9 @@ const Link: React.FC<ILink> = ({
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...attrs}
         >
-            {arrows && <Icon name="arrow-right" />}
-            {children}
-            {arrows && <Icon name="arrow-right" />}
+            {arrows ? (
+                <ArrowsCta>{children}</ArrowsCta>
+            ) : children }
         </a>
     );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import ArrowsCta from '../../01-atoms/arrows-cta';
 import Image, { ImageProps } from '../../01-atoms/image';
 
 interface Props {
@@ -30,7 +31,7 @@ const Teaser: React.FC<Props> = ({
                     </a>
                 )}
                 {text && <p className="m-teaser__text">{text}</p>}
-                {hasCTA && <span className="m-teaser__more">Mehr Info</span>}
+                {hasCTA && <ArrowsCta>Mehr Info</ArrowsCta>}
             </div>
         </article>
     );

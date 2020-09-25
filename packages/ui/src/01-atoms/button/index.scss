@@ -1,7 +1,5 @@
 $button-min-width: rem(60);
 $button-padding-x: em(40, 15);
-$button-arrow-padding-x: em(66, 15);
-$button-arrow-position-x: em(10, 15);
 $button-arrow-hover-position-x: em(36, 15);
 
 .a-btn {
@@ -16,8 +14,6 @@ $button-arrow-hover-position-x: em(36, 15);
   padding: em(10, 15) $button-padding-x;
   position: relative;
   text-decoration: none !important;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   width: 100%;
 
   @include media-breakpoint-up(mobile) {
@@ -28,6 +24,28 @@ $button-arrow-hover-position-x: em(36, 15);
     margin-top: em(12, 15) * -1;
     position: absolute;
     top: 50%;
+  }
+
+  .a-arrows-cta {
+    color: currentColor !important;
+
+    > .a-icon {
+      color: currentColor;
+    }
+  }
+
+  .no-touchdevice & {
+    @include hover {
+      .a-arrows-cta {
+        @include arrows-animation(em(10, 15));
+      }
+    }
+  }
+
+  &:focus {
+    .a-arrows-cta {
+      @include arrows-animation(em(10, 15));
+    }
   }
 
   &--primary {
@@ -61,53 +79,6 @@ $button-arrow-hover-position-x: em(36, 15);
     > .a-icon {
       left: 50%;
       margin-left: em(12, 15) * -1;
-    }
-  }
-
-  &--arrows {
-    @mixin hover-animation {
-      padding-left: $button-arrow-padding-x;
-      padding-right: $button-padding-x;
-
-      > .a-icon {
-        opacity: 0;
-
-        &:first-child {
-          opacity: 1;
-        }
-      }
-    }
-
-    padding-right: $button-arrow-padding-x;
-    position: relative;
-    transition: background-color $arrow-animation-duration
-      $arrow-animation-easing,
-      border-color $arrow-animation-duration $arrow-animation-easing,
-      padding-left $arrow-animation-duration $arrow-animation-easing,
-      padding-right $arrow-animation-duration $arrow-animation-easing;
-
-    > .a-icon {
-      transition: opacity $arrow-animation-duration $arrow-animation-easing;
-
-      &:last-child {
-        margin-left: em(6, 15);
-        opacity: 1;
-      }
-
-      &:first-child {
-        margin-left: em(30, 15) * -1;
-        opacity: 0;
-      }
-    }
-
-    .no-touchdevice & {
-      @include hover {
-        @include hover-animation;
-      }
-    }
-
-    &:focus {
-      @include hover-animation;
     }
   }
 
