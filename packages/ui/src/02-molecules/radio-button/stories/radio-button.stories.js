@@ -13,15 +13,15 @@ const handleChange = id => {
 };
 
 export const Default = () => renderToStaticMarkup(
-    <RadioButton id="radiobutton-1" name="radiobutton-1" label="Default" checked={false} handleChange={handleChange} />,
+    <RadioButton id="radiobutton-1" name="radiobutton-1" label="Default" checked={false} disabled={false} handleChange={handleChange} />,
 );
 
 export const Checked = () => renderToStaticMarkup(
-    <RadioButton id="radiobutton-2" name="radiobutton-2" label="Checked" checked handleChange={handleChange} />,
+    <RadioButton id="radiobutton-2" name="radiobutton-2" label="Checked" checked disabled={false} handleChange={handleChange} />,
 );
 
 export const Disabled = () => renderToStaticMarkup(
-    <RadioButton id="radiobutton-3" name="radiobutton-3" label="Disabled" disabled handleChange={handleChange} />,
+    <RadioButton id="radiobutton-3" name="radiobutton-3" label="Disabled" disabled checked={false} handleChange={handleChange} />,
 );
 
 export const CheckedDisabled = () => renderToStaticMarkup(

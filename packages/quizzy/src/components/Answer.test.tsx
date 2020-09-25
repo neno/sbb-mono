@@ -2,9 +2,9 @@ import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import Answer from './Answer';
 
-const questionId = 100;
+const questionId = '100';
 let questionType = 'single-choice';
-const id = 101;
+const id = '101';
 const title = 'Option 1';
 const toggleAnswer = jest.fn(() => {});
 let correct = false;

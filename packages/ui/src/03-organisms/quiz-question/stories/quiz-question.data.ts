@@ -16,11 +16,13 @@ export const singleChoice = {
             id: '102',
             title: 'Antwort 1.2',
             correct: false,
+            checked: false,
         },
         {
             id: '103',
             title: 'Antwort 1.3',
             correct: false,
+            checked: false,
         },
     ],
 };
@@ -42,6 +44,7 @@ export const multipleChoice = {
             title: 'Antwort 2.2',
             text: '<p>Hier ein Bild:</p><img src="//via.placeholder.com/350x150" width="350" height="150">',
             correct: true,
+            checked: false,
         },
         {
             id: '203',

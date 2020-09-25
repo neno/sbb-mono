@@ -2,6 +2,7 @@ import React from 'react';
 
 const Checkmark: React.FC = () => (
     <svg
+        data-testid="icon-checkmark"
         focusable="false"
         aria-hidden="true"
         className="a-icon a-icon--use-stroke"

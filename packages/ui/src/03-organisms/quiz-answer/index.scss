@@ -1,7 +1,7 @@
 $quiz-answer-border: 2;
 $quiz-padding-vertical: 14;
 
-.m-quiz-answer {
+.o-quiz-answer {
   background-color: $color-white;
   border-bottom: em($quiz-answer-border, $font-size-regular-px) solid $color-white;
   padding: em($quiz-padding-vertical, $font-size-regular-px) em(10, $font-size-regular-px) em($quiz-padding-vertical - $quiz-answer-border, $font-size-regular-px);
