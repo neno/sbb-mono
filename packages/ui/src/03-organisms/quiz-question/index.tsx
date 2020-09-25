@@ -2,17 +2,17 @@ import React from 'react';
 import QuizAnswer from '../quiz-answer';
 import Icon from '../../01-atoms/icon';
 
-type QuestionType = 'multiple-choice' | 'single-choice';
+export type QuestionType = 'multiple-choice' | 'single-choice';
 
-interface AnswerProps {
+export interface AnswerProps {
     id: string;
     title: string;
-    text: string;
     correct: boolean;
-    checked?: boolean;
+    checked: boolean;
+    text?: string;
 }
 
-interface Props {
+export interface Props {
     id: string;
     title: string;
     text: string;
@@ -49,7 +49,7 @@ const Question: React.FC<Props> = ({
     }
 
     return (
-        <fieldset className={clsNames}>
+        <fieldset data-testid="quiz-question" className={clsNames}>
             <legend>
                 <span className="o-quiz-question__legend">
                     {title}

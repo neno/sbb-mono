@@ -31,7 +31,7 @@ const Checkbox:React.FC<Props> = ({
                 id={id}
                 checked={!!checked}
                 onChange={handleChange}
-                disabled={disabled}
+                disabled={!!disabled}
                 onKeyUp={handleKeyUp}
             />
             <Label htmlFor={id} classes={['m-checkbox__label']}>

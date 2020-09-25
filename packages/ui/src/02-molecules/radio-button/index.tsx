@@ -22,7 +22,7 @@ const RadioButton:React.FC<RadioButtonProps> = ({
             id={id}
             checked={!!checked}
             onChange={handleChange}
-            disabled={disabled}
+            disabled={!!disabled}
         />
         <Label htmlFor={id} classes={['m-radio-button__label']}>
             {label}
