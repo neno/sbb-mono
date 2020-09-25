@@ -32,8 +32,8 @@
 }
 
 @mixin link {
-  cursor: pointer;
   color: $color-black;
+  cursor: pointer;
   text-decoration: underline;
 
   @include hover {

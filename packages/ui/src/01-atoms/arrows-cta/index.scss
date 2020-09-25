@@ -1,7 +1,7 @@
 .a-arrows-cta {
   $arrow-position-x: em(10, $font-size-regular-px);
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
   padding-right: em(40, $font-size-regular-px);
   position: relative;
   text-decoration: none !important;
@@ -12,9 +12,9 @@
   white-space: nowrap;
 
   .a-icon {
+    color: $color-red;
     position: absolute;
     top: 50%;
-    color: $color-red;
     transform: translateY(-50%);
     transition: opacity $arrow-animation-duration $arrow-animation-easing;
 

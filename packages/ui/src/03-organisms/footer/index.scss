@@ -8,14 +8,14 @@
   }
 
   &--fixed {
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
-    bottom: 0;
     left: 0;
+    max-height: 100vh;
+    padding-top: em(40, 15) !important;
     position: fixed;
     right: 0;
-    padding-top: em(40, 15) !important;
   }
 
   &__footer-toggable {
@@ -23,12 +23,12 @@
     flex: 1 1 auto;
     overflow: auto;
 
-    &--active {
-      display: block;
-    }
-
     @include media-breakpoint-up(tablet) {
       margin-top: -#{em(40, 15)};
+    }
+
+    &--active {
+      display: block;
     }
   }
 }

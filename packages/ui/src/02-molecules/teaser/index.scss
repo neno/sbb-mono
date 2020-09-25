@@ -5,23 +5,41 @@
   position: relative;
   transition: background-color 225ms ease-in-out;
 
-  @mixin hover-animation {
-    background-color: $color-aluminum;
-    color: $color-black;
+  @include hover {
+    @include hover-animation;
+  }
 
-    .a-img {
-      &__image {
-        transform: scale3d(1.07, 1.07, 1.07);
+  @include media-breakpoint-up(mobile) {
+    .m-teaser__body {
+      padding: em(32, 15) em(24, 15);
+    }
+
+    &--cta {
+      .m-teaser__body {
+        padding-bottom: em(104, 15);
       }
     }
 
+    &__text {
+      display: block;
+    }
+
     .a-arrows-cta {
-      @include arrows-animation;
+      bottom: 3.2em;
+      left: em(24, 15);
+      margin-top: 0;
+      position: absolute;
     }
   }
 
-  @include hover {
-    @include hover-animation;
+  @include media-breakpoint-up(tablet) {
+    &--cta {
+      .m-teaser__body {
+        &__body {
+          padding-bottom: em(112, 15);
+        }
+      }
+    }
   }
 
   &__title {
@@ -79,36 +97,18 @@
     @include hover-animation;
   }
 
-  @include media-breakpoint-up(mobile) {
-    .m-teaser__body {
-      padding: em(32, 15) em(24, 15);
-    }
+  @mixin hover-animation {
+    background-color: $color-aluminum;
+    color: $color-black;
 
-    &--cta {
-      .m-teaser__body {
-        padding-bottom: em(104, 15);
+    .a-img {
+      &__image {
+        transform: scale3d(1.07, 1.07, 1.07);
       }
-    }
-
-    &__text {
-      display: block;
     }
 
     .a-arrows-cta {
-      bottom: 3.2em;
-      left: em(24, 15);
-      margin-top: 0;
-      position: absolute;
-    }
-  }
-
-  @include media-breakpoint-up(tablet) {
-    &--cta {
-      .m-teaser__body {
-        &__body {
-          padding-bottom: em(112, 15);
-        }
-      }
+      @include arrows-animation;
     }
   }
 }

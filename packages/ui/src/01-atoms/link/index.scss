@@ -13,8 +13,8 @@
 
   &--footer-bottom {
     color: $color-granite;
-    text-decoration: none;
     font-size: em(12, $font-size-regular-px);
     line-height: (18 / 12);
+    text-decoration: none;
   }
 }
