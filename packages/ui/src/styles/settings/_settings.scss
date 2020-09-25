@@ -1,12 +1,14 @@
 $font-size-h1: em(28, 15);
-$font-size-h1-mobile-up: em(30, 15);
-$font-size-h1-tablet-up: em(40, 15);
+$font-size-h1-mobile: em(30, 15);
+$font-size-h1-tablet: em(40, 15);
 
 $font-size-h2: em(24, 15);
-$font-size-h2-tablet-up: em(32, 15);
+$font-size-h2-tablet: em(32, 15);
 
 $font-size-h3: em(20, 15);
-$font-size-h3-mobile-up: em(21, 15);
+$font-size-h3-px: 20px;
+$font-size-h3-mobile: em(21, 15);
+$font-size-h3-mobile-px: 21px;
 
 $font-size-regular-px: 15px;
 $font-size-regular: rem($font-size-regular-px);

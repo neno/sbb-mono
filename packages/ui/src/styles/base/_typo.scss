@@ -9,11 +9,11 @@ h1,
   line-height: 1.2;
 
   @include media-breakpoint-up(mobile) {
-    font-size: $font-size-h1-mobile-up;
+    font-size: $font-size-h1-mobile;
   }
 
   @include media-breakpoint-up(tablet) {
-    font-size: $font-size-h1-tablet-up;
+    font-size: $font-size-h1-tablet;
   }
 }
 
@@ -24,7 +24,7 @@ h2,
   line-height: 1.2;
 
   @include media-breakpoint-up(tablet) {
-    font-size: $font-size-h2-tablet-up;
+    font-size: $font-size-h2-tablet;
   }
 }
 
