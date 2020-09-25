@@ -13,15 +13,15 @@ const handleChange = id => {
 };
 
 export const Default = () => renderToStaticMarkup(
-    <Checkbox id="checkbox-1" name="checkbox-1" label="Default" checked={false} handleChange={handleChange} />,
+    <Checkbox id="checkbox-1" name="checkbox-1" label="Default" checked={false} disabled={false} handleChange={handleChange} />,
 );
 
 export const Checked = () => renderToStaticMarkup(
-    <Checkbox id="checkbox-2" name="checkbox-2" label="Checked" checked handleChange={handleChange} />,
+    <Checkbox id="checkbox-2" name="checkbox-2" label="Checked" checked disabled={false} handleChange={handleChange} />,
 );
 
 export const Disabled = () => renderToStaticMarkup(
-    <Checkbox id="checkbox-3" name="checkbox-3" label="Disabled" disabled handleChange={handleChange} />,
+    <Checkbox id="checkbox-3" name="checkbox-3" label="Disabled" checked={false} disabled handleChange={handleChange} />,
 );
 
 export const CheckedDisabled = () => renderToStaticMarkup(

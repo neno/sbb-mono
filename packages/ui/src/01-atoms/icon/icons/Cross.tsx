@@ -2,6 +2,7 @@ import React from 'react';
 
 const Cross: React.FC = () => (
     <svg
+        data-testid="icon-cross"
         focusable="false"
         aria-hidden="true"
         className="a-icon a-icon--use-stroke"

@@ -1,0 +1,6496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots 01-Atoms/Accordion Button Default 1`] = `
+<button
+  aria-controls="accordion-panel-default"
+  class="a-accordion-btn "
+  type="button"
+>
+  Some text
+  <span
+    class="a-accordion-btn__icon-plus"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon"
+      focusable="false"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+      />
+    </svg>
+  </span>
+  <span
+    class="a-accordion-btn__icon-minus"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon"
+      focusable="false"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20 12.5H4v-1h16v1z"
+      />
+    </svg>
+  </span>
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Accordion Button Footer 1`] = `
+<button
+  aria-controls="accordion-panel-footer"
+  class="a-accordion-btn a-accordion-btn--footer"
+  type="button"
+>
+  Some text
+  <span
+    class="a-accordion-btn__icon-plus"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon"
+      focusable="false"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+      />
+    </svg>
+  </span>
+  <span
+    class="a-accordion-btn__icon-minus"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon"
+      focusable="false"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20 12.5H4v-1h16v1z"
+      />
+    </svg>
+  </span>
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Arrows CTA Default 1`] = `
+<span
+  class="a-arrows-cta "
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+    />
+  </svg>
+  More Information
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+    />
+  </svg>
+</span>
+`;
+
+exports[`Storyshots 01-Atoms/Buttons Button Primary 1`] = `
+<button
+  class="a-btn a-btn--primary"
+  type="button"
+>
+  Label
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Buttons Button Search 1`] = `
+<button
+  class="a-btn a-btn--primary a-btn--search"
+  type="button"
+>
+  <span
+    class="u-sr-only"
+  >
+    Label
+  </span>
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9,3.4997 C12.038,3.4997 14.5,5.9627 14.5,8.9997 C14.5,12.0377 12.038,14.4997 9,14.4997 C5.962,14.4997 3.5,12.0377 3.5,8.9997 C3.5,5.9627 5.962,3.4997 9,3.4997 Z M20,19.9997 L12.889,12.8887"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Buttons Button With Arrows 1`] = `
+<button
+  class="a-btn a-btn--primary"
+  type="button"
+>
+  <span
+    class="a-arrows-cta "
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+      />
+    </svg>
+    Label
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+      />
+    </svg>
+  </span>
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Buttons Default 1`] = `
+<button
+  class="a-btn"
+  type="button"
+>
+  Default Button
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Collapsibles Collapsible Trigger Target 1`] = `
+<div
+  class="a-collapsible "
+  data-collapsible-options="{\\"triggerSelector\\":\\".a-btn\\",\\"targetSelector\\":\\".a-box\\"}"
+  data-module="collapsible"
+>
+  <button
+    class="a-btn a-btn--primary"
+    type="button"
+  >
+    <span>
+      Show/Hide
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Field Error Default 1`] = `
+<p
+  class="a-field-error"
+>
+  Error Text
+</p>
+`;
+
+exports[`Storyshots 01-Atoms/Footer Toggle Default 1`] = `
+<button
+  aria-controls="default"
+  class="a-footer-toggler "
+  data-module="collapsible"
+  type="button"
+>
+  <span
+    class="u-sr-only"
+  >
+    Some text
+  </span>
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <polyline
+      fill="none"
+      points="8.092 10.35 11.996 14.3 15.9 10.352"
+      stroke="#000"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Arrow Right 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon a-icon--use-stroke"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Arrow Up Circle 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon"
+  focusable="false"
+  viewBox="0 0 30.66 30.69"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M15.33,0A15.35,15.35,0,1,0,30.66,15.36h0A15.34,15.34,0,0,0,15.33,0Zm0,29.89A14.55,14.55,0,1,1,29.86,15.36h0A14.54,14.54,0,0,1,15.33,29.89Zm-4-15.71.77.76,2.65-2.65v8.64h1.09V12.32L18.53,15l.73-.8-4-3.84Z"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Checkmark 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon a-icon--use-stroke"
+  data-testid="icon-checkmark"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M5.5,12.49l4,4,9-9"
+    fill="none"
+    stroke="#000"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Chevron Down 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon a-icon--use-stroke"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <polyline
+    fill="none"
+    points="8.092 10.35 11.996 14.3 15.9 10.352"
+    stroke="#000"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Cross 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon a-icon--use-stroke"
+  data-testid="icon-cross"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M6,17.9997 L18,5.9997 M18,17.9997 L6,5.9997"
+    fill="none"
+    stroke="#000"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Facebook 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M17 6V3h-5.3c-.9 0-1.7.7-1.7 1.7V9H8v3h2v9h4v-9h2V9h-2V6h3z"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Globe 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon a-icon--use-stroke"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M19.5,11.5002 C19.5,7.0822 15.918,3.5002 11.5,3.5002 C7.082,3.5002 3.5,7.0822 3.5,11.5002 C3.5,15.9182 7.082,19.5002 11.5,19.5002 C15.918,19.5002 19.5,15.9182 19.5,11.5002 Z M18.5,15.529 L4.5,15.529 M19.5,11.529 L3.5,11.529 M18.5,7.529 L4.5,7.529 M8.8696,19.0486 C7.3496,17.2356 6.3826,14.5286 6.3826,11.5006 C6.3826,8.4716 7.3496,5.7646 8.8696,3.9516 M8.8696,3.9519 C7.3496,5.7639 6.3826,8.4719 6.3826,11.4999 C6.3826,14.5289 7.3496,17.2349 8.8696,19.0489 M14.1309,3.9519 C15.6509,5.7639 16.6169,8.4719 16.6169,11.4999 C16.6169,14.5289 15.6509,17.2349 14.1309,19.0489 M14.1309,19.0486 C15.6509,17.2356 16.6169,14.5286 16.6169,11.5006 C16.6169,8.4716 15.6509,5.7646 14.1309,3.9516 M11.5,3.5002 L11.5,19.5002"
+    fill="none"
+    stroke="#000"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Instagram 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M18.9 3H5.1C3.9 3 3 3.9 3 5.1v13.8c0 1.2.9 2.1 2.1 2.1h13.8c1.1 0 2.1-.9 2.1-2.1V5.1c0-1.2-.9-2.1-2.1-2.1zM12 8.5c1.9 0 3.5 1.5 3.5 3.5 0 1.9-1.5 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5zm6.9 9.7c0 .4-.3.7-.7.7H5.8c-.4 0-.7-.3-.7-.7v-7.6h1.6c-.1.4-.2.9-.2 1.4 0 3.1 2.5 5.5 5.5 5.5 3.1 0 5.5-2.5 5.5-5.5 0-.5-.1-.9-.2-1.4h1.6v7.6zM19 7.9c0 .4-.3.7-.7.7h-2.1c-.4 0-.7-.3-.7-.7V5.8c0-.4.3-.7.7-.7h2.1c.4 0 .7.3.7.7v2.1z"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Magnifying Glass 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon a-icon--use-stroke"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M9,3.4997 C12.038,3.4997 14.5,5.9627 14.5,8.9997 C14.5,12.0377 12.038,14.4997 9,14.4997 C5.962,14.4997 3.5,12.0377 3.5,8.9997 C3.5,5.9627 5.962,3.4997 9,3.4997 Z M20,19.9997 L12.889,12.8887"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Minus 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon"
+  focusable="false"
+  height="24"
+  viewBox="0 0 24 24"
+  width="24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M20 12.5H4v-1h16v1z"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Plus 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon"
+  focusable="false"
+  height="24"
+  viewBox="0 0 24 24"
+  width="24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Sign Exclamation Point 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon a-icon--use-stroke"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M2.7998,20.4997 L20.1998,20.4997 L11.4998,2.9997 L2.7998,20.4997 Z M11.5,15.9997 L11.5,17.9997 M11.5,13.9997 L11.5,7.9997"
+    fill-rule="evenodd"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Twitter 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M18.9 7.4c.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.2-2.7-1.2-2 0-3.7 1.7-3.7 3.8 0 .3 0 .6.1.9-3.1-.2-5.8-1.7-7.6-4-.4.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.6 3.2-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.4 3 3.7-.3.1-.6.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.6 3.4 2.6-1.3 1-2.9 1.6-4.6 1.6-.3 0-.6 0-.9-.1C4.6 19.4 6.6 20 8.7 20c6.8 0 10.5-5.8 10.5-10.8v-.5c.7-.5 1.3-1.2 1.8-1.9-.7.3-1.4.5-2.1.6z"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Icons Youtube 1`] = `
+<svg
+  aria-hidden="true"
+  class="a-icon"
+  focusable="false"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M19.8 9.4s-.2-1.1-.6-1.6c-.6-.6-1.3-.6-1.6-.7C15.4 7 12 7 12 7s-3.4 0-5.6.2c-.3 0-1 0-1.6.7-.5.5-.6 1.6-.6 1.6S4 10.6 4 11.9v1.2c0 1.3.2 2.5.2 2.5s.2 1.1.6 1.6c.6.6 1.4.6 1.8.7 1.2.1 5.4.1 5.4.1s3.4 0 5.6-.2c.3 0 1 0 1.6-.7.5-.5.6-1.6.6-1.6s.2-1.3.2-2.5v-1.2c0-1.2-.2-2.4-.2-2.4zm-9.5 5.1v-4.4l4.3 2.2-4.3 2.2z"
+  />
+</svg>
+`;
+
+exports[`Storyshots 01-Atoms/Image Default 1`] = `
+<span
+  class="a-img "
+>
+  <img
+    class="a-img__image"
+    height="450"
+    sizes="100vw"
+    src="https://placehold.it/300x169"
+    srcset="
+      https://placehold.it/300x169 300w,
+      https://placehold.it/400x225 400w,
+      https://placehold.it/600x338 600w,
+      https://placehold.it/800x450 800w,
+      https://placehold.it/1200x675 1200w,
+      https://placehold.it/1600x900 1600w,
+      https://placehold.it/2000x1125 2000w
+    "
+    width="800"
+  />
+</span>
+`;
+
+exports[`Storyshots 01-Atoms/Label Default 1`] = `
+<label
+  class="a-label"
+  for="field_name"
+>
+  Label Text
+</label>
+`;
+
+exports[`Storyshots 01-Atoms/Links Footer Link 1`] = `
+<a
+  class="a-link a-link--footer "
+  href="/"
+>
+  Footer Link
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Links Link With Arrows CTA 1`] = `
+<a
+  class="a-link a-link--arrows"
+  href="/"
+>
+  <span
+    class="a-arrows-cta "
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+      />
+    </svg>
+    More information
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+      />
+    </svg>
+  </span>
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Links Standard 1`] = `
+<a
+  class="a-link "
+  href="/"
+>
+  Das ist ein inline Link
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Meta Link Default 1`] = `
+<a
+  class="a-meta-link"
+  href="/"
+>
+  Sbb.ch
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Meta Link Meta Link Language Selector 1`] = `
+<button
+  class="a-meta-link"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19.5,11.5002 C19.5,7.0822 15.918,3.5002 11.5,3.5002 C7.082,3.5002 3.5,7.0822 3.5,11.5002 C3.5,15.9182 7.082,19.5002 11.5,19.5002 C15.918,19.5002 19.5,15.9182 19.5,11.5002 Z M18.5,15.529 L4.5,15.529 M19.5,11.529 L3.5,11.529 M18.5,7.529 L4.5,7.529 M8.8696,19.0486 C7.3496,17.2356 6.3826,14.5286 6.3826,11.5006 C6.3826,8.4716 7.3496,5.7646 8.8696,3.9516 M8.8696,3.9519 C7.3496,5.7639 6.3826,8.4719 6.3826,11.4999 C6.3826,14.5289 7.3496,17.2349 8.8696,19.0489 M14.1309,3.9519 C15.6509,5.7639 16.6169,8.4719 16.6169,11.4999 C16.6169,14.5289 15.6509,17.2349 14.1309,19.0489 M14.1309,19.0486 C15.6509,17.2356 16.6169,14.5286 16.6169,11.5006 C16.6169,8.4716 15.6509,5.7646 14.1309,3.9516 M11.5,3.5002 L11.5,19.5002"
+      fill="none"
+      stroke="#000"
+    />
+  </svg>
+  Deutsch
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <polyline
+      fill="none"
+      points="8.092 10.35 11.996 14.3 15.9 10.352"
+      stroke="#000"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Meta Link Meta Link With Icon 1`] = `
+<a
+  class="a-meta-link"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9,3.4997 C12.038,3.4997 14.5,5.9627 14.5,8.9997 C14.5,12.0377 12.038,14.4997 9,14.4997 C5.962,14.4997 3.5,12.0377 3.5,8.9997 C3.5,5.9627 5.962,3.4997 9,3.4997 Z M20,19.9997 L12.889,12.8887"
+    />
+  </svg>
+  Suche
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Notification Default 1`] = `
+<div
+  class="a-notification"
+  role="alert"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9,3.4997 C12.038,3.4997 14.5,5.9627 14.5,8.9997 C14.5,12.0377 12.038,14.4997 9,14.4997 C5.962,14.4997 3.5,12.0377 3.5,8.9997 C3.5,5.9627 5.962,3.4997 9,3.4997 Z M20,19.9997 L12.889,12.8887"
+    />
+  </svg>
+  <div
+    class="a-notification__text"
+  >
+    Notification Text
+  </div>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Notification Error 1`] = `
+<div
+  class="a-notification a-notification--error"
+  role="alert"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon a-icon--use-stroke"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.7998,20.4997 L20.1998,20.4997 L11.4998,2.9997 L2.7998,20.4997 Z M11.5,15.9997 L11.5,17.9997 M11.5,13.9997 L11.5,7.9997"
+      fill-rule="evenodd"
+    />
+  </svg>
+  <div
+    class="a-notification__text"
+  >
+    <strong>
+      Notification Title
+    </strong>
+    <ul
+      class="a-notification__error-list"
+    >
+      <li>
+        <a
+          href="#field-1"
+        >
+          Input field 1
+        </a>
+      </li>
+      <li>
+        <a
+          href="#field-2"
+        >
+          Input field 2
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Social Links Facebook 1`] = `
+<a
+  class="a-social-link"
+  href="#"
+  rel="external noopener nofollow noreferrer"
+  target="_blank"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M17 6V3h-5.3c-.9 0-1.7.7-1.7 1.7V9H8v3h2v9h4v-9h2V9h-2V6h3z"
+    />
+  </svg>
+  <span
+    class="u-sr-only"
+  >
+    Die Facebook-Seite der SBB anzeigen. Link öffnet in neuem Fenster.
+  </span>
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Social Links Instagram 1`] = `
+<a
+  class="a-social-link"
+  href="#"
+  rel="external noopener nofollow noreferrer"
+  target="_blank"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M18.9 3H5.1C3.9 3 3 3.9 3 5.1v13.8c0 1.2.9 2.1 2.1 2.1h13.8c1.1 0 2.1-.9 2.1-2.1V5.1c0-1.2-.9-2.1-2.1-2.1zM12 8.5c1.9 0 3.5 1.5 3.5 3.5 0 1.9-1.5 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5zm6.9 9.7c0 .4-.3.7-.7.7H5.8c-.4 0-.7-.3-.7-.7v-7.6h1.6c-.1.4-.2.9-.2 1.4 0 3.1 2.5 5.5 5.5 5.5 3.1 0 5.5-2.5 5.5-5.5 0-.5-.1-.9-.2-1.4h1.6v7.6zM19 7.9c0 .4-.3.7-.7.7h-2.1c-.4 0-.7-.3-.7-.7V5.8c0-.4.3-.7.7-.7h2.1c.4 0 .7.3.7.7v2.1z"
+    />
+  </svg>
+  <span
+    class="u-sr-only"
+  >
+    Hier geht's zum Instagram-Account der SBB. Link öffnet in neuem Fenster.
+  </span>
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Social Links Twitter 1`] = `
+<a
+  class="a-social-link"
+  href="#"
+  rel="external noopener nofollow noreferrer"
+  target="_blank"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M18.9 7.4c.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.2-2.7-1.2-2 0-3.7 1.7-3.7 3.8 0 .3 0 .6.1.9-3.1-.2-5.8-1.7-7.6-4-.4.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.6 3.2-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.4 3 3.7-.3.1-.6.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.6 3.4 2.6-1.3 1-2.9 1.6-4.6 1.6-.3 0-.6 0-.9-.1C4.6 19.4 6.6 20 8.7 20c6.8 0 10.5-5.8 10.5-10.8v-.5c.7-.5 1.3-1.2 1.8-1.9-.7.3-1.4.5-2.1.6z"
+    />
+  </svg>
+  <span
+    class="u-sr-only"
+  >
+    Hier geht's zum Twitter-Account der SBB. Link öffnet in neuem Fenster.
+  </span>
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Social Links Youtube 1`] = `
+<a
+  class="a-social-link"
+  href="#"
+  rel="external noopener nofollow noreferrer"
+  target="_blank"
+>
+  <svg
+    aria-hidden="true"
+    class="a-icon"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19.8 9.4s-.2-1.1-.6-1.6c-.6-.6-1.3-.6-1.6-.7C15.4 7 12 7 12 7s-3.4 0-5.6.2c-.3 0-1 0-1.6.7-.5.5-.6 1.6-.6 1.6S4 10.6 4 11.9v1.2c0 1.3.2 2.5.2 2.5s.2 1.1.6 1.6c.6.6 1.4.6 1.8.7 1.2.1 5.4.1 5.4.1s3.4 0 5.6-.2c.3 0 1 0 1.6-.7.5-.5.6-1.6.6-1.6s.2-1.3.2-2.5v-1.2c0-1.2-.2-2.4-.2-2.4zm-9.5 5.1v-4.4l4.3 2.2-4.3 2.2z"
+    />
+  </svg>
+  <span
+    class="u-sr-only"
+  >
+    Hier geht's zum YouTube-Kanal der SBB. Link öffnet in neuem Fenster.
+  </span>
+</a>
+`;
+
+exports[`Storyshots 01-Atoms/Tab Active 1`] = `
+<button
+  aria-controls="tab-1-tab"
+  aria-selected="true"
+  class="a-tab a-tab--active"
+  data-panel="tab-1-tab"
+  id="tab-1"
+  role="tab"
+  tabindex="0"
+  type="button"
+>
+  Label
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Tab Default 1`] = `
+<button
+  aria-controls="tab-1-tab"
+  aria-selected="false"
+  class="a-tab"
+  data-panel="tab-1-tab"
+  id="tab-1"
+  role="tab"
+  tabindex="-1"
+  type="button"
+>
+  Label
+</button>
+`;
+
+exports[`Storyshots 01-Atoms/Table Align Center 1`] = `
+<div
+  class="a-table a-table--align-center"
+>
+  <table
+    class="a-table__table"
+  >
+    <thead
+      class="a-table__thead"
+    >
+      <tr>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Jahr
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anzahl Bahnhöfe*
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anteil Reisender
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 1
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 2
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="a-table__tbody"
+    >
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2017
+        </td>
+        <td
+          class="a-table__td"
+        >
+          335 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          58 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          556 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          93 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          Nach 2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          679 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          99 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Table Align Left 1`] = `
+<div
+  class="a-table a-table--align-left"
+>
+  <table
+    class="a-table__table"
+  >
+    <thead
+      class="a-table__thead"
+    >
+      <tr>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Jahr
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anzahl Bahnhöfe*
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anteil Reisender
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 1
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 2
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="a-table__tbody"
+    >
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2017
+        </td>
+        <td
+          class="a-table__td"
+        >
+          335 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          58 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          556 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          93 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          Nach 2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          679 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          99 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Table Align Right 1`] = `
+<div
+  class="a-table a-table--align-right"
+>
+  <table
+    class="a-table__table"
+  >
+    <thead
+      class="a-table__thead"
+    >
+      <tr>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Jahr
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anzahl Bahnhöfe*
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anteil Reisender
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 1
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 2
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="a-table__tbody"
+    >
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2017
+        </td>
+        <td
+          class="a-table__td"
+        >
+          335 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          58 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          556 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          93 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          Nach 2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          679 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          99 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Table Headers Side 1`] = `
+<div
+  class="a-table a-table--align-left"
+>
+  <table
+    class="a-table__table"
+  >
+    <thead
+      class="a-table__thead"
+    >
+      <tr />
+    </thead>
+    <tbody
+      class="a-table__tbody"
+    >
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          Jahr
+        </th>
+        <td
+          class="a-table__td"
+        >
+          2017
+        </td>
+        <td
+          class="a-table__td"
+        >
+          2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Nach 202
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          Anzahl Bahnhöfe*
+        </th>
+        <td
+          class="a-table__td"
+        >
+          335 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          556 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          93 Prozent
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          Anteil Reisender
+        </th>
+        <td
+          class="a-table__td"
+        >
+          358 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          679 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          99 Prozent
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          Extra Heading 1
+        </th>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          Extra Heading 2
+        </th>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Ipsum
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Dolor sit amet
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Table Headers Top 1`] = `
+<div
+  class="a-table"
+>
+  <table
+    class="a-table__table"
+  >
+    <thead
+      class="a-table__thead"
+    >
+      <tr>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Jahr
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anzahl Bahnhöfe*
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anteil Reisender
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 1
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 2
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="a-table__tbody"
+    >
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2017
+        </td>
+        <td
+          class="a-table__td"
+        >
+          335 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          58 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          556 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          93 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <td
+          class="a-table__td"
+        >
+          Nach 2023
+        </td>
+        <td
+          class="a-table__td"
+        >
+          679 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          99 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Table Two Headers 1`] = `
+<div
+  class="a-table a-table--align-center"
+>
+  <table
+    class="a-table__table"
+  >
+    <thead
+      class="a-table__thead"
+    >
+      <tr>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Jahr
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anzahl Bahnhöfe*
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Anteil Reisender
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 1
+        </th>
+        <th
+          class="a-table__th"
+          scope="col"
+        >
+          Extra Heading 2
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="a-table__tbody"
+    >
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          2017
+        </th>
+        <td
+          class="a-table__td"
+        >
+          335 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          58 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          2023
+        </th>
+        <td
+          class="a-table__td"
+        >
+          556 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          93 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+      <tr
+        class="a-table__tr"
+      >
+        <th
+          class="a-table__td"
+          scope="row"
+        >
+          Nach 2023
+        </th>
+        <td
+          class="a-table__td"
+        >
+          679 BehiG-konform
+        </td>
+        <td
+          class="a-table__td"
+        >
+          99 Prozent
+        </td>
+        <td
+          class="a-table__td"
+        >
+          -
+        </td>
+        <td
+          class="a-table__td"
+        >
+          Lorem
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots 01-Atoms/Text Input Default 1`] = `
+<input
+  class="a-text-input"
+  id="field-1"
+  name="field-1"
+  required=""
+  type="text"
+  value="Value"
+/>
+`;
+
+exports[`Storyshots 01-Atoms/Text Input Disabled 1`] = `
+<input
+  class="a-text-input"
+  disabled=""
+  id="field-3"
+  name="field-3"
+  type="text"
+  value="Value"
+/>
+`;
+
+exports[`Storyshots 01-Atoms/Text Input Error 1`] = `
+<input
+  class="a-text-input a-input--error"
+  id="field-4"
+  name="field-4"
+  type="text"
+/>
+`;
+
+exports[`Storyshots 01-Atoms/Text Input Placeholder 1`] = `
+<input
+  class="a-text-input"
+  id="field-2"
+  name="field-2"
+  placeholder="Placeholder Text"
+  type="text"
+/>
+`;
+
+exports[`Storyshots 01-Atoms/To Top Default 1`] = `
+<button
+  class="a-btn a-btn--to-top"
+  data-module="to-top"
+  type="button"
+>
+  <span
+    class="u-sr-only"
+  >
+    Nach Oben
+  </span>
+  <svg
+    aria-hidden="true"
+    class="a-icon"
+    focusable="false"
+    viewBox="0 0 30.66 30.69"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15.33,0A15.35,15.35,0,1,0,30.66,15.36h0A15.34,15.34,0,0,0,15.33,0Zm0,29.89A14.55,14.55,0,1,1,29.86,15.36h0A14.54,14.54,0,0,1,15.33,29.89Zm-4-15.71.77.76,2.65-2.65v8.64h1.09V12.32L18.53,15l.73-.8-4-3.84Z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots 02-Molecules/Button Group Default 1`] = `
+<div
+  class="m-btn-group"
+>
+  <button
+    class="a-btn"
+    type="button"
+  >
+    Default Button
+  </button>
+  <button
+    class="a-btn a-btn--primary"
+    type="button"
+  >
+    <span
+      class="a-arrows-cta "
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+        />
+      </svg>
+      Primary Button
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
+<aside
+  class="m-footer-section"
+>
+  <h3
+    class="m-footer-section__title"
+  >
+    Über die SBB
+  </h3>
+  <button
+    aria-controls="accordion-panel-undefined"
+    class="a-accordion-btn a-accordion-btn--footer"
+    type="button"
+  >
+    Über die SBB
+    <span
+      class="a-accordion-btn__icon-plus"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon"
+        focusable="false"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+        />
+      </svg>
+    </span>
+    <span
+      class="a-accordion-btn__icon-minus"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon"
+        focusable="false"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20 12.5H4v-1h16v1z"
+        />
+      </svg>
+    </span>
+  </button>
+  <div
+    aria-hidden="false"
+    class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+    id="accordion-panel-undefined"
+  >
+    <div
+      class="m-footer-section__body"
+    >
+      <ul
+        class="m-link-list "
+      >
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer "
+            href="/"
+          >
+            Unternehmen
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer "
+            href="/"
+          >
+            SBB Immobilien
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer "
+            href="/"
+          >
+            SBB Cargo
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer "
+            href="/"
+          >
+            Jobs & Karriere
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer "
+            href="/"
+          >
+            Medien & Dossiers
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer "
+            href="/"
+          >
+            Zahlen & Fakten
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Checkbox Checked 1`] = `
+<div
+  class="m-checkbox"
+>
+  <input
+    checked=""
+    class="m-checkbox__input"
+    id="checkbox-2"
+    name="checkbox-2"
+    type="checkbox"
+  />
+  <label
+    class="a-label m-checkbox__label"
+    for="checkbox-2"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      data-testid="icon-checkmark"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.5,12.49l4,4,9-9"
+        fill="none"
+        stroke="#000"
+      />
+    </svg>
+    Checked
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Checkbox Checked Disabled 1`] = `
+<div
+  class="m-checkbox"
+>
+  <input
+    checked=""
+    class="m-checkbox__input"
+    disabled=""
+    id="checkbox-4"
+    name="checkbox-4"
+    type="checkbox"
+  />
+  <label
+    class="a-label m-checkbox__label"
+    for="checkbox-4"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      data-testid="icon-checkmark"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.5,12.49l4,4,9-9"
+        fill="none"
+        stroke="#000"
+      />
+    </svg>
+    Checked disabled
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Checkbox Default 1`] = `
+<div
+  class="m-checkbox"
+>
+  <input
+    class="m-checkbox__input"
+    id="checkbox-1"
+    name="checkbox-1"
+    type="checkbox"
+  />
+  <label
+    class="a-label m-checkbox__label"
+    for="checkbox-1"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      data-testid="icon-checkmark"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.5,12.49l4,4,9-9"
+        fill="none"
+        stroke="#000"
+      />
+    </svg>
+    Default
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Checkbox Disabled 1`] = `
+<div
+  class="m-checkbox"
+>
+  <input
+    class="m-checkbox__input"
+    disabled=""
+    id="checkbox-3"
+    name="checkbox-3"
+    type="checkbox"
+  />
+  <label
+    class="a-label m-checkbox__label"
+    for="checkbox-3"
+  >
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      data-testid="icon-checkmark"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.5,12.49l4,4,9-9"
+        fill="none"
+        stroke="#000"
+      />
+    </svg>
+    Disabled
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Radio Button Checked 1`] = `
+<div
+  class="m-radio-button"
+>
+  <input
+    checked=""
+    class="m-radio-button__input"
+    id="radiobutton-2"
+    name="radiobutton-2"
+    type="radio"
+  />
+  <label
+    class="a-label m-radio-button__label"
+    for="radiobutton-2"
+  >
+    Checked
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Radio Button Checked Disabled 1`] = `
+<div
+  class="m-radio-button"
+>
+  <input
+    checked=""
+    class="m-radio-button__input"
+    disabled=""
+    id="radiobutton-4"
+    name="radiobutton-4"
+    type="radio"
+  />
+  <label
+    class="a-label m-radio-button__label"
+    for="radiobutton-4"
+  >
+    Checked disabled
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Radio Button Default 1`] = `
+<div
+  class="m-radio-button"
+>
+  <input
+    class="m-radio-button__input"
+    id="radiobutton-1"
+    name="radiobutton-1"
+    type="radio"
+  />
+  <label
+    class="a-label m-radio-button__label"
+    for="radiobutton-1"
+  >
+    Default
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Radio Button Disabled 1`] = `
+<div
+  class="m-radio-button"
+>
+  <input
+    class="m-radio-button__input"
+    disabled=""
+    id="radiobutton-3"
+    name="radiobutton-3"
+    type="radio"
+  />
+  <label
+    class="a-label m-radio-button__label"
+    for="radiobutton-3"
+  >
+    Disabled
+  </label>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Radio Button List Default 1`] = `
+<div
+  class="m-radio-button-list"
+>
+  <ol
+    class="m-radio-button-list__list"
+  >
+    <li>
+      <div
+        class="m-radio-button"
+      >
+        <input
+          class="m-radio-button__input"
+          id="checkbox-1"
+          name="checkbox-1"
+          type="radio"
+        />
+        <label
+          class="a-label m-radio-button__label"
+          for="checkbox-1"
+        >
+          Option 1
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="m-radio-button"
+      >
+        <input
+          checked=""
+          class="m-radio-button__input"
+          id="checkbox-2"
+          name="checkbox-2"
+          type="radio"
+        />
+        <label
+          class="a-label m-radio-button__label"
+          for="checkbox-2"
+        >
+          Option 2
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="m-radio-button"
+      >
+        <input
+          class="m-radio-button__input"
+          id="checkbox-3"
+          name="checkbox-3"
+          type="radio"
+        />
+        <label
+          class="a-label m-radio-button__label"
+          for="checkbox-3"
+        >
+          Option 3
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="m-radio-button"
+      >
+        <input
+          class="m-radio-button__input"
+          id="checkbox-4"
+          name="checkbox-4"
+          type="radio"
+        />
+        <label
+          class="a-label m-radio-button__label"
+          for="checkbox-4"
+        >
+          Option 4
+        </label>
+      </div>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Text Field Default 1`] = `
+<div
+  class="m-text-field"
+>
+  <label
+    class="a-label"
+    for="field_name"
+  >
+    Label Text
+  </label>
+  <input
+    class="a-text-input"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Text Field Has Error 1`] = `
+<div
+  class="m-text-field"
+>
+  <label
+    class="a-label"
+    for="field_name"
+  >
+    Label Text
+  </label>
+  <input
+    class="a-text-input a-input--error"
+    type="text"
+  />
+  <p
+    class="a-field-error"
+  >
+    Pflichtfeld, bitte ausfüllen.
+  </p>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Form Fields/Text Field Optional 1`] = `
+<div
+  class="m-text-field"
+>
+  <label
+    class="a-label"
+    for="field_name"
+  >
+    Label Text (optional)
+  </label>
+  <input
+    class="a-text-input"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Link List Footer Bottom 1`] = `
+<ul
+  class="m-link-list m-link-list--footer-bottom"
+>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer-bottom "
+      href="/"
+    >
+      Impresum
+    </a>
+  </li>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer-bottom "
+      href="/"
+    >
+      Rechtlichter Hinweis
+    </a>
+  </li>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer-bottom "
+      href="/"
+    >
+      Datenschutz
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots 02-Molecules/Link List Footer Quick Links 1`] = `
+<ul
+  class="m-link-list "
+>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer "
+      href="/"
+    >
+      Unternehmen
+    </a>
+  </li>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer "
+      href="/"
+    >
+      SBB Immobilien
+    </a>
+  </li>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer "
+      href="/"
+    >
+      SBB Cargo
+    </a>
+  </li>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer "
+      href="/"
+    >
+      Jobs & Karriere
+    </a>
+  </li>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer "
+      href="/"
+    >
+      Medien & Dossiers
+    </a>
+  </li>
+  <li
+    class="m-link-list__item"
+  >
+    <a
+      class="a-link a-link--footer "
+      href="/"
+    >
+      Zahlen & Fakten
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots 02-Molecules/Quiz Answer Correct 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--single-choice o-quiz-answer--correct"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-radio-button m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-radio-button__input"
+      disabled=""
+      id="quiz-answer-3"
+      name="quiz-answer-1"
+      type="radio"
+    />
+    <label
+      class="a-label m-radio-button__label"
+      for="quiz-answer-3"
+    >
+      Answer Correct
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Quiz Answer Incorrect 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--multiple-choice o-quiz-answer--incorrect"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-checkbox m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-checkbox__input"
+      disabled=""
+      id="quiz-answer-4"
+      name="quiz-answer-4"
+      type="checkbox"
+    />
+    <label
+      class="a-label m-checkbox__label"
+      for="quiz-answer-4"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        data-testid="icon-checkmark"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5,12.49l4,4,9-9"
+          fill="none"
+          stroke="#000"
+        />
+      </svg>
+      Answer Incorrect
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Quiz Answer Multiple Choice 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--multiple-choice"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-checkbox m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-checkbox__input"
+      id="quiz-answer-2"
+      name="quiz-answer-2"
+      type="checkbox"
+    />
+    <label
+      class="a-label m-checkbox__label"
+      for="quiz-answer-2"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        data-testid="icon-checkmark"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5,12.49l4,4,9-9"
+          fill="none"
+          stroke="#000"
+        />
+      </svg>
+      Multiple Choice
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Quiz Answer Single Choice 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--single-choice"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-radio-button m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-radio-button__input"
+      id="quiz-answer-1"
+      name="quiz-answer-1"
+      type="radio"
+    />
+    <label
+      class="a-label m-radio-button__label"
+      for="quiz-answer-1"
+    >
+      Single Choice
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Quiz Answer With Text 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--single-choice"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-radio-button m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-radio-button__input"
+      id="quiz-answer-1"
+      name="quiz-answer-1"
+      type="radio"
+    />
+    <label
+      class="a-label m-radio-button__label"
+      for="quiz-answer-1"
+    >
+      Single Choice
+    </label>
+  </div>
+  <div
+    class="o-quiz-answer__text"
+  >
+    <p>
+      Erklärungstext zur Antwort
+    </p>
+    <p>
+      Und noch ein Link: 
+      <a
+        href="http://google.ch"
+        target="_blank"
+      >
+        http://google.ch
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Search Form Default 1`] = `
+<form
+  class="m-search-form"
+>
+  <label
+    class="u-sr-only"
+    for="search-term"
+  >
+    Suchbegriff
+  </label>
+  <input
+    class="a-text-input a-input--search"
+    id="search-term"
+    name="search-term"
+    placeholder="Suchtext eingeben"
+    type="text"
+  />
+  <div
+    class="m-search-form__submit"
+  >
+    <button
+      class="a-btn a-btn--primary a-btn--icon a-btn--search"
+      type="submit"
+    >
+      <span
+        class="u-sr-only"
+      >
+        Suche
+      </span>
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9,3.4997 C12.038,3.4997 14.5,5.9627 14.5,8.9997 C14.5,12.0377 12.038,14.4997 9,14.4997 C5.962,14.4997 3.5,12.0377 3.5,8.9997 C3.5,5.9627 5.962,3.4997 9,3.4997 Z M20,19.9997 L12.889,12.8887"
+        />
+      </svg>
+    </button>
+  </div>
+</form>
+`;
+
+exports[`Storyshots 02-Molecules/Social Links Default 1`] = `
+<ul
+  class="m-social-links "
+>
+  <li
+    class="m-social-links__item"
+  >
+    <a
+      class="a-social-link"
+      href="#"
+      rel="external noopener nofollow noreferrer"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17 6V3h-5.3c-.9 0-1.7.7-1.7 1.7V9H8v3h2v9h4v-9h2V9h-2V6h3z"
+        />
+      </svg>
+      <span
+        class="u-sr-only"
+      >
+        Die Facebook-Seite der SBB anzeigen. Link öffnet in neuem Fenster.
+      </span>
+    </a>
+  </li>
+  <li
+    class="m-social-links__item"
+  >
+    <a
+      class="a-social-link"
+      href="#"
+      rel="external noopener nofollow noreferrer"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.9 7.4c.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.2-2.7-1.2-2 0-3.7 1.7-3.7 3.8 0 .3 0 .6.1.9-3.1-.2-5.8-1.7-7.6-4-.4.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.6 3.2-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.4 3 3.7-.3.1-.6.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.6 3.4 2.6-1.3 1-2.9 1.6-4.6 1.6-.3 0-.6 0-.9-.1C4.6 19.4 6.6 20 8.7 20c6.8 0 10.5-5.8 10.5-10.8v-.5c.7-.5 1.3-1.2 1.8-1.9-.7.3-1.4.5-2.1.6z"
+        />
+      </svg>
+      <span
+        class="u-sr-only"
+      >
+        Hier geht's zum Twitter-Account der SBB. Link öffnet in neuem Fenster.
+      </span>
+    </a>
+  </li>
+  <li
+    class="m-social-links__item"
+  >
+    <a
+      class="a-social-link"
+      href="#"
+      rel="external noopener nofollow noreferrer"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.8 9.4s-.2-1.1-.6-1.6c-.6-.6-1.3-.6-1.6-.7C15.4 7 12 7 12 7s-3.4 0-5.6.2c-.3 0-1 0-1.6.7-.5.5-.6 1.6-.6 1.6S4 10.6 4 11.9v1.2c0 1.3.2 2.5.2 2.5s.2 1.1.6 1.6c.6.6 1.4.6 1.8.7 1.2.1 5.4.1 5.4.1s3.4 0 5.6-.2c.3 0 1 0 1.6-.7.5-.5.6-1.6.6-1.6s.2-1.3.2-2.5v-1.2c0-1.2-.2-2.4-.2-2.4zm-9.5 5.1v-4.4l4.3 2.2-4.3 2.2z"
+        />
+      </svg>
+      <span
+        class="u-sr-only"
+      >
+        Hier geht's zum YouTube-Kanal der SBB. Link öffnet in neuem Fenster.
+      </span>
+    </a>
+  </li>
+  <li
+    class="m-social-links__item"
+  >
+    <a
+      class="a-social-link"
+      href="#"
+      rel="external noopener nofollow noreferrer"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.9 3H5.1C3.9 3 3 3.9 3 5.1v13.8c0 1.2.9 2.1 2.1 2.1h13.8c1.1 0 2.1-.9 2.1-2.1V5.1c0-1.2-.9-2.1-2.1-2.1zM12 8.5c1.9 0 3.5 1.5 3.5 3.5 0 1.9-1.5 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5zm6.9 9.7c0 .4-.3.7-.7.7H5.8c-.4 0-.7-.3-.7-.7v-7.6h1.6c-.1.4-.2.9-.2 1.4 0 3.1 2.5 5.5 5.5 5.5 3.1 0 5.5-2.5 5.5-5.5 0-.5-.1-.9-.2-1.4h1.6v7.6zM19 7.9c0 .4-.3.7-.7.7h-2.1c-.4 0-.7-.3-.7-.7V5.8c0-.4.3-.7.7-.7h2.1c.4 0 .7.3.7.7v2.1z"
+        />
+      </svg>
+      <span
+        class="u-sr-only"
+      >
+        Hier geht's zum Instagram-Account der SBB. Link öffnet in neuem Fenster.
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots 02-Molecules/Tab List Centered 1`] = `
+<div
+  aria-label="Example of tab list"
+  class="m-tablist m-tablist--centered"
+  role="tablist"
+>
+  <button
+    aria-controls="label-1-tab"
+    aria-selected="true"
+    class="a-tab a-tab--active"
+    data-panel="label-1-tab"
+    id="label-1"
+    role="tab"
+    tabindex="0"
+    type="button"
+  >
+    Label 1
+  </button>
+  <button
+    aria-controls="label-2-tab"
+    aria-selected="false"
+    class="a-tab"
+    data-panel="label-2-tab"
+    id="label-2"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Label 2
+  </button>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Tab List Default 1`] = `
+<div
+  aria-label="Example of tab list"
+  class="m-tablist"
+  role="tablist"
+>
+  <button
+    aria-controls="label-1-tab"
+    aria-selected="true"
+    class="a-tab a-tab--active"
+    data-panel="label-1-tab"
+    id="label-1"
+    role="tab"
+    tabindex="0"
+    type="button"
+  >
+    Label 1
+  </button>
+  <button
+    aria-controls="label-2-tab"
+    aria-selected="false"
+    class="a-tab"
+    data-panel="label-2-tab"
+    id="label-2"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Label 2
+  </button>
+</div>
+`;
+
+exports[`Storyshots 02-Molecules/Teaser Centered 1`] = `
+<article
+  class="m-teaser m-teaser--centered"
+>
+  <span
+    class="a-img "
+  >
+    <img
+      class="a-img__image"
+      height="616"
+      sizes="(min-width: 64.0625em) 24.125rem, (min-width: 40.1875em) 30rem, 100%"
+      src="https://placehold.it/387x252"
+      srcset="
+          https://placehold.it/387x252 387w,
+          https://placehold.it/480x313 480w,
+          https://placehold.it/618x402 618w,
+          https://placehold.it/774x504 774w,
+          https://placehold.it/960x616 960w,
+          https://placehold.it/1236x804 1236w
+        "
+      width="960"
+    />
+  </span>
+  <div
+    class="m-teaser__body"
+  >
+    <a
+      class="m-teaser__block-link"
+      href="#"
+    >
+      <h3
+        class="m-teaser__title"
+      >
+        Schritt für Schritt zu klimafreundlichen Bahnhöfen
+      </h3>
+    </a>
+  </div>
+</article>
+`;
+
+exports[`Storyshots 02-Molecules/Teaser Default 1`] = `
+<article
+  class="m-teaser m-teaser--cta "
+>
+  <span
+    class="a-img "
+  >
+    <img
+      class="a-img__image"
+      height="616"
+      sizes="(min-width: 64.0625em) 24.125rem, (min-width: 40.1875em) 30rem, 100%"
+      src="https://placehold.it/387x252"
+      srcset="
+          https://placehold.it/387x252 387w,
+          https://placehold.it/480x313 480w,
+          https://placehold.it/618x402 618w,
+          https://placehold.it/774x504 774w,
+          https://placehold.it/960x616 960w,
+          https://placehold.it/1236x804 1236w
+        "
+      width="960"
+    />
+  </span>
+  <div
+    class="m-teaser__body"
+  >
+    <a
+      class="m-teaser__block-link"
+      href="#"
+    >
+      <h3
+        class="m-teaser__title"
+      >
+        Schritt für Schritt zu klimafreundlichen Bahnhöfen
+      </h3>
+    </a>
+    <p
+      class="m-teaser__text"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.
+    </p>
+    <span
+      class="a-arrows-cta "
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+        />
+      </svg>
+      Mehr Info
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+        />
+      </svg>
+    </span>
+  </div>
+</article>
+`;
+
+exports[`Storyshots 03-Organisms/Footer Bottom Default 1`] = `
+<div
+  class="o-footer-bottom"
+>
+  <div
+    class="l-constrainer"
+  >
+    <ul
+      class="m-link-list m-link-list--footer-bottom"
+    >
+      <li
+        class="m-link-list__item"
+      >
+        <a
+          class="a-link a-link--footer-bottom "
+          href="/"
+        >
+          Impresum
+        </a>
+      </li>
+      <li
+        class="m-link-list__item"
+      >
+        <a
+          class="a-link a-link--footer-bottom "
+          href="/"
+        >
+          Rechtlichter Hinweis
+        </a>
+      </li>
+      <li
+        class="m-link-list__item"
+      >
+        <a
+          class="a-link a-link--footer-bottom "
+          href="/"
+        >
+          Datenschutz
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 03-Organisms/Footer Default 1`] = `
+<footer
+  class="o-footer"
+  data-module="footer"
+>
+  <h2
+    class="u-sr-only"
+  >
+    Kontakt und zusätzliche Informationen
+  </h2>
+  <div
+    class="o-footer__sections-container"
+  >
+    <div
+      class="l-constrainer"
+    >
+      <div
+        class="o-footer-sections"
+      >
+        <aside
+          class="m-footer-section"
+        >
+          <h3
+            class="m-footer-section__title"
+          >
+            Kontakt
+          </h3>
+          <button
+            aria-controls="accordion-panel-footer-contact"
+            class="a-accordion-btn a-accordion-btn--footer"
+            type="button"
+          >
+            Kontakt
+            <span
+              class="a-accordion-btn__icon-plus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                />
+              </svg>
+            </span>
+            <span
+              class="a-accordion-btn__icon-minus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5H4v-1h16v1z"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+            id="accordion-panel-footer-contact"
+          >
+            <div
+              class="m-footer-section__body"
+            >
+              <a
+                class="a-btn a-btn--footer"
+                href="/"
+                type="button"
+              >
+                <span
+                  class="a-arrows-cta "
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon a-icon--use-stroke"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                    />
+                  </svg>
+                  Kontakt
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon a-icon--use-stroke"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <p>
+                Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
+                <a
+                  class="a-link a-link--footer "
+                  href="/"
+                >
+                  Datenschutz.
+                </a>
+              </p>
+            </div>
+          </div>
+        </aside>
+        <aside
+          class="m-footer-section"
+        >
+          <h3
+            class="m-footer-section__title"
+          >
+            Bahnverkehrsinformationen
+          </h3>
+          <button
+            aria-controls="accordion-panel-footer-railinfo"
+            class="a-accordion-btn a-accordion-btn--footer"
+            type="button"
+          >
+            Bahnverkehrsinformationen
+            <span
+              class="a-accordion-btn__icon-plus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                />
+              </svg>
+            </span>
+            <span
+              class="a-accordion-btn__icon-minus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5H4v-1h16v1z"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+            id="accordion-panel-footer-railinfo"
+          >
+            <div
+              class="m-footer-section__body"
+            >
+              <p>
+                Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
+              </p>
+              <p>
+                <a
+                  class="a-link a-link--footer a-link--arrows"
+                  href="/"
+                >
+                  <span
+                    class="a-arrows-cta "
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                    Aktuelle Hinweise
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </aside>
+        <aside
+          class="m-footer-section"
+        >
+          <h3
+            class="m-footer-section__title"
+          >
+            Newsletter & Social Media
+          </h3>
+          <button
+            aria-controls="accordion-panel-footer-social"
+            class="a-accordion-btn a-accordion-btn--footer"
+            type="button"
+          >
+            Newsletter & Social Media
+            <span
+              class="a-accordion-btn__icon-plus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                />
+              </svg>
+            </span>
+            <span
+              class="a-accordion-btn__icon-minus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5H4v-1h16v1z"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+            id="accordion-panel-footer-social"
+          >
+            <div
+              class="m-footer-section__body"
+            >
+              <p>
+                Jeden Monat über Angebote und Neuigkeiten informiert sein.
+              </p>
+              <p>
+                <a
+                  class="a-link a-link--footer a-link--arrows"
+                  href="/"
+                >
+                  <span
+                    class="a-arrows-cta "
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                    Newsletter abonnieren
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </p>
+              <ul
+                class="m-social-links "
+              >
+                <li
+                  class="m-social-links__item"
+                >
+                  <a
+                    class="a-social-link"
+                    href="#"
+                    rel="external noopener nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 6V3h-5.3c-.9 0-1.7.7-1.7 1.7V9H8v3h2v9h4v-9h2V9h-2V6h3z"
+                      />
+                    </svg>
+                    <span
+                      class="u-sr-only"
+                    >
+                      Die Facebook-Seite der SBB anzeigen. Link öffnet in neuem Fenster.
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="m-social-links__item"
+                >
+                  <a
+                    class="a-social-link"
+                    href="#"
+                    rel="external noopener nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.9 7.4c.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.2-2.7-1.2-2 0-3.7 1.7-3.7 3.8 0 .3 0 .6.1.9-3.1-.2-5.8-1.7-7.6-4-.4.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.6 3.2-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.4 3 3.7-.3.1-.6.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.6 3.4 2.6-1.3 1-2.9 1.6-4.6 1.6-.3 0-.6 0-.9-.1C4.6 19.4 6.6 20 8.7 20c6.8 0 10.5-5.8 10.5-10.8v-.5c.7-.5 1.3-1.2 1.8-1.9-.7.3-1.4.5-2.1.6z"
+                      />
+                    </svg>
+                    <span
+                      class="u-sr-only"
+                    >
+                      Hier geht's zum Twitter-Account der SBB. Link öffnet in neuem Fenster.
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="m-social-links__item"
+                >
+                  <a
+                    class="a-social-link"
+                    href="#"
+                    rel="external noopener nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.8 9.4s-.2-1.1-.6-1.6c-.6-.6-1.3-.6-1.6-.7C15.4 7 12 7 12 7s-3.4 0-5.6.2c-.3 0-1 0-1.6.7-.5.5-.6 1.6-.6 1.6S4 10.6 4 11.9v1.2c0 1.3.2 2.5.2 2.5s.2 1.1.6 1.6c.6.6 1.4.6 1.8.7 1.2.1 5.4.1 5.4.1s3.4 0 5.6-.2c.3 0 1 0 1.6-.7.5-.5.6-1.6.6-1.6s.2-1.3.2-2.5v-1.2c0-1.2-.2-2.4-.2-2.4zm-9.5 5.1v-4.4l4.3 2.2-4.3 2.2z"
+                      />
+                    </svg>
+                    <span
+                      class="u-sr-only"
+                    >
+                      Hier geht's zum YouTube-Kanal der SBB. Link öffnet in neuem Fenster.
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="m-social-links__item"
+                >
+                  <a
+                    class="a-social-link"
+                    href="#"
+                    rel="external noopener nofollow noreferrer"
+                    target="_blank"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.9 3H5.1C3.9 3 3 3.9 3 5.1v13.8c0 1.2.9 2.1 2.1 2.1h13.8c1.1 0 2.1-.9 2.1-2.1V5.1c0-1.2-.9-2.1-2.1-2.1zM12 8.5c1.9 0 3.5 1.5 3.5 3.5 0 1.9-1.5 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5zm6.9 9.7c0 .4-.3.7-.7.7H5.8c-.4 0-.7-.3-.7-.7v-7.6h1.6c-.1.4-.2.9-.2 1.4 0 3.1 2.5 5.5 5.5 5.5 3.1 0 5.5-2.5 5.5-5.5 0-.5-.1-.9-.2-1.4h1.6v7.6zM19 7.9c0 .4-.3.7-.7.7h-2.1c-.4 0-.7-.3-.7-.7V5.8c0-.4.3-.7.7-.7h2.1c.4 0 .7.3.7.7v2.1z"
+                      />
+                    </svg>
+                    <span
+                      class="u-sr-only"
+                    >
+                      Hier geht's zum Instagram-Account der SBB. Link öffnet in neuem Fenster.
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <aside
+          class="m-footer-section"
+        >
+          <h3
+            class="m-footer-section__title"
+          >
+            Über die SBB
+          </h3>
+          <button
+            aria-controls="accordion-panel-footer-company"
+            class="a-accordion-btn a-accordion-btn--footer"
+            type="button"
+          >
+            Über die SBB
+            <span
+              class="a-accordion-btn__icon-plus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                />
+              </svg>
+            </span>
+            <span
+              class="a-accordion-btn__icon-minus"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.5H4v-1h16v1z"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+            id="accordion-panel-footer-company"
+          >
+            <div
+              class="m-footer-section__body"
+            >
+              <ul
+                class="m-link-list "
+              >
+                <li
+                  class="m-link-list__item"
+                >
+                  <a
+                    class="a-link a-link--footer "
+                    href="/"
+                  >
+                    Unternehmen
+                  </a>
+                </li>
+                <li
+                  class="m-link-list__item"
+                >
+                  <a
+                    class="a-link a-link--footer "
+                    href="/"
+                  >
+                    SBB Immobilien
+                  </a>
+                </li>
+                <li
+                  class="m-link-list__item"
+                >
+                  <a
+                    class="a-link a-link--footer "
+                    href="/"
+                  >
+                    SBB Cargo
+                  </a>
+                </li>
+                <li
+                  class="m-link-list__item"
+                >
+                  <a
+                    class="a-link a-link--footer "
+                    href="/"
+                  >
+                    Jobs & Karriere
+                  </a>
+                </li>
+                <li
+                  class="m-link-list__item"
+                >
+                  <a
+                    class="a-link a-link--footer "
+                    href="/"
+                  >
+                    Medien & Dossiers
+                  </a>
+                </li>
+                <li
+                  class="m-link-list__item"
+                >
+                  <a
+                    class="a-link a-link--footer "
+                    href="/"
+                  >
+                    Zahlen & Fakten
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <div
+    class="o-footer-bottom"
+  >
+    <div
+      class="l-constrainer"
+    >
+      <ul
+        class="m-link-list m-link-list--footer-bottom"
+      >
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer-bottom "
+            href="/"
+          >
+            Impresum
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer-bottom "
+            href="/"
+          >
+            Rechtlichter Hinweis
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer-bottom "
+            href="/"
+          >
+            Datenschutz
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
+<footer
+  class="o-footer o-footer--fixed"
+  data-module="footer"
+>
+  <h2
+    class="u-sr-only"
+  >
+    Kontakt und zusätzliche Informationen
+  </h2>
+  <button
+    aria-controls="footer-toggable"
+    class="a-footer-toggler "
+    data-collapsible-options="{\\"animate\\":true,\\"activeCls\\":\\"a-footer-toggler--active\\",\\"targetActiveCls\\":\\"o-footer__footer-toggable--active\\"}"
+    data-module="collapsible"
+    type="button"
+  >
+    <span
+      class="u-sr-only"
+    >
+      Kontakt und zusätzliche Informationen Öffnen
+    </span>
+    <svg
+      aria-hidden="true"
+      class="a-icon a-icon--use-stroke"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <polyline
+        fill="none"
+        points="8.092 10.35 11.996 14.3 15.9 10.352"
+        stroke="#000"
+      />
+    </svg>
+  </button>
+  <div
+    class="o-footer__footer-toggable"
+    id="footer-toggable"
+  >
+    <div
+      class="o-footer__sections-container"
+    >
+      <div
+        class="l-constrainer"
+      >
+        <div
+          class="o-footer-sections"
+        >
+          <aside
+            class="m-footer-section"
+          >
+            <h3
+              class="m-footer-section__title"
+            >
+              Kontakt
+            </h3>
+            <button
+              aria-controls="accordion-panel-footer-contact"
+              class="a-accordion-btn a-accordion-btn--footer"
+              type="button"
+            >
+              Kontakt
+              <span
+                class="a-accordion-btn__icon-plus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="a-accordion-btn__icon-minus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5H4v-1h16v1z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+              id="accordion-panel-footer-contact"
+            >
+              <div
+                class="m-footer-section__body"
+              >
+                <a
+                  class="a-btn a-btn--footer"
+                  href="/"
+                  type="button"
+                >
+                  <span
+                    class="a-arrows-cta "
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                    Kontakt
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <p>
+                  Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
+                  <a
+                    class="a-link a-link--footer "
+                    href="/"
+                  >
+                    Datenschutz.
+                  </a>
+                </p>
+              </div>
+            </div>
+          </aside>
+          <aside
+            class="m-footer-section"
+          >
+            <h3
+              class="m-footer-section__title"
+            >
+              Bahnverkehrsinformationen
+            </h3>
+            <button
+              aria-controls="accordion-panel-footer-railinfo"
+              class="a-accordion-btn a-accordion-btn--footer"
+              type="button"
+            >
+              Bahnverkehrsinformationen
+              <span
+                class="a-accordion-btn__icon-plus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="a-accordion-btn__icon-minus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5H4v-1h16v1z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+              id="accordion-panel-footer-railinfo"
+            >
+              <div
+                class="m-footer-section__body"
+              >
+                <p>
+                  Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
+                </p>
+                <p>
+                  <a
+                    class="a-link a-link--footer a-link--arrows"
+                    href="/"
+                  >
+                    <span
+                      class="a-arrows-cta "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon a-icon--use-stroke"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                        />
+                      </svg>
+                      Aktuelle Hinweise
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon a-icon--use-stroke"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </aside>
+          <aside
+            class="m-footer-section"
+          >
+            <h3
+              class="m-footer-section__title"
+            >
+              Newsletter & Social Media
+            </h3>
+            <button
+              aria-controls="accordion-panel-footer-social"
+              class="a-accordion-btn a-accordion-btn--footer"
+              type="button"
+            >
+              Newsletter & Social Media
+              <span
+                class="a-accordion-btn__icon-plus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="a-accordion-btn__icon-minus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5H4v-1h16v1z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+              id="accordion-panel-footer-social"
+            >
+              <div
+                class="m-footer-section__body"
+              >
+                <p>
+                  Jeden Monat über Angebote und Neuigkeiten informiert sein.
+                </p>
+                <p>
+                  <a
+                    class="a-link a-link--footer a-link--arrows"
+                    href="/"
+                  >
+                    <span
+                      class="a-arrows-cta "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon a-icon--use-stroke"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                        />
+                      </svg>
+                      Newsletter abonnieren
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon a-icon--use-stroke"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </p>
+                <ul
+                  class="m-social-links "
+                >
+                  <li
+                    class="m-social-links__item"
+                  >
+                    <a
+                      class="a-social-link"
+                      href="#"
+                      rel="external noopener nofollow noreferrer"
+                      target="_blank"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17 6V3h-5.3c-.9 0-1.7.7-1.7 1.7V9H8v3h2v9h4v-9h2V9h-2V6h3z"
+                        />
+                      </svg>
+                      <span
+                        class="u-sr-only"
+                      >
+                        Die Facebook-Seite der SBB anzeigen. Link öffnet in neuem Fenster.
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="m-social-links__item"
+                  >
+                    <a
+                      class="a-social-link"
+                      href="#"
+                      rel="external noopener nofollow noreferrer"
+                      target="_blank"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.9 7.4c.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.2-2.7-1.2-2 0-3.7 1.7-3.7 3.8 0 .3 0 .6.1.9-3.1-.2-5.8-1.7-7.6-4-.4.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.6 3.2-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.4 3 3.7-.3.1-.6.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.6 3.4 2.6-1.3 1-2.9 1.6-4.6 1.6-.3 0-.6 0-.9-.1C4.6 19.4 6.6 20 8.7 20c6.8 0 10.5-5.8 10.5-10.8v-.5c.7-.5 1.3-1.2 1.8-1.9-.7.3-1.4.5-2.1.6z"
+                        />
+                      </svg>
+                      <span
+                        class="u-sr-only"
+                      >
+                        Hier geht's zum Twitter-Account der SBB. Link öffnet in neuem Fenster.
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="m-social-links__item"
+                  >
+                    <a
+                      class="a-social-link"
+                      href="#"
+                      rel="external noopener nofollow noreferrer"
+                      target="_blank"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.8 9.4s-.2-1.1-.6-1.6c-.6-.6-1.3-.6-1.6-.7C15.4 7 12 7 12 7s-3.4 0-5.6.2c-.3 0-1 0-1.6.7-.5.5-.6 1.6-.6 1.6S4 10.6 4 11.9v1.2c0 1.3.2 2.5.2 2.5s.2 1.1.6 1.6c.6.6 1.4.6 1.8.7 1.2.1 5.4.1 5.4.1s3.4 0 5.6-.2c.3 0 1 0 1.6-.7.5-.5.6-1.6.6-1.6s.2-1.3.2-2.5v-1.2c0-1.2-.2-2.4-.2-2.4zm-9.5 5.1v-4.4l4.3 2.2-4.3 2.2z"
+                        />
+                      </svg>
+                      <span
+                        class="u-sr-only"
+                      >
+                        Hier geht's zum YouTube-Kanal der SBB. Link öffnet in neuem Fenster.
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="m-social-links__item"
+                  >
+                    <a
+                      class="a-social-link"
+                      href="#"
+                      rel="external noopener nofollow noreferrer"
+                      target="_blank"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.9 3H5.1C3.9 3 3 3.9 3 5.1v13.8c0 1.2.9 2.1 2.1 2.1h13.8c1.1 0 2.1-.9 2.1-2.1V5.1c0-1.2-.9-2.1-2.1-2.1zM12 8.5c1.9 0 3.5 1.5 3.5 3.5 0 1.9-1.5 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5zm6.9 9.7c0 .4-.3.7-.7.7H5.8c-.4 0-.7-.3-.7-.7v-7.6h1.6c-.1.4-.2.9-.2 1.4 0 3.1 2.5 5.5 5.5 5.5 3.1 0 5.5-2.5 5.5-5.5 0-.5-.1-.9-.2-1.4h1.6v7.6zM19 7.9c0 .4-.3.7-.7.7h-2.1c-.4 0-.7-.3-.7-.7V5.8c0-.4.3-.7.7-.7h2.1c.4 0 .7.3.7.7v2.1z"
+                        />
+                      </svg>
+                      <span
+                        class="u-sr-only"
+                      >
+                        Hier geht's zum Instagram-Account der SBB. Link öffnet in neuem Fenster.
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+          <aside
+            class="m-footer-section"
+          >
+            <h3
+              class="m-footer-section__title"
+            >
+              Über die SBB
+            </h3>
+            <button
+              aria-controls="accordion-panel-footer-company"
+              class="a-accordion-btn a-accordion-btn--footer"
+              type="button"
+            >
+              Über die SBB
+              <span
+                class="a-accordion-btn__icon-plus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="a-accordion-btn__icon-minus"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="a-icon"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12.5H4v-1h16v1z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+              id="accordion-panel-footer-company"
+            >
+              <div
+                class="m-footer-section__body"
+              >
+                <ul
+                  class="m-link-list "
+                >
+                  <li
+                    class="m-link-list__item"
+                  >
+                    <a
+                      class="a-link a-link--footer "
+                      href="/"
+                    >
+                      Unternehmen
+                    </a>
+                  </li>
+                  <li
+                    class="m-link-list__item"
+                  >
+                    <a
+                      class="a-link a-link--footer "
+                      href="/"
+                    >
+                      SBB Immobilien
+                    </a>
+                  </li>
+                  <li
+                    class="m-link-list__item"
+                  >
+                    <a
+                      class="a-link a-link--footer "
+                      href="/"
+                    >
+                      SBB Cargo
+                    </a>
+                  </li>
+                  <li
+                    class="m-link-list__item"
+                  >
+                    <a
+                      class="a-link a-link--footer "
+                      href="/"
+                    >
+                      Jobs & Karriere
+                    </a>
+                  </li>
+                  <li
+                    class="m-link-list__item"
+                  >
+                    <a
+                      class="a-link a-link--footer "
+                      href="/"
+                    >
+                      Medien & Dossiers
+                    </a>
+                  </li>
+                  <li
+                    class="m-link-list__item"
+                  >
+                    <a
+                      class="a-link a-link--footer "
+                      href="/"
+                    >
+                      Zahlen & Fakten
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="o-footer-bottom"
+  >
+    <div
+      class="l-constrainer"
+    >
+      <ul
+        class="m-link-list m-link-list--footer-bottom"
+      >
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer-bottom "
+            href="/"
+          >
+            Impresum
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer-bottom "
+            href="/"
+          >
+            Rechtlichter Hinweis
+          </a>
+        </li>
+        <li
+          class="m-link-list__item"
+        >
+          <a
+            class="a-link a-link--footer-bottom "
+            href="/"
+          >
+            Datenschutz
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
+<div
+  class="o-footer-sections"
+>
+  <aside
+    class="m-footer-section"
+  >
+    <h3
+      class="m-footer-section__title"
+    >
+      Kontakt
+    </h3>
+    <button
+      aria-controls="accordion-panel-footer-contact"
+      class="a-accordion-btn a-accordion-btn--footer"
+      type="button"
+    >
+      Kontakt
+      <span
+        class="a-accordion-btn__icon-plus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+          />
+        </svg>
+      </span>
+      <span
+        class="a-accordion-btn__icon-minus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5H4v-1h16v1z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+      id="accordion-panel-footer-contact"
+    >
+      <div
+        class="m-footer-section__body"
+      >
+        <a
+          class="a-btn a-btn--footer"
+          href="/"
+          type="button"
+        >
+          <span
+            class="a-arrows-cta "
+          >
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+              />
+            </svg>
+            Kontakt
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+              />
+            </svg>
+          </span>
+        </a>
+        <p>
+          Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
+          <a
+            class="a-link a-link--footer "
+            href="/"
+          >
+            Datenschutz.
+          </a>
+        </p>
+      </div>
+    </div>
+  </aside>
+  <aside
+    class="m-footer-section"
+  >
+    <h3
+      class="m-footer-section__title"
+    >
+      Bahnverkehrsinformationen
+    </h3>
+    <button
+      aria-controls="accordion-panel-footer-railinfo"
+      class="a-accordion-btn a-accordion-btn--footer"
+      type="button"
+    >
+      Bahnverkehrsinformationen
+      <span
+        class="a-accordion-btn__icon-plus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+          />
+        </svg>
+      </span>
+      <span
+        class="a-accordion-btn__icon-minus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5H4v-1h16v1z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+      id="accordion-panel-footer-railinfo"
+    >
+      <div
+        class="m-footer-section__body"
+      >
+        <p>
+          Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
+        </p>
+        <p>
+          <a
+            class="a-link a-link--footer a-link--arrows"
+            href="/"
+          >
+            <span
+              class="a-arrows-cta "
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon a-icon--use-stroke"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                />
+              </svg>
+              Aktuelle Hinweise
+              <svg
+                aria-hidden="true"
+                class="a-icon a-icon--use-stroke"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                />
+              </svg>
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </aside>
+  <aside
+    class="m-footer-section"
+  >
+    <h3
+      class="m-footer-section__title"
+    >
+      Newsletter & Social Media
+    </h3>
+    <button
+      aria-controls="accordion-panel-footer-social"
+      class="a-accordion-btn a-accordion-btn--footer"
+      type="button"
+    >
+      Newsletter & Social Media
+      <span
+        class="a-accordion-btn__icon-plus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+          />
+        </svg>
+      </span>
+      <span
+        class="a-accordion-btn__icon-minus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5H4v-1h16v1z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+      id="accordion-panel-footer-social"
+    >
+      <div
+        class="m-footer-section__body"
+      >
+        <p>
+          Jeden Monat über Angebote und Neuigkeiten informiert sein.
+        </p>
+        <p>
+          <a
+            class="a-link a-link--footer a-link--arrows"
+            href="/"
+          >
+            <span
+              class="a-arrows-cta "
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon a-icon--use-stroke"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                />
+              </svg>
+              Newsletter abonnieren
+              <svg
+                aria-hidden="true"
+                class="a-icon a-icon--use-stroke"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                />
+              </svg>
+            </span>
+          </a>
+        </p>
+        <ul
+          class="m-social-links "
+        >
+          <li
+            class="m-social-links__item"
+          >
+            <a
+              class="a-social-link"
+              href="#"
+              rel="external noopener nofollow noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 6V3h-5.3c-.9 0-1.7.7-1.7 1.7V9H8v3h2v9h4v-9h2V9h-2V6h3z"
+                />
+              </svg>
+              <span
+                class="u-sr-only"
+              >
+                Die Facebook-Seite der SBB anzeigen. Link öffnet in neuem Fenster.
+              </span>
+            </a>
+          </li>
+          <li
+            class="m-social-links__item"
+          >
+            <a
+              class="a-social-link"
+              href="#"
+              rel="external noopener nofollow noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.9 7.4c.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.2-2.7-1.2-2 0-3.7 1.7-3.7 3.8 0 .3 0 .6.1.9-3.1-.2-5.8-1.7-7.6-4-.4.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.6 3.2-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.4 3 3.7-.3.1-.6.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.6 3.4 2.6-1.3 1-2.9 1.6-4.6 1.6-.3 0-.6 0-.9-.1C4.6 19.4 6.6 20 8.7 20c6.8 0 10.5-5.8 10.5-10.8v-.5c.7-.5 1.3-1.2 1.8-1.9-.7.3-1.4.5-2.1.6z"
+                />
+              </svg>
+              <span
+                class="u-sr-only"
+              >
+                Hier geht's zum Twitter-Account der SBB. Link öffnet in neuem Fenster.
+              </span>
+            </a>
+          </li>
+          <li
+            class="m-social-links__item"
+          >
+            <a
+              class="a-social-link"
+              href="#"
+              rel="external noopener nofollow noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.8 9.4s-.2-1.1-.6-1.6c-.6-.6-1.3-.6-1.6-.7C15.4 7 12 7 12 7s-3.4 0-5.6.2c-.3 0-1 0-1.6.7-.5.5-.6 1.6-.6 1.6S4 10.6 4 11.9v1.2c0 1.3.2 2.5.2 2.5s.2 1.1.6 1.6c.6.6 1.4.6 1.8.7 1.2.1 5.4.1 5.4.1s3.4 0 5.6-.2c.3 0 1 0 1.6-.7.5-.5.6-1.6.6-1.6s.2-1.3.2-2.5v-1.2c0-1.2-.2-2.4-.2-2.4zm-9.5 5.1v-4.4l4.3 2.2-4.3 2.2z"
+                />
+              </svg>
+              <span
+                class="u-sr-only"
+              >
+                Hier geht's zum YouTube-Kanal der SBB. Link öffnet in neuem Fenster.
+              </span>
+            </a>
+          </li>
+          <li
+            class="m-social-links__item"
+          >
+            <a
+              class="a-social-link"
+              href="#"
+              rel="external noopener nofollow noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.9 3H5.1C3.9 3 3 3.9 3 5.1v13.8c0 1.2.9 2.1 2.1 2.1h13.8c1.1 0 2.1-.9 2.1-2.1V5.1c0-1.2-.9-2.1-2.1-2.1zM12 8.5c1.9 0 3.5 1.5 3.5 3.5 0 1.9-1.5 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5zm6.9 9.7c0 .4-.3.7-.7.7H5.8c-.4 0-.7-.3-.7-.7v-7.6h1.6c-.1.4-.2.9-.2 1.4 0 3.1 2.5 5.5 5.5 5.5 3.1 0 5.5-2.5 5.5-5.5 0-.5-.1-.9-.2-1.4h1.6v7.6zM19 7.9c0 .4-.3.7-.7.7h-2.1c-.4 0-.7-.3-.7-.7V5.8c0-.4.3-.7.7-.7h2.1c.4 0 .7.3.7.7v2.1z"
+                />
+              </svg>
+              <span
+                class="u-sr-only"
+              >
+                Hier geht's zum Instagram-Account der SBB. Link öffnet in neuem Fenster.
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <aside
+    class="m-footer-section"
+  >
+    <h3
+      class="m-footer-section__title"
+    >
+      Über die SBB
+    </h3>
+    <button
+      aria-controls="accordion-panel-footer-company"
+      class="a-accordion-btn a-accordion-btn--footer"
+      type="button"
+    >
+      Über die SBB
+      <span
+        class="a-accordion-btn__icon-plus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+          />
+        </svg>
+      </span>
+      <span
+        class="a-accordion-btn__icon-minus"
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon"
+          focusable="false"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 12.5H4v-1h16v1z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+      id="accordion-panel-footer-company"
+    >
+      <div
+        class="m-footer-section__body"
+      >
+        <ul
+          class="m-link-list "
+        >
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer "
+              href="/"
+            >
+              Unternehmen
+            </a>
+          </li>
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer "
+              href="/"
+            >
+              SBB Immobilien
+            </a>
+          </li>
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer "
+              href="/"
+            >
+              SBB Cargo
+            </a>
+          </li>
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer "
+              href="/"
+            >
+              Jobs & Karriere
+            </a>
+          </li>
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer "
+              href="/"
+            >
+              Medien & Dossiers
+            </a>
+          </li>
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer "
+              href="/"
+            >
+              Zahlen & Fakten
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>
+`;
+
+exports[`Storyshots 03-Organisms/Form Default 1`] = `
+<form
+  class="o-form"
+  data-module="form-validation"
+>
+  <ol
+    class="o-form__list"
+  >
+    <li
+      class="o-form__list-item"
+    >
+      <div
+        class="m-text-field"
+      >
+        <label
+          class="a-label"
+          for="firstname"
+        >
+          First Name
+        </label>
+        <input
+          class="a-text-input"
+          type="text"
+        />
+      </div>
+    </li>
+    <li
+      class="o-form__list-item"
+    >
+      <div
+        class="m-text-field"
+      >
+        <label
+          class="a-label"
+          for="lastname"
+        >
+          Last Name
+        </label>
+        <input
+          class="a-text-input"
+          type="text"
+        />
+      </div>
+    </li>
+    <li
+      class="o-form__list-item"
+    >
+      <div
+        class="m-text-field"
+      >
+        <label
+          class="a-label"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          class="a-text-input"
+          type="text"
+        />
+      </div>
+    </li>
+  </ol>
+  <div
+    class="o-form__footer"
+  >
+    <button
+      class="a-btn a-btn--primary"
+      type="submit"
+    >
+      <span
+        class="a-arrows-cta "
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon a-icon--use-stroke"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+          />
+        </svg>
+        Submit
+        <svg
+          aria-hidden="true"
+          class="a-icon a-icon--use-stroke"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</form>
+`;
+
+exports[`Storyshots 03-Organisms/Form Invalid 1`] = `
+<form
+  class="o-form"
+  data-module="form-validation"
+>
+  <div
+    class="o-form__notification"
+  >
+    <div
+      class="a-notification a-notification--error"
+      role="alert"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2.7998,20.4997 L20.1998,20.4997 L11.4998,2.9997 L2.7998,20.4997 Z M11.5,15.9997 L11.5,17.9997 M11.5,13.9997 L11.5,7.9997"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <div
+        class="a-notification__text"
+      >
+        <strong>
+          Notification Title
+        </strong>
+        <ul
+          class="a-notification__error-list"
+        >
+          <li>
+            <a
+              href="#firstname"
+            >
+              First Name
+            </a>
+          </li>
+          <li>
+            <a
+              href="#lastname"
+            >
+              Last Name
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ol
+    class="o-form__list"
+  >
+    <li
+      class="o-form__list-item"
+    >
+      <div
+        class="m-text-field"
+      >
+        <label
+          class="a-label"
+          for="firstname"
+        >
+          First Name
+        </label>
+        <input
+          class="a-text-input a-input--error"
+          type="text"
+        />
+        <p
+          class="a-field-error"
+        >
+          Pflichtfeld, bitte ausfüllen.
+        </p>
+      </div>
+    </li>
+    <li
+      class="o-form__list-item"
+    >
+      <div
+        class="m-text-field"
+      >
+        <label
+          class="a-label"
+          for="lastname"
+        >
+          Last Name
+        </label>
+        <input
+          class="a-text-input a-input--error"
+          type="text"
+        />
+        <p
+          class="a-field-error"
+        >
+          Pflichtfeld, bitte ausfüllen.
+        </p>
+      </div>
+    </li>
+  </ol>
+  <div
+    class="o-form__footer"
+  >
+    <button
+      class="a-btn a-btn--primary"
+      type="submit"
+    >
+      <span
+        class="a-arrows-cta "
+      >
+        <svg
+          aria-hidden="true"
+          class="a-icon a-icon--use-stroke"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+          />
+        </svg>
+        Submit
+        <svg
+          aria-hidden="true"
+          class="a-icon a-icon--use-stroke"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</form>
+`;
+
+exports[`Storyshots 03-Organisms/Login Template 1`] = `
+<div
+  class="o-login"
+>
+  <h1>
+    Login
+  </h1>
+  <div
+    class="l-divider-big"
+  >
+    <div
+      class="o-tabs"
+      data-module="tabs"
+    >
+      <div
+        class="m-tablist m-tablist--centered"
+        role="tablist"
+      >
+        <button
+          aria-controls="mitarbeitende-tab"
+          aria-selected="true"
+          class="a-tab a-tab--active"
+          data-panel="mitarbeitende-tab"
+          id="mitarbeitende"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Mitarbeitende
+        </button>
+        <button
+          aria-controls="pensionierte-tab"
+          aria-selected="false"
+          class="a-tab"
+          data-panel="pensionierte-tab"
+          id="pensionierte"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Pensionierte
+        </button>
+      </div>
+      <div
+        aria-labelledby="mitarbeitende"
+        class="a-tab-panel a-tab-panel--active"
+        id="mitarbeitende-tab"
+        role="tabpanel"
+        tabindex="0"
+      >
+        <div
+          class="l-login-panel"
+        >
+          <a
+            class="a-btn a-btn--primary"
+            href="/"
+            type="button"
+          >
+            <span
+              class="a-arrows-cta "
+            >
+              <svg
+                aria-hidden="true"
+                class="a-icon a-icon--use-stroke"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                />
+              </svg>
+              Login
+              <svg
+                aria-hidden="true"
+                class="a-icon a-icon--use-stroke"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        aria-labelledby="pensionierte"
+        class="a-tab-panel"
+        id="pensionierte-tab"
+        role="tabpanel"
+        tabindex="0"
+      >
+        <div
+          class="l-login-panel"
+        >
+          <p>
+            Pensionierte melden sich mit den gleichen Anmeldeninformationen an, die sie auch auf www.sbb.ch/benefit benutzen.
+          </p>
+          <div
+            class="l-divider-small"
+          >
+            <form
+              class="o-form"
+              data-module="form-validation"
+            >
+              <ol
+                class="o-form__list"
+              >
+                <li
+                  class="o-form__list-item"
+                >
+                  <div
+                    class="m-text-field"
+                  >
+                    <label
+                      class="a-label"
+                      for="benutzername"
+                    >
+                      Benutzername
+                    </label>
+                    <input
+                      class="a-text-input"
+                      id="benutzername"
+                      name="benutzername"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                </li>
+                <li
+                  class="o-form__list-item"
+                >
+                  <div
+                    class="m-text-field"
+                  >
+                    <label
+                      class="a-label"
+                      for="passwort"
+                    >
+                      Passwort
+                    </label>
+                    <input
+                      class="a-text-input"
+                      id="passwort"
+                      name="passwort"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                </li>
+              </ol>
+              <div
+                class="o-form__footer u-text-center"
+              >
+                <button
+                  class="a-btn a-btn--primary"
+                  type="submit"
+                >
+                  <span
+                    class="a-arrows-cta "
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                    Login
+                    <svg
+                      aria-hidden="true"
+                      class="a-icon a-icon--use-stroke"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="l-divider-medium"
+  >
+    <p>
+      Probleme beim Login?
+    </p>
+    <p>
+      ICT Service Desk
+      <br />
+      Tel. 051 220 30 40
+      <br />
+      <a
+        href="mailto:ict.servicedesk@sbb.ch"
+      >
+        ict.servicedesk@sbb.ch
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Question Multiple Choice 1`] = `
+<fieldset
+  class="o-quiz-question"
+  data-testid="quiz-question"
+>
+  <legend>
+    <span
+      class="o-quiz-question__legend"
+    >
+      Frage 2
+    </span>
+  </legend>
+  <div>
+    Erklärungstext 2
+  </div>
+  <ol
+    class="o-quiz-question__answers"
+  >
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--multiple-choice"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-checkbox m-quiz-answer__field"
+        >
+          <input
+            checked=""
+            class="m-checkbox__input"
+            id="quiz-answer-201"
+            name="quiz-answer-201"
+            type="checkbox"
+          />
+          <label
+            class="a-label m-checkbox__label"
+            for="quiz-answer-201"
+          >
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              data-testid="icon-checkmark"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.5,12.49l4,4,9-9"
+                fill="none"
+                stroke="#000"
+              />
+            </svg>
+            Antwort 2.1
+          </label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--multiple-choice"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-checkbox m-quiz-answer__field"
+        >
+          <input
+            class="m-checkbox__input"
+            id="quiz-answer-202"
+            name="quiz-answer-202"
+            type="checkbox"
+          />
+          <label
+            class="a-label m-checkbox__label"
+            for="quiz-answer-202"
+          >
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              data-testid="icon-checkmark"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.5,12.49l4,4,9-9"
+                fill="none"
+                stroke="#000"
+              />
+            </svg>
+            Antwort 2.2
+          </label>
+        </div>
+        <div
+          class="o-quiz-answer__text"
+        >
+          <p>
+            Hier ein Bild:
+          </p>
+          <img
+            height="150"
+            src="//via.placeholder.com/350x150"
+            width="350"
+          />
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--multiple-choice"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-checkbox m-quiz-answer__field"
+        >
+          <input
+            checked=""
+            class="m-checkbox__input"
+            id="quiz-answer-203"
+            name="quiz-answer-203"
+            type="checkbox"
+          />
+          <label
+            class="a-label m-checkbox__label"
+            for="quiz-answer-203"
+          >
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              data-testid="icon-checkmark"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.5,12.49l4,4,9-9"
+                fill="none"
+                stroke="#000"
+              />
+            </svg>
+            Antwort 2.3
+          </label>
+        </div>
+      </div>
+    </li>
+  </ol>
+</fieldset>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Question Multiple Choice Show Results 1`] = `
+<fieldset
+  class="o-quiz-question o-quiz-question--incorrect"
+  data-testid="quiz-question"
+>
+  <legend>
+    <span
+      class="o-quiz-question__legend"
+    >
+      Frage 2
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        data-testid="icon-cross"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6,17.9997 L18,5.9997 M18,17.9997 L6,5.9997"
+          fill="none"
+          stroke="#000"
+        />
+      </svg>
+    </span>
+  </legend>
+  <div>
+    Erklärungstext 2
+  </div>
+  <ol
+    class="o-quiz-question__answers"
+  >
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--multiple-choice o-quiz-answer--incorrect"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-checkbox m-quiz-answer__field"
+        >
+          <input
+            checked=""
+            class="m-checkbox__input"
+            disabled=""
+            id="quiz-answer-201"
+            name="quiz-answer-201"
+            type="checkbox"
+          />
+          <label
+            class="a-label m-checkbox__label"
+            for="quiz-answer-201"
+          >
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              data-testid="icon-checkmark"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.5,12.49l4,4,9-9"
+                fill="none"
+                stroke="#000"
+              />
+            </svg>
+            Antwort 2.1
+          </label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--multiple-choice o-quiz-answer--correct"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-checkbox m-quiz-answer__field"
+        >
+          <input
+            class="m-checkbox__input"
+            disabled=""
+            id="quiz-answer-202"
+            name="quiz-answer-202"
+            type="checkbox"
+          />
+          <label
+            class="a-label m-checkbox__label"
+            for="quiz-answer-202"
+          >
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              data-testid="icon-checkmark"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.5,12.49l4,4,9-9"
+                fill="none"
+                stroke="#000"
+              />
+            </svg>
+            Antwort 2.2
+          </label>
+        </div>
+        <div
+          class="o-quiz-answer__text"
+        >
+          <p>
+            Hier ein Bild:
+          </p>
+          <img
+            height="150"
+            src="//via.placeholder.com/350x150"
+            width="350"
+          />
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--multiple-choice o-quiz-answer--incorrect"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-checkbox m-quiz-answer__field"
+        >
+          <input
+            checked=""
+            class="m-checkbox__input"
+            disabled=""
+            id="quiz-answer-203"
+            name="quiz-answer-203"
+            type="checkbox"
+          />
+          <label
+            class="a-label m-checkbox__label"
+            for="quiz-answer-203"
+          >
+            <svg
+              aria-hidden="true"
+              class="a-icon a-icon--use-stroke"
+              data-testid="icon-checkmark"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.5,12.49l4,4,9-9"
+                fill="none"
+                stroke="#000"
+              />
+            </svg>
+            Antwort 2.3
+          </label>
+        </div>
+      </div>
+    </li>
+  </ol>
+</fieldset>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Question Single Choice 1`] = `
+<fieldset
+  class="o-quiz-question"
+  data-testid="quiz-question"
+>
+  <legend>
+    <span
+      class="o-quiz-question__legend"
+    >
+      Frage 1
+    </span>
+  </legend>
+  <div>
+    Erklärungstext 1
+  </div>
+  <ol
+    class="o-quiz-question__answers"
+  >
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--single-choice"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-radio-button m-quiz-answer__field"
+        >
+          <input
+            checked=""
+            class="m-radio-button__input"
+            id="quiz-answer-101"
+            name="quiz-answer-100"
+            type="radio"
+          />
+          <label
+            class="a-label m-radio-button__label"
+            for="quiz-answer-101"
+          >
+            Antwort 1.1
+          </label>
+        </div>
+        <div
+          class="o-quiz-answer__text"
+        >
+          <p>
+            Erklärungstext zur Antwort
+          </p>
+          <p>
+            Und noch ein Link: 
+            <a
+              href="http://google.ch"
+              target="_blank"
+            >
+              http://google.ch
+            </a>
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--single-choice"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-radio-button m-quiz-answer__field"
+        >
+          <input
+            class="m-radio-button__input"
+            id="quiz-answer-102"
+            name="quiz-answer-100"
+            type="radio"
+          />
+          <label
+            class="a-label m-radio-button__label"
+            for="quiz-answer-102"
+          >
+            Antwort 1.2
+          </label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--single-choice"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-radio-button m-quiz-answer__field"
+        >
+          <input
+            class="m-radio-button__input"
+            id="quiz-answer-103"
+            name="quiz-answer-100"
+            type="radio"
+          />
+          <label
+            class="a-label m-radio-button__label"
+            for="quiz-answer-103"
+          >
+            Antwort 1.3
+          </label>
+        </div>
+      </div>
+    </li>
+  </ol>
+</fieldset>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Question Single Choice Show Results 1`] = `
+<fieldset
+  class="o-quiz-question o-quiz-question--correct"
+  data-testid="quiz-question"
+>
+  <legend>
+    <span
+      class="o-quiz-question__legend"
+    >
+      Frage 1
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        data-testid="icon-checkmark"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5,12.49l4,4,9-9"
+          fill="none"
+          stroke="#000"
+        />
+      </svg>
+    </span>
+  </legend>
+  <div>
+    Erklärungstext 1
+  </div>
+  <ol
+    class="o-quiz-question__answers"
+  >
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--single-choice o-quiz-answer--correct"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-radio-button m-quiz-answer__field"
+        >
+          <input
+            checked=""
+            class="m-radio-button__input"
+            disabled=""
+            id="quiz-answer-101"
+            name="quiz-answer-100"
+            type="radio"
+          />
+          <label
+            class="a-label m-radio-button__label"
+            for="quiz-answer-101"
+          >
+            Antwort 1.1
+          </label>
+        </div>
+        <div
+          class="o-quiz-answer__text"
+        >
+          <p>
+            Erklärungstext zur Antwort
+          </p>
+          <p>
+            Und noch ein Link: 
+            <a
+              href="http://google.ch"
+              target="_blank"
+            >
+              http://google.ch
+            </a>
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--single-choice o-quiz-answer--incorrect"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-radio-button m-quiz-answer__field"
+        >
+          <input
+            class="m-radio-button__input"
+            disabled=""
+            id="quiz-answer-102"
+            name="quiz-answer-100"
+            type="radio"
+          />
+          <label
+            class="a-label m-radio-button__label"
+            for="quiz-answer-102"
+          >
+            Antwort 1.2
+          </label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div
+        class="o-quiz-answer o-quiz-answer--single-choice o-quiz-answer--incorrect"
+        data-testid="quiz-answer"
+      >
+        <div
+          class="m-radio-button m-quiz-answer__field"
+        >
+          <input
+            class="m-radio-button__input"
+            disabled=""
+            id="quiz-answer-103"
+            name="quiz-answer-100"
+            type="radio"
+          />
+          <label
+            class="a-label m-radio-button__label"
+            for="quiz-answer-103"
+          >
+            Antwort 1.3
+          </label>
+        </div>
+      </div>
+    </li>
+  </ol>
+</fieldset>
+`;
+
+exports[`Storyshots 03-Organisms/Tabs Default 1`] = `
+<div
+  class="o-tabs"
+  data-module="tabs"
+>
+  <div
+    aria-label="Example of tabs"
+    class="m-tablist"
+    role="tablist"
+  >
+    <button
+      aria-controls="label-1-tab"
+      aria-selected="true"
+      class="a-tab a-tab--active"
+      data-panel="label-1-tab"
+      id="label-1"
+      role="tab"
+      tabindex="0"
+      type="button"
+    >
+      Label 1
+    </button>
+    <button
+      aria-controls="label-2-tab"
+      aria-selected="false"
+      class="a-tab"
+      data-panel="label-2-tab"
+      id="label-2"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Label 2
+    </button>
+    <button
+      aria-controls="label-3-tab"
+      aria-selected="false"
+      class="a-tab"
+      data-panel="label-3-tab"
+      id="label-3"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Label 3
+    </button>
+    <button
+      aria-controls="label-4-tab"
+      aria-selected="false"
+      class="a-tab"
+      data-panel="label-4-tab"
+      id="label-4"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Label 4
+    </button>
+  </div>
+  <div
+    aria-labelledby="label-1"
+    class="a-tab-panel a-tab-panel--active"
+    id="label-1-tab"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero illo delectus atque praesentium, iusto distinctio saepe. In vitae repellat inventore nulla officia veniam animi veritatis?
+    </p>
+  </div>
+  <div
+    aria-labelledby="label-2"
+    class="a-tab-panel"
+    id="label-2-tab"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quisquam? Magni maxime suscipit dolorem similique maiores tenetur sed ipsa, animi adipisci earum laudantium rem. Rerum soluta architecto enim consequatur corporis.
+      </p>
+      <ul>
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+        <li>
+          Item 4
+        </li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam incidunt exercitationem odit consequuntur commodi deleniti in iste nihil magnam illo, id dolor, voluptate fugit asperiores, quibusdam nesciunt facere obcaecati itaque
+      </p>
+    </div>
+  </div>
+  <div
+    aria-labelledby="label-3"
+    class="a-tab-panel"
+    id="label-3-tab"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus praesentium tempore quo eveniet dolor! Nesciunt est explicabo deserunt nemo minima perferendis omnis consectetur iste hic perspiciatis assumenda, nihil, incidunt culpa! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus praesentium tempore quo eveniet dolor! Nesciunt est explicabo deserunt nemo minima perferendis omnis consectetur iste hic perspiciatis assumenda, nihil, incidunt culpa!
+    </p>
+  </div>
+  <div
+    aria-labelledby="label-4"
+    class="a-tab-panel"
+    id="label-4-tab"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero illo delectus atque praesentium, iusto distinctio saepe. In vitae repellat inventore nulla officia veniam animi veritatis
+      </p>
+      <p>
+        Nam incidunt exercitationem odit consequuntur commodi
+        <a
+          href="http://www.sbb.ch"
+        >
+          deleniti in iste nihil
+        </a>
+        magnam illo, id dolor, voluptate fugit asperiores, quibusdam nesciunt facere obcaecati itaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
+<div
+  class="t-fixed-footer"
+>
+  <main
+    id="main"
+  >
+    <div
+      class="l-constrainer"
+    >
+      <h1>
+        Fixed Footer Template
+      </h1>
+      <h2>
+        Subtitle example
+      </h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, expedita! Dolorum quam eos sint, eum soluta ipsam placeat, perspiciatis eveniet mollitia eius tenetur eaque alias adipisci quasi numquam rem assumenda!
+      </p>
+      <h2>
+        Subtitle example
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae blanditiis accusamus, unde corporis eum, impedit quisquam quo, eaque fugit ab reprehenderit a? Facere quis eligendi, eos eius ratione maxime!
+      </p>
+      <h2>
+        Subtitle example
+      </h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, expedita! Dolorum quam eos sint, eum soluta ipsam placeat, perspiciatis eveniet mollitia eius tenetur eaque alias adipisci quasi numquam rem assumenda!
+      </p>
+      <h2>
+        Subtitle example
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae blanditiis accusamus, unde corporis eum, impedit quisquam quo, eaque fugit ab reprehenderit a? Facere quis eligendi, eos eius ratione maxime!
+      </p>
+      <h2>
+        Subtitle example
+      </h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, expedita! Dolorum quam eos sint, eum soluta ipsam placeat, perspiciatis eveniet mollitia eius tenetur eaque alias adipisci quasi numquam rem assumenda!
+      </p>
+      <h2>
+        Subtitle example
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae blanditiis accusamus, unde corporis eum, impedit quisquam quo, eaque fugit ab reprehenderit a? Facere quis eligendi, eos eius ratione maxime!
+      </p>
+    </div>
+  </main>
+  <footer
+    class="o-footer o-footer--fixed"
+    data-module="footer"
+  >
+    <h2
+      class="u-sr-only"
+    >
+      Kontakt und zusätzliche Informationen
+    </h2>
+    <button
+      aria-controls="footer-toggable"
+      class="a-footer-toggler "
+      data-collapsible-options="{\\"animate\\":true,\\"activeCls\\":\\"a-footer-toggler--active\\",\\"targetActiveCls\\":\\"o-footer__footer-toggable--active\\"}"
+      data-module="collapsible"
+      type="button"
+    >
+      <span
+        class="u-sr-only"
+      >
+        Kontakt und zusätzliche Informationen Öffnen
+      </span>
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          fill="none"
+          points="8.092 10.35 11.996 14.3 15.9 10.352"
+          stroke="#000"
+        />
+      </svg>
+    </button>
+    <div
+      class="o-footer__footer-toggable"
+      id="footer-toggable"
+    >
+      <div
+        class="o-footer__sections-container"
+      >
+        <div
+          class="l-constrainer"
+        >
+          <div
+            class="o-footer-sections"
+          >
+            <aside
+              class="m-footer-section"
+            >
+              <h3
+                class="m-footer-section__title"
+              >
+                Kontakt
+              </h3>
+              <button
+                aria-controls="accordion-panel-footer-contact"
+                class="a-accordion-btn a-accordion-btn--footer"
+                type="button"
+              >
+                Kontakt
+                <span
+                  class="a-accordion-btn__icon-plus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="a-accordion-btn__icon-minus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5H4v-1h16v1z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+                id="accordion-panel-footer-contact"
+              >
+                <div
+                  class="m-footer-section__body"
+                >
+                  <a
+                    class="a-btn a-btn--footer"
+                    href="/"
+                    type="button"
+                  >
+                    <span
+                      class="a-arrows-cta "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon a-icon--use-stroke"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                        />
+                      </svg>
+                      Kontakt
+                      <svg
+                        aria-hidden="true"
+                        class="a-icon a-icon--use-stroke"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <p>
+                    Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
+                    <a
+                      class="a-link a-link--footer "
+                      href="/"
+                    >
+                      Datenschutz.
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </aside>
+            <aside
+              class="m-footer-section"
+            >
+              <h3
+                class="m-footer-section__title"
+              >
+                Bahnverkehrsinformationen
+              </h3>
+              <button
+                aria-controls="accordion-panel-footer-railinfo"
+                class="a-accordion-btn a-accordion-btn--footer"
+                type="button"
+              >
+                Bahnverkehrsinformationen
+                <span
+                  class="a-accordion-btn__icon-plus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="a-accordion-btn__icon-minus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5H4v-1h16v1z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+                id="accordion-panel-footer-railinfo"
+              >
+                <div
+                  class="m-footer-section__body"
+                >
+                  <p>
+                    Informationen über die aktuelle Betriebslage und Störungen auf dem Schweizer Schienennetz und über wichtige Behinderungen und Streiks im Ausland.
+                  </p>
+                  <p>
+                    <a
+                      class="a-link a-link--footer a-link--arrows"
+                      href="/"
+                    >
+                      <span
+                        class="a-arrows-cta "
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon a-icon--use-stroke"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                          />
+                        </svg>
+                        Aktuelle Hinweise
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon a-icon--use-stroke"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </aside>
+            <aside
+              class="m-footer-section"
+            >
+              <h3
+                class="m-footer-section__title"
+              >
+                Newsletter & Social Media
+              </h3>
+              <button
+                aria-controls="accordion-panel-footer-social"
+                class="a-accordion-btn a-accordion-btn--footer"
+                type="button"
+              >
+                Newsletter & Social Media
+                <span
+                  class="a-accordion-btn__icon-plus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="a-accordion-btn__icon-minus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5H4v-1h16v1z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+                id="accordion-panel-footer-social"
+              >
+                <div
+                  class="m-footer-section__body"
+                >
+                  <p>
+                    Jeden Monat über Angebote und Neuigkeiten informiert sein.
+                  </p>
+                  <p>
+                    <a
+                      class="a-link a-link--footer a-link--arrows"
+                      href="/"
+                    >
+                      <span
+                        class="a-arrows-cta "
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon a-icon--use-stroke"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                          />
+                        </svg>
+                        Newsletter abonnieren
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon a-icon--use-stroke"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4,12.4914 L19.49,12.4914 M16.3486,15.6404 L19.4906,12.4914 L16.3486,9.3504"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </p>
+                  <ul
+                    class="m-social-links "
+                  >
+                    <li
+                      class="m-social-links__item"
+                    >
+                      <a
+                        class="a-social-link"
+                        href="#"
+                        rel="external noopener nofollow noreferrer"
+                        target="_blank"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M17 6V3h-5.3c-.9 0-1.7.7-1.7 1.7V9H8v3h2v9h4v-9h2V9h-2V6h3z"
+                          />
+                        </svg>
+                        <span
+                          class="u-sr-only"
+                        >
+                          Die Facebook-Seite der SBB anzeigen. Link öffnet in neuem Fenster.
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class="m-social-links__item"
+                    >
+                      <a
+                        class="a-social-link"
+                        href="#"
+                        rel="external noopener nofollow noreferrer"
+                        target="_blank"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.9 7.4c.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.2-2.7-1.2-2 0-3.7 1.7-3.7 3.8 0 .3 0 .6.1.9-3.1-.2-5.8-1.7-7.6-4-.4.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.6 3.2-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.4 3 3.7-.3.1-.6.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.6 3.4 2.6-1.3 1-2.9 1.6-4.6 1.6-.3 0-.6 0-.9-.1C4.6 19.4 6.6 20 8.7 20c6.8 0 10.5-5.8 10.5-10.8v-.5c.7-.5 1.3-1.2 1.8-1.9-.7.3-1.4.5-2.1.6z"
+                          />
+                        </svg>
+                        <span
+                          class="u-sr-only"
+                        >
+                          Hier geht's zum Twitter-Account der SBB. Link öffnet in neuem Fenster.
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class="m-social-links__item"
+                    >
+                      <a
+                        class="a-social-link"
+                        href="#"
+                        rel="external noopener nofollow noreferrer"
+                        target="_blank"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.8 9.4s-.2-1.1-.6-1.6c-.6-.6-1.3-.6-1.6-.7C15.4 7 12 7 12 7s-3.4 0-5.6.2c-.3 0-1 0-1.6.7-.5.5-.6 1.6-.6 1.6S4 10.6 4 11.9v1.2c0 1.3.2 2.5.2 2.5s.2 1.1.6 1.6c.6.6 1.4.6 1.8.7 1.2.1 5.4.1 5.4.1s3.4 0 5.6-.2c.3 0 1 0 1.6-.7.5-.5.6-1.6.6-1.6s.2-1.3.2-2.5v-1.2c0-1.2-.2-2.4-.2-2.4zm-9.5 5.1v-4.4l4.3 2.2-4.3 2.2z"
+                          />
+                        </svg>
+                        <span
+                          class="u-sr-only"
+                        >
+                          Hier geht's zum YouTube-Kanal der SBB. Link öffnet in neuem Fenster.
+                        </span>
+                      </a>
+                    </li>
+                    <li
+                      class="m-social-links__item"
+                    >
+                      <a
+                        class="a-social-link"
+                        href="#"
+                        rel="external noopener nofollow noreferrer"
+                        target="_blank"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="a-icon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.9 3H5.1C3.9 3 3 3.9 3 5.1v13.8c0 1.2.9 2.1 2.1 2.1h13.8c1.1 0 2.1-.9 2.1-2.1V5.1c0-1.2-.9-2.1-2.1-2.1zM12 8.5c1.9 0 3.5 1.5 3.5 3.5 0 1.9-1.5 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5zm6.9 9.7c0 .4-.3.7-.7.7H5.8c-.4 0-.7-.3-.7-.7v-7.6h1.6c-.1.4-.2.9-.2 1.4 0 3.1 2.5 5.5 5.5 5.5 3.1 0 5.5-2.5 5.5-5.5 0-.5-.1-.9-.2-1.4h1.6v7.6zM19 7.9c0 .4-.3.7-.7.7h-2.1c-.4 0-.7-.3-.7-.7V5.8c0-.4.3-.7.7-.7h2.1c.4 0 .7.3.7.7v2.1z"
+                          />
+                        </svg>
+                        <span
+                          class="u-sr-only"
+                        >
+                          Hier geht's zum Instagram-Account der SBB. Link öffnet in neuem Fenster.
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+            <aside
+              class="m-footer-section"
+            >
+              <h3
+                class="m-footer-section__title"
+              >
+                Über die SBB
+              </h3>
+              <button
+                aria-controls="accordion-panel-footer-company"
+                class="a-accordion-btn a-accordion-btn--footer"
+                type="button"
+              >
+                Über die SBB
+                <span
+                  class="a-accordion-btn__icon-plus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5h-7.5V20h-1v-7.5H4v-1h7.5V4h1v7.5H20v1z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="a-accordion-btn__icon-minus"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="a-icon"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12.5H4v-1h16v1z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
+                id="accordion-panel-footer-company"
+              >
+                <div
+                  class="m-footer-section__body"
+                >
+                  <ul
+                    class="m-link-list "
+                  >
+                    <li
+                      class="m-link-list__item"
+                    >
+                      <a
+                        class="a-link a-link--footer "
+                        href="/"
+                      >
+                        Unternehmen
+                      </a>
+                    </li>
+                    <li
+                      class="m-link-list__item"
+                    >
+                      <a
+                        class="a-link a-link--footer "
+                        href="/"
+                      >
+                        SBB Immobilien
+                      </a>
+                    </li>
+                    <li
+                      class="m-link-list__item"
+                    >
+                      <a
+                        class="a-link a-link--footer "
+                        href="/"
+                      >
+                        SBB Cargo
+                      </a>
+                    </li>
+                    <li
+                      class="m-link-list__item"
+                    >
+                      <a
+                        class="a-link a-link--footer "
+                        href="/"
+                      >
+                        Jobs & Karriere
+                      </a>
+                    </li>
+                    <li
+                      class="m-link-list__item"
+                    >
+                      <a
+                        class="a-link a-link--footer "
+                        href="/"
+                      >
+                        Medien & Dossiers
+                      </a>
+                    </li>
+                    <li
+                      class="m-link-list__item"
+                    >
+                      <a
+                        class="a-link a-link--footer "
+                        href="/"
+                      >
+                        Zahlen & Fakten
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="o-footer-bottom"
+    >
+      <div
+        class="l-constrainer"
+      >
+        <ul
+          class="m-link-list m-link-list--footer-bottom"
+        >
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer-bottom "
+              href="/"
+            >
+              Impresum
+            </a>
+          </li>
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer-bottom "
+              href="/"
+            >
+              Rechtlichter Hinweis
+            </a>
+          </li>
+          <li
+            class="m-link-list__item"
+          >
+            <a
+              class="a-link a-link--footer-bottom "
+              href="/"
+            >
+              Datenschutz
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

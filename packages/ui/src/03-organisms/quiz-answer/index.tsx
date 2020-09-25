@@ -1,17 +1,17 @@
 import React, { memo } from 'react';
-import RadioButton from '../radio-button';
-import Checkbox from '../checkbox';
+import RadioButton from '../../02-molecules/radio-button';
+import Checkbox from '../../02-molecules/checkbox';
 
 export interface Props {
     id: string;
     title: string;
-    text?: string;
+    checked: boolean;
     correct: boolean;
-    checked?: boolean;
     questionId: string;
     questionType: string;
     showResults: boolean;
     toggleAnswer: (id: string) => void;
+    text?: string;
 }
 
 /* eslint-disable react/no-danger */
@@ -28,11 +28,11 @@ const QuizAnswer: React.FC<Props> = memo(
         toggleAnswer,
         showResults,
     }) => {
-        let clsNames = `m-quiz-answer m-quiz-answer--${questionType}`;
+        let clsNames = `o-quiz-answer o-quiz-answer--${questionType}`;
         if (showResults) {
             clsNames += correct
-                ? ' m-quiz-answer--correct'
-                : ' m-quiz-answer--incorrect';
+                ? ' o-quiz-answer--correct'
+                : ' o-quiz-answer--incorrect';
         }
 
         const fieldPrefix = 'quiz-answer-';
@@ -42,13 +42,13 @@ const QuizAnswer: React.FC<Props> = memo(
         };
 
         return (
-            <div className={clsNames}>
+            <div className={clsNames} data-testid="quiz-answer">
                 {questionType === 'single-choice' ? (
                     <RadioButton
                         id={`${fieldPrefix}${id}`}
                         name={`${fieldPrefix}${questionId}`}
-                        checked={checked}
-                        disabled={showResults}
+                        checked={!!checked}
+                        disabled={!!showResults}
                         label={title}
                         handleChange={handleChange}
                         classes={['m-quiz-answer__field']}
@@ -57,14 +57,14 @@ const QuizAnswer: React.FC<Props> = memo(
                     <Checkbox
                         id={`${fieldPrefix}${id}`}
                         name={`${fieldPrefix}${id}`}
-                        checked={checked}
-                        disabled={showResults}
+                        checked={!!checked}
+                        disabled={!!showResults}
                         label={title}
                         handleChange={handleChange}
                         classes={['m-quiz-answer__field']}
                     />
                 )}
-                {text && <div className="m-quiz-answer__text" dangerouslySetInnerHTML={{ __html: text }} />}
+                {text && <div className="o-quiz-answer__text" dangerouslySetInnerHTML={{ __html: text }} />}
             </div>
         );
     },
