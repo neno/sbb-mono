@@ -12,7 +12,7 @@ export interface ILink extends ComponentProps<'a'> {
 const Link: React.FC<ILink> = ({
     children, href, classes = [], attrs = {}, arrows,
 }) => {
-    const cls = ['a-link', ...classes, arrows && 'a-link--arrows'];
+    const cls = ['a-link', ...classes];
 
     return (
         <a
