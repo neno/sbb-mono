@@ -9,9 +9,7 @@ export function slideDown(el, duration = 1000, display = 'block') {
     if (isVisible(el) === true) {
         return;
     }
-    // Set default values for parameters
-    duration = duration || 1000;
-    display = display || 'block';
+
     // Display the element
     el.style.display = display;
     // Create variables
@@ -42,13 +40,12 @@ export function slideDown(el, duration = 1000, display = 'block') {
     window.requestAnimationFrame(run);
 }
 
-export function slideUp(el, duration) {
+export function slideUp(el, duration = 1000) {
     // Return if the element not is visible
     if (isVisible(el) === false) {
         return;
     }
-    // Set default values for parameters
-    duration = duration || 1000;
+
     // Create variables
     let start = null;
     const height = el.offsetHeight;

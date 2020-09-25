@@ -1,45 +1,27 @@
 .a-accordion-btn {
+
+  @include font-h3(line-height(28, $font-size-h3-px));
+
+  @include accordion-btn-icons(
+    $font-size-h3-px,
+    $font-size-h3-mobile-px,
+    $color-anthracite
+  );
   background: $color-milk;
   border: 0;
   cursor: pointer;
   display: block;
+  padding: em(25, $font-size-h3-px) em(24 * 3, $font-size-h3-px)
+    em(25, $font-size-h3-px) em(24, $font-size-h3-px);
   position: relative;
   text-align: left;
   transition: background 0.3s ease-out;
   user-select: none;
   width: 100%;
-  padding: em(25, $font-size-h3-px) em(24 * 3, $font-size-h3-px)
-    em(25, $font-size-h3-px) em(24, $font-size-h3-px);
 
-  @include font-h3(line-height(28, $font-size-h3-px));
-
-  @mixin accordion-btn-icons(
-    $base-size,
-    $base-size-mobile,
-    $icon-color: $color-granite
-  ) {
-    .a-accordion-btn__icon-minus,
-    .a-accordion-btn__icon-plus {
-      height: em(24, $base-size);
-      right: em(24, $base-size);
-      width: em(24, $base-size);
-      color: $icon-color;
-      transition: border-color 0.3s ease-out, border-color 0.3s ease-out;
-
-      .a-icon {
-        height: (16 / strip-unit($base-size)) * 100%;
-        width: (16 / strip-unit($base-size)) * 100%;
-      }
-    }
-
-    @include media-breakpoint-up(mobile) {
-      .a-accordion-btn__icon-minus,
-      .a-accordion-btn__icon-plus {
-        height: em(32, $base-size-mobile);
-        right: em(32, $base-size-mobile);
-        width: em(32, $base-size-mobile);
-      }
-    }
+  @include media-breakpoint-up(mobile) {
+    padding: em(36, $font-size-h3-mobile-px) em(88, $font-size-h3-mobile-px)
+      em(36, $font-size-h3-mobile-px) em(32, $font-size-h3-mobile-px);
   }
 
   .a-accordion-btn__icon-minus,
@@ -59,21 +41,11 @@
     .a-accordion-btn__icon-minus,
     .a-accordion-btn__icon-plus {
       border-color: $color-red-125;
+
       .a-icon {
         color: $color-red-125;
       }
     }
-  }
-
-  @include accordion-btn-icons(
-    $font-size-h3-px,
-    $font-size-h3-mobile-px,
-    $color-anthracite
-  );
-
-  @include media-breakpoint-up(mobile) {
-    padding: em(36, $font-size-h3-mobile-px) em(88, $font-size-h3-mobile-px)
-      em(36, $font-size-h3-mobile-px) em(32, $font-size-h3-mobile-px);
   }
 
   &:not(&--active) {
@@ -89,13 +61,13 @@
   }
 
   &--footer {
+
+    @include accordion-btn-icons(16, 18);
     background-color: $color-cloud;
     color: $color-anthracite;
     font-size: em(16, $footer-section-base-size);
     line-height: (19 / 16);
     padding: em(23, 16) em(24 * 3, 16) em(22, 16) em(24, 16);
-
-    @include accordion-btn-icons(16, 18);
 
     @include hover {
       background-color: $color-milk;
@@ -109,6 +81,36 @@
 
     @include media-breakpoint-up(tablet) {
       display: none;
+    }
+  }
+
+  @mixin accordion-btn-icons(
+    $base-size,
+    $base-size-mobile,
+    $icon-color: $color-granite
+  ) {
+
+    @include media-breakpoint-up(mobile) {
+      .a-accordion-btn__icon-minus,
+      .a-accordion-btn__icon-plus {
+        height: em(32, $base-size-mobile);
+        right: em(32, $base-size-mobile);
+        width: em(32, $base-size-mobile);
+      }
+    }
+
+    .a-accordion-btn__icon-minus,
+    .a-accordion-btn__icon-plus {
+      color: $icon-color;
+      height: em(24, $base-size);
+      right: em(24, $base-size);
+      transition: border-color 0.3s ease-out, border-color 0.3s ease-out;
+      width: em(24, $base-size);
+
+      .a-icon {
+        height: (16 / strip-unit($base-size)) * 100%;
+        width: (16 / strip-unit($base-size)) * 100%;
+      }
     }
   }
 }

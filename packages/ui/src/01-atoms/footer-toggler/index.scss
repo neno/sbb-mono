@@ -2,36 +2,29 @@
   align-items: center;
   background: $color-cloud;
   border: 0;
+  cursor: pointer;
   display: flex;
   height: em($footer-toggler-height-px, 15);
+  justify-content: center;
   justify-content: center;
   left: 0;
   margin: 0;
   padding: 0;
   position: absolute;
-  justify-content: center;
   top: 0;
   width: 100%;
-  cursor: pointer;
+
+  @include hover {
+    @include hover-animation();
+  }
 
   .a-icon {
     color: $color-iron;
     display: inline-block;
-    width: em($footer-toggler-height-px, 15);
     height: em($footer-toggler-height-px, 15);
-    transition: transform 0.3s ease;
     pointer-events: none;
-  }
-
-  @mixin hover-animation {
-    .a-icon {
-      color: $color-red-125;
-      transform: scale(1.1);
-    }
-  }
-
-  @include hover {
-    @include hover-animation();
+    transition: transform 0.3s ease;
+    width: em($footer-toggler-height-px, 15);
   }
 
   &:focus {
@@ -39,22 +32,29 @@
   }
 
   &--active {
-    @mixin hover-animation {
-      .a-icon {
-        transform: scale(1.1) rotate(180deg);
-      }
+
+    @include hover {
+      @include hover-animation();
     }
 
     .a-icon {
       transform: rotate(180deg);
     }
 
-    @include hover {
-      @include hover-animation();
-    }
-
     &:focus {
       @include hover-animation();
+    }
+    @mixin hover-animation {
+      .a-icon {
+        transform: scale(1.1) rotate(180deg);
+      }
+    }
+  }
+
+  @mixin hover-animation {
+    .a-icon {
+      color: $color-red-125;
+      transform: scale(1.1);
     }
   }
 }
