@@ -1,0 +1,10 @@
+.o-footer-bottom {
+  background: $color-white;
+
+  .l-constrainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: em($footer-bottom-height-px, $font-size-regular-px);
+  }
+}

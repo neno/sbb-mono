@@ -3,7 +3,7 @@
   background: $color-cloud;
   border: 0;
   display: flex;
-  height: em(40, 15);
+  height: em($footer-toggler-height-px, 15);
   justify-content: center;
   left: 0;
   margin: 0;
@@ -17,8 +17,8 @@
   .a-icon {
     color: $color-iron;
     display: inline-block;
-    width: em(40, 15);
-    height: em(40, 15);
+    width: em($footer-toggler-height-px, 15);
+    height: em($footer-toggler-height-px, 15);
     transition: transform 0.3s ease;
     pointer-events: none;
   }

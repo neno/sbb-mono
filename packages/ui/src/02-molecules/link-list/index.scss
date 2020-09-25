@@ -6,4 +6,18 @@
       margin-top: em(8, $footer-section-base-size);
     }
   }
+
+  &--footer-bottom {
+    justify-content: space-between;
+    @include h-list(em(48, $footer-section-base-size));
+
+    .m-link-list__item {
+      flex: 0 0 auto;
+    }
+
+    @include media-breakpoint-up(mobile) {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+    }
+  }
 }
