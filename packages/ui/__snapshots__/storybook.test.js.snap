@@ -3,7 +3,6 @@
 exports[`Storyshots 01-Atoms/Accordion Button Default 1`] = `
 <button
   aria-controls="accordion-panel-default"
-  aria-expanded="false"
   class="a-accordion-btn "
   type="button"
 >
@@ -48,7 +47,6 @@ exports[`Storyshots 01-Atoms/Accordion Button Default 1`] = `
 exports[`Storyshots 01-Atoms/Accordion Button Footer 1`] = `
 <button
   aria-controls="accordion-panel-footer"
-  aria-expanded="false"
   class="a-accordion-btn a-accordion-btn--footer"
   type="button"
 >
@@ -1772,7 +1770,6 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
   </h3>
   <button
     aria-controls="accordion-panel-undefined"
-    aria-expanded="false"
     class="a-accordion-btn a-accordion-btn--footer"
     type="button"
   >
@@ -1813,7 +1810,8 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
     </span>
   </button>
   <div
-    class="a-accordion-panel a-accordion-panel--footer"
+    aria-hidden="false"
+    class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
     id="accordion-panel-undefined"
   >
     <div
@@ -2938,7 +2936,6 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
           </h3>
           <button
             aria-controls="accordion-panel-footer-contact"
-            aria-expanded="false"
             class="a-accordion-btn a-accordion-btn--footer"
             type="button"
           >
@@ -2979,7 +2976,8 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
             </span>
           </button>
           <div
-            class="a-accordion-panel a-accordion-panel--footer"
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
             id="accordion-panel-footer-contact"
           >
             <div
@@ -3040,7 +3038,6 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
           </h3>
           <button
             aria-controls="accordion-panel-footer-railinfo"
-            aria-expanded="false"
             class="a-accordion-btn a-accordion-btn--footer"
             type="button"
           >
@@ -3081,7 +3078,8 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
             </span>
           </button>
           <div
-            class="a-accordion-panel a-accordion-panel--footer"
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
             id="accordion-panel-footer-railinfo"
           >
             <div
@@ -3137,7 +3135,6 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
           </h3>
           <button
             aria-controls="accordion-panel-footer-social"
-            aria-expanded="false"
             class="a-accordion-btn a-accordion-btn--footer"
             type="button"
           >
@@ -3178,7 +3175,8 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
             </span>
           </button>
           <div
-            class="a-accordion-panel a-accordion-panel--footer"
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
             id="accordion-panel-footer-social"
           >
             <div
@@ -3346,7 +3344,6 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
           </h3>
           <button
             aria-controls="accordion-panel-footer-company"
-            aria-expanded="false"
             class="a-accordion-btn a-accordion-btn--footer"
             type="button"
           >
@@ -3387,7 +3384,8 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
             </span>
           </button>
           <div
-            class="a-accordion-panel a-accordion-panel--footer"
+            aria-hidden="false"
+            class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
             id="accordion-panel-footer-company"
           >
             <div
@@ -3567,7 +3565,6 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
             </h3>
             <button
               aria-controls="accordion-panel-footer-contact"
-              aria-expanded="false"
               class="a-accordion-btn a-accordion-btn--footer"
               type="button"
             >
@@ -3608,7 +3605,8 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
               </span>
             </button>
             <div
-              class="a-accordion-panel a-accordion-panel--footer"
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
               id="accordion-panel-footer-contact"
             >
               <div
@@ -3669,7 +3667,6 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
             </h3>
             <button
               aria-controls="accordion-panel-footer-railinfo"
-              aria-expanded="false"
               class="a-accordion-btn a-accordion-btn--footer"
               type="button"
             >
@@ -3710,7 +3707,8 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
               </span>
             </button>
             <div
-              class="a-accordion-panel a-accordion-panel--footer"
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
               id="accordion-panel-footer-railinfo"
             >
               <div
@@ -3766,7 +3764,6 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
             </h3>
             <button
               aria-controls="accordion-panel-footer-social"
-              aria-expanded="false"
               class="a-accordion-btn a-accordion-btn--footer"
               type="button"
             >
@@ -3807,7 +3804,8 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
               </span>
             </button>
             <div
-              class="a-accordion-panel a-accordion-panel--footer"
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
               id="accordion-panel-footer-social"
             >
               <div
@@ -3975,7 +3973,6 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
             </h3>
             <button
               aria-controls="accordion-panel-footer-company"
-              aria-expanded="false"
               class="a-accordion-btn a-accordion-btn--footer"
               type="button"
             >
@@ -4016,7 +4013,8 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
               </span>
             </button>
             <div
-              class="a-accordion-panel a-accordion-panel--footer"
+              aria-hidden="false"
+              class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
               id="accordion-panel-footer-company"
             >
               <div
@@ -4152,7 +4150,6 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
     </h3>
     <button
       aria-controls="accordion-panel-footer-contact"
-      aria-expanded="false"
       class="a-accordion-btn a-accordion-btn--footer"
       type="button"
     >
@@ -4193,7 +4190,8 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
       </span>
     </button>
     <div
-      class="a-accordion-panel a-accordion-panel--footer"
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
       id="accordion-panel-footer-contact"
     >
       <div
@@ -4254,7 +4252,6 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
     </h3>
     <button
       aria-controls="accordion-panel-footer-railinfo"
-      aria-expanded="false"
       class="a-accordion-btn a-accordion-btn--footer"
       type="button"
     >
@@ -4295,7 +4292,8 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
       </span>
     </button>
     <div
-      class="a-accordion-panel a-accordion-panel--footer"
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
       id="accordion-panel-footer-railinfo"
     >
       <div
@@ -4351,7 +4349,6 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
     </h3>
     <button
       aria-controls="accordion-panel-footer-social"
-      aria-expanded="false"
       class="a-accordion-btn a-accordion-btn--footer"
       type="button"
     >
@@ -4392,7 +4389,8 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
       </span>
     </button>
     <div
-      class="a-accordion-panel a-accordion-panel--footer"
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
       id="accordion-panel-footer-social"
     >
       <div
@@ -4560,7 +4558,6 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
     </h3>
     <button
       aria-controls="accordion-panel-footer-company"
-      aria-expanded="false"
       class="a-accordion-btn a-accordion-btn--footer"
       type="button"
     >
@@ -4601,7 +4598,8 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
       </span>
     </button>
     <div
-      class="a-accordion-panel a-accordion-panel--footer"
+      aria-hidden="false"
+      class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
       id="accordion-panel-footer-company"
     >
       <div
@@ -5925,7 +5923,6 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
               </h3>
               <button
                 aria-controls="accordion-panel-footer-contact"
-                aria-expanded="false"
                 class="a-accordion-btn a-accordion-btn--footer"
                 type="button"
               >
@@ -5966,7 +5963,8 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                 </span>
               </button>
               <div
-                class="a-accordion-panel a-accordion-panel--footer"
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
                 id="accordion-panel-footer-contact"
               >
                 <div
@@ -6027,7 +6025,6 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
               </h3>
               <button
                 aria-controls="accordion-panel-footer-railinfo"
-                aria-expanded="false"
                 class="a-accordion-btn a-accordion-btn--footer"
                 type="button"
               >
@@ -6068,7 +6065,8 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                 </span>
               </button>
               <div
-                class="a-accordion-panel a-accordion-panel--footer"
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
                 id="accordion-panel-footer-railinfo"
               >
                 <div
@@ -6124,7 +6122,6 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
               </h3>
               <button
                 aria-controls="accordion-panel-footer-social"
-                aria-expanded="false"
                 class="a-accordion-btn a-accordion-btn--footer"
                 type="button"
               >
@@ -6165,7 +6162,8 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                 </span>
               </button>
               <div
-                class="a-accordion-panel a-accordion-panel--footer"
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
                 id="accordion-panel-footer-social"
               >
                 <div
@@ -6333,7 +6331,6 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
               </h3>
               <button
                 aria-controls="accordion-panel-footer-company"
-                aria-expanded="false"
                 class="a-accordion-btn a-accordion-btn--footer"
                 type="button"
               >
@@ -6374,7 +6371,8 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                 </span>
               </button>
               <div
-                class="a-accordion-panel a-accordion-panel--footer"
+                aria-hidden="false"
+                class="a-accordion-panel a-accordion-panel--active a-accordion-panel--footer"
                 id="accordion-panel-footer-company"
               >
                 <div
