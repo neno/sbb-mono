@@ -6,7 +6,7 @@ const Accordion = createModule({
         triggerSelector: '.a-accordion-btn',
         targetSelector: '.a-accordion-panel',
         activeCls: 'a-accordion-btn--active',
-        targetActiveCls: 'a-accordion-panel--active',
+        targetClosedCls: 'a-accordion-panel--active',
         duration: 300,
     }),
     constructor({ el, state, options }) {
@@ -22,7 +22,7 @@ const Accordion = createModule({
 
             target.setAttribute('aria-hidden', 'false');
             slideDown(target, duration);
-            target.classList.add(options.targetActiveCls);
+            target.classList.remove(options.targetClosedCls);
         };
 
         const showAllTargets = () => {
@@ -49,7 +49,7 @@ const Accordion = createModule({
 
             target.setAttribute('aria-hidden', 'true');
             slideUp(target, duration);
-            target.classList.remove(options.targetActiveCls);
+            target.classList.add(options.targetClosedCls);
         };
 
         const hideAllTargets = () => {

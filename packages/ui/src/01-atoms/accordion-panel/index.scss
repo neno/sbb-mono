@@ -1,11 +1,11 @@
 .a-accordion-panel {
-  display: none;
-
-  &--active {
-    display: block;
+  &--closed {
+    display: none;
   }
 
   &--footer {
+    display: none;
+
     @include media-breakpoint-up(tablet) {
       display: block !important;
       height: auto !important;
