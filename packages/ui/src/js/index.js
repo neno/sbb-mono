@@ -1,4 +1,3 @@
-import '../styles/index.scss';
 import './libs/detect-touch';
 import Tabs from './libs/Tabs';
 import FormValidation from './libs/FormValidation';

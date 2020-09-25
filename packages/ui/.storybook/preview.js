@@ -1,8 +1,7 @@
 import { addDecorator } from "@storybook/html"
 import { withHTML } from "@whitespace/storybook-addon-html/html"
 
-// import "../src/js/index.js"
-// import "../src/styles/preview.scss"
+import "../src/js/index.js"
 
 addDecorator(withHTML)
 
