@@ -13,6 +13,7 @@ const AccordionPanel: React.FC<Props> = ({
     const cls = active ? 'a-accordion-panel a-accordion-panel--active' : 'a-accordion-panel';
     return (
         <div
+            aria-hidden={!active}
             id={`accordion-panel-${id}`}
             aria-labelledby={labelledby}
             className={`${cls} ${classes.join(' ')}`}

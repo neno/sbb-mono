@@ -13,7 +13,7 @@ const FooterSection: React.FC<Props> = ({ id, title, children }) => (
     <aside className="m-footer-section">
         <h3 className="m-footer-section__title">{title}</h3>
         <AccordionBtn classes={['a-accordion-btn--footer']} id={id}>{title}</AccordionBtn>
-        <AccordionPanel classes={['a-accordion-panel--footer']} id={id}>
+        <AccordionPanel classes={['a-accordion-panel--footer']} active id={id}>
             <div className="m-footer-section__body">
                 {children}
             </div>
