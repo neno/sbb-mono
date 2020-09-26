@@ -28,10 +28,6 @@
     padding: em(16, $footer-section-base-size) em(24, $footer-section-base-size)
       em(36, $footer-section-base-size);
 
-    > *:first-child {
-      margin-top: 0;
-    }
-
     @include media-breakpoint-up(mobile) {
       padding-left: em(48, $footer-section-base-size);
       padding-right: em(48, $footer-section-base-size);
@@ -39,6 +35,10 @@
 
     @include media-breakpoint-up(tablet) {
       padding: 0;
+    }
+
+    > *:first-child {
+      margin-top: 0;
     }
   }
 
