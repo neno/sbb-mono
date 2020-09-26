@@ -1,16 +1,6 @@
 .a-accordion-btn {
   @include font-h3(line-height(28, $font-size-h3-px));
 
-  .a-icon {
-    height: (16 / 24) * 100%;
-    width: (16 / 24) * 100%;
-
-    @include media-breakpoint-up(mobile) {
-      height: (24 / 32) * 100%;
-      width: (24 / 32) * 100%;
-    }
-  }
-
   @include accordion-btn-icons(
     $font-size-h3-px,
     $font-size-h3-mobile-px,
@@ -34,12 +24,22 @@
       em(36, $font-size-h3-mobile-px) em(32, $font-size-h3-mobile-px);
   }
 
+  .a-icon {
+    height: (16 / 24) * 100%;
+    width: (16 / 24) * 100%;
+
+    @include media-breakpoint-up(mobile) {
+      height: (24 / 32) * 100%;
+      width: (24 / 32) * 100%;
+    }
+  }
+
   .a-accordion-btn__icon-minus,
   .a-accordion-btn__icon-plus {
     align-items: center;
-    box-sizing: content-box;
     border: em(1, $font-size-h3-px) solid $color-storm;
     border-radius: 50%;
+    box-sizing: content-box;
     display: flex;
     justify-content: center;
     pointer-events: none;
