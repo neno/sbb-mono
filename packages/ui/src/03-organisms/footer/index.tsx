@@ -12,7 +12,7 @@ interface Props {
 const togglerOptions = {
     animate: true,
     activeCls: 'a-footer-toggler--active',
-    targetActiveCls: 'o-footer__footer-toggable--active',
+    targetActiveCls: 'o-footer__toggable--active',
 };
 
 const Footer: React.FC<Props> = ({
@@ -28,7 +28,7 @@ const Footer: React.FC<Props> = ({
                     text={`${title} Öffnen`}
                     options={togglerOptions}
                 />
-                <div className="o-footer__footer-toggable" id="footer-toggable">
+                <div className="o-footer__toggable" id="footer-toggable">
                     <div className="o-footer__sections-container">
                         <div className="l-constrainer">
                             <FooterSections />
