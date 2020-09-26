@@ -54,10 +54,14 @@
 @mixin accordion-btn-icons(
   $base-size,
   $base-size-mobile,
-  $icon-color: $color-granite
+  $icon-color: $color-granite,
+  $border-width: false
 ) {
   .a-accordion-btn__icon-minus,
   .a-accordion-btn__icon-plus {
+    @if $border-width {
+      $border-width: em(1, $base-size);
+    }
     color: $icon-color;
     height: em(24, $base-size);
     right: em(24, $base-size);
@@ -65,14 +69,12 @@
     width: em(24, $base-size);
 
     @include media-breakpoint-up(mobile) {
+      @if $border-width {
+        $border-width: em(1, $base-size-mobile);
+      }
       height: em(32, $base-size-mobile);
       right: em(32, $base-size-mobile);
       width: em(32, $base-size-mobile);
-    }
-
-    .a-icon {
-      height: (16 / strip-unit($base-size)) * 100%;
-      width: (16 / strip-unit($base-size)) * 100%;
     }
   }
 }

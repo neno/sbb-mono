@@ -9,7 +9,7 @@ export const links = {
         { children: 'Zahlen & Fakten', href: '/' },
     ],
     footerBottomLinks: [
-        { children: 'Impresum', href: '/' },
+        { children: 'Impressum', href: '/' },
         { children: 'Rechtlichter Hinweis', href: '/' },
         { children: 'Datenschutz', href: '/' },
     ],

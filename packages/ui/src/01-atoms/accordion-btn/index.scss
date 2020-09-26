@@ -1,11 +1,22 @@
 .a-accordion-btn {
   @include font-h3(line-height(28, $font-size-h3-px));
 
+  .a-icon {
+    height: (16 / 24) * 100%;
+    width: (16 / 24) * 100%;
+
+    @include media-breakpoint-up(mobile) {
+      height: (24 / 32) * 100%;
+      width: (24 / 32) * 100%;
+    }
+  }
+
   @include accordion-btn-icons(
     $font-size-h3-px,
     $font-size-h3-mobile-px,
     $color-anthracite
   );
+
   background: $color-milk;
   border: 0;
   cursor: pointer;
@@ -26,7 +37,8 @@
   .a-accordion-btn__icon-minus,
   .a-accordion-btn__icon-plus {
     align-items: center;
-    border: rem(1) solid $color-storm;
+    box-sizing: content-box;
+    border: em(1, $font-size-h3-px) solid $color-storm;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -34,6 +46,10 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    @include media-breakpoint-up(mobile) {
+      border-width: em(1, $font-size-h3-mobile-px);
+    }
   }
 
   &:focus {
@@ -60,7 +76,7 @@
   }
 
   &--footer {
-    @include accordion-btn-icons(16, 18);
+    @include accordion-btn-icons(16, 18, $border-width: true);
     background-color: $color-cloud;
     color: $color-anthracite;
     font-size: em(16, $footer-section-base-size);

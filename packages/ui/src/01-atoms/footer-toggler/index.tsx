@@ -13,7 +13,9 @@ const FooterToggle: React.FC<Props> = ({
     controls,
     text,
     expanded,
-    options,
+    options = {
+        activeCls: 'a-footer-toggler--active',
+    },
     classes = [],
 }) => (
     <button

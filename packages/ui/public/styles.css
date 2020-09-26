@@ -415,6 +415,16 @@ body:not(:-moz-handler-blocked) fieldset {
     font-size: 1.4em;
   }
 }
+.a-accordion-btn .a-icon {
+  height: 66.6666666667%;
+  width: 66.6666666667%;
+}
+@media (min-width: 40.1875em) {
+  .a-accordion-btn .a-icon {
+    height: 75%;
+    width: 75%;
+  }
+}
 .a-accordion-btn .a-accordion-btn__icon-minus,
 .a-accordion-btn .a-accordion-btn__icon-plus {
   color: #5a5a5a;
@@ -422,11 +432,6 @@ body:not(:-moz-handler-blocked) fieldset {
   right: 1.2em;
   transition: border-color 0.3s ease-out, border-color 0.3s ease-out;
   width: 1.2em;
-}
-.a-accordion-btn .a-accordion-btn__icon-minus .a-icon,
-.a-accordion-btn .a-accordion-btn__icon-plus .a-icon {
-  height: 80%;
-  width: 80%;
 }
 @media (min-width: 40.1875em) {
   .a-accordion-btn .a-accordion-btn__icon-minus,
@@ -444,7 +449,8 @@ body:not(:-moz-handler-blocked) fieldset {
 .a-accordion-btn .a-accordion-btn__icon-minus,
 .a-accordion-btn .a-accordion-btn__icon-plus {
   align-items: center;
-  border: 0.0625rem solid #a8a8a8;
+  box-sizing: content-box;
+  border: 0.05em solid #a8a8a8;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -452,6 +458,12 @@ body:not(:-moz-handler-blocked) fieldset {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+@media (min-width: 40.1875em) {
+  .a-accordion-btn .a-accordion-btn__icon-minus,
+.a-accordion-btn .a-accordion-btn__icon-plus {
+    border-width: 0.0476190476em;
+  }
 }
 .a-accordion-btn:focus .a-accordion-btn__icon-minus,
 .a-accordion-btn:focus .a-accordion-btn__icon-plus {
@@ -481,11 +493,6 @@ body:not(:-moz-handler-blocked) fieldset {
   right: 1.5em;
   transition: border-color 0.3s ease-out, border-color 0.3s ease-out;
   width: 1.5em;
-}
-.a-accordion-btn--footer .a-accordion-btn__icon-minus .a-icon,
-.a-accordion-btn--footer .a-accordion-btn__icon-plus .a-icon {
-  height: 100%;
-  width: 100%;
 }
 @media (min-width: 40.1875em) {
   .a-accordion-btn--footer .a-accordion-btn__icon-minus,
@@ -1282,9 +1289,6 @@ body:not(:-moz-handler-blocked) fieldset {
 .m-footer-section__body {
   padding: 1.1428571429em 1.7142857143em 2.5714285714em;
 }
-.m-footer-section__body > *:first-child {
-  margin-top: 0;
-}
 @media (min-width: 40.1875em) {
   .m-footer-section__body {
     padding-left: 3.4285714286em;
@@ -1295,6 +1299,9 @@ body:not(:-moz-handler-blocked) fieldset {
   .m-footer-section__body {
     padding: 0;
   }
+}
+.m-footer-section__body > *:first-child {
+  margin-top: 0;
 }
 .m-footer-section .m-social-links {
   margin-top: 1.7142857143em;

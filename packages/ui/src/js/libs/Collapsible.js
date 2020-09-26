@@ -11,45 +11,54 @@ const Collapsible = createModule({
         const target = document.getElementById(targetID);
 
         const showTarget = () => {
+            if (target) {
+                if (options.animate) {
+                    slideDown(target, options.duration);
+                }
+
+                target.setAttribute('aria-hidden', 'false');
+                if (options.targetActiveCls) {
+                    target.classList.add(options.targetActiveCls);
+                }
+            }
+        };
+
+        const activate = () => {
             el.setAttribute('aria-expanded', 'true');
             if (options.activeCls) {
                 el.classList.add(options.activeCls);
             }
 
-            if (options.animate) {
-                slideDown(target, options.duration);
-            }
-            target.setAttribute('aria-hidden', 'false');
-            if (options.targetActiveCls) {
-                target.classList.add(options.targetActiveCls);
-            }
+            showTarget();
         };
 
         const hideTarget = () => {
+            if (target) {
+                if (options.animate) {
+                    slideUp(target, options.duration);
+                }
+
+                target.setAttribute('aria-hidden', 'true');
+                if (options.targetActiveCls) {
+                    target.classList.remove(options.targetActiveCls);
+                }
+            }
+        };
+
+        const deactivate = () => {
             el.setAttribute('aria-expanded', 'false');
             if (options.activeCls) {
                 el.classList.remove(options.activeCls);
             }
 
-            if (options.animate) {
-                slideUp(target, options.duration);
-            }
-            target.setAttribute('aria-hidden', 'true');
-            if (options.targetActiveCls) {
-                target.classList.remove(options.targetActiveCls);
-            }
+            hideTarget();
         };
 
         const toggle = () => {
-            if (target) {
-                if (el.getAttribute('aria-expanded') === 'true') {
-                    hideTarget();
-                } else {
-                    showTarget();
-                }
+            if (el.getAttribute('aria-expanded') === 'true') {
+                deactivate();
             } else {
-                // eslint-disable-next-line no-console
-                console.log('The target selector was not found.');
+                activate();
             }
         };
 
