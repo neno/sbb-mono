@@ -4,6 +4,24 @@
         "max-nesting-depth": 6,
         "selector-max-compound-selectors": 8,
         "selector-no-qualifying-type": null,
-        "scss/at-extend-no-missing-placeholder": null
+        "scss/at-extend-no-missing-placeholder": null,
+        "value-no-vendor-prefix": [
+            true,
+            {
+                "ignoreValues": [
+                    "grid"
+                ]
+            }
+        ],
+        "property-no-vendor-prefix": [
+            true,
+            {
+                "ignoreProperties": [
+                    "grid-rows",
+                    "grid-column",
+                    "grid-columns"
+                ]
+            }
+        ]
     }
 }
