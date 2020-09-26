@@ -4,7 +4,7 @@
   border: 0;
   cursor: pointer;
   display: flex;
-  height: em($footer-toggler-height-px, 15);
+  height: em($footer-toggler-height-px, $font-size-regular-px);
   justify-content: center;
   justify-content: center;
   left: 0;
@@ -24,10 +24,10 @@
   .a-icon {
     color: $color-iron;
     display: inline-block;
-    height: em($footer-toggler-height-px, 15);
+    height: em($footer-toggler-height-px, $font-size-regular-px);
     pointer-events: none;
     transition: transform 0.3s ease;
-    width: em($footer-toggler-height-px, 15);
+    width: em($footer-toggler-height-px, $font-size-regular-px);
   }
 
   &--active {
