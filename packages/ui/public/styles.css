@@ -521,9 +521,6 @@ body:not(:-moz-handler-blocked) fieldset {
 .a-accordion-panel--closed {
   display: none;
 }
-.a-accordion-panel--footer {
-  display: none;
-}
 @media (min-width: 64.0625em) {
   .a-accordion-panel--footer {
     display: block !important;
@@ -1494,17 +1491,17 @@ body:not(:-moz-handler-blocked) fieldset {
   position: fixed;
   right: 0;
 }
-.o-footer__footer-toggable {
+.o-footer__toggable {
   display: none;
   flex: 1 1 auto;
   overflow: auto;
 }
 @media (min-width: 64.0625em) {
-  .o-footer__footer-toggable {
+  .o-footer__toggable {
     margin-top: -2.6666666667em;
   }
 }
-.o-footer__footer-toggable--active {
+.o-footer__toggable--active {
   display: block;
 }
 
