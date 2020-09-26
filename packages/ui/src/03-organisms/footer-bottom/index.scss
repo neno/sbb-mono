@@ -10,6 +10,7 @@
 
     @include media-breakpoint-up(mobile) {
       justify-content: space-between;
+      min-height: em($footer-bottom-height-mobile-px, $font-size-regular-px);
     }
   }
 }

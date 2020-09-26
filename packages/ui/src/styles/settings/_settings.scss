@@ -15,13 +15,16 @@ $font-size-regular: rem($font-size-regular-px);
 $font-size-regular-xlarge: rem(23);
 $font-size-regular-xxlarge: rem(30);
 
-// arrows animation
+// arrows cta
 
+$arrow-position-x: em(10, $font-size-regular-px);
+$arrow-visible-side-padding: em(30px, $font-size-regular-px);
 $arrow-animation-duration: 0.4s;
 $arrow-animation-easing: ease;
 
 // footer
 
 $footer-section-base-size: 14px;
-$footer-bottom-height-px: 96px;
+$footer-bottom-height-px: 72px;
 $footer-toggler-height-px: 40px;
+$footer-bottom-height-mobile-px: 96px;

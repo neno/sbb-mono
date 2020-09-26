@@ -16,7 +16,7 @@
   }
 }
 
-@mixin hoverFocus($not: null) {
+@mixin hover-focus($not: null) {
   @include hover($not) {
     @content;
   }

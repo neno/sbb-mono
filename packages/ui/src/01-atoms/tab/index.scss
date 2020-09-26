@@ -15,10 +15,6 @@
     &::after {
       height: em(1, 26);
     }
-
-    + .a-tab {
-      margin-left: em(42, 26);
-    }
   }
 
   &::after {
@@ -36,6 +32,10 @@
 
   + .a-tab {
     margin-left: em(18, 20);
+
+    @include media-breakpoint-up(mobile) {
+      margin-left: em(42, 26);
+    }
   }
 
   &:not(&--active) {

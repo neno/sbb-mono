@@ -56,15 +56,6 @@
   $base-size-mobile,
   $icon-color: $color-granite
 ) {
-  @include media-breakpoint-up(mobile) {
-    .a-accordion-btn__icon-minus,
-    .a-accordion-btn__icon-plus {
-      height: em(32, $base-size-mobile);
-      right: em(32, $base-size-mobile);
-      width: em(32, $base-size-mobile);
-    }
-  }
-
   .a-accordion-btn__icon-minus,
   .a-accordion-btn__icon-plus {
     color: $icon-color;
@@ -76,6 +67,12 @@
     .a-icon {
       height: (16 / strip-unit($base-size)) * 100%;
       width: (16 / strip-unit($base-size)) * 100%;
+    }
+
+    @include media-breakpoint-up(mobile) {
+      height: em(32, $base-size-mobile);
+      right: em(32, $base-size-mobile);
+      width: em(32, $base-size-mobile);
     }
   }
 }

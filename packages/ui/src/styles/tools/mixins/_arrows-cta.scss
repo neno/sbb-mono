@@ -1,6 +1,6 @@
 @mixin arrows-animation($padding-right-hover: 0) {
   color: $color-red-125;
-  padding-left: em(30, 15);
+  padding-left: $arrow-visible-side-padding;
   padding-right: $padding-right-hover;
 
   > .a-icon {

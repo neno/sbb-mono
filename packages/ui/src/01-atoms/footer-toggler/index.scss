@@ -14,7 +14,7 @@
   top: 0;
   width: 100%;
 
-  @include hoverFocus {
+  @include hover-focus {
     .a-icon {
       color: $color-red-125;
       transform: scale(1.1);
@@ -31,7 +31,7 @@
   }
 
   &--active {
-    @include hoverFocus {
+    @include hover-focus {
       .a-icon {
         transform: scale(1.1) rotate(180deg);
       }

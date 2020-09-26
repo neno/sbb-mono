@@ -1,6 +1,6 @@
 $button-min-width: rem(60);
 $button-padding-x: em(40, 15);
-$button-arrow-hover-position-x: em(36, 15);
+$button-arrow-padding-x: em(10, 15);
 
 .a-btn {
   background-color: $color-silver;
@@ -28,6 +28,8 @@ $button-arrow-hover-position-x: em(36, 15);
 
   .a-arrows-cta {
     color: currentColor !important;
+    margin: 0 ($button-arrow-padding-x * -1);
+    padding-left: $button-arrow-padding-x;
 
     > .a-icon {
       color: currentColor;
@@ -37,7 +39,7 @@ $button-arrow-hover-position-x: em(36, 15);
   .no-touchdevice & {
     @include hover {
       .a-arrows-cta {
-        @include arrows-animation(em(10, 15));
+        @include arrows-animation($button-arrow-padding-x);
       }
     }
   }

@@ -29,7 +29,7 @@ const FooterToggle: React.FC<Props> = ({
             {text}
         </span>
 
-        <Icon name="chevron-down" />
+        <Icon name="chevron-up" />
 
     </button>
 );

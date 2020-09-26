@@ -1,3 +1,9 @@
 .t-fixed-footer {
-  padding-bottom: em($footer-bottom-height-px + $footer-toggler-height-px, 15);
+  padding-bottom: em($footer-bottom-height-px + $footer-toggler-height-px,
+  $font-size-regular-px);
+
+  @include media-breakpoint-up(mobile) {
+    padding-bottom: em($footer-bottom-height-mobile-px + $footer-toggler-height-px,
+    $font-size-regular-px);
+  }
 }

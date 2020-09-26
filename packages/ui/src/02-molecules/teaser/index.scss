@@ -20,45 +20,16 @@
     }
   }
 
-  @include media-breakpoint-up(mobile) {
-    .m-teaser__body {
+  &__body {
+    padding: em(24, 15) em(12, 15);
+
+    @include media-breakpoint-up(mobile) {
       padding: em(32, 15) em(24, 15);
-    }
-
-    &--cta {
-      .m-teaser__body {
-        padding-bottom: em(104, 15);
-      }
-    }
-
-    &__text {
-      display: block;
-    }
-
-    .a-arrows-cta {
-      bottom: 3.2em;
-      left: em(24, 15);
-      margin-top: 0;
-      position: absolute;
-    }
-  }
-
-  @include media-breakpoint-up(tablet) {
-    &--cta {
-      .m-teaser__body {
-        &__body {
-          padding-bottom: em(112, 15);
-        }
-      }
     }
   }
 
   &__title {
     @include font-h3;
-  }
-
-  &__body {
-    padding: em(24, 15) em(12, 15);
   }
 
   &__block-link {
@@ -79,6 +50,10 @@
 
   &__text {
     display: none;
+
+    @include media-breakpoint-up(mobile) {
+      display: block;
+    }
   }
 
   .a-img {
@@ -92,6 +67,13 @@
 
   .a-arrows-cta {
     margin-top: em(9, 15);
+
+    @include media-breakpoint-up(mobile) {
+      bottom: 3.2em;
+      left: em(24, 15);
+      margin-top: 0;
+      position: absolute;
+    }
   }
 
   &--centered {
@@ -101,6 +83,14 @@
   &--cta {
     .m-teaser__body {
       padding-bottom: em(32, 15);
+
+      @include media-breakpoint-up(mobile) {
+        padding-bottom: em(104, 15);
+      }
+
+      @include media-breakpoint-up(tablet) {
+        padding-bottom: em(112, 15);
+      }
     }
   }
 
