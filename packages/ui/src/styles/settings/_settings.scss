@@ -22,9 +22,23 @@ $arrow-visible-side-padding: em(30px, $font-size-regular-px);
 $arrow-animation-duration: 0.4s;
 $arrow-animation-easing: ease;
 
+// header
+
+$header-height-mobile: 48px;
+$header-height-tablet: 64px;
+$header-height-desktop: 128px;
+
 // footer
 
 $footer-section-base-size: 14px;
 $footer-bottom-height-px: 72px;
 $footer-toggler-height-px: 40px;
 $footer-bottom-height-mobile-px: 96px;
+
+// Ascending order of z-index items
+// The further down the item is placed here, the higher the index
+$z-indexes: (
+  page-layout: (
+    footer,
+  ),
+);

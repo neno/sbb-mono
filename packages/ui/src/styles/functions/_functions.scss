@@ -30,3 +30,18 @@
 @function grid-col-width-ie($cols, $total-cols, $grid-gutter) {
   @return calc((100% / #{$total-cols}) * #{$cols} - #{$grid-gutter});
 }
+
+@function z-index($key1, $key2: null) {
+  $map: $z-indexes;
+  $found-index: null;
+  @if (map-has-key($map, $key1)) {
+    $found-index: index(map-keys($map), $key1);
+
+    @if ($key2) {
+      $map: map-get($map, $key1);
+      $found-index: index($map, $key2);
+    }
+  }
+
+  @return $found-index;
+}

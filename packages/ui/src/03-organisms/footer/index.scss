@@ -12,20 +12,25 @@
     display: flex;
     flex-direction: column;
     left: 0;
-    max-height: 100vh;
+    max-height: calc(100vh - #{em($header-height-mobile, $font-size-regular-px)});
     padding-top: em(40, 15) !important;
     position: fixed;
     right: 0;
+    z-index: z-index(page-layout, footer);
+
+    @include media-breakpoint-up(mobile) {
+      max-height: calc(100vh - #{em($header-height-tablet, $font-size-regular-px)});
+    }
+
+    @include media-breakpoint-up(tablet) {
+      max-height: calc(100vh - #{em($header-height-desktop, $font-size-regular-px)});
+    }
   }
 
   &__toggable {
     display: none;
     flex: 1 1 auto;
     overflow: auto;
-
-    @include media-breakpoint-up(tablet) {
-      margin-top: -#{em(40, 15)};
-    }
 
     &--active {
       display: block;

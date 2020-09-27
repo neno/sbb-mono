@@ -1486,20 +1486,26 @@ body:not(:-moz-handler-blocked) fieldset {
   display: flex;
   flex-direction: column;
   left: 0;
-  max-height: 100vh;
+  max-height: calc(100vh - 3.2em);
   padding-top: 2.6666666667em !important;
   position: fixed;
   right: 0;
+  z-index: 1;
+}
+@media (min-width: 40.1875em) {
+  .o-footer--fixed {
+    max-height: calc(100vh - 4.2666666667em);
+  }
+}
+@media (min-width: 64.0625em) {
+  .o-footer--fixed {
+    max-height: calc(100vh - 8.5333333333em);
+  }
 }
 .o-footer__toggable {
   display: none;
   flex: 1 1 auto;
   overflow: auto;
-}
-@media (min-width: 64.0625em) {
-  .o-footer__toggable {
-    margin-top: -2.6666666667em;
-  }
 }
 .o-footer__toggable--active {
   display: block;
