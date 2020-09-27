@@ -56,7 +56,7 @@ const Question: React.FC<Props> = ({
                     {showResults && (isCorrect ? <Correct /> : <Incorrect />)}
                 </span>
             </legend>
-            <div dangerouslySetInnerHTML={{ __html: text }} />
+            <div className="o-quiz-question__description" dangerouslySetInnerHTML={{ __html: text }} />
             <ol className="o-quiz-question__answers">
                 {answers.map(answer => (
                     <li key={answer.id}>

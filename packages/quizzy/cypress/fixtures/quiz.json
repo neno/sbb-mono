@@ -1,0 +1,84 @@
+{
+    "quiz": {
+        "title": "Selbsttest",
+        "submit": "Antworten prüfen",
+        "confirmChanges": "Änderungen bestätigen",
+        "repeat": "Test wiederholen",
+        "changesEffective": "Änderungen gültig ab: 01.12.2018",
+        "confirmMessage": "Hiermit bestätige ich, die Änderungen gelesen und verstanden zu haben.",
+        "questions": [
+            {
+                "id": "100",
+                "title": "Frage 1",
+                "text": "<p>Erklärungstext 1</p>",
+                "questionType": "single-choice",
+                "answers": [
+                    {
+                        "id": "101",
+                        "title": "Antwort 1.1",
+                        "text": "<p>Erklärungstext zur Antwort:</p><p>Link: <a href=\"http://google.ch\" target=\"_blank\">http://google.ch</a></p>",
+                        "correct": true
+                    },
+                    {
+                        "id": "102",
+                        "title": "Antwort 1.2",
+                        "correct": false
+                    },
+                    {
+                        "id": "103",
+                        "title": "Antwort 1.3",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "id": "200",
+                "title": "Frage 2",
+                "text": "<p>Erklärungstext 2</p>",
+                "questionType": "multiple-choice",
+                "answers": [
+                    {
+                        "id": "201",
+                        "title": "Antwort 2.1",
+                        "text": "Erklärungstext zur Antwort",
+                        "correct": false
+                    },
+                    {
+                        "id": "202",
+                        "title": "Antwort 2.2",
+                        "text": "<p>Hier ein Bild:</p><img src=\"//via.placeholder.com/350x150\" width=\"350\" height=\"150\">",
+                        "correct": true
+                    },
+                    {
+                        "id": "203",
+                        "title": "Antwort 2.3",
+                        "text": "Erklärungstext zur Antwort",
+                        "correct": false
+                    }
+                ]
+            }
+        ],
+        "results": [
+            {
+                "score": 0,
+                "text": "Du hast alle Fragen falsch beantwortet. Wir empfehlen dir, die Änderung noch mal zu studieren bevor du sie als gelesen und verstanden quittierst."
+            },
+            {
+                "score": 10,
+                "text": "Leider hast du die Mehrheit der Fragen falsch beantwortet. Wir empfehlen dir, die Änderung noch mal zu studieren bevor du sie als gelesen und verstanden bestätigst."
+            },
+            {
+                "score": 50,
+                "text": "Du hast Rund die Hälfte aller Fragen richtig beantwortet. Wir empfehlen dir, die Änderung noch mal zu studieren bevor du sie als gelesen und verstanden bestätigst."
+            },
+            {
+                "score": 70,
+                "text": "Du hast die meisten Fragen richtig beantwortet. Hast Du noch Unsicherheiten? Dann kannst du dir die Änderung nochmals ansehen. Vergiss nicht die Änderung als gelesen und verstanden zu bestätigen."
+            },
+            {
+                "score": 100,
+                "text": "Bravo, du hast alle Fragen richtig beantwortet. Vergiss nicht die Änderung als gelesen und verstanden zu bestätigen."
+            }
+        ]
+    }
+}
