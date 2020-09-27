@@ -589,6 +589,7 @@ body:not(:-moz-handler-blocked) fieldset {
   overflow: hidden;
   padding: 0.6666666667em 2.6666666667em;
   position: relative;
+  text-align: center;
   text-decoration: none !important;
   width: 100%;
 }
@@ -1552,6 +1553,13 @@ body:not(:-moz-handler-blocked) fieldset {
   display: flex;
   justify-content: center;
   min-height: 4.8em;
+}
+.o-footer-bottom .l-constrainer:before {
+  content: "";
+  display: block;
+  margin-left: -1rem;
+  min-height: inherit;
+  width: 0.0625rem;
 }
 @media (min-width: 40.1875em) {
   .o-footer-bottom .l-constrainer {

@@ -12,5 +12,15 @@
       justify-content: space-between;
       min-height: em($footer-bottom-height-mobile-px, $font-size-regular-px);
     }
+
+    // ie11 bug fixing
+    // remove if clock is added
+    &::before {
+      content: '';
+      display: block;
+      margin-left: -#{1rem};
+      min-height: inherit;
+      width: rem(1);
+    }
   }
 }
