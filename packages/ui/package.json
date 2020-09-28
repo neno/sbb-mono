@@ -6,7 +6,7 @@
     "scripts": {
         "storybook": "STORYBOOK_TIMEOUT=2000 start-storybook -p 6006 -s public",
         "build-storybook": "STORYBOOK_TIMEOUT=2000 build-storybook -s public",
-        "test": "jest --watch",
+        "test": "jest",
         "lint": "lint-staged",
         "lint-script": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
         "lint-style": "stylelint \"src/**/*.scss\" --fix"

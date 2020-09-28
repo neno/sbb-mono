@@ -6,7 +6,6 @@
         "repeat": "Test wiederholen",
         "changesEffective": "Änderungen gültig ab: 01.12.2018",
         "confirmMessage": "Hiermit bestätige ich, die Änderungen gelesen und verstanden zu haben.",
-        "redirectUrl": "http://www.sbb.ch",
         "questions": [
             {
                 "id": "100",

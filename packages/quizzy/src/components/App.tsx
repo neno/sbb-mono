@@ -1,5 +1,5 @@
 import React, { useReducer, FormEventHandler } from 'react';
-import MyButton from '@sbb-mono/ui/src/01-atoms/button';
+import Button from '@sbb-mono/ui/src/01-atoms/button';
 import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models';
 import { apiEndpoint } from '../config';
 import reducer, { INITIAL_STATE } from '../reducer';
@@ -31,7 +31,11 @@ const App: React.FC = () => {
         });
     };
 
-    const handleConfirm = (): void => {};
+    const handleConfirm = (): void => {
+        if (state.quiz && state.quiz.redirectUrl) {
+            window.location.href = state.quiz.redirectUrl;
+        }
+    };
 
     if (state.error) {
         return <div>{state.error}</div>;
@@ -62,28 +66,48 @@ const App: React.FC = () => {
                         />
                     )}
                 </div>
-                <p>
-                    <strong>{state.quiz.changesEffective}</strong>
-                </p>
-                <p>{state.quiz.confirmMessage}</p>
+
+                {state.showResults && (
+                    <p>
+                        <strong>{state.quiz.changesEffective}</strong>
+                    </p>
+                )}
+
+                {state.showResults && <p>{state.quiz.confirmMessage}</p>}
                 <div className="t-quiz__actions">
                     {!state.showResults && (
-                        <MyButton type="submit">{state.quiz.submit}</MyButton>
+                        <Button
+                            type="submit"
+                            attrs={{
+                                'data-cy': 'evaluate',
+                            }}
+                        >
+                            {state.quiz.submit}
+                        </Button>
                     )}
-                    {state.showResults && (
-                        <MyButton
+                    {state.showResults && state.quiz.confirmChanges && (
+                        <Button
                             type="button"
                             arrows
                             classes={['a-btn--primary']}
                             handleClick={handleConfirm}
+                            attrs={{
+                                'data-cy': 'redirect',
+                            }}
                         >
                             {state.quiz.confirmChanges}
-                        </MyButton>
+                        </Button>
                     )}
                     {state.showResults && (
-                        <MyButton type="button" handleClick={handleReset}>
+                        <Button
+                            type="button"
+                            handleClick={handleReset}
+                            attrs={{
+                                'data-cy': 'reset',
+                            }}
+                        >
                             {state.quiz.repeat}
-                        </MyButton>
+                        </Button>
                     )}
                 </div>
             </form>
