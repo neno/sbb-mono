@@ -2,7 +2,7 @@ import React from 'react';
 
 interface Props {
     id: string;
-    active: boolean;
+    active?: boolean;
 }
 
 const TabPanel: React.FC<Props> = ({ children, id, active }) => (
