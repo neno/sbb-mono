@@ -1,27 +1,44 @@
-$font-size-h1: em(28, 15);
-$font-size-h1-mobile: em(30, 15);
-$font-size-h1-tablet: em(40, 15);
-
-$font-size-h2: em(24, 15);
-$font-size-h2-tablet: em(32, 15);
-
-$font-size-h3: em(20, 15);
-$font-size-h3-px: 20px;
-$font-size-h3-mobile: em(21, 15);
-$font-size-h3-mobile-px: 21px;
-
 $font-size-regular-px: 15px;
 $font-size-regular: rem($font-size-regular-px);
 $font-size-regular-xlarge: rem(23);
 $font-size-regular-xxlarge: rem(30);
 
-// arrows animation
+$font-size-h1: em(28, $font-size-regular-px);
+$font-size-h1-mobile: em(30, $font-size-regular-px);
+$font-size-h1-tablet: em(40, $font-size-regular-px);
 
+$font-size-h2: em(24, $font-size-regular-px);
+$font-size-h2-tablet: em(32, $font-size-regular-px);
+
+$font-size-h3: em(20, $font-size-regular-px);
+$font-size-h3-px: 20px;
+$font-size-h3-mobile: em(21, $font-size-regular-px);
+$font-size-h3-mobile-px: 21px;
+
+// arrows cta
+
+$arrow-position-x: em(10, $font-size-regular-px);
+$arrow-visible-side-padding: em(30px, $font-size-regular-px);
 $arrow-animation-duration: 0.4s;
 $arrow-animation-easing: ease;
+
+// header
+
+$header-height-mobile: 48px;
+$header-height-tablet: 64px;
+$header-height-desktop: 128px;
 
 // footer
 
 $footer-section-base-size: 14px;
-$footer-bottom-height-px: 96px;
+$footer-bottom-height-px: 72px;
 $footer-toggler-height-px: 40px;
+$footer-bottom-height-mobile-px: 96px;
+
+// Ascending order of z-index items
+// The further down the item is placed here, the higher the index
+$z-indexes: (
+  page-layout: (
+    footer,
+  ),
+);

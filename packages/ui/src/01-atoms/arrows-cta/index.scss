@@ -1,8 +1,7 @@
 .a-arrows-cta {
-  $arrow-position-x: em(10, $font-size-regular-px);
   cursor: pointer;
   display: inline-block;
-  padding-right: em(40, $font-size-regular-px);
+  padding-right: $arrow-visible-side-padding;
   position: relative;
   text-decoration: none !important;
   text-overflow: ellipsis;

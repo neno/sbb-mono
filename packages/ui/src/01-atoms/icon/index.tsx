@@ -4,6 +4,7 @@ import ArrowRight from './icons/ArrowRight';
 import ArrowUpCircle from './icons/ArrowUpCircle';
 import Checkmark from './icons/Checkmark';
 import ChevronDown from './icons/ChevronDown';
+import ChevronUp from './icons/ChevronUp';
 import Cross from './icons/Cross';
 import Globe from './icons/Globe';
 import MagnifyingGlass from './icons/MagnifyingGlass';
@@ -20,6 +21,7 @@ const icons = {
     'arrow-up-circle': ArrowUpCircle,
     checkmark: Checkmark,
     'chevron-down': ChevronDown,
+    'chevron-up': ChevronUp,
     cross: Cross,
     globe: Globe,
     'magnifying-glass': MagnifyingGlass,

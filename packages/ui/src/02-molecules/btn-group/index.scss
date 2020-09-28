@@ -1,13 +1,10 @@
 .m-btn-group {
+  .a-btn + .a-btn {
+    margin-top: em(24, $font-size-regular-px);
 
-  @include media-breakpoint-up(mobile) {
-    .a-btn + .a-btn {
+    @include media-breakpoint-up(mobile) {
       margin-left: em(24, $font-size-regular-px);
       margin-top: 0;
     }
-  }
-
-  .a-btn + .a-btn {
-    margin-top: em(24, $font-size-regular-px);
   }
 }

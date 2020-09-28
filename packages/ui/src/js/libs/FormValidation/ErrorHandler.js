@@ -19,6 +19,7 @@ export default class ErrorHandler {
     removeInvalidInputAttr(field) {
         field.classList.remove(this.fieldErrorClass);
         field.removeAttribute('aria-describedby');
+        field.setAttribute('aria-invalid', false);
         field.removeEventListener('input', this.handleInput);
     }
 
@@ -39,6 +40,7 @@ export default class ErrorHandler {
 
     addInvalidInputAttr(field, id) {
         field.classList.add(this.fieldErrorClass);
+        field.setAttribute('aria-invalid', true);
         field.setAttribute('aria-describedby', `error-for-${id}`);
     }
 

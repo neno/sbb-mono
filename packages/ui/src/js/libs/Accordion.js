@@ -6,7 +6,7 @@ const Accordion = createModule({
         triggerSelector: '.a-accordion-btn',
         targetSelector: '.a-accordion-panel',
         activeCls: 'a-accordion-btn--active',
-        targetClosedCls: 'a-accordion-panel--active',
+        targetClosedCls: 'a-accordion-panel--closed',
         duration: 300,
     }),
     constructor({ el, state, options }) {

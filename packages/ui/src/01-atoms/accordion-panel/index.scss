@@ -4,8 +4,6 @@
   }
 
   &--footer {
-    display: none;
-
     @include media-breakpoint-up(tablet) {
       display: block !important;
       height: auto !important;

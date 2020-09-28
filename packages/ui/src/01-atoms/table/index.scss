@@ -2,35 +2,31 @@
   overflow: auto;
   width: 100%;
 
-  @include media-breakpoint-up(mobile) {
-    &__td,
-    &__th {
-      padding-left: 1.0667em;
-      padding-right: 1.0667em;
-    }
-  }
-
-  &__table {
+  &__table,
+  table {
     background-color: $color-white;
     border: rem(1) solid $color-cloud;
     border-spacing: 0;
     padding-bottom: 1.0667em;
   }
 
+  thead,
   &__thead {
     background-color: $color-cloud;
+
+    th,
+    &__th {
+      &:first-child {
+        border-left: $color-cloud solid 1.0667em;
+      }
+
+      &:last-child {
+        border-right: $color-cloud solid 1.0667em;
+      }
+    }
   }
 
-  &__th {
-    &:first-child {
-      border-left: $color-cloud solid 1.0667em;
-    }
-
-    &:last-child {
-      border-right: $color-cloud solid 1.0667em;
-    }
-  }
-
+  td,
   &__td {
     font-weight: 400;
 
@@ -43,16 +39,24 @@
     }
   }
 
+  tr,
   &__tr {
     &:nth-child(even) {
       background-color: $color-milk;
     }
   }
 
+  th,
+  td,
   &__td,
   &__th {
     line-height: (22 / 15);
     padding: em(19, 15) 0.8em;
+
+    @include media-breakpoint-up(mobile) {
+      padding-left: 1.0667em;
+      padding-right: 1.0667em;
+    }
   }
 
   &--align-center {

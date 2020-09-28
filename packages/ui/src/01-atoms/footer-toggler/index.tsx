@@ -13,7 +13,9 @@ const FooterToggle: React.FC<Props> = ({
     controls,
     text,
     expanded,
-    options,
+    options = {
+        activeCls: 'a-footer-toggler--active',
+    },
     classes = [],
 }) => (
     <button
@@ -29,7 +31,7 @@ const FooterToggle: React.FC<Props> = ({
             {text}
         </span>
 
-        <Icon name="chevron-down" />
+        <Icon name="chevron-up" />
 
     </button>
 );
