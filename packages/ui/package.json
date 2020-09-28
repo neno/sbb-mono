@@ -4,14 +4,12 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "dev": "npm-run-all --parallel sass storybook",
         "storybook": "STORYBOOK_TIMEOUT=2000 start-storybook -p 6006 -s public",
         "build-storybook": "STORYBOOK_TIMEOUT=2000 build-storybook -s public",
         "test": "jest --watch",
         "lint": "lint-staged",
         "lint-script": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-        "lint-style": "stylelint \"src/**/*.scss\" --fix",
-        "sass": "sass src/styles/index.scss public/styles.css --watch"
+        "lint-style": "stylelint \"src/**/*.scss\" --fix"
     },
     "dependencies": {
         "@testing-library/jest-dom": "^5.11.4",
