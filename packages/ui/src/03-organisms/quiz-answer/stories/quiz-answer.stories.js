@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import QuizAnswer from '../index';
 
 export default {
-    title: '02-Molecules/Quiz Answer',
+    title: '03-Organisms/Quiz Answer',
 };
 
 const handleChange = id => {
@@ -28,6 +28,6 @@ export const Incorrect = () => renderToStaticMarkup(
     <QuizAnswer id="4" questionId="1" title="Answer Incorrect" questionType="multiple-choice" checked handleChange={handleChange} showResults />,
 );
 
-export const WithText = () => renderToStaticMarkup(
+export const WithRichTextExplanation = () => renderToStaticMarkup(
     <QuizAnswer id="1" questionId="1" title="Single Choice" text="<p>Erklärungstext zur Antwort</p><p>Und noch ein Link: <a href='http://google.ch' target='_blank'>http://google.ch</a></p>" questionType="single-choice" checked handleChange={handleChange} showResults={false} />,
 );
