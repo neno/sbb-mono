@@ -12,7 +12,7 @@ const OverviewTemplate = () => (
         <h1>Login</h1>
         <div className="l-divider-big">
             <Tabs tabs={tabs} isTabListCentered>
-                <TabPanel id="mitarbeitende">
+                <TabPanel id="mitarbeitende" active={tabs[0].active}>
                     <h2 className="u-sr-only">Mitarbeitende</h2>
                     <div className="l-login-panel">
                         <Button classes={['a-btn--primary']} arrows url="/">
@@ -20,7 +20,7 @@ const OverviewTemplate = () => (
                         </Button>
                     </div>
                 </TabPanel>
-                <TabPanel id="pensionierte" active>
+                <TabPanel id="pensionierte" active={tabs[1].active}>
                     <h2 className="u-sr-only">Pensionierte</h2>
                     <div className="l-login-panel">
                         <p>
