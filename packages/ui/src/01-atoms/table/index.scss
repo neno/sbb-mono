@@ -5,8 +5,9 @@
   &__table,
   table {
     background-color: $color-white;
-    border: rem(1) solid $color-cloud;
+    border: em(1, 15) solid $color-cloud;
     border-spacing: 0;
+    border-collapse: separate;
     padding-bottom: 1.0667em;
   }
 
@@ -16,6 +17,8 @@
 
     th,
     &__th {
+      font-weight: $font-bold;
+
       &:first-child {
         border-left: $color-cloud solid 1.0667em;
       }
@@ -23,19 +26,6 @@
       &:last-child {
         border-right: $color-cloud solid 1.0667em;
       }
-    }
-  }
-
-  td,
-  &__td {
-    font-weight: 400;
-
-    &:first-child {
-      border-left: $color-white solid 1.0667em;
-    }
-
-    &:last-child {
-      border-right: $color-white solid 1.0667em;
     }
   }
 
@@ -50,8 +40,18 @@
   td,
   &__td,
   &__th {
+    border: 0;
+    font-weight: $font-light;
     line-height: (22 / 15);
     padding: em(19, 15) 0.8em;
+
+    &:first-child {
+      border-left: $color-white solid 1.0667em;
+    }
+
+    &:last-child {
+      border-right: $color-white solid 1.0667em;
+    }
 
     @include media-breakpoint-up(mobile) {
       padding-left: 1.0667em;
