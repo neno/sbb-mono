@@ -16,6 +16,23 @@ quizData.quiz.results.forEach((result: IResult) => {
 });
 
 context('Evaluation', () => {
+    describe('Disable Form', () => {
+        beforeEach(() => {
+            cy.visit('/');
+            cy.get('form').submit();
+        });
+
+        it('Should show result', () => {
+            cy.get('.t-quiz__results').should('be.not.empty');
+        });
+
+        it('Should disable inputs', () => {
+            cy.get('input').each(($input) => {
+                cy.get($input).should('be.disabled');
+            });
+        });
+    });
+
     describe('All answers correct', () => {
         it('Should display success message', () => {
             cy.visit('/');
@@ -27,7 +44,7 @@ context('Evaluation', () => {
                 }
             });
 
-            cy.get('button').click({ force: true });
+            cy.get('[data-cy="evaluate"]').click({ force: true });
 
             cy.get('.t-quiz__results').should(
                 'contain.text',
@@ -47,7 +64,7 @@ context('Evaluation', () => {
                 }
             });
 
-            cy.get('button').click({ force: true });
+            cy.get('[data-cy=evaluate]').click({ force: true });
 
             cy.get('.t-quiz__results').should(
                 'contain.text',
@@ -78,12 +95,30 @@ context('Evaluation', () => {
                 });
             }
 
-            cy.get('button').click({ force: true });
+            cy.get('[data-cy=evaluate]').click({ force: true });
 
             cy.get('.t-quiz__results').should(
                 'contain.text',
                 resultsByScore[50]
             );
+        });
+    });
+});
+
+describe('Reset', () => {
+    beforeEach(() => {
+        cy.visit('/');
+        cy.get('form').submit();
+        cy.get('[data-cy=reset]').click({ force: true });
+    });
+
+    it('Should not display result', () => {
+        cy.get('.t-quiz__results').should('be.empty');
+    });
+
+    it('Should enable inputs', () => {
+        cy.get('input').each(($input) => {
+            cy.get($input).should('be.enabled');
         });
     });
 });

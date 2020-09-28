@@ -13,6 +13,7 @@ export interface IQuiz {
     repeat?: string;
     changesEffective?: string;
     confirmMessage?: string;
+    redirectUrl?: string;
     questions: IQuestion[];
     results: IResult[];
 }
