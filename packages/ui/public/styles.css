@@ -1021,39 +1021,42 @@ body:not(:-moz-handler-blocked) fieldset {
   overflow: auto;
   width: 100%;
 }
-.a-table__table {
+.a-table__table,
+.a-table table {
   background-color: #fff;
   border: 0.0625rem solid #e5e5e5;
   border-spacing: 0;
   padding-bottom: 1.0667em;
 }
-.a-table__thead {
+.a-table thead, .a-table__thead {
   background-color: #e5e5e5;
 }
-.a-table__th:first-child {
+.a-table thead th:first-child, .a-table thead__th:first-child, .a-table__thead th:first-child, .a-table__thead__th:first-child {
   border-left: #e5e5e5 solid 1.0667em;
 }
-.a-table__th:last-child {
+.a-table thead th:last-child, .a-table thead__th:last-child, .a-table__thead th:last-child, .a-table__thead__th:last-child {
   border-right: #e5e5e5 solid 1.0667em;
 }
-.a-table__td {
+.a-table td, .a-table__td {
   font-weight: 400;
 }
-.a-table__td:first-child {
+.a-table td:first-child, .a-table__td:first-child {
   border-left: #fff solid 1.0667em;
 }
-.a-table__td:last-child {
+.a-table td:last-child, .a-table__td:last-child {
   border-right: #fff solid 1.0667em;
 }
-.a-table__tr:nth-child(even) {
+.a-table tr:nth-child(even), .a-table__tr:nth-child(even) {
   background-color: #f6f6f6;
 }
-.a-table__td, .a-table__th {
+.a-table th,
+.a-table td, .a-table__td, .a-table__th {
   line-height: 1.4666666667;
   padding: 1.2666666667em 0.8em;
 }
 @media (min-width: 40.1875em) {
-  .a-table__td, .a-table__th {
+  .a-table th,
+.a-table td, .a-table__td, .a-table__th {
     padding-left: 1.0667em;
     padding-right: 1.0667em;
   }
@@ -1554,18 +1557,18 @@ body:not(:-moz-handler-blocked) fieldset {
   justify-content: center;
   min-height: 4.8em;
 }
-.o-footer-bottom .l-constrainer:before {
-  content: "";
-  display: block;
-  margin-left: -1rem;
-  min-height: inherit;
-  width: 0.0625rem;
-}
 @media (min-width: 40.1875em) {
   .o-footer-bottom .l-constrainer {
     justify-content: space-between;
     min-height: 6.4em;
   }
+}
+.o-footer-bottom .l-constrainer::before {
+  content: "";
+  display: block;
+  margin-left: -1rem;
+  min-height: inherit;
+  width: 0.0625rem;
 }
 
 .o-quiz-answer {
