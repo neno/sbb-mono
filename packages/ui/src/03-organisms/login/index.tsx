@@ -12,14 +12,16 @@ const OverviewTemplate = () => (
         <h1>Login</h1>
         <div className="l-divider-big">
             <Tabs tabs={tabs} isTabListCentered>
-                <TabPanel id="mitarbeitende" active>
+                <TabPanel id="mitarbeitende">
+                    <h2 className="u-sr-only">Mitarbeitende</h2>
                     <div className="l-login-panel">
                         <Button classes={['a-btn--primary']} arrows url="/">
                             Login
                         </Button>
                     </div>
                 </TabPanel>
-                <TabPanel id="pensionierte" active={false}>
+                <TabPanel id="pensionierte" active>
+                    <h2 className="u-sr-only">Pensionierte</h2>
                     <div className="l-login-panel">
                         <p>
                             Pensionierte melden sich mit den gleichen
