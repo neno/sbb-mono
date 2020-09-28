@@ -100,7 +100,7 @@ const App: React.FC = () => {
                                 {state.quiz.confirmChanges}
                             </Button>
                         )}
-                        {state.showResults && (
+                        {state.showResults && state.quiz.repeat && (
                             <Button
                                 type="button"
                                 handleClick={handleReset}
