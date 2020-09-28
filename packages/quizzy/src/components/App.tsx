@@ -1,5 +1,6 @@
 import React, { useReducer, FormEventHandler } from 'react';
 import Button from '@sbb-mono/ui/src/01-atoms/button';
+import ButtonGroup from '@sbb-mono/ui/src/02-molecules/btn-group';
 import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models';
 import { apiEndpoint } from '../config';
 import reducer, { INITIAL_STATE } from '../reducer';
@@ -75,40 +76,42 @@ const App: React.FC = () => {
 
                 {state.showResults && <p>{state.quiz.confirmMessage}</p>}
                 <div className="t-quiz__actions">
-                    {!state.showResults && (
-                        <Button
-                            type="submit"
-                            attrs={{
-                                'data-cy': 'evaluate',
-                            }}
-                        >
-                            {state.quiz.submit}
-                        </Button>
-                    )}
-                    {state.showResults && state.quiz.confirmChanges && (
-                        <Button
-                            type="button"
-                            arrows
-                            classes={['a-btn--primary']}
-                            handleClick={handleConfirm}
-                            attrs={{
-                                'data-cy': 'redirect',
-                            }}
-                        >
-                            {state.quiz.confirmChanges}
-                        </Button>
-                    )}
-                    {state.showResults && (
-                        <Button
-                            type="button"
-                            handleClick={handleReset}
-                            attrs={{
-                                'data-cy': 'reset',
-                            }}
-                        >
-                            {state.quiz.repeat}
-                        </Button>
-                    )}
+                    <ButtonGroup>
+                        {!state.showResults && (
+                            <Button
+                                type="submit"
+                                attrs={{
+                                    'data-cy': 'evaluate',
+                                }}
+                            >
+                                {state.quiz.submit}
+                            </Button>
+                        )}
+                        {state.showResults && state.quiz.confirmChanges && (
+                            <Button
+                                type="button"
+                                arrows
+                                classes={['a-btn--primary']}
+                                handleClick={handleConfirm}
+                                attrs={{
+                                    'data-cy': 'redirect',
+                                }}
+                            >
+                                {state.quiz.confirmChanges}
+                            </Button>
+                        )}
+                        {state.showResults && (
+                            <Button
+                                type="button"
+                                handleClick={handleReset}
+                                attrs={{
+                                    'data-cy': 'reset',
+                                }}
+                            >
+                                {state.quiz.repeat}
+                            </Button>
+                        )}
+                    </ButtonGroup>
                 </div>
             </form>
         </article>
