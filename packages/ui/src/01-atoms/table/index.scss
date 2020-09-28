@@ -6,8 +6,8 @@
   table {
     background-color: $color-white;
     border: em(1, 15) solid $color-cloud;
-    border-spacing: 0;
     border-collapse: separate;
+    border-spacing: 0;
     padding-bottom: 1.0667em;
   }
 
@@ -45,17 +45,17 @@
     line-height: (22 / 15);
     padding: em(19, 15) 0.8em;
 
+    @include media-breakpoint-up(mobile) {
+      padding-left: 1.0667em;
+      padding-right: 1.0667em;
+    }
+
     &:first-child {
       border-left: $color-white solid 1.0667em;
     }
 
     &:last-child {
       border-right: $color-white solid 1.0667em;
-    }
-
-    @include media-breakpoint-up(mobile) {
-      padding-left: 1.0667em;
-      padding-right: 1.0667em;
     }
   }
 
