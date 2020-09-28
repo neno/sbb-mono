@@ -1,6 +1,6 @@
 @mixin font-regular {
   font-size: $font-size-regular;
-  font-weight: $font-light;
+  font-weight: $font-normal;
   line-height: (26 / 15);
 
   @include media-breakpoint-up(wide) {
@@ -32,8 +32,8 @@
 }
 
 @mixin link {
-  color: $color-black;
   cursor: pointer;
+  color: $color-black;
   text-decoration: underline;
 
   @include hover {

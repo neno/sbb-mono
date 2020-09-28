@@ -30,6 +30,8 @@ body {
   background-color: $color-white;
   color: $color-black;
   font-family: $font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 figure {
@@ -48,32 +50,3 @@ figure {
 abbr {
   text-decoration: none;
 }
-
-/*
- * START reset fieldset
- */
-legend {
-  display: table;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-legend + * {
-  clear: both;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  min-width: 0;
-  padding: 0.01em 0 0;
-}
-
-body:not(:-moz-handler-blocked) fieldset {
-  display: table-cell;
-}
-/*
- * END reset fieldset
- */
