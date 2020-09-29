@@ -21,13 +21,13 @@
   }
 
   &__input {
-    position: absolute;
+    height: em(20, 15);
     left: 0;
     opacity: 0;
-    z-index: 1;
+    position: absolute;
     top: em(3, 15);
     width: em(20, 15);
-    height: em(20, 15);
+    z-index: 1;
   }
 
   &__label {

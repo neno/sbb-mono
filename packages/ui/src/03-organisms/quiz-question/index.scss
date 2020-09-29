@@ -28,15 +28,15 @@ $quiz-question-icon: 48;
     position: relative;
 
     .a-icon {
+      height: em($quiz-question-icon, $font-size-h3-px);
       position: absolute;
       right: 0;
       top: -#{em(8, $font-size-h3-px)};
-      height: em($quiz-question-icon, $font-size-h3-px);
       width: em($quiz-question-icon, $font-size-h3-px);
 
       @include media-breakpoint-up(mobile) {
-        top: -#{em(8, $font-size-h3-mobile-px)};
         height: em($quiz-question-icon, $font-size-h3-mobile-px);
+        top: -#{em(8, $font-size-h3-mobile-px)};
         width: em($quiz-question-icon, $font-size-h3-mobile-px);
       }
     }
