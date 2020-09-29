@@ -79,3 +79,13 @@ body:not(:-moz-handler-blocked) fieldset {
 /*
  * END reset fieldset
  */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
