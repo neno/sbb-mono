@@ -220,10 +220,11 @@ exports[`Storyshots 01-Atoms/Field Error Default 1`] = `
 </p>
 `;
 
-exports[`Storyshots 01-Atoms/Footer Toggle Default 1`] = `
+exports[`Storyshots 01-Atoms/Footer Toggler Default 1`] = `
 <button
   aria-controls="default"
   class="a-footer-toggler "
+  data-collapsible-options="{\\"activeCls\\":\\"a-footer-toggler--active\\"}"
   data-module="collapsible"
   type="button"
 >
@@ -241,7 +242,7 @@ exports[`Storyshots 01-Atoms/Footer Toggle Default 1`] = `
   >
     <polyline
       fill="none"
-      points="8.092 10.35 11.996 14.3 15.9 10.352"
+      points="15.9 13.675 11.996 9.725 8.092 13.674"
       stroke="#000"
     />
   </svg>
@@ -491,9 +492,19 @@ exports[`Storyshots 01-Atoms/Label Default 1`] = `
 </label>
 `;
 
+exports[`Storyshots 01-Atoms/Lead Text Default 1`] = `
+<div
+  class="a-lead-text"
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam repellat, dolor reprehenderit corrupti necessitatibus iure expedita fuga quia, laborum labore sint qui dicta, repellendus perspiciatis sapiente id iste illo!
+  </p>
+</div>
+`;
+
 exports[`Storyshots 01-Atoms/Links Footer Link 1`] = `
 <a
-  class="a-link a-link--footer "
+  class="a-link a-link--footer"
   href="/"
 >
   Footer Link
@@ -502,7 +513,7 @@ exports[`Storyshots 01-Atoms/Links Footer Link 1`] = `
 
 exports[`Storyshots 01-Atoms/Links Link With Arrows CTA 1`] = `
 <a
-  class="a-link a-link--arrows"
+  class="a-link"
   href="/"
 >
   <span
@@ -537,7 +548,7 @@ exports[`Storyshots 01-Atoms/Links Link With Arrows CTA 1`] = `
 
 exports[`Storyshots 01-Atoms/Links Standard 1`] = `
 <a
-  class="a-link "
+  class="a-link"
   href="/"
 >
   Das ist ein inline Link
@@ -1824,7 +1835,7 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer "
+            class="a-link a-link--footer"
             href="/"
           >
             Unternehmen
@@ -1834,7 +1845,7 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer "
+            class="a-link a-link--footer"
             href="/"
           >
             SBB Immobilien
@@ -1844,7 +1855,7 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer "
+            class="a-link a-link--footer"
             href="/"
           >
             SBB Cargo
@@ -1854,7 +1865,7 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer "
+            class="a-link a-link--footer"
             href="/"
           >
             Jobs & Karriere
@@ -1864,7 +1875,7 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer "
+            class="a-link a-link--footer"
             href="/"
           >
             Medien & Dossiers
@@ -1874,7 +1885,7 @@ exports[`Storyshots 02-Molecules/Footer Section Quick Links 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer "
+            class="a-link a-link--footer"
             href="/"
           >
             Zahlen & Fakten
@@ -2250,17 +2261,17 @@ exports[`Storyshots 02-Molecules/Link List Footer Bottom 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer-bottom "
+      class="a-link a-link--footer-bottom"
       href="/"
     >
-      Impresum
+      Impressum
     </a>
   </li>
   <li
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer-bottom "
+      class="a-link a-link--footer-bottom"
       href="/"
     >
       Rechtlichter Hinweis
@@ -2270,7 +2281,7 @@ exports[`Storyshots 02-Molecules/Link List Footer Bottom 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer-bottom "
+      class="a-link a-link--footer-bottom"
       href="/"
     >
       Datenschutz
@@ -2287,7 +2298,7 @@ exports[`Storyshots 02-Molecules/Link List Footer Quick Links 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer "
+      class="a-link a-link--footer"
       href="/"
     >
       Unternehmen
@@ -2297,7 +2308,7 @@ exports[`Storyshots 02-Molecules/Link List Footer Quick Links 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer "
+      class="a-link a-link--footer"
       href="/"
     >
       SBB Immobilien
@@ -2307,7 +2318,7 @@ exports[`Storyshots 02-Molecules/Link List Footer Quick Links 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer "
+      class="a-link a-link--footer"
       href="/"
     >
       SBB Cargo
@@ -2317,7 +2328,7 @@ exports[`Storyshots 02-Molecules/Link List Footer Quick Links 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer "
+      class="a-link a-link--footer"
       href="/"
     >
       Jobs & Karriere
@@ -2327,7 +2338,7 @@ exports[`Storyshots 02-Molecules/Link List Footer Quick Links 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer "
+      class="a-link a-link--footer"
       href="/"
     >
       Medien & Dossiers
@@ -2337,184 +2348,13 @@ exports[`Storyshots 02-Molecules/Link List Footer Quick Links 1`] = `
     class="m-link-list__item"
   >
     <a
-      class="a-link a-link--footer "
+      class="a-link a-link--footer"
       href="/"
     >
       Zahlen & Fakten
     </a>
   </li>
 </ul>
-`;
-
-exports[`Storyshots 02-Molecules/Quiz Answer Correct 1`] = `
-<div
-  class="o-quiz-answer o-quiz-answer--single-choice o-quiz-answer--correct"
-  data-testid="quiz-answer"
->
-  <div
-    class="m-radio-button m-quiz-answer__field"
-  >
-    <input
-      checked=""
-      class="m-radio-button__input"
-      disabled=""
-      id="quiz-answer-3"
-      name="quiz-answer-1"
-      type="radio"
-    />
-    <label
-      class="a-label m-radio-button__label"
-      for="quiz-answer-3"
-    >
-      Answer Correct
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots 02-Molecules/Quiz Answer Incorrect 1`] = `
-<div
-  class="o-quiz-answer o-quiz-answer--multiple-choice o-quiz-answer--incorrect"
-  data-testid="quiz-answer"
->
-  <div
-    class="m-checkbox m-quiz-answer__field"
-  >
-    <input
-      checked=""
-      class="m-checkbox__input"
-      disabled=""
-      id="quiz-answer-4"
-      name="quiz-answer-4"
-      type="checkbox"
-    />
-    <label
-      class="a-label m-checkbox__label"
-      for="quiz-answer-4"
-    >
-      <svg
-        aria-hidden="true"
-        class="a-icon a-icon--use-stroke"
-        data-testid="icon-checkmark"
-        focusable="false"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.5,12.49l4,4,9-9"
-          fill="none"
-          stroke="#000"
-        />
-      </svg>
-      Answer Incorrect
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots 02-Molecules/Quiz Answer Multiple Choice 1`] = `
-<div
-  class="o-quiz-answer o-quiz-answer--multiple-choice"
-  data-testid="quiz-answer"
->
-  <div
-    class="m-checkbox m-quiz-answer__field"
-  >
-    <input
-      checked=""
-      class="m-checkbox__input"
-      id="quiz-answer-2"
-      name="quiz-answer-2"
-      type="checkbox"
-    />
-    <label
-      class="a-label m-checkbox__label"
-      for="quiz-answer-2"
-    >
-      <svg
-        aria-hidden="true"
-        class="a-icon a-icon--use-stroke"
-        data-testid="icon-checkmark"
-        focusable="false"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.5,12.49l4,4,9-9"
-          fill="none"
-          stroke="#000"
-        />
-      </svg>
-      Multiple Choice
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots 02-Molecules/Quiz Answer Single Choice 1`] = `
-<div
-  class="o-quiz-answer o-quiz-answer--single-choice"
-  data-testid="quiz-answer"
->
-  <div
-    class="m-radio-button m-quiz-answer__field"
-  >
-    <input
-      checked=""
-      class="m-radio-button__input"
-      id="quiz-answer-1"
-      name="quiz-answer-1"
-      type="radio"
-    />
-    <label
-      class="a-label m-radio-button__label"
-      for="quiz-answer-1"
-    >
-      Single Choice
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots 02-Molecules/Quiz Answer With Text 1`] = `
-<div
-  class="o-quiz-answer o-quiz-answer--single-choice"
-  data-testid="quiz-answer"
->
-  <div
-    class="m-radio-button m-quiz-answer__field"
-  >
-    <input
-      checked=""
-      class="m-radio-button__input"
-      id="quiz-answer-1"
-      name="quiz-answer-1"
-      type="radio"
-    />
-    <label
-      class="a-label m-radio-button__label"
-      for="quiz-answer-1"
-    >
-      Single Choice
-    </label>
-  </div>
-  <div
-    class="o-quiz-answer__text"
-  >
-    <p>
-      Erklärungstext zur Antwort
-    </p>
-    <p>
-      Und noch ein Link: 
-      <a
-        href="http://google.ch"
-        target="_blank"
-      >
-        http://google.ch
-      </a>
-    </p>
-  </div>
-</div>
 `;
 
 exports[`Storyshots 02-Molecules/Search Form Default 1`] = `
@@ -2771,7 +2611,6 @@ exports[`Storyshots 02-Molecules/Teaser Centered 1`] = `
   >
     <a
       class="m-teaser__block-link"
-      href="#"
     >
       <h3
         class="m-teaser__title"
@@ -2811,7 +2650,6 @@ exports[`Storyshots 02-Molecules/Teaser Default 1`] = `
   >
     <a
       class="m-teaser__block-link"
-      href="#"
     >
       <h3
         class="m-teaser__title"
@@ -2876,17 +2714,17 @@ exports[`Storyshots 03-Organisms/Footer Bottom Default 1`] = `
         class="m-link-list__item"
       >
         <a
-          class="a-link a-link--footer-bottom "
+          class="a-link a-link--footer-bottom"
           href="/"
         >
-          Impresum
+          Impressum
         </a>
       </li>
       <li
         class="m-link-list__item"
       >
         <a
-          class="a-link a-link--footer-bottom "
+          class="a-link a-link--footer-bottom"
           href="/"
         >
           Rechtlichter Hinweis
@@ -2896,7 +2734,7 @@ exports[`Storyshots 03-Organisms/Footer Bottom Default 1`] = `
         class="m-link-list__item"
       >
         <a
-          class="a-link a-link--footer-bottom "
+          class="a-link a-link--footer-bottom"
           href="/"
         >
           Datenschutz
@@ -3019,7 +2857,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
               <p>
                 Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
                 <a
-                  class="a-link a-link--footer "
+                  class="a-link a-link--footer"
                   href="/"
                 >
                   Datenschutz.
@@ -3090,7 +2928,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
               </p>
               <p>
                 <a
-                  class="a-link a-link--footer a-link--arrows"
+                  class="a-link a-link--footer"
                   href="/"
                 >
                   <span
@@ -3187,7 +3025,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
               </p>
               <p>
                 <a
-                  class="a-link a-link--footer a-link--arrows"
+                  class="a-link a-link--footer"
                   href="/"
                 >
                   <span
@@ -3398,7 +3236,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
                   class="m-link-list__item"
                 >
                   <a
-                    class="a-link a-link--footer "
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     Unternehmen
@@ -3408,7 +3246,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
                   class="m-link-list__item"
                 >
                   <a
-                    class="a-link a-link--footer "
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     SBB Immobilien
@@ -3418,7 +3256,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
                   class="m-link-list__item"
                 >
                   <a
-                    class="a-link a-link--footer "
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     SBB Cargo
@@ -3428,7 +3266,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
                   class="m-link-list__item"
                 >
                   <a
-                    class="a-link a-link--footer "
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     Jobs & Karriere
@@ -3438,7 +3276,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
                   class="m-link-list__item"
                 >
                   <a
-                    class="a-link a-link--footer "
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     Medien & Dossiers
@@ -3448,7 +3286,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
                   class="m-link-list__item"
                 >
                   <a
-                    class="a-link a-link--footer "
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     Zahlen & Fakten
@@ -3474,17 +3312,17 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer-bottom "
+            class="a-link a-link--footer-bottom"
             href="/"
           >
-            Impresum
+            Impressum
           </a>
         </li>
         <li
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer-bottom "
+            class="a-link a-link--footer-bottom"
             href="/"
           >
             Rechtlichter Hinweis
@@ -3494,7 +3332,7 @@ exports[`Storyshots 03-Organisms/Footer Default 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer-bottom "
+            class="a-link a-link--footer-bottom"
             href="/"
           >
             Datenschutz
@@ -3519,7 +3357,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
   <button
     aria-controls="footer-toggable"
     class="a-footer-toggler "
-    data-collapsible-options="{\\"animate\\":true,\\"activeCls\\":\\"a-footer-toggler--active\\",\\"targetActiveCls\\":\\"o-footer__footer-toggable--active\\"}"
+    data-collapsible-options="{\\"animate\\":true,\\"activeCls\\":\\"a-footer-toggler--active\\",\\"targetActiveCls\\":\\"o-footer__toggable--active\\"}"
     data-module="collapsible"
     type="button"
   >
@@ -3537,13 +3375,13 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
     >
       <polyline
         fill="none"
-        points="8.092 10.35 11.996 14.3 15.9 10.352"
+        points="15.9 13.675 11.996 9.725 8.092 13.674"
         stroke="#000"
       />
     </svg>
   </button>
   <div
-    class="o-footer__footer-toggable"
+    class="o-footer__toggable"
     id="footer-toggable"
   >
     <div
@@ -3648,7 +3486,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                 <p>
                   Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
                   <a
-                    class="a-link a-link--footer "
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     Datenschutz.
@@ -3719,7 +3557,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                 </p>
                 <p>
                   <a
-                    class="a-link a-link--footer a-link--arrows"
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     <span
@@ -3816,7 +3654,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                 </p>
                 <p>
                   <a
-                    class="a-link a-link--footer a-link--arrows"
+                    class="a-link a-link--footer"
                     href="/"
                   >
                     <span
@@ -4027,7 +3865,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                     class="m-link-list__item"
                   >
                     <a
-                      class="a-link a-link--footer "
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       Unternehmen
@@ -4037,7 +3875,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                     class="m-link-list__item"
                   >
                     <a
-                      class="a-link a-link--footer "
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       SBB Immobilien
@@ -4047,7 +3885,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                     class="m-link-list__item"
                   >
                     <a
-                      class="a-link a-link--footer "
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       SBB Cargo
@@ -4057,7 +3895,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                     class="m-link-list__item"
                   >
                     <a
-                      class="a-link a-link--footer "
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       Jobs & Karriere
@@ -4067,7 +3905,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                     class="m-link-list__item"
                   >
                     <a
-                      class="a-link a-link--footer "
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       Medien & Dossiers
@@ -4077,7 +3915,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
                     class="m-link-list__item"
                   >
                     <a
-                      class="a-link a-link--footer "
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       Zahlen & Fakten
@@ -4104,17 +3942,17 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer-bottom "
+            class="a-link a-link--footer-bottom"
             href="/"
           >
-            Impresum
+            Impressum
           </a>
         </li>
         <li
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer-bottom "
+            class="a-link a-link--footer-bottom"
             href="/"
           >
             Rechtlichter Hinweis
@@ -4124,7 +3962,7 @@ exports[`Storyshots 03-Organisms/Footer Fixed 1`] = `
           class="m-link-list__item"
         >
           <a
-            class="a-link a-link--footer-bottom "
+            class="a-link a-link--footer-bottom"
             href="/"
           >
             Datenschutz
@@ -4233,7 +4071,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
         <p>
           Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
           <a
-            class="a-link a-link--footer "
+            class="a-link a-link--footer"
             href="/"
           >
             Datenschutz.
@@ -4304,7 +4142,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
         </p>
         <p>
           <a
-            class="a-link a-link--footer a-link--arrows"
+            class="a-link a-link--footer"
             href="/"
           >
             <span
@@ -4401,7 +4239,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
         </p>
         <p>
           <a
-            class="a-link a-link--footer a-link--arrows"
+            class="a-link a-link--footer"
             href="/"
           >
             <span
@@ -4612,7 +4450,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer "
+              class="a-link a-link--footer"
               href="/"
             >
               Unternehmen
@@ -4622,7 +4460,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer "
+              class="a-link a-link--footer"
               href="/"
             >
               SBB Immobilien
@@ -4632,7 +4470,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer "
+              class="a-link a-link--footer"
               href="/"
             >
               SBB Cargo
@@ -4642,7 +4480,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer "
+              class="a-link a-link--footer"
               href="/"
             >
               Jobs & Karriere
@@ -4652,7 +4490,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer "
+              class="a-link a-link--footer"
               href="/"
             >
               Medien & Dossiers
@@ -4662,7 +4500,7 @@ exports[`Storyshots 03-Organisms/Footer Sections Default 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer "
+              class="a-link a-link--footer"
               href="/"
             >
               Zahlen & Fakten
@@ -4967,6 +4805,11 @@ exports[`Storyshots 03-Organisms/Login Template 1`] = `
         role="tabpanel"
         tabindex="0"
       >
+        <h2
+          class="u-sr-only"
+        >
+          Mitarbeitende
+        </h2>
         <div
           class="l-login-panel"
         >
@@ -5012,6 +4855,11 @@ exports[`Storyshots 03-Organisms/Login Template 1`] = `
         role="tabpanel"
         tabindex="0"
       >
+        <h2
+          class="u-sr-only"
+        >
+          Pensionierte
+        </h2>
         <div
           class="l-login-panel"
         >
@@ -5134,6 +4982,177 @@ exports[`Storyshots 03-Organisms/Login Template 1`] = `
 </div>
 `;
 
+exports[`Storyshots 03-Organisms/Quiz Answer Correct 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--single-choice o-quiz-answer--correct"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-radio-button m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-radio-button__input"
+      disabled=""
+      id="quiz-answer-3"
+      name="quiz-answer-1"
+      type="radio"
+    />
+    <label
+      class="a-label m-radio-button__label"
+      for="quiz-answer-3"
+    >
+      Answer Correct
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Answer Incorrect 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--multiple-choice o-quiz-answer--incorrect"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-checkbox m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-checkbox__input"
+      disabled=""
+      id="quiz-answer-4"
+      name="quiz-answer-4"
+      type="checkbox"
+    />
+    <label
+      class="a-label m-checkbox__label"
+      for="quiz-answer-4"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        data-testid="icon-checkmark"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5,12.49l4,4,9-9"
+          fill="none"
+          stroke="#000"
+        />
+      </svg>
+      Answer Incorrect
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Answer Multiple Choice 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--multiple-choice"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-checkbox m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-checkbox__input"
+      id="quiz-answer-2"
+      name="quiz-answer-2"
+      type="checkbox"
+    />
+    <label
+      class="a-label m-checkbox__label"
+      for="quiz-answer-2"
+    >
+      <svg
+        aria-hidden="true"
+        class="a-icon a-icon--use-stroke"
+        data-testid="icon-checkmark"
+        focusable="false"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5,12.49l4,4,9-9"
+          fill="none"
+          stroke="#000"
+        />
+      </svg>
+      Multiple Choice
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Answer Single Choice 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--single-choice"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-radio-button m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-radio-button__input"
+      id="quiz-answer-1"
+      name="quiz-answer-1"
+      type="radio"
+    />
+    <label
+      class="a-label m-radio-button__label"
+      for="quiz-answer-1"
+    >
+      Single Choice
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots 03-Organisms/Quiz Answer With Rich Text Explanation 1`] = `
+<div
+  class="o-quiz-answer o-quiz-answer--single-choice"
+  data-testid="quiz-answer"
+>
+  <div
+    class="m-radio-button m-quiz-answer__field"
+  >
+    <input
+      checked=""
+      class="m-radio-button__input"
+      id="quiz-answer-1"
+      name="quiz-answer-1"
+      type="radio"
+    />
+    <label
+      class="a-label m-radio-button__label"
+      for="quiz-answer-1"
+    >
+      Single Choice
+    </label>
+  </div>
+  <div
+    class="o-quiz-answer__text"
+  >
+    <p>
+      Erklärungstext zur Antwort
+    </p>
+    <p>
+      Und noch ein Link: 
+      <a
+        href="http://google.ch"
+        target="_blank"
+      >
+        http://google.ch
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Storyshots 03-Organisms/Quiz Question Multiple Choice 1`] = `
 <fieldset
   class="o-quiz-question"
@@ -5146,7 +5165,9 @@ exports[`Storyshots 03-Organisms/Quiz Question Multiple Choice 1`] = `
       Frage 2
     </span>
   </legend>
-  <div>
+  <div
+    class="o-quiz-question__description"
+  >
     Erklärungstext 2
   </div>
   <ol
@@ -5307,7 +5328,9 @@ exports[`Storyshots 03-Organisms/Quiz Question Multiple Choice Show Results 1`] 
       </svg>
     </span>
   </legend>
-  <div>
+  <div
+    class="o-quiz-question__description"
+  >
     Erklärungstext 2
   </div>
   <ol
@@ -5457,7 +5480,9 @@ exports[`Storyshots 03-Organisms/Quiz Question Single Choice 1`] = `
       Frage 1
     </span>
   </legend>
-  <div>
+  <div
+    class="o-quiz-question__description"
+  >
     Erklärungstext 1
   </div>
   <ol
@@ -5579,7 +5604,9 @@ exports[`Storyshots 03-Organisms/Quiz Question Single Choice Show Results 1`] = 
       </svg>
     </span>
   </legend>
-  <div>
+  <div
+    class="o-quiz-question__description"
+  >
     Erklärungstext 1
   </div>
   <ol
@@ -5877,7 +5904,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
     <button
       aria-controls="footer-toggable"
       class="a-footer-toggler "
-      data-collapsible-options="{\\"animate\\":true,\\"activeCls\\":\\"a-footer-toggler--active\\",\\"targetActiveCls\\":\\"o-footer__footer-toggable--active\\"}"
+      data-collapsible-options="{\\"animate\\":true,\\"activeCls\\":\\"a-footer-toggler--active\\",\\"targetActiveCls\\":\\"o-footer__toggable--active\\"}"
       data-module="collapsible"
       type="button"
     >
@@ -5895,13 +5922,13 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
       >
         <polyline
           fill="none"
-          points="8.092 10.35 11.996 14.3 15.9 10.352"
+          points="15.9 13.675 11.996 9.725 8.092 13.674"
           stroke="#000"
         />
       </svg>
     </button>
     <div
-      class="o-footer__footer-toggable"
+      class="o-footer__toggable"
       id="footer-toggable"
     >
       <div
@@ -6006,7 +6033,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                   <p>
                     Haben Sie Fragen? Wir helfen Ihnen gerne. Bitte lesen Sie auch unsere Erklärung zum 
                     <a
-                      class="a-link a-link--footer "
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       Datenschutz.
@@ -6077,7 +6104,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                   </p>
                   <p>
                     <a
-                      class="a-link a-link--footer a-link--arrows"
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       <span
@@ -6174,7 +6201,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                   </p>
                   <p>
                     <a
-                      class="a-link a-link--footer a-link--arrows"
+                      class="a-link a-link--footer"
                       href="/"
                     >
                       <span
@@ -6385,7 +6412,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                       class="m-link-list__item"
                     >
                       <a
-                        class="a-link a-link--footer "
+                        class="a-link a-link--footer"
                         href="/"
                       >
                         Unternehmen
@@ -6395,7 +6422,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                       class="m-link-list__item"
                     >
                       <a
-                        class="a-link a-link--footer "
+                        class="a-link a-link--footer"
                         href="/"
                       >
                         SBB Immobilien
@@ -6405,7 +6432,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                       class="m-link-list__item"
                     >
                       <a
-                        class="a-link a-link--footer "
+                        class="a-link a-link--footer"
                         href="/"
                       >
                         SBB Cargo
@@ -6415,7 +6442,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                       class="m-link-list__item"
                     >
                       <a
-                        class="a-link a-link--footer "
+                        class="a-link a-link--footer"
                         href="/"
                       >
                         Jobs & Karriere
@@ -6425,7 +6452,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                       class="m-link-list__item"
                     >
                       <a
-                        class="a-link a-link--footer "
+                        class="a-link a-link--footer"
                         href="/"
                       >
                         Medien & Dossiers
@@ -6435,7 +6462,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
                       class="m-link-list__item"
                     >
                       <a
-                        class="a-link a-link--footer "
+                        class="a-link a-link--footer"
                         href="/"
                       >
                         Zahlen & Fakten
@@ -6462,17 +6489,17 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer-bottom "
+              class="a-link a-link--footer-bottom"
               href="/"
             >
-              Impresum
+              Impressum
             </a>
           </li>
           <li
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer-bottom "
+              class="a-link a-link--footer-bottom"
               href="/"
             >
               Rechtlichter Hinweis
@@ -6482,7 +6509,7 @@ exports[`Storyshots 04-Templates/Fixed Footer Template 1`] = `
             class="m-link-list__item"
           >
             <a
-              class="a-link a-link--footer-bottom "
+              class="a-link a-link--footer-bottom"
               href="/"
             >
               Datenschutz

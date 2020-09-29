@@ -8,7 +8,7 @@ export interface IState {
 
 export interface IQuiz {
     title: string;
-    leadText: string;
+    leadText?: string;
     submit: string;
     confirmChanges?: string;
     repeat?: string;

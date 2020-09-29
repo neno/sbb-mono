@@ -1,5 +1,6 @@
 import React, { useReducer, FormEventHandler } from 'react';
 import Button from '@sbb-mono/ui/src/01-atoms/button';
+import LeadText from '@sbb-mono/ui/src/01-atoms/lead-text';
 import ButtonGroup from '@sbb-mono/ui/src/02-molecules/btn-group';
 import { TOGGLE_ANSWER, SHOW_RESULTS, RESET_QUIZ } from '../models';
 import reducer, { INITIAL_STATE } from '../reducer';
@@ -45,10 +46,14 @@ const App: React.FC = () => {
         <article>
             <h1>{state.quiz.title}</h1>
             {state.quiz.leadText && (
-                <div
-                    className="lead"
-                    dangerouslySetInnerHTML={{ __html: state.quiz.leadText }}
-                />
+                <LeadText>
+                    <div
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML={{
+                            __html: state.quiz.leadText,
+                        }}
+                    />
+                </LeadText>
             )}
             <form action="#" onSubmit={handleSubmit}>
                 {state.quiz.questions.map((question) => (
