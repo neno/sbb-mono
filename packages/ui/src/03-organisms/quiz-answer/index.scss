@@ -1,10 +1,13 @@
-$quiz-answer-border: 2;
+$quiz-answer-border: 3;
 $quiz-padding-vertical: 14;
 
 .o-quiz-answer {
   background-color: $color-white;
-  border-bottom: em($quiz-answer-border, $font-size-regular-px) solid $color-white;
-  padding: em($quiz-padding-vertical, $font-size-regular-px) em(10, $font-size-regular-px) em($quiz-padding-vertical - $quiz-answer-border, $font-size-regular-px);
+  border-bottom: em($quiz-answer-border, $font-size-regular-px) solid
+    $color-white;
+  padding: em($quiz-padding-vertical, $font-size-regular-px)
+    em(10, $font-size-regular-px)
+    em($quiz-padding-vertical - $quiz-answer-border, $font-size-regular-px);
 
   &__text {
     margin-left: em(28, $font-size-regular-px);

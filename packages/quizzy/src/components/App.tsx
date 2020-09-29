@@ -74,7 +74,7 @@ const App: React.FC = () => {
                 )}
 
                 {state.showResults && <p>{state.quiz.confirmMessage}</p>}
-                <div className="t-quiz__actions">
+                <div className="t-quiz__actions l-divider-small">
                     <ButtonGroup>
                         {!state.showResults && (
                             <Button
