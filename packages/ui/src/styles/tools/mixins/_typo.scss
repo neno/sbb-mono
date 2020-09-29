@@ -23,6 +23,20 @@
   }
 }
 
+@mixin lead {
+  font-size: $font-size-h3;
+  font-weight: $font-light;
+  line-height: (26 / 20);
+
+  @include media-breakpoint-up(mobile) {
+    font-size: $font-size-h3-mobile;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    line-height: (32 / 21);
+  }
+}
+
 @mixin link-hover-animation {
   color: $color-red-125;
 
