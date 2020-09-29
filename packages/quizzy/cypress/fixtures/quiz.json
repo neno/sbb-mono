@@ -1,11 +1,13 @@
 {
     "quiz": {
         "title": "Selbsttest",
+        "leadText": "<p>Thema des Selbsttest</p>",
         "submit": "Antworten prüfen",
         "confirmChanges": "Änderungen bestätigen",
         "repeat": "Test wiederholen",
         "changesEffective": "Änderungen gültig ab: 01.12.2018",
         "confirmMessage": "Hiermit bestätige ich, die Änderungen gelesen und verstanden zu haben.",
+        "redirectUrl": "/confirmation",
         "questions": [
             {
                 "id": "100",

@@ -44,6 +44,12 @@ const App: React.FC = () => {
     return state && state.quiz ? (
         <article>
             <h1>{state.quiz.title}</h1>
+            {state.quiz.leadText && (
+                <div
+                    className="lead"
+                    dangerouslySetInnerHTML={{ __html: state.quiz.leadText }}
+                />
+            )}
             <form action="#" onSubmit={handleSubmit}>
                 {state.quiz.questions.map((question) => (
                     <div className="t-quiz__questions" key={question.id}>
@@ -93,7 +99,7 @@ const App: React.FC = () => {
                                 classes={['a-btn--primary']}
                                 handleClick={handleConfirm}
                                 attrs={{
-                                    'data-cy': 'redirect',
+                                    'data-cy': 'confirm',
                                 }}
                             >
                                 {state.quiz.confirmChanges}

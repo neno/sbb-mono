@@ -2,7 +2,7 @@ $quiz-question-icon: 48;
 
 .o-quiz-question {
   background-color: $color-milk;
-  margin-bottom: em(25, $font-size-regular-px);
+  margin-top: em(25, $font-size-regular-px);
   min-height: em($quiz-question-icon, $font-size-h3-px);
   padding: em(8, $font-size-regular-px);
 
