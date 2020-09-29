@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Sbb';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/../public/SBBWeb-UltraLight.eot');
+  src: url('/../public/SBBWeb-UltraLight.eot?#iefix') format('embedded-opentype'),
+    url('/../public/SBBWeb-UltraLight.woff2') format('woff2'),
+    url('/../public/SBBWeb-UltraLight.woff') format('woff'),
+    url('/../public/SBBWeb-UltraLight.ttf') format('truetype'),
+    url('/../public/SBBWeb-UltraLight.svg#/../public/SBBWeb-UltraLight') format('svg');
+}
+
+@font-face {
+  font-family: 'Sbb';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/../public/SBBWeb-Thin.eot');
+  src: url('/../public/SBBWeb-Thin.eot?#iefix') format('embedded-opentype'),
+    url('/../public/SBBWeb-Thin.woff2') format('woff2'),
+    url('/../public/SBBWeb-Thin.woff') format('woff'),
+    url('/../public/SBBWeb-Thin.ttf') format('truetype'),
+    url('/../public/SBBWeb-Thin.svg#/../public/SBBWeb-Thin') format('svg');
+}
+
+@font-face {
+  font-display: auto;
+  font-family: 'Sbb';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/../public/SBBWeb-Light.eot');
+  src: url('/../public/SBBWeb-Light.eot?#iefix') format('embedded-opentype'),
+    url('/../public/SBBWeb-Light.woff2') format('woff2'),
+    url('/../public/SBBWeb-Light.woff') format('woff'),
+    url('/../public/SBBWeb-Light.ttf') format('truetype'),
+    url('/../public/SBBWeb-Light.svg#/../public/SBBWeb-Light') format('svg');
+}
+
+@font-face {
+  font-family: 'Sbb';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/../public/SBBWeb-Roman.eot');
+  src: url('/../public/SBBWeb-Roman.eot?#iefix') format('embedded-opentype'),
+    url('/../public/SBBWeb-Roman.woff2') format('woff2'),
+    url('/../public/SBBWeb-Roman.woff') format('woff'),
+    url('/../public/SBBWeb-Roman.ttf') format('truetype'),
+    url('/../public/SBBWeb-Roman.svg#/../public/SBBWeb-Roman') format('svg');
+}
+
+@font-face {
+  font-family: 'Sbb';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/../public/SBBWeb-Italic.eot');
+  src: url('/../public/SBBWeb-Italic.eot?#iefix') format('embedded-opentype'),
+    url('/../public/SBBWeb-Italic.woff2') format('woff2'),
+    url('/../public/SBBWeb-Italic.woff') format('woff'),
+    url('/../public/SBBWeb-Italic.ttf') format('truetype'),
+    url('/../public/SBBWeb-Italic.svg#/../public/SBBWeb-Italic') format('svg');
+}
+
+@font-face {
+  font-family: 'Sbb';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/../public/SBBWeb-Bold.eot');
+  src: url('/../public/SBBWeb-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/../public/SBBWeb-Bold.woff2') format('woff2'),
+    url('/../public/SBBWeb-Bold.woff') format('woff'),
+    url('/../public/SBBWeb-Bold.ttf') format('truetype'),
+    url('/../public/SBBWeb-Bold.svg#/../public/SBBWeb-Bold') format('svg');
+}
+
+body {
+  font-family: 'SBB', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}

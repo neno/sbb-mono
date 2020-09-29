@@ -6,35 +6,25 @@ import {
     FETCH_ERROR,
     IApiData,
 } from './models';
-import { excludeApi } from './config';
 
-const useFetch = (url: string, dispatch: React.Dispatch<QuizAction>): void => {
+const useFetch = (dispatch: React.Dispatch<QuizAction>): void => {
     useEffect(() => {
         dispatch({ type: FETCH_LOADING });
 
         const fetchUrl = async () => {
             try {
                 let result: IApiData;
-                if (
-                    process.env.NODE_ENV === 'production' &&
-                    !excludeApi.includes(window.location.hostname)
-                ) {
-                    const root = document.getElementById('root');
-                    const apiUrl = root?.dataset.api;
-                    if (!apiUrl) {
-                        throw new Error(
-                            'Missing data-api on root element, eg: <div id="root" data-api="http://my-example-api.com">…<div>'
-                        );
-                    }
+
+                const root = document.getElementById('root');
+                const apiUrl = root?.dataset.api;
+
+                if (apiUrl) {
                     const response = await fetch(apiUrl);
                     result = await response.json();
-                    dispatch({
-                        type: FETCH_RESPONSE_COMPLETE,
-                        payload: { result },
-                    });
                 } else {
                     result = await import('./quiz.json');
                 }
+
                 dispatch({
                     type: FETCH_RESPONSE_COMPLETE,
                     payload: { result },
@@ -49,7 +39,7 @@ const useFetch = (url: string, dispatch: React.Dispatch<QuizAction>): void => {
             }
         };
         fetchUrl();
-    }, [dispatch, url]);
+    }, [dispatch]);
 };
 
 export default useFetch;
