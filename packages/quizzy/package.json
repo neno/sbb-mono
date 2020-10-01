@@ -11,9 +11,10 @@
         "test:e2e:dev": "npm-run-all --parallel dev cy:open",
         "cy:open": "cypress open",
         "cy:run": "cypress run",
-        "lint": "lint-staged",
+        "lint": "npm-run-all lint-script lint-style",
         "lint-script": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-        "lint-style": "stylelint \"src/**/*.scss\" --fix"
+        "lint-style": "stylelint \"src/**/*.scss\" --fix",
+        "precommit": "lint-staged"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -67,7 +68,6 @@
         "eslint-plugin-prettier": "^3.1.4",
         "eslint-plugin-react": "^7.20.6",
         "eslint-plugin-react-hooks": "4.0.0",
-        "husky": "^4.2.5",
         "lint-staged": "^10.2.13",
         "mini-css-extract-plugin": "^0.10.0",
         "msw": "^0.21.2",
@@ -80,18 +80,5 @@
         "stylelint-scss": "^3.18.0",
         "typescript": "^4.0.2",
         "whatwg-fetch": "^3.4.1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": [
-            "eslint --cache --fix"
-        ],
-        "src/**/*.scss": [
-            "stylelint --fix"
-        ]
     }
 }

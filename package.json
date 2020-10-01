@@ -4,11 +4,31 @@
     "workspaces": [
         "packages/*"
     ],
+    "scripts": {
+        "test": "lerna run test",
+        "lint": "lerna run lint"
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx}": [
+            "eslint --fix"
+        ],
+        "src/**/*.scss": [
+            "stylelint --fix"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lerna run precommit"
+        }
+    },
     "devDependencies": {
         "@babel/core": "^7.11.6",
         "@babel/preset-env": "^7.11.5",
         "@babel/preset-react": "^7.10.4",
         "eslint": "^7.8.0",
         "lerna": "^3.22.1"
+    },
+    "dependencies": {
+        "husky": "^4.3.0"
     }
 }

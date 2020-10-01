@@ -7,9 +7,10 @@
         "storybook": "STORYBOOK_TIMEOUT=2000 start-storybook -p 6006 -s public",
         "build-storybook": "STORYBOOK_TIMEOUT=2000 build-storybook -s public",
         "test": "jest",
-        "lint": "lint-staged",
+        "lint": "npm-run-all lint-script lint-style",
         "lint-script": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-        "lint-style": "stylelint \"src/**/*.scss\" --fix"
+        "lint-style": "stylelint \"src/**/*.scss\" --fix",
+        "precommit": "lint-staged"
     },
     "dependencies": {
         "@testing-library/jest-dom": "^5.11.4",
@@ -48,7 +49,6 @@
         "eslint-plugin-prettier": "^3.1.4",
         "eslint-plugin-react": "^7.20.6",
         "eslint-plugin-react-hooks": "^4.1.0",
-        "husky": "^4.2.5",
         "lint-staged": "^10.3.0",
         "mini-css-extract-plugin": "^0.11.0",
         "npm-run-all": "^4.1.5",
@@ -67,18 +67,5 @@
         "webpack": "^4.44.1",
         "webpack-cli": "^3.3.12",
         "webpack-merge": "^5.1.3"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": [
-            "eslint --cache --fix"
-        ],
-        "src/**/*.scss": [
-            "stylelint --fix"
-        ]
     }
 }
