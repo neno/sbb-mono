@@ -1,6 +1,6 @@
 /* eslint-disable jest/expect-expect */
 
-import quizData from '../fixtures/quiz.json';
+import quizData from '../../src/quiz.json';
 import { IAnswer, IQuestion } from '../../src/models';
 
 context('Test Quiz Layout', () => {

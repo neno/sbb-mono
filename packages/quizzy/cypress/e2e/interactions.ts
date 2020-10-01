@@ -1,6 +1,6 @@
 /* eslint-disable jest/expect-expect */
 
-import quizData from '../fixtures/quiz.json';
+import quizData from '../../src/quiz.json';
 import { IAnswer, IQuestion, IResult } from '../../src/models';
 
 const questions: IQuestion[] = quizData.quiz.questions;
@@ -36,7 +36,7 @@ context('Evaluation', () => {
     describe('All answers correct', () => {
         it('Should display success message', () => {
             cy.visit('/');
-            cy.get('.a-label').each(($label, index) => {
+            cy.get('.a-label').each(($label) => {
                 const labelText = $label[0].innerText;
                 const answer = answers.find((a) => a.title === labelText);
                 if (answer && answer.correct) {
@@ -56,7 +56,7 @@ context('Evaluation', () => {
     describe('All answers wrong', () => {
         it('Should display success message', () => {
             cy.visit('/');
-            cy.get('.a-label').each(($label, index) => {
+            cy.get('.a-label').each(($label) => {
                 const labelText = $label[0].innerText;
                 const answer = answers.find((a) => a.title === labelText);
                 if (answer && !answer.correct) {
@@ -84,7 +84,7 @@ context('Evaluation', () => {
             );
 
             if (correctAnswer && correctAnswer) {
-                cy.get('.a-label').each(($label, index) => {
+                cy.get('.a-label').each(($label) => {
                     const labelText = $label[0].innerText;
                     if (
                         labelText === correctAnswer.title ||
@@ -119,6 +119,18 @@ describe('Reset', () => {
     it('Should enable inputs', () => {
         cy.get('input').each(($input) => {
             cy.get($input).should('be.enabled');
+        });
+    });
+});
+
+describe('Redirect', () => {
+    it('Should redirect on confirm', () => {
+        cy.visit('/');
+        cy.get('[data-cy="evaluate"]').click({ force: true });
+        cy.get('[data-cy="confirm"]').click({ force: true });
+
+        cy.location().should((loc) => {
+            expect(loc.pathname).to.eq(quizData.quiz.redirectUrl);
         });
     });
 });

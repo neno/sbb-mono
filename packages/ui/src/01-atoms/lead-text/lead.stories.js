@@ -1,19 +1,19 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import Lead from './index';
+import LeadText from './index';
 
 export default {
-    title: '01-Atoms/Lead',
+    title: '01-Atoms/Lead Text',
 };
 
 export const Default = () => renderToStaticMarkup(
-    <Lead htmlFor="field_name">
+    <LeadText>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Eveniet nam repellat, dolor reprehenderit corrupti
             necessitatibus iure expedita fuga quia, laborum labore
             sint qui dicta, repellendus perspiciatis sapiente id iste illo!
         </p>
-    </Lead>,
+    </LeadText>,
 );
